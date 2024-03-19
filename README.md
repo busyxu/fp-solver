@@ -103,20 +103,20 @@ llvm 6.0 + z3 4.6.2 + json-c + jfs + klee 2.3-pre +gsl
      7.4. make
      #7.5. sudo make install 
     7.6. make install
-     7.7. sudo ln -s /home/aaa/fp-solver/nlopt/install/lib/libnlopt.so /usr/lib/libnlopt.so.0
+    7.7. 
+    sudo ln -s /home/aaa/fp-solver/nlopt/build/libnlopt.so.0 /usr/lib/x86_64-linux-gnu/libnlopt.so.0
+    sudo ln -s /home/aaa/fp-solver/nlopt/build/libnlopt.so /usr/lib/libnlopt.so
     
 8. 安装dreal，使用install脚本预先安装依赖，而后dpkg安装
    
     ```
     8.1. 运行./install_dreal.sh  注意，dreal的amd64包在同一路径下
-    sudo ln -s /opt/dreal/4.21.06.2/lib/libdreal.so /usr/lib/libdreal.so
-    sudo ln -s /opt/libibex/2.7.4/lib/libibex.so /usr/lib/libibex.so
     
     8.2. 将dreal库软链接到/usr/lib目录下
     sudo ln -s /opt/dreal/4.21.06.2/lib/libdreal.so /usr/lib/libdreal.so
     sudo ln -s /opt/libibex/2.7.4/lib/libibex.so /usr/lib/libibex.so
     ```
-
+    
 9. 是否要重新编译gsl_runtime库?  
 
     ```
@@ -268,4 +268,10 @@ run:
 
 
 -watchdog 会抑制backpoint
+
+
+git add .失效，可能是子模块中有git的原因造成
+
+git rm --cached gosat
+git add gosat/
 ```

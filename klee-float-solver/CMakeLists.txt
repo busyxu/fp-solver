@@ -38,7 +38,7 @@ set(Z3_DIR /home/aaa/fp-solver/z3-4.6.2/install)
 set(Z3_INCLUDE_DIRS /home/aaa/fp-solver/z3-4.6.2/install/include)
 set(Z3_LIBRARIES /home/aaa/fp-solver/z3-4.6.2/install/lib/libz3.so)
 
-set(NLOPT_LIBRARIES /home/aaa/fp-solver/nlopt/install/lib/libnlopt.so)
+set(NLOPT_LIBRARIES /home/aaa/fp-solver/nlopt/build/libnlopt.so)
 set(NLOPT_INCLUDE_DIRS /home/aaa/fp-solver/nlopt/install/include)
 
 set(json-c_INCLUDE_DIR /home/aaa/fp-solver/json-c/install/include)
