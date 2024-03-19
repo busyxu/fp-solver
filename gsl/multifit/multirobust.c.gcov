@@ -1,0 +1,774 @@
+        -:    0:Source:multirobust.c
+        -:    0:Graph:multirobust.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:/* multirobust.c
+        -:    2: * 
+        -:    3: * Copyright (C) 2013 Patrick Alken
+        -:    4: * 
+        -:    5: * This program is free software; you can redistribute it and/or modify
+        -:    6: * it under the terms of the GNU General Public License as published by
+        -:    7: * the Free Software Foundation; either version 3 of the License, or (at
+        -:    8: * your option) any later version.
+        -:    9: * 
+        -:   10: * This program is distributed in the hope that it will be useful, but
+        -:   11: * WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   12: * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+        -:   13: * General Public License for more details.
+        -:   14: * 
+        -:   15: * You should have received a copy of the GNU General Public License
+        -:   16: * along with this program; if not, write to the Free Software
+        -:   17: * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+        -:   18: *
+        -:   19: * This module contains routines related to robust linear least squares. The
+        -:   20: * algorithm used closely follows the publications:
+        -:   21: *
+        -:   22: * [1] DuMouchel, W. and F. O'Brien (1989), "Integrating a robust
+        -:   23: * option into a multiple regression computing environment,"
+        -:   24: * Computer Science and Statistics:  Proceedings of the 21st
+        -:   25: * Symposium on the Interface, American Statistical Association
+        -:   26: *
+        -:   27: * [2] Street, J.O., R.J. Carroll, and D. Ruppert (1988), "A note on
+        -:   28: * computing robust regression estimates via iteratively
+        -:   29: * reweighted least squares," The American Statistician, v. 42, 
+        -:   30: * pp. 152-154.
+        -:   31: */
+        -:   32:
+        -:   33:#include <config.h>
+        -:   34:#include <gsl/gsl_math.h>
+        -:   35:#include <gsl/gsl_multifit.h>
+        -:   36:#include <gsl/gsl_vector.h>
+        -:   37:#include <gsl/gsl_matrix.h>
+        -:   38:#include <gsl/gsl_statistics.h>
+        -:   39:#include <gsl/gsl_sort.h>
+        -:   40:#include <gsl/gsl_sort_vector.h>
+        -:   41:#include <gsl/gsl_blas.h>
+        -:   42:#include <gsl/gsl_linalg.h>
+        -:   43:
+        -:   44:static int robust_test_convergence(const gsl_vector *c_prev, const gsl_vector *c,
+        -:   45:                                   const double tol);
+        -:   46:static double robust_madsigma(const gsl_vector *r, const size_t p, gsl_vector *workn);
+        -:   47:static double robust_robsigma(const gsl_vector *r, const double s,
+        -:   48:                              const double tune, gsl_multifit_robust_workspace *w);
+        -:   49:static double robust_sigma(const double s_ols, const double s_rob,
+        -:   50:                           gsl_multifit_robust_workspace *w);
+        -:   51:static int robust_covariance(const double sigma, gsl_matrix *cov,
+        -:   52:                             gsl_multifit_robust_workspace *w);
+        -:   53:
+        -:   54:/*
+        -:   55:gsl_multifit_robust_alloc
+        -:   56:  Allocate a robust workspace
+        -:   57:
+        -:   58:Inputs: T - robust weighting algorithm
+        -:   59:        n - number of observations
+        -:   60:        p - number of model parameters
+        -:   61:
+        -:   62:Return: pointer to workspace
+        -:   63:*/
+        -:   64:
+        -:   65:gsl_multifit_robust_workspace *
+        -:   66:gsl_multifit_robust_alloc(const gsl_multifit_robust_type *T,
+        -:   67:                          const size_t n, const size_t p)
+        -:   68:{
+        -:   69:  gsl_multifit_robust_workspace *w;
+        -:   70:
+    #####:   71:  if (n < p)
+        -:   72:    {
+    #####:   73:      GSL_ERROR_VAL("observations n must be >= p", GSL_EINVAL, 0);
+    #####:   74:    }
+        -:   75:
+    #####:   76:  w = calloc(1, sizeof(gsl_multifit_robust_workspace));
+    #####:   77:  if (w == 0)
+        -:   78:    {
+    #####:   79:      GSL_ERROR_VAL("failed to allocate space for multifit_robust struct",
+        -:   80:                    GSL_ENOMEM, 0);
+    #####:   81:    }
+        -:   82:
+    #####:   83:  w->n = n;
+    #####:   84:  w->p = p;
+    #####:   85:  w->type = T;
+    #####:   86:  w->maxiter = 100; /* maximum iterations */
+    #####:   87:  w->tune = w->type->tuning_default;
+        -:   88:
+    #####:   89:  w->multifit_p = gsl_multifit_linear_alloc(n, p);
+    #####:   90:  if (w->multifit_p == 0)
+        -:   91:    {
+    #####:   92:      gsl_multifit_robust_free(w);
+    #####:   93:      GSL_ERROR_VAL("failed to allocate space for multifit_linear struct",
+        -:   94:                    GSL_ENOMEM, 0);
+    #####:   95:    }
+        -:   96:
+    #####:   97:  w->r = gsl_vector_alloc(n);
+    #####:   98:  if (w->r == 0)
+        -:   99:    {
+    #####:  100:      gsl_multifit_robust_free(w);
+    #####:  101:      GSL_ERROR_VAL("failed to allocate space for residuals",
+        -:  102:                    GSL_ENOMEM, 0);
+    #####:  103:    }
+        -:  104:
+    #####:  105:  w->weights = gsl_vector_alloc(n);
+    #####:  106:  if (w->weights == 0)
+        -:  107:    {
+    #####:  108:      gsl_multifit_robust_free(w);
+    #####:  109:      GSL_ERROR_VAL("failed to allocate space for weights", GSL_ENOMEM, 0);
+    #####:  110:    }
+        -:  111:
+    #####:  112:  w->c_prev = gsl_vector_alloc(p);
+    #####:  113:  if (w->c_prev == 0)
+        -:  114:    {
+    #####:  115:      gsl_multifit_robust_free(w);
+    #####:  116:      GSL_ERROR_VAL("failed to allocate space for c_prev", GSL_ENOMEM, 0);
+    #####:  117:    }
+        -:  118:
+    #####:  119:  w->resfac = gsl_vector_alloc(n);
+    #####:  120:  if (w->resfac == 0)
+        -:  121:    {
+    #####:  122:      gsl_multifit_robust_free(w);
+    #####:  123:      GSL_ERROR_VAL("failed to allocate space for residual factors",
+        -:  124:                    GSL_ENOMEM, 0);
+    #####:  125:    }
+        -:  126:
+    #####:  127:  w->psi = gsl_vector_alloc(n);
+    #####:  128:  if (w->psi == 0)
+        -:  129:    {
+    #####:  130:      gsl_multifit_robust_free(w);
+    #####:  131:      GSL_ERROR_VAL("failed to allocate space for psi", GSL_ENOMEM, 0);
+    #####:  132:    }
+        -:  133:
+    #####:  134:  w->dpsi = gsl_vector_alloc(n);
+    #####:  135:  if (w->dpsi == 0)
+        -:  136:    {
+    #####:  137:      gsl_multifit_robust_free(w);
+    #####:  138:      GSL_ERROR_VAL("failed to allocate space for dpsi", GSL_ENOMEM, 0);
+    #####:  139:    }
+        -:  140:
+    #####:  141:  w->QSI = gsl_matrix_alloc(p, p);
+    #####:  142:  if (w->QSI == 0)
+        -:  143:    {
+    #####:  144:      gsl_multifit_robust_free(w);
+    #####:  145:      GSL_ERROR_VAL("failed to allocate space for QSI", GSL_ENOMEM, 0);
+    #####:  146:    }
+        -:  147:
+    #####:  148:  w->D = gsl_vector_alloc(p);
+    #####:  149:  if (w->D == 0)
+        -:  150:    {
+    #####:  151:      gsl_multifit_robust_free(w);
+    #####:  152:      GSL_ERROR_VAL("failed to allocate space for D", GSL_ENOMEM, 0);
+    #####:  153:    }
+        -:  154:
+    #####:  155:  w->workn = gsl_vector_alloc(n);
+    #####:  156:  if (w->workn == 0)
+        -:  157:    {
+    #####:  158:      gsl_multifit_robust_free(w);
+    #####:  159:      GSL_ERROR_VAL("failed to allocate space for workn", GSL_ENOMEM, 0);
+    #####:  160:    }
+        -:  161:
+    #####:  162:  w->stats.sigma_ols = 0.0;
+    #####:  163:  w->stats.sigma_mad = 0.0;
+    #####:  164:  w->stats.sigma_rob = 0.0;
+    #####:  165:  w->stats.sigma = 0.0;
+    #####:  166:  w->stats.Rsq = 0.0;
+    #####:  167:  w->stats.adj_Rsq = 0.0;
+    #####:  168:  w->stats.rmse = 0.0;
+    #####:  169:  w->stats.sse = 0.0;
+    #####:  170:  w->stats.dof = n - p;
+    #####:  171:  w->stats.weights = w->weights;
+    #####:  172:  w->stats.r = w->r;
+        -:  173:
+    #####:  174:  return w;
+    #####:  175:} /* gsl_multifit_robust_alloc() */
+        -:  176:
+        -:  177:/*
+        -:  178:gsl_multifit_robust_free()
+        -:  179:  Free memory associated with robust workspace
+        -:  180:*/
+        -:  181:
+        -:  182:void
+        -:  183:gsl_multifit_robust_free(gsl_multifit_robust_workspace *w)
+        -:  184:{
+    #####:  185:  if (w->multifit_p)
+    #####:  186:    gsl_multifit_linear_free(w->multifit_p);
+        -:  187:
+    #####:  188:  if (w->r)
+    #####:  189:    gsl_vector_free(w->r);
+        -:  190:
+    #####:  191:  if (w->weights)
+    #####:  192:    gsl_vector_free(w->weights);
+        -:  193:
+    #####:  194:  if (w->c_prev)
+    #####:  195:    gsl_vector_free(w->c_prev);
+        -:  196:
+    #####:  197:  if (w->resfac)
+    #####:  198:    gsl_vector_free(w->resfac);
+        -:  199:
+    #####:  200:  if (w->psi)
+    #####:  201:    gsl_vector_free(w->psi);
+        -:  202:
+    #####:  203:  if (w->dpsi)
+    #####:  204:    gsl_vector_free(w->dpsi);
+        -:  205:
+    #####:  206:  if (w->QSI)
+    #####:  207:    gsl_matrix_free(w->QSI);
+        -:  208:
+    #####:  209:  if (w->D)
+    #####:  210:    gsl_vector_free(w->D);
+        -:  211:
+    #####:  212:  if (w->workn)
+    #####:  213:    gsl_vector_free(w->workn);
+        -:  214:
+    #####:  215:  free(w);
+    #####:  216:} /* gsl_multifit_robust_free() */
+        -:  217:
+        -:  218:int
+        -:  219:gsl_multifit_robust_tune(const double tune, gsl_multifit_robust_workspace *w)
+        -:  220:{
+    #####:  221:  w->tune = tune;
+    #####:  222:  return GSL_SUCCESS;
+        -:  223:}
+        -:  224:
+        -:  225:int
+        -:  226:gsl_multifit_robust_maxiter(const size_t maxiter,
+        -:  227:                            gsl_multifit_robust_workspace *w)
+        -:  228:{
+    #####:  229:  if (w->maxiter == 0)
+        -:  230:    {
+    #####:  231:      GSL_ERROR("maxiter must be greater than 0", GSL_EINVAL);
+    #####:  232:    }
+        -:  233:  else
+        -:  234:    {
+    #####:  235:      w->maxiter = maxiter;
+    #####:  236:      return GSL_SUCCESS;
+        -:  237:    }
+    #####:  238:}
+        -:  239:
+        -:  240:const char *
+        -:  241:gsl_multifit_robust_name(const gsl_multifit_robust_workspace *w)
+        -:  242:{
+    #####:  243:  return w->type->name;
+        -:  244:}
+        -:  245:
+        -:  246:gsl_multifit_robust_stats
+        -:  247:gsl_multifit_robust_statistics(const gsl_multifit_robust_workspace *w)
+        -:  248:{
+    #####:  249:  return w->stats;
+        -:  250:}
+        -:  251:
+        -:  252:/*
+        -:  253:gsl_multifit_robust_weights()
+        -:  254:  Compute iterative weights for given residuals
+        -:  255:
+        -:  256:Inputs: r   - residuals
+        -:  257:        wts - (output) where to store weights
+        -:  258:              w_i = r_i / (sigma_mad * tune)
+        -:  259:        w   - workspace
+        -:  260:
+        -:  261:Return: success/error
+        -:  262:
+        -:  263:Notes:
+        -:  264:1) Sizes of r and wts must be equal
+        -:  265:2) Size of r/wts may be less than or equal to w->n, to allow
+        -:  266:for computing weights of a subset of data
+        -:  267:*/
+        -:  268:
+        -:  269:int
+        -:  270:gsl_multifit_robust_weights(const gsl_vector *r, gsl_vector *wts,
+        -:  271:                            gsl_multifit_robust_workspace *w)
+        -:  272:{
+    #####:  273:  if (r->size != wts->size)
+        -:  274:    {
+    #####:  275:      GSL_ERROR("residual vector does not match weight vector size", GSL_EBADLEN);
+    #####:  276:    }
+        -:  277:  else
+        -:  278:    {
+        -:  279:      int s;
+        -:  280:      double sigma;
+        -:  281:
+    #####:  282:      sigma = robust_madsigma(r, w->p, wts);
+        -:  283:
+        -:  284:      /* scale residuals by sigma and tuning factor */
+    #####:  285:      gsl_vector_memcpy(wts, r);
+        -:  286:
+    #####:  287:      if (sigma > 0.0)
+    #####:  288:        gsl_vector_scale(wts, 1.0 / (sigma * w->tune));
+        -:  289:
+        -:  290:      /* compute weights in-place */
+    #####:  291:      s = w->type->wfun(wts, wts);
+        -:  292:
+    #####:  293:      return s;
+        -:  294:    }
+    #####:  295:} /* gsl_multifit_robust_weights() */
+        -:  296:
+        -:  297:/*
+        -:  298:gsl_multifit_robust()
+        -:  299:  Perform robust iteratively reweighted linear least squares
+        -:  300:fit
+        -:  301:
+        -:  302:Inputs: X     - design matrix of basis functions
+        -:  303:        y     - right hand side vector
+        -:  304:        c     - (output) model coefficients
+        -:  305:        cov   - (output) covariance matrix
+        -:  306:        w     - workspace
+        -:  307:*/
+        -:  308:
+        -:  309:int
+        -:  310:gsl_multifit_robust(const gsl_matrix * X,
+        -:  311:                    const gsl_vector * y,
+        -:  312:                    gsl_vector * c,
+        -:  313:                    gsl_matrix * cov,
+        -:  314:                    gsl_multifit_robust_workspace *w)
+        -:  315:{
+        -:  316:  /* check matrix and vector sizes */
+    #####:  317:  if (X->size1 != y->size)
+        -:  318:    {
+    #####:  319:      GSL_ERROR
+        -:  320:        ("number of observations in y does not match rows of matrix X",
+        -:  321:         GSL_EBADLEN);
+    #####:  322:    }
+    #####:  323:  else if (X->size2 != c->size)
+        -:  324:    {
+    #####:  325:      GSL_ERROR ("number of parameters c does not match columns of matrix X",
+        -:  326:                 GSL_EBADLEN);
+    #####:  327:    }
+    #####:  328:  else if (cov->size1 != cov->size2)
+        -:  329:    {   
+    #####:  330:      GSL_ERROR ("covariance matrix is not square", GSL_ENOTSQR);
+    #####:  331:    }   
+    #####:  332:  else if (c->size != cov->size1)
+        -:  333:    {   
+    #####:  334:      GSL_ERROR
+        -:  335:        ("number of parameters does not match size of covariance matrix",
+        -:  336:         GSL_EBADLEN);
+    #####:  337:    }
+    #####:  338:  else if (X->size1 != w->n || X->size2 != w->p)
+        -:  339:    {
+    #####:  340:      GSL_ERROR
+        -:  341:        ("size of workspace does not match size of observation matrix",
+        -:  342:         GSL_EBADLEN);
+    #####:  343:    }
+        -:  344:  else
+        -:  345:    {
+        -:  346:      int s;
+        -:  347:      double chisq;
+    #####:  348:      const double tol = GSL_SQRT_DBL_EPSILON;
+    #####:  349:      int converged = 0;
+    #####:  350:      size_t numit = 0;
+    #####:  351:      const size_t n = y->size;
+    #####:  352:      double sigy = gsl_stats_sd(y->data, y->stride, n);
+        -:  353:      double sig_lower;
+        -:  354:      size_t i;
+        -:  355:
+        -:  356:      /*
+        -:  357:       * if the initial fit is very good, then finding outliers by comparing
+        -:  358:       * them to the residual standard deviation is difficult. Therefore we
+        -:  359:       * set a lower bound on the standard deviation estimate that is a small
+        -:  360:       * fraction of the standard deviation of the data values
+        -:  361:       */
+    #####:  362:      sig_lower = 1.0e-6 * sigy;
+    #####:  363:      if (sig_lower == 0.0)
+    #####:  364:        sig_lower = 1.0;
+        -:  365:
+        -:  366:      /* compute initial estimates using ordinary least squares */
+    #####:  367:      s = gsl_multifit_linear(X, y, c, cov, &chisq, w->multifit_p);
+    #####:  368:      if (s)
+    #####:  369:        return s;
+        -:  370:
+        -:  371:      /* save Q S^{-1} of original matrix */
+    #####:  372:      gsl_matrix_memcpy(w->QSI, w->multifit_p->QSI);
+    #####:  373:      gsl_vector_memcpy(w->D, w->multifit_p->D);
+        -:  374:
+        -:  375:      /* compute statistical leverage of each data point */
+    #####:  376:      s = gsl_linalg_SV_leverage(w->multifit_p->A, w->resfac);
+    #####:  377:      if (s)
+    #####:  378:        return s;
+        -:  379:
+        -:  380:      /* correct residuals with factor 1 / sqrt(1 - h) */
+    #####:  381:      for (i = 0; i < n; ++i)
+        -:  382:        {
+    #####:  383:          double h = gsl_vector_get(w->resfac, i);
+        -:  384:
+    #####:  385:          if (h > 0.9999)
+    #####:  386:            h = 0.9999;
+        -:  387:
+    #####:  388:          gsl_vector_set(w->resfac, i, 1.0 / sqrt(1.0 - h));
+    #####:  389:        }
+        -:  390:
+        -:  391:      /* compute residuals from OLS fit r = y - X c */
+    #####:  392:      s = gsl_multifit_linear_residuals(X, y, c, w->r);
+    #####:  393:      if (s)
+    #####:  394:        return s;
+        -:  395:
+        -:  396:      /* compute estimate of sigma from ordinary least squares */
+    #####:  397:      w->stats.sigma_ols = gsl_blas_dnrm2(w->r) / sqrt((double) w->stats.dof);
+        -:  398:
+    #####:  399:      while (!converged && ++numit <= w->maxiter)
+        -:  400:        {
+        -:  401:          double sig;
+        -:  402:
+        -:  403:          /* adjust residuals by statistical leverage (see DuMouchel and O'Brien) */
+    #####:  404:          s = gsl_vector_mul(w->r, w->resfac);
+    #####:  405:          if (s)
+    #####:  406:            return s;
+        -:  407:
+        -:  408:          /* compute estimate of standard deviation using MAD */
+    #####:  409:          sig = robust_madsigma(w->r, w->p, w->workn);
+        -:  410:
+        -:  411:          /* scale residuals by standard deviation and tuning parameter */
+    #####:  412:          gsl_vector_scale(w->r, 1.0 / (GSL_MAX(sig, sig_lower) * w->tune));
+        -:  413:
+        -:  414:          /* compute weights using these residuals */
+    #####:  415:          s = w->type->wfun(w->r, w->weights);
+    #####:  416:          if (s)
+    #####:  417:            return s;
+        -:  418:
+    #####:  419:          gsl_vector_memcpy(w->c_prev, c);
+        -:  420:
+        -:  421:          /* solve weighted least squares with new weights */
+    #####:  422:          s = gsl_multifit_wlinear(X, w->weights, y, c, cov, &chisq, w->multifit_p);
+    #####:  423:          if (s)
+    #####:  424:            return s;
+        -:  425:
+        -:  426:          /* compute new residuals r = y - X c */
+    #####:  427:          s = gsl_multifit_linear_residuals(X, y, c, w->r);
+    #####:  428:          if (s)
+    #####:  429:            return s;
+        -:  430:
+    #####:  431:          converged = robust_test_convergence(w->c_prev, c, tol);
+        -:  432:        }
+        -:  433:
+        -:  434:      /* compute final MAD sigma */
+    #####:  435:      w->stats.sigma_mad = robust_madsigma(w->r, w->p, w->workn);
+        -:  436:
+        -:  437:      /* compute robust estimate of sigma */
+    #####:  438:      w->stats.sigma_rob = robust_robsigma(w->r, w->stats.sigma_mad, w->tune, w);
+        -:  439:
+        -:  440:      /* compute final estimate of sigma */
+    #####:  441:      w->stats.sigma = robust_sigma(w->stats.sigma_ols, w->stats.sigma_rob, w);
+        -:  442:
+        -:  443:      /* store number of iterations */
+    #####:  444:      w->stats.numit = numit;
+        -:  445:
+        -:  446:      {
+    #####:  447:        double dof = (double) w->stats.dof;
+    #####:  448:        double rnorm = w->stats.sigma * sqrt(dof); /* see DuMouchel, sec 4.2 */
+    #####:  449:        double ss_err = rnorm * rnorm;
+    #####:  450:        double ss_tot = gsl_stats_tss(y->data, y->stride, n);
+        -:  451:
+        -:  452:        /* compute R^2 */
+    #####:  453:        w->stats.Rsq = 1.0 - ss_err / ss_tot;
+        -:  454:
+        -:  455:        /* compute adjusted R^2 */
+    #####:  456:        w->stats.adj_Rsq = 1.0 - (1.0 - w->stats.Rsq) * ((double)n - 1.0) / dof;
+        -:  457:
+        -:  458:        /* compute rmse */
+    #####:  459:        w->stats.rmse = sqrt(ss_err / dof);
+        -:  460:
+        -:  461:        /* store SSE */
+    #####:  462:        w->stats.sse = ss_err;
+        -:  463:      }
+        -:  464:
+        -:  465:      /* calculate covariance matrix = sigma^2 (X^T X)^{-1} */
+    #####:  466:      s = robust_covariance(w->stats.sigma, cov, w);
+    #####:  467:      if (s)
+    #####:  468:        return s;
+        -:  469:
+        -:  470:      /* raise an error if not converged */
+    #####:  471:      if (numit > w->maxiter)
+        -:  472:        {
+    #####:  473:          GSL_ERROR("maximum iterations exceeded", GSL_EMAXITER);
+    #####:  474:        }
+        -:  475:
+    #####:  476:      return s;
+        -:  477:    }
+    #####:  478:} /* gsl_multifit_robust() */
+        -:  479:
+        -:  480:/* Estimation of values for given x */
+        -:  481:int
+        -:  482:gsl_multifit_robust_est(const gsl_vector * x, const gsl_vector * c,
+        -:  483:                        const gsl_matrix * cov, double *y, double *y_err)
+        -:  484:{
+    #####:  485:  int s = gsl_multifit_linear_est(x, c, cov, y, y_err);
+        -:  486:
+    #####:  487:  return s;
+        -:  488:}
+        -:  489:
+        -:  490:/*
+        -:  491:gsl_multifit_robust_residuals()
+        -:  492:  Compute robust / studentized residuals from fit
+        -:  493:
+        -:  494:r_i = (y_i - Y_i) / (sigma * sqrt(1 - h_i))
+        -:  495:
+        -:  496:Inputs: X - design matrix
+        -:  497:        y - rhs vector
+        -:  498:        c - fit coefficients
+        -:  499:        r - (output) studentized residuals
+        -:  500:        w - workspace
+        -:  501:
+        -:  502:Notes:
+        -:  503:1) gsl_multifit_robust() must first be called to compute the coefficients
+        -:  504:c, the leverage factors in w->resfac, and sigma in w->stats.sigma
+        -:  505:*/
+        -:  506:
+        -:  507:int
+        -:  508:gsl_multifit_robust_residuals(const gsl_matrix * X, const gsl_vector * y,
+        -:  509:                              const gsl_vector * c, gsl_vector * r,
+        -:  510:                              gsl_multifit_robust_workspace * w)
+        -:  511:{
+    #####:  512:  if (X->size1 != y->size)
+        -:  513:    {
+    #####:  514:      GSL_ERROR
+        -:  515:        ("number of observations in y does not match rows of matrix X",
+        -:  516:         GSL_EBADLEN);
+    #####:  517:    }
+    #####:  518:  else if (X->size2 != c->size)
+        -:  519:    {
+    #####:  520:      GSL_ERROR ("number of parameters c does not match columns of matrix X",
+        -:  521:                 GSL_EBADLEN);
+    #####:  522:    }
+    #####:  523:  else if (y->size != r->size)
+        -:  524:    {
+    #####:  525:      GSL_ERROR ("number of observations in y does not match number of residuals",
+        -:  526:                 GSL_EBADLEN);
+    #####:  527:    }
+        -:  528:  else
+        -:  529:    {
+    #####:  530:      const double sigma = w->stats.sigma; /* previously calculated sigma */
+        -:  531:      int s;
+        -:  532:      size_t i;
+        -:  533:
+        -:  534:      /* compute r = y - X c */
+    #####:  535:      s = gsl_multifit_linear_residuals(X, y, c, r);
+    #####:  536:      if (s)
+    #####:  537:        return s;
+        -:  538:
+    #####:  539:      for (i = 0; i < r->size; ++i)
+        -:  540:        {
+    #####:  541:          double hfac = gsl_vector_get(w->resfac, i); /* 1/sqrt(1 - h_i) */
+    #####:  542:          double *ri = gsl_vector_ptr(r, i);
+        -:  543:
+        -:  544:          /* multiply residual by 1 / (sigma * sqrt(1 - h_i)) */
+    #####:  545:          *ri *= hfac / sigma;
+    #####:  546:        }
+        -:  547:
+    #####:  548:      return s;
+        -:  549:    }
+    #####:  550:} /* gsl_multifit_robust_residuals() */
+        -:  551:
+        -:  552:/***********************************
+        -:  553: * INTERNAL ROUTINES               *
+        -:  554: ***********************************/
+        -:  555:
+        -:  556:/*
+        -:  557:robust_test_convergence()
+        -:  558:  Test for convergence in robust least squares
+        -:  559:
+        -:  560:Convergence criteria:
+        -:  561:
+        -:  562:|c_i^(k) - c_i^(k-1)| <= tol * max(|c_i^(k)|, |c_i^(k-1)|)
+        -:  563:
+        -:  564:for all i. k refers to iteration number.
+        -:  565:
+        -:  566:Inputs: c_prev - coefficients from previous iteration
+        -:  567:        c      - coefficients from current iteration
+        -:  568:        tol    - tolerance
+        -:  569:
+        -:  570:Return: 1 if converged, 0 if not
+        -:  571:*/
+        -:  572:
+        -:  573:static int
+        -:  574:robust_test_convergence(const gsl_vector *c_prev, const gsl_vector *c,
+        -:  575:                        const double tol)
+        -:  576:{
+    #####:  577:  size_t p = c->size;
+        -:  578:  size_t i;
+        -:  579:
+    #####:  580:  for (i = 0; i < p; ++i)
+        -:  581:    {
+    #####:  582:      double ai = gsl_vector_get(c_prev, i);
+    #####:  583:      double bi = gsl_vector_get(c, i);
+        -:  584:
+    #####:  585:      if (fabs(bi - ai) > tol * GSL_MAX(fabs(ai), fabs(bi)))
+    #####:  586:        return 0; /* not yet converged */
+    #####:  587:    }
+        -:  588:
+        -:  589:  /* converged */
+    #####:  590:  return 1;
+    #####:  591:} /* robust_test_convergence() */
+        -:  592:
+        -:  593:/*
+        -:  594:robust_madsigma()
+        -:  595:  Estimate the standard deviation of the residuals using
+        -:  596:the Median-Absolute-Deviation (MAD) of the residuals,
+        -:  597:throwing away the smallest p residuals.
+        -:  598:
+        -:  599:See: Street et al, 1988
+        -:  600:
+        -:  601:Inputs: r     - vector of residuals
+        -:  602:        p     - number of model coefficients (smallest p residuals are
+        -:  603:                ignored)
+        -:  604:        workn - workspace of size n = length(r)
+        -:  605:*/
+        -:  606:
+        -:  607:static double
+        -:  608:robust_madsigma(const gsl_vector *r, const size_t p, gsl_vector *workn)
+        -:  609:{
+    #####:  610:  size_t n = r->size;
+        -:  611:  double sigma;
+        -:  612:  size_t i;
+        -:  613:
+        -:  614:  /* allow for the possibility that r->size < w->n */
+    #####:  615:  gsl_vector_view v1 = gsl_vector_subvector(workn, 0, n);
+        -:  616:  gsl_vector_view v2;
+        -:  617:
+        -:  618:  /* copy |r| into workn */
+    #####:  619:  for (i = 0; i < n; ++i)
+        -:  620:    {
+    #####:  621:      gsl_vector_set(&v1.vector, i, fabs(gsl_vector_get(r, i)));
+    #####:  622:    }
+        -:  623:
+    #####:  624:  gsl_sort_vector(&v1.vector);
+        -:  625:
+        -:  626:  /*
+        -:  627:   * ignore the smallest p residuals when computing the median
+        -:  628:   * (see Street et al 1988)
+        -:  629:   */
+    #####:  630:  v2 = gsl_vector_subvector(&v1.vector, p - 1, n - p + 1);
+    #####:  631:  sigma = gsl_stats_median_from_sorted_data(v2.vector.data, v2.vector.stride, v2.vector.size) / 0.6745;
+        -:  632:
+    #####:  633:  return sigma;
+        -:  634:} /* robust_madsigma() */
+        -:  635:
+        -:  636:/*
+        -:  637:robust_robsigma()
+        -:  638:  Compute robust estimate of sigma so that
+        -:  639:sigma^2 * inv(X' * X) is a reasonable estimate of
+        -:  640:the covariance for robust regression. Based heavily
+        -:  641:on the equations of Street et al, 1988.
+        -:  642:
+        -:  643:Inputs: r    - vector of residuals y - X c
+        -:  644:        s    - sigma estimate using MAD
+        -:  645:        tune - tuning constant
+        -:  646:        w    - workspace
+        -:  647:*/
+        -:  648:
+        -:  649:static double
+        -:  650:robust_robsigma(const gsl_vector *r, const double s,
+        -:  651:                const double tune, gsl_multifit_robust_workspace *w)
+        -:  652:{
+        -:  653:  double sigma;
+        -:  654:  size_t i;
+    #####:  655:  const size_t n = w->n;
+    #####:  656:  const size_t p = w->p;
+    #####:  657:  const double st = s * tune;
+        -:  658:  double a, b, lambda;
+        -:  659:
+        -:  660:  /* compute u = r / sqrt(1 - h) / st */
+    #####:  661:  gsl_vector_memcpy(w->workn, r);
+    #####:  662:  gsl_vector_mul(w->workn, w->resfac);
+    #####:  663:  gsl_vector_scale(w->workn, 1.0 / st);
+        -:  664:
+        -:  665:  /* compute w(u) and psi'(u) */
+    #####:  666:  w->type->wfun(w->workn, w->psi);
+    #####:  667:  w->type->psi_deriv(w->workn, w->dpsi);
+        -:  668:
+        -:  669:  /* compute psi(u) = u*w(u) */
+    #####:  670:  gsl_vector_mul(w->psi, w->workn);
+        -:  671:
+        -:  672:  /* Street et al, Eq (3) */
+    #####:  673:  a = gsl_stats_mean(w->dpsi->data, w->dpsi->stride, n);
+        -:  674:
+        -:  675:  /* Street et al, Eq (5) */
+    #####:  676:  b = 0.0;
+    #####:  677:  for (i = 0; i < n; ++i)
+        -:  678:    {
+    #####:  679:      double psi_i = gsl_vector_get(w->psi, i);
+    #####:  680:      double resfac = gsl_vector_get(w->resfac, i);
+    #####:  681:      double fac = 1.0 / (resfac*resfac); /* 1 - h */
+        -:  682:
+    #####:  683:      b += fac * psi_i * psi_i;
+    #####:  684:    }
+    #####:  685:  b /= (double) (n - p);
+        -:  686:
+        -:  687:  /* Street et al, Eq (5) */
+    #####:  688:  lambda = 1.0 + ((double)p)/((double)n) * (1.0 - a) / a;
+        -:  689:
+    #####:  690:  sigma = lambda * sqrt(b) * st / a;
+        -:  691:
+    #####:  692:  return sigma;
+        -:  693:} /* robust_robsigma() */
+        -:  694:
+        -:  695:/*
+        -:  696:robust_sigma()
+        -:  697:  Compute final estimate of residual standard deviation, using
+        -:  698:the OLS and robust sigma estimates.
+        -:  699:
+        -:  700:This equation is taken from DuMouchel and O'Brien, sec 4.1:
+        -:  701:\hat{\sigma_R}
+        -:  702:
+        -:  703:Inputs: s_ols - OLS sigma
+        -:  704:        s_rob - robust sigma
+        -:  705:        w     - workspace
+        -:  706:
+        -:  707:Return: final estimate of sigma
+        -:  708:*/
+        -:  709:
+        -:  710:static double
+        -:  711:robust_sigma(const double s_ols, const double s_rob,
+        -:  712:             gsl_multifit_robust_workspace *w)
+        -:  713:{
+        -:  714:  double sigma;
+    #####:  715:  const double p = (double) w->p;
+    #####:  716:  const double n = (double) w->n;
+        -:  717:
+        -:  718:  /* see DuMouchel and O'Brien, sec 4.1 */
+    #####:  719:  sigma = GSL_MAX(s_rob,
+        -:  720:                  sqrt((s_ols*s_ols*p*p + s_rob*s_rob*n) /
+        -:  721:                       (p*p + n)));
+        -:  722:
+    #####:  723:  return sigma;
+        -:  724:} /* robust_sigma() */
+        -:  725:
+        -:  726:/*
+        -:  727:robust_covariance()
+        -:  728:  Calculate final covariance matrix, defined as:
+        -:  729:
+        -:  730:  sigma * (X^T X)^{-1}
+        -:  731:
+        -:  732:Inputs: sigma - residual standard deviation
+        -:  733:        cov   - (output) covariance matrix
+        -:  734:        w     - workspace
+        -:  735:*/
+        -:  736:
+        -:  737:static int
+        -:  738:robust_covariance(const double sigma, gsl_matrix *cov,
+        -:  739:                  gsl_multifit_robust_workspace *w)
+        -:  740:{
+    #####:  741:  int status = 0;
+    #####:  742:  const size_t p = w->p;
+    #####:  743:  const double s2 = sigma * sigma;
+        -:  744:  size_t i, j;
+    #####:  745:  gsl_matrix *QSI = w->QSI;
+    #####:  746:  gsl_vector *D = w->D;
+        -:  747:
+        -:  748:  /* Form variance-covariance matrix cov = s2 * (Q S^-1) (Q S^-1)^T */
+        -:  749:
+    #####:  750:  for (i = 0; i < p; i++)
+        -:  751:    {
+    #####:  752:      gsl_vector_view row_i = gsl_matrix_row (QSI, i);
+    #####:  753:      double d_i = gsl_vector_get (D, i);
+        -:  754:
+    #####:  755:      for (j = i; j < p; j++)
+        -:  756:        {
+    #####:  757:          gsl_vector_view row_j = gsl_matrix_row (QSI, j);
+    #####:  758:          double d_j = gsl_vector_get (D, j);
+        -:  759:          double s;
+        -:  760:
+    #####:  761:          gsl_blas_ddot (&row_i.vector, &row_j.vector, &s);
+        -:  762:
+    #####:  763:          gsl_matrix_set (cov, i, j, s * s2 / (d_i * d_j));
+    #####:  764:          gsl_matrix_set (cov, j, i, s * s2 / (d_i * d_j));
+    #####:  765:        }
+    #####:  766:    }
+        -:  767:
+    #####:  768:  return status;
+        -:  769:} /* robust_covariance() */

@@ -1,0 +1,362 @@
+        -:    0:Source:../gsl/gsl_matrix_double.h
+        -:    0:Graph:multirobust.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:/* matrix/gsl_matrix_double.h
+        -:    2: * 
+        -:    3: * Copyright (C) 1996, 1997, 1998, 1999, 2000, 2007 Gerard Jungman, Brian Gough
+        -:    4: * 
+        -:    5: * This program is free software; you can redistribute it and/or modify
+        -:    6: * it under the terms of the GNU General Public License as published by
+        -:    7: * the Free Software Foundation; either version 3 of the License, or (at
+        -:    8: * your option) any later version.
+        -:    9: * 
+        -:   10: * This program is distributed in the hope that it will be useful, but
+        -:   11: * WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   12: * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+        -:   13: * General Public License for more details.
+        -:   14: * 
+        -:   15: * You should have received a copy of the GNU General Public License
+        -:   16: * along with this program; if not, write to the Free Software
+        -:   17: * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+        -:   18: */
+        -:   19:
+        -:   20:#ifndef __GSL_MATRIX_DOUBLE_H__
+        -:   21:#define __GSL_MATRIX_DOUBLE_H__
+        -:   22:
+        -:   23:#include <stdlib.h>
+        -:   24:#include <gsl/gsl_types.h>
+        -:   25:#include <gsl/gsl_errno.h>
+        -:   26:#include <gsl/gsl_inline.h>
+        -:   27:#include <gsl/gsl_check_range.h>
+        -:   28:#include <gsl/gsl_vector_double.h>
+        -:   29:#include <gsl/gsl_blas_types.h>
+        -:   30:
+        -:   31:#undef __BEGIN_DECLS
+        -:   32:#undef __END_DECLS
+        -:   33:#ifdef __cplusplus
+        -:   34:# define __BEGIN_DECLS extern "C" {
+        -:   35:# define __END_DECLS }
+        -:   36:#else
+        -:   37:# define __BEGIN_DECLS /* empty */
+        -:   38:# define __END_DECLS /* empty */
+        -:   39:#endif
+        -:   40:
+        -:   41:__BEGIN_DECLS
+        -:   42:
+        -:   43:typedef struct 
+        -:   44:{
+        -:   45:  size_t size1;
+        -:   46:  size_t size2;
+        -:   47:  size_t tda;
+        -:   48:  double * data;
+        -:   49:  gsl_block * block;
+        -:   50:  int owner;
+        -:   51:} gsl_matrix;
+        -:   52:
+        -:   53:typedef struct
+        -:   54:{
+        -:   55:  gsl_matrix matrix;
+        -:   56:} _gsl_matrix_view;
+        -:   57:
+        -:   58:typedef _gsl_matrix_view gsl_matrix_view;
+        -:   59:
+        -:   60:typedef struct
+        -:   61:{
+        -:   62:  gsl_matrix matrix;
+        -:   63:} _gsl_matrix_const_view;
+        -:   64:
+        -:   65:typedef const _gsl_matrix_const_view gsl_matrix_const_view;
+        -:   66:
+        -:   67:/* Allocation */
+        -:   68:
+        -:   69:gsl_matrix * 
+        -:   70:gsl_matrix_alloc (const size_t n1, const size_t n2);
+        -:   71:
+        -:   72:gsl_matrix * 
+        -:   73:gsl_matrix_calloc (const size_t n1, const size_t n2);
+        -:   74:
+        -:   75:gsl_matrix * 
+        -:   76:gsl_matrix_alloc_from_block (gsl_block * b, 
+        -:   77:                                   const size_t offset, 
+        -:   78:                                   const size_t n1, 
+        -:   79:                                   const size_t n2, 
+        -:   80:                                   const size_t d2);
+        -:   81:
+        -:   82:gsl_matrix * 
+        -:   83:gsl_matrix_alloc_from_matrix (gsl_matrix * m,
+        -:   84:                                    const size_t k1, 
+        -:   85:                                    const size_t k2,
+        -:   86:                                    const size_t n1, 
+        -:   87:                                    const size_t n2);
+        -:   88:
+        -:   89:gsl_vector * 
+        -:   90:gsl_vector_alloc_row_from_matrix (gsl_matrix * m,
+        -:   91:                                        const size_t i);
+        -:   92:
+        -:   93:gsl_vector * 
+        -:   94:gsl_vector_alloc_col_from_matrix (gsl_matrix * m,
+        -:   95:                                        const size_t j);
+        -:   96:
+        -:   97:void gsl_matrix_free (gsl_matrix * m);
+        -:   98:
+        -:   99:/* Views */
+        -:  100:
+        -:  101:_gsl_matrix_view 
+        -:  102:gsl_matrix_submatrix (gsl_matrix * m, 
+        -:  103:                            const size_t i, const size_t j, 
+        -:  104:                            const size_t n1, const size_t n2);
+        -:  105:
+        -:  106:_gsl_vector_view 
+        -:  107:gsl_matrix_row (gsl_matrix * m, const size_t i);
+        -:  108:
+        -:  109:_gsl_vector_view 
+        -:  110:gsl_matrix_column (gsl_matrix * m, const size_t j);
+        -:  111:
+        -:  112:_gsl_vector_view 
+        -:  113:gsl_matrix_diagonal (gsl_matrix * m);
+        -:  114:
+        -:  115:_gsl_vector_view 
+        -:  116:gsl_matrix_subdiagonal (gsl_matrix * m, const size_t k);
+        -:  117:
+        -:  118:_gsl_vector_view 
+        -:  119:gsl_matrix_superdiagonal (gsl_matrix * m, const size_t k);
+        -:  120:
+        -:  121:_gsl_vector_view
+        -:  122:gsl_matrix_subrow (gsl_matrix * m, const size_t i,
+        -:  123:                         const size_t offset, const size_t n);
+        -:  124:
+        -:  125:_gsl_vector_view
+        -:  126:gsl_matrix_subcolumn (gsl_matrix * m, const size_t j,
+        -:  127:                            const size_t offset, const size_t n);
+        -:  128:
+        -:  129:_gsl_matrix_view
+        -:  130:gsl_matrix_view_array (double * base,
+        -:  131:                             const size_t n1, 
+        -:  132:                             const size_t n2);
+        -:  133:
+        -:  134:_gsl_matrix_view
+        -:  135:gsl_matrix_view_array_with_tda (double * base, 
+        -:  136:                                      const size_t n1, 
+        -:  137:                                      const size_t n2,
+        -:  138:                                      const size_t tda);
+        -:  139:
+        -:  140:
+        -:  141:_gsl_matrix_view
+        -:  142:gsl_matrix_view_vector (gsl_vector * v,
+        -:  143:                              const size_t n1, 
+        -:  144:                              const size_t n2);
+        -:  145:
+        -:  146:_gsl_matrix_view
+        -:  147:gsl_matrix_view_vector_with_tda (gsl_vector * v,
+        -:  148:                                       const size_t n1, 
+        -:  149:                                       const size_t n2,
+        -:  150:                                       const size_t tda);
+        -:  151:
+        -:  152:
+        -:  153:_gsl_matrix_const_view 
+        -:  154:gsl_matrix_const_submatrix (const gsl_matrix * m, 
+        -:  155:                                  const size_t i, const size_t j, 
+        -:  156:                                  const size_t n1, const size_t n2);
+        -:  157:
+        -:  158:_gsl_vector_const_view 
+        -:  159:gsl_matrix_const_row (const gsl_matrix * m, 
+        -:  160:                            const size_t i);
+        -:  161:
+        -:  162:_gsl_vector_const_view 
+        -:  163:gsl_matrix_const_column (const gsl_matrix * m, 
+        -:  164:                               const size_t j);
+        -:  165:
+        -:  166:_gsl_vector_const_view
+        -:  167:gsl_matrix_const_diagonal (const gsl_matrix * m);
+        -:  168:
+        -:  169:_gsl_vector_const_view 
+        -:  170:gsl_matrix_const_subdiagonal (const gsl_matrix * m, 
+        -:  171:                                    const size_t k);
+        -:  172:
+        -:  173:_gsl_vector_const_view 
+        -:  174:gsl_matrix_const_superdiagonal (const gsl_matrix * m, 
+        -:  175:                                      const size_t k);
+        -:  176:
+        -:  177:_gsl_vector_const_view
+        -:  178:gsl_matrix_const_subrow (const gsl_matrix * m, const size_t i,
+        -:  179:                               const size_t offset, const size_t n);
+        -:  180:
+        -:  181:_gsl_vector_const_view
+        -:  182:gsl_matrix_const_subcolumn (const gsl_matrix * m, const size_t j,
+        -:  183:                                  const size_t offset, const size_t n);
+        -:  184:
+        -:  185:_gsl_matrix_const_view
+        -:  186:gsl_matrix_const_view_array (const double * base,
+        -:  187:                                   const size_t n1, 
+        -:  188:                                   const size_t n2);
+        -:  189:
+        -:  190:_gsl_matrix_const_view
+        -:  191:gsl_matrix_const_view_array_with_tda (const double * base, 
+        -:  192:                                            const size_t n1, 
+        -:  193:                                            const size_t n2,
+        -:  194:                                            const size_t tda);
+        -:  195:
+        -:  196:_gsl_matrix_const_view
+        -:  197:gsl_matrix_const_view_vector (const gsl_vector * v,
+        -:  198:                                    const size_t n1, 
+        -:  199:                                    const size_t n2);
+        -:  200:
+        -:  201:_gsl_matrix_const_view
+        -:  202:gsl_matrix_const_view_vector_with_tda (const gsl_vector * v,
+        -:  203:                                             const size_t n1, 
+        -:  204:                                             const size_t n2,
+        -:  205:                                             const size_t tda);
+        -:  206:
+        -:  207:/* Operations */
+        -:  208:
+        -:  209:void gsl_matrix_set_zero (gsl_matrix * m);
+        -:  210:void gsl_matrix_set_identity (gsl_matrix * m);
+        -:  211:void gsl_matrix_set_all (gsl_matrix * m, double x);
+        -:  212:
+        -:  213:int gsl_matrix_fread (FILE * stream, gsl_matrix * m) ;
+        -:  214:int gsl_matrix_fwrite (FILE * stream, const gsl_matrix * m) ;
+        -:  215:int gsl_matrix_fscanf (FILE * stream, gsl_matrix * m);
+        -:  216:int gsl_matrix_fprintf (FILE * stream, const gsl_matrix * m, const char * format);
+        -:  217: 
+        -:  218:int gsl_matrix_memcpy(gsl_matrix * dest, const gsl_matrix * src);
+        -:  219:int gsl_matrix_swap(gsl_matrix * m1, gsl_matrix * m2);
+        -:  220:int gsl_matrix_tricpy(CBLAS_UPLO_t Uplo, CBLAS_DIAG_t Diag, gsl_matrix * dest, const gsl_matrix * src);
+        -:  221:
+        -:  222:int gsl_matrix_swap_rows(gsl_matrix * m, const size_t i, const size_t j);
+        -:  223:int gsl_matrix_swap_columns(gsl_matrix * m, const size_t i, const size_t j);
+        -:  224:int gsl_matrix_swap_rowcol(gsl_matrix * m, const size_t i, const size_t j);
+        -:  225:int gsl_matrix_transpose (gsl_matrix * m);
+        -:  226:int gsl_matrix_transpose_memcpy (gsl_matrix * dest, const gsl_matrix * src);
+        -:  227:int gsl_matrix_transpose_tricpy (CBLAS_UPLO_t Uplo_src, CBLAS_DIAG_t Diag, gsl_matrix * dest, const gsl_matrix * src);
+        -:  228:
+        -:  229:double gsl_matrix_max (const gsl_matrix * m);
+        -:  230:double gsl_matrix_min (const gsl_matrix * m);
+        -:  231:void gsl_matrix_minmax (const gsl_matrix * m, double * min_out, double * max_out);
+        -:  232:
+        -:  233:void gsl_matrix_max_index (const gsl_matrix * m, size_t * imax, size_t *jmax);
+        -:  234:void gsl_matrix_min_index (const gsl_matrix * m, size_t * imin, size_t *jmin);
+        -:  235:void gsl_matrix_minmax_index (const gsl_matrix * m, size_t * imin, size_t * jmin, size_t * imax, size_t * jmax);
+        -:  236:
+        -:  237:int gsl_matrix_equal (const gsl_matrix * a, const gsl_matrix * b);
+        -:  238:
+        -:  239:int gsl_matrix_isnull (const gsl_matrix * m);
+        -:  240:int gsl_matrix_ispos (const gsl_matrix * m);
+        -:  241:int gsl_matrix_isneg (const gsl_matrix * m);
+        -:  242:int gsl_matrix_isnonneg (const gsl_matrix * m);
+        -:  243:
+        -:  244:double gsl_matrix_norm1 (const gsl_matrix * m);
+        -:  245:
+        -:  246:int gsl_matrix_add (gsl_matrix * a, const gsl_matrix * b);
+        -:  247:int gsl_matrix_sub (gsl_matrix * a, const gsl_matrix * b);
+        -:  248:int gsl_matrix_mul_elements (gsl_matrix * a, const gsl_matrix * b);
+        -:  249:int gsl_matrix_div_elements (gsl_matrix * a, const gsl_matrix * b);
+        -:  250:int gsl_matrix_scale (gsl_matrix * a, const double x);
+        -:  251:int gsl_matrix_scale_rows (gsl_matrix * a, const gsl_vector * x);
+        -:  252:int gsl_matrix_scale_columns (gsl_matrix * a, const gsl_vector * x);
+        -:  253:int gsl_matrix_add_constant (gsl_matrix * a, const double x);
+        -:  254:int gsl_matrix_add_diagonal (gsl_matrix * a, const double x);
+        -:  255:
+        -:  256:/***********************************************************************/
+        -:  257:/* The functions below are obsolete                                    */
+        -:  258:/***********************************************************************/
+        -:  259:int gsl_matrix_get_row(gsl_vector * v, const gsl_matrix * m, const size_t i);
+        -:  260:int gsl_matrix_get_col(gsl_vector * v, const gsl_matrix * m, const size_t j);
+        -:  261:int gsl_matrix_set_row(gsl_matrix * m, const size_t i, const gsl_vector * v);
+        -:  262:int gsl_matrix_set_col(gsl_matrix * m, const size_t j, const gsl_vector * v);
+        -:  263:/***********************************************************************/
+        -:  264:
+        -:  265:/* inline functions if you are using GCC */
+        -:  266:
+        -:  267:INLINE_DECL double   gsl_matrix_get(const gsl_matrix * m, const size_t i, const size_t j);
+        -:  268:INLINE_DECL void    gsl_matrix_set(gsl_matrix * m, const size_t i, const size_t j, const double x);
+        -:  269:INLINE_DECL double * gsl_matrix_ptr(gsl_matrix * m, const size_t i, const size_t j);
+        -:  270:INLINE_DECL const double * gsl_matrix_const_ptr(const gsl_matrix * m, const size_t i, const size_t j);
+        -:  271:
+        -:  272:#ifdef HAVE_INLINE
+        -:  273:INLINE_FUN 
+        -:  274:double
+        -:  275:gsl_matrix_get(const gsl_matrix * m, const size_t i, const size_t j)
+        -:  276:{
+        -:  277:#if GSL_RANGE_CHECK
+        -:  278:  if (GSL_RANGE_COND(1)) 
+        -:  279:    {
+        -:  280:      if (i >= m->size1)
+        -:  281:        {
+        -:  282:          GSL_ERROR_VAL("first index out of range", GSL_EINVAL, 0) ;
+        -:  283:        }
+        -:  284:      else if (j >= m->size2)
+        -:  285:        {
+        -:  286:          GSL_ERROR_VAL("second index out of range", GSL_EINVAL, 0) ;
+        -:  287:        }
+        -:  288:    }
+        -:  289:#endif
+        -:  290:  return m->data[i * m->tda + j] ;
+        -:  291:} 
+        -:  292:
+        -:  293:INLINE_FUN 
+        -:  294:void
+        -:  295:gsl_matrix_set(gsl_matrix * m, const size_t i, const size_t j, const double x)
+        -:  296:{
+        -:  297:#if GSL_RANGE_CHECK
+        -:  298:  if (GSL_RANGE_COND(1)) 
+        -:  299:    {
+        -:  300:      if (i >= m->size1)
+        -:  301:        {
+        -:  302:          GSL_ERROR_VOID("first index out of range", GSL_EINVAL) ;
+        -:  303:        }
+        -:  304:      else if (j >= m->size2)
+        -:  305:        {
+        -:  306:          GSL_ERROR_VOID("second index out of range", GSL_EINVAL) ;
+        -:  307:        }
+        -:  308:    }
+        -:  309:#endif
+    #####:  310:  m->data[i * m->tda + j] = x ;
+    #####:  311:}
+        -:  312:
+        -:  313:INLINE_FUN 
+        -:  314:double *
+        -:  315:gsl_matrix_ptr(gsl_matrix * m, const size_t i, const size_t j)
+        -:  316:{
+        -:  317:#if GSL_RANGE_CHECK
+        -:  318:  if (GSL_RANGE_COND(1)) 
+        -:  319:    {
+        -:  320:      if (i >= m->size1)
+        -:  321:        {
+        -:  322:          GSL_ERROR_NULL("first index out of range", GSL_EINVAL) ;
+        -:  323:        }
+        -:  324:      else if (j >= m->size2)
+        -:  325:        {
+        -:  326:          GSL_ERROR_NULL("second index out of range", GSL_EINVAL) ;
+        -:  327:        }
+        -:  328:    }
+        -:  329:#endif
+        -:  330:  return (double *) (m->data + (i * m->tda + j)) ;
+        -:  331:} 
+        -:  332:
+        -:  333:INLINE_FUN 
+        -:  334:const double *
+        -:  335:gsl_matrix_const_ptr(const gsl_matrix * m, const size_t i, const size_t j)
+        -:  336:{
+        -:  337:#if GSL_RANGE_CHECK
+        -:  338:  if (GSL_RANGE_COND(1)) 
+        -:  339:    {
+        -:  340:      if (i >= m->size1)
+        -:  341:        {
+        -:  342:          GSL_ERROR_NULL("first index out of range", GSL_EINVAL) ;
+        -:  343:        }
+        -:  344:      else if (j >= m->size2)
+        -:  345:        {
+        -:  346:          GSL_ERROR_NULL("second index out of range", GSL_EINVAL) ;
+        -:  347:        }
+        -:  348:    }
+        -:  349:#endif
+        -:  350:  return (const double *) (m->data + (i * m->tda + j)) ;
+        -:  351:} 
+        -:  352:
+        -:  353:#endif
+        -:  354:
+        -:  355:__END_DECLS
+        -:  356:
+        -:  357:#endif /* __GSL_MATRIX_DOUBLE_H__ */

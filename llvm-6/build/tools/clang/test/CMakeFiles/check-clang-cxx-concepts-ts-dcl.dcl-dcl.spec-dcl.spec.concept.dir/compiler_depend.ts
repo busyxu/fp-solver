@@ -1,2 +1,0 @@
-# CMAKE generated file: DO NOT EDIT!
-# Timestamp file for custom commands dependencies management for check-clang-cxx-concepts-ts-dcl.dcl-dcl.spec-dcl.spec.concept.
