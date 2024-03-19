@@ -1,0 +1,69 @@
+KLEE: KLEE: WATCHDOG: watching 5352
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_hermite_prob_e&mathsat5&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>MathSAT5 exec time: 2.673102e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: WARNING ONCE: flushing 7152 bytes on read, may be slow and/or crash: MO11588[7152] allocated at global:doub_fact_table
+>>>MathSAT5 exec time: 9.166243e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 4.101431e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 4.457720e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 3.103020e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 2.983191e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 3.704449e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 9.876934e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+MathSAT5 Timeout !
+>>>MathSAT5 exec time: 3.019627e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 1.416229e+03 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 4.078421e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 4.147543e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 2.564908e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 2.148511e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 2.397421e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 2.306512e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 2.312958e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 1.014137e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 8.128960e-01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140393193084544, 94186816032224, 94186817104336, 53, 94186815926416, 94186817104320) at stream.c:46 1
+gsl: hermite.c:53: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140393193084768) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+
+KLEE: done: total instructions = 290
+KLEE: done: completed paths = 8
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 8
+Total exec time: 2.501891e+05 ms

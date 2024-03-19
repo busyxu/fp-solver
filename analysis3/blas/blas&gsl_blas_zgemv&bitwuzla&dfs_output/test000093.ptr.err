@@ -1,0 +1,9 @@
+Error: memory error: out of bound pointer
+Stack: 
+	#000210592 in cblas_zgemv (order=101, TransA, M=2, N=2, alpha=94285638615904, A=94285638272800, lda=2, X=94285638272864, incX=1, beta=94285638615952, Y=94285638387456, incY=1)
+	#100209981 in gsl_blas_zgemv (, , , =94285639020384, =94285639020000, , , =94285639020144) at blas.c:679
+	#200005047 in main ()
+Info: 
+	address: 94285638272832
+	next: object at 94285318581504 of size 256
+		MO9870[256] allocated at global:aph2_data

@@ -1,0 +1,78 @@
+KLEE: KLEE: WATCHDOG: watching 29624
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RJ_e&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: ERROR: ellint.c:244: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 1.246668e+01 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+>>>Dreal-Z3 exec time: 1.924000e-03 ms
+>>>Dreal-dreal exec time: 1.011474e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.197000e-03 ms
+>>>Dreal-dreal exec time: 2.157600e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>Dreal-Z3 exec time: 2.445000e-03 ms
+>>>Dreal-dreal exec time: 6.643000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+KLEE: WARNING ONCE: calling external: fprintf(140425112626816, 94427456123520, 94427457169600, 253, 94427456016624, 94427457169584) at stream.c:46 1
+gsl: ellint.c:253: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140425112627040) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 2.545000e-03 ms
+>>>Dreal-dreal exec time: 2.012530e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: ellint.c:252: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 2.035000e-03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: ellint.c:252: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 1.653000e-03 ms
+>>>Dreal-dreal exec time: 2.315900e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 5.060000e-03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+>>>Dreal-Z3 exec time: 1.513000e-03 ms
+>>>Dreal-dreal exec time: 2.163120e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 4.187000e-03 ms
+>>>Dreal-dreal exec time: 1.340550e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+gsl: ellint.c:250: ERROR: domain error
+Default GSL error handler invoked.
+>>>Dreal-Z3 exec time: 2.675000e-03 ms
+>>>Dreal-dreal exec time: 8.878800e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+gsl: ellint.c:250: ERROR: domain error
+Default GSL error handler invoked.
+>>>Dreal-Z3 exec time: 2.244000e-03 ms
+>>>Dreal-dreal exec time: 5.696800e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+gsl: ellint.c:250: ERROR: domain error
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 388
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 8
+KLEE: done: generated tests = 4
+Total exec time: 1.393567e+04 ms

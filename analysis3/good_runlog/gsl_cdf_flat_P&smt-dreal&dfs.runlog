@@ -1,0 +1,85 @@
+KLEE: KLEE: WATCHDOG: watching 30613
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_flat_P&smt-dreal&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Synergy-Z3 exec time: 1.654356e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.477707e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 6.891744e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 2.026864e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.600642e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.657934e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.868248e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.640021e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 3.436600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.322280e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 5.370000e-03 ms
+>>>Synergy-dreal exec time: 7.915250e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.244345e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.598000e-03 ms
+>>>Synergy-dreal exec time: 1.929248e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.666046e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: FDiv Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 2.507594e+03 ms
+>>>Synergy-dreal exec time: 4.207888e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.654022e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 2.252717e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: flat.c:40: FloatPointCheck: FDiv Invalid found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.981634e+03 ms
+>>>Synergy-dreal exec time: 7.698840e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.254340e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 2.306400e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+
+KLEE: done: total instructions = 63
+KLEE: done: completed paths = 3
+KLEE: done: partially completed paths = 10
+KLEE: done: generated tests = 12
+Total exec time: 9.567792e+04 ms

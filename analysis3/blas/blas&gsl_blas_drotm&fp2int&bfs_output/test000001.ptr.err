@@ -1,0 +1,9 @@
+Error: memory error: out of bound pointer
+Stack: 
+	#000206865 in cblas_drotm (N=2, X=94742917178032, incX=1, Y=94742917178064, incY=1, P=94742917178096)
+	#100206750 in gsl_blas_drotm (=94742917583552, =94742917583696, =94742917178096) at blas.c:538
+	#200004959 in main ()
+Info: 
+	address: 94742917178112
+	next: object at 94742597135616 of size 256
+		MO9871[256] allocated at global:aph2_data

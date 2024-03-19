@@ -1,0 +1,54 @@
+KLEE: KLEE: WATCHDOG: watching 30220
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RJ_e&gosat&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: ERROR: ellint.c:244: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-Z3 exec time: 1.516927e+01 ms
+KLEE: WARNING: GOSAT: Z3 evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.847000e-03 ms
+>>>GoSat-gosat exec time: 7.271019e+03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.642000e-03 ms
+>>>GoSat-gosat exec time: 6.372729e+03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 1.953700e-02 ms
+>>>GoSat-gosat exec time: 4.046947e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+KLEE: WARNING ONCE: calling external: fprintf(139912378107520, 94758244520576, 94758245566656, 253, 94758244413680, 94758245566640) at stream.c:46 1
+gsl: ellint.c:253: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139912378107744) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-Z3 exec time: 3.447000e-03 ms
+>>>GoSat-gosat exec time: 7.100309e+02 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.640000e-03 ms
+>>>GoSat-gosat exec time: 7.355027e+02 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.390000e-03 ms
+>>>GoSat-gosat exec time: 4.317738e+02 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.650000e-03 ms
+>>>GoSat-gosat exec time: 2.100872e+02 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+
+KLEE: done: total instructions = 193
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 3.229481e+04 ms

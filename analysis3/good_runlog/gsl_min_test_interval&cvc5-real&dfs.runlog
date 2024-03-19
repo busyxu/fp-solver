@@ -1,0 +1,96 @@
+KLEE: KLEE: WATCHDOG: watching 42349
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_min_test_interval&cvc5-real&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+complex:(FAddOverflowCheck (COS w64 (ReadLSB w64 0 a))
+                    4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 2.385364e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddUnderflowCheck (COS w64 (ReadLSB w64 0 a))
+                     4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 2.076549e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddAccuracyCheck (COS w64 (ReadLSB w64 0 a))
+                    4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 1.032062e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddOverflowCheck (COS w64 (ReadLSB w64 0 b))
+                    4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 1.089155e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddUnderflowCheck (COS w64 (ReadLSB w64 0 b))
+                     4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 2.024208e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddAccuracyCheck (COS w64 (ReadLSB w64 0 b))
+                    4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 9.594740e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddOverflowCheck (COS w64 (ReadLSB w64 0 m))
+                    4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 1.093004e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddUnderflowCheck (COS w64 (ReadLSB w64 0 m))
+                     4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 2.005713e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddAccuracyCheck (COS w64 (ReadLSB w64 0 m))
+                    4607182418800017408)
+>>>CVC5Real-cvc5 exec time: 9.605970e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: WARNING ONCE: calling external: fprintf(139658663044736, 94194839865056, 94194837512080, 117, 94194839712464, 94194840337280) at stream.c:46 1
+gsl: fsolver.c:117: ERROR: x_minimum must lie inside interval (lower < x < upper)
+KLEE: WARNING ONCE: calling external: fflush(139658663044960) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+complex:(Eq false
+     (FOGt (ReadLSB w64 0 a)
+           (ReadLSB w64 0 b)))
+complex:(Eq false
+     (FOGe (ReadLSB w64 0 m)
+           (ReadLSB w64 0 b)))
+>>>CVC5Real-cvc5 exec time: 1.414821e+00 ms
+a
+[8,0,0,0,0,0,0,0,]
+b
+[8,0,0,0,0,0,0,0,]
+m
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FOGt (ReadLSB w64 0 a)
+       (ReadLSB w64 0 b))
+>>>CVC5Real-cvc5 exec time: 1.442232e+00 ms
+a
+[8,0,0,0,0,0,0,0,]
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>CVC5Real-cvc5 exec time: 6.423300e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 6.344570e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 6.086670e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+
+KLEE: done: total instructions = 358
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 1
+Total exec time: 1.254309e+04 ms

@@ -1,0 +1,50 @@
+array Side[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+array beta0[4] : w32 -> w8 = symbolic
+array beta1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                (Eq 141
+                    N1:(ReadLSB w32 0 Side)))
+         N2:(Eq 142 N1)
+         N0
+         N0
+         N2
+         (Eq false
+             (Eq 121
+                 N3:(ReadLSB w32 0 Uplo)))
+         (Eq 122 N3)
+         (FOEq (FPExt w64 (ReadLSB w32 0 alpha0))
+               0)
+         (FOEq (FPExt w64 (ReadLSB w32 0 alpha1))
+               0)
+         N4:(Eq false
+                (FOEq N5:(FPExt w64 N6:(ReadLSB w32 0 beta0))
+                      4607182418800017408))
+         (Eq false (FOEq N5 0))
+         N4
+         N7:(Not (FOEq (FAbs w32 N6) 0))
+         (FOEq (FDiv w32 N8:(FMul w32 N6 1045891645) N6)
+               1045891645)
+         (FOEq (FDiv w32 N8 1045891645) N6)
+         N7
+         (FOEq (FDiv w32 N9:(FMul w32 N6 1046562734) N6)
+               1046562734)
+         (FOEq (FDiv w32 N9 1046562734) N6)
+         N7
+         (FOEq (FDiv w32 N10:(FMul w32 N6 1047233823) N6)
+               1047233823)
+         (FOEq (FDiv w32 N10 1047233823) N6)
+         N7
+         (FOEq (FDiv w32 N11:(FMul w32 N6 1149206528) N6)
+               1149206528)
+         (FOEq (FDiv w32 N11 1149206528) N6)
+         N7
+         (FOEq (FDiv w32 N12:(FMul w32 N6 1149296640) N6)
+               1149296640)
+         (FOEq (FDiv w32 N12 1149296640) N6)
+         (FSubOverflowCheck N12
+                            (FMul w32 (ReadLSB w32 0 beta1)
+                                      1149304832))]
+        false)

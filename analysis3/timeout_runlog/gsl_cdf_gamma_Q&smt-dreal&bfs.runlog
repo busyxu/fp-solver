@@ -1,0 +1,166 @@
+KLEE: KLEE: WATCHDOG: watching 48155
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_gamma_Q&smt-dreal&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: ERROR: gamma.c:57: FloatPointCheck: FDiv Invalid found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-dreal exec time: 7.374520e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.576311e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: gamma.c:57: FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-dreal exec time: 2.111423e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.587198e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: gamma.c:57: FloatPointCheck: FDiv Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.181391e+03 ms
+>>>Synergy-dreal exec time: 5.952420e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.370004e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: gamma.c:57: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 3.383541e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: gamma.c:57: FloatPointCheck: FDiv Divide-By-Zero found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 2.603098e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 2.321695e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.702200e-02 ms
+>>>Synergy-dreal exec time: 7.617090e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.644425e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.699539e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140117044160128, 94666605735712, 94666606782784, 503, 94666605629616, 94666606782768) at stream.c:46 1
+gsl: gamma_inc.c:503: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140117044160352) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 3.571800e-02 ms
+>>>Synergy-dreal exec time: 3.820680e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 1.641946e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: gamma_inc.c:503: ERROR: domain error
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 3.342400e-02 ms
+>>>Synergy-dreal exec time: 3.867860e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 1.737439e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.690444e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 4.860000e-03 ms
+>>>Synergy-dreal exec time: 3.875870e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.268490e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.228000e-03 ms
+>>>Synergy-dreal exec time: 4.426620e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evalueate SUCCESS !
+KLEE: ERROR: gamma_inc.c:516: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 3.843971e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: gamma_inc.c:516: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.100000e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 8.112485e+00 ms
+>>>Synergy-Z3 exec time: 4.253100e-02 ms
+>>>Synergy-dreal exec time: 4.088380e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.235143e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 5.535600e-02 ms
+>>>Synergy-dreal exec time: 7.108210e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 3.264985e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 6.823900e-02 ms
+>>>Synergy-dreal exec time: 1.562000e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 1.659328e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: gamma_inc.c:559: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 5.346100e-02 ms
+>>>Synergy-dreal exec time: 9.205210e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.683307e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: gamma_inc.c:584: ERROR: domain error
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 3.104386e+01 ms
+>>>Synergy-dreal exec time: 2.817850e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.623480e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: gamma_inc.c:584: ERROR: domain error
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 8.045000e-03 ms
+>>>Synergy-dreal exec time: 3.336040e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.558081e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: gamma_inc.c:44: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.410724e+03 ms
+>>>Synergy-Z3 exec time: 1.219419e+02 ms
+>>>Synergy-Z3 exec time: 7.977775e+02 ms
+>>>Synergy-dreal exec time: 1.719200e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 1.663882e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 5.264100e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 5.342100e-02 ms
+>>>Synergy-dreal exec time: 6.058820e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.266593e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 8.529200e-02 ms
+>>>Synergy-dreal exec time: 6.728990e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.246440e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 2.806340e+03 ms
+>>>Synergy-Z3 exec time: 6.905100e-02 ms
+>>>Synergy-dreal exec time: 1.734688e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 3.283130e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 7.486300e-02 ms
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f6f8a792d02 in __GI___clock_gettime (clock_id=1, tp=0x7ffd2534a1c0) at ../sysdeps/unix/clock_gettime.c:115
+115	../sysdeps/unix/clock_gettime.c: No such file or directory.
+'halt_execution' has unknown return type; cast the call to its declared return type
+KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
+

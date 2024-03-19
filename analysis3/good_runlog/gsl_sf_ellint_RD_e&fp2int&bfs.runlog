@@ -1,0 +1,28 @@
+KLEE: KLEE: WATCHDOG: watching 61100
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RD_e&fp2int&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: ERROR: ellint.c:119: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.371840e+01 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+tcmalloc: large alloc 1073741824 bytes == 0x5595864c2000 @  0x7fe035dce887 0x559523ae2fa8 0x559523ab03fd 0x559523acfd08 0x559523ad43eb 0x559523b3b60e 0x559523ad6870 0x559523ad7289 0x559523a605d1 0x7fe033b88c87 0x559523aa2faa
+tcmalloc: large alloc 2147483648 bytes == 0x5595c64c2000 @  0x7fe035dce887 0x559523ae2fa8 0x559523ab03fd 0x559523acfd08 0x559523ad43eb 0x559523b3b60e 0x559523ad6870 0x559523ad7289 0x559523a605d1 0x7fe033b88c87 0x559523aa2faa
+KLEE: WARNING: killing 1 states (over memory cap: 2542MB)
+
+KLEE: done: total instructions = 134283264
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 134282256
+KLEE: done: generated tests = 2
+Total exec time: 3.794596e+04 ms

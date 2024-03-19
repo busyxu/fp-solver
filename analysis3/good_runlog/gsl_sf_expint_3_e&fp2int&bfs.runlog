@@ -1,0 +1,72 @@
+KLEE: KLEE: WATCHDOG: watching 37984
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_expint_3_e&fp2int&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Z3 exec time: 8.464330e+00 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+tcmalloc: large alloc 1073741824 bytes == 0x55f24e42e000 @  0x7fe712e15887 0x55f1eb255fa8 0x55f1eb2233fd 0x55f1eb242d08 0x55f1eb2473eb 0x55f1eb2ae60e 0x55f1eb249870 0x55f1eb24a289 0x55f1eb1d35d1 0x7fe710bcfc87 0x55f1eb215faa
+tcmalloc: large alloc 2147483648 bytes == 0x55f28e42e000 @  0x7fe712e15887 0x55f1eb255fa8 0x55f1eb2233fd 0x55f1eb242d08 0x55f1eb2473eb 0x55f1eb2ae60e 0x55f1eb249870 0x55f1eb24a289 0x55f1eb1d35d1 0x7fe710bcfc87 0x55f1eb215faa
+KLEE: WARNING: killing 2 states (over memory cap: 2542MB)
+>>>Z3 exec time: 7.777726e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 9.053381e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.364449e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.255390e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 8.877777e+00 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+>>>Z3 exec time: 8.141186e+00 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140630398969472, 94497905502720, 94497906013920, 107, 94497905492784, 94497906013904) at stream.c:46 1
+gsl: expint3.c:107: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140630398969696) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 8.009686e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.087264e+01 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.708403e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.517260e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.464839e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.305797e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.720876e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.741400e-02 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.149200e-02 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.174200e-02 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.386421e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.704456e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.249670e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 7.621738e+00 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+
+KLEE: done: total instructions = 134283352
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 134278519
+KLEE: done: generated tests = 2
+Total exec time: 3.027717e+04 ms

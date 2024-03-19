@@ -1,0 +1,65 @@
+KLEE: KLEE: WATCHDOG: watching 43333
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_lngamma_sgn_e&mathsat5&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>MathSAT5 exec time: 3.036879e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 4.307173e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 6.183548e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: ERROR: gamma.c:1187: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 5.735724e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 5.646426e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 5.205611e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: ERROR: gamma.c:1193: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 8.467666e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 6.691671e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140423677548160, 94102512536768, 94102512431320, 1205, 94102512431224, 94102510208800) at stream.c:46 1
+gsl: gamma.c:1205: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140423677548384) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 1.166483e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 1.340727e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: ERROR: gamma.c:709: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 3.799494e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 3.764258e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 7.112892e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 2.533979e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 2.777369e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+
+KLEE: done: total instructions = 131
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 4
+KLEE: done: generated tests = 4
+Total exec time: 1.915258e+04 ms

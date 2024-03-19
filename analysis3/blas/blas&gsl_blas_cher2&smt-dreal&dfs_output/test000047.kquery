@@ -1,0 +1,60 @@
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq 121
+                (ReadLSB w32 0 Uplo))
+         (FOEq (FPExt w64 N1:(ReadLSB w32 0 alpha0))
+               0)
+         (Eq false
+             (FOEq (FPExt w64 N2:(ReadLSB w32 0 alpha1))
+                   0))
+         N0
+         N3:(Not (FOEq (FAbs w32 N2) 0))
+         (FOEq (FDiv w32 N4:(FMul w32 N2 1039516303) N2)
+               1039516303)
+         (FOEq (FDiv w32 N4 1039516303) N2)
+         N3
+         (FOEq (FDiv w32 N5:(FMul w32 N2 1038174126) N2)
+               1038174126)
+         (FOEq (FDiv w32 N5 1038174126) N2)
+         N3
+         (FOEq (FDiv w32 N6:(FMul w32 N2 1149042688) N2)
+               1149042688)
+         (FOEq (FDiv w32 N6 1149042688) N2)
+         (Not (FOEq (FAbs w32 N7:(FSub w32 2147483648 N2))
+                    0))
+         (FOEq (FDiv w32 N8:(FMul w32 N7 1149026304) N7)
+               1149026304)
+         (FOEq (FDiv w32 N8 1149026304) N7)
+         N9:(Not (FOEq (FAbs w32 N10:(FSub w32 (FMul w32 N1 1038174126) N4))
+                       0))
+         (FOEq (FDiv w32 N11:(FMul w32 N10 1149026304) N10)
+               1149026304)
+         (FOEq (FDiv w32 N11 1149026304) N10)
+         N12:(Not (FOEq (FAbs w32 N13:(FAdd w32 N5 (FMul w32 N1 1039516303)))
+                        0))
+         (FOEq (FDiv w32 N14:(FMul w32 N13 1149042688) N13)
+               1149042688)
+         (FOEq (FDiv w32 N14 1149042688) N13)
+         (FOEq (FSub w32 N15:(FAdd w32 1045891645
+                                       N16:(FMul w32 1073741824 (FAdd w32 N11 N14)))
+                         1045891645)
+               N16)
+         (FOEq (FSub w32 N15 N16) 1045891645)
+         N9
+         (FOEq (FDiv w32 N17:(FMul w32 N10 1149190144) N10)
+               1149190144)
+         (FOEq (FDiv w32 N17 1149190144) N10)
+         N12
+         (FOEq (FDiv w32 N18:(FMul w32 N13 1038174126) N13)
+               1038174126)
+         (FOEq (FDiv w32 N18 1038174126) N13)
+         (FOEq (FSub w32 N19:(FAdd w32 N17 N18) N17)
+               N18)
+         (FOEq (FSub w32 N19 N18) N17)
+         (Not (FOEq (FAbs w32 N20:(FAdd w32 (FMul w32 N1 1149026304) N6))
+                    0))
+         (FOEq (FDiv w32 N21:(FMul w32 N20 1040522936) N20)
+               1040522936)
+         (FOEq (FDiv w32 N21 1040522936) N20)]
+        false)

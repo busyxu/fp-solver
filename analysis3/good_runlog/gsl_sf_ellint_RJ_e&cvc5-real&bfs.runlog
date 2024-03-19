@@ -1,0 +1,176 @@
+KLEE: KLEE: WATCHDOG: watching 29493
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RJ_e&cvc5-real&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: ERROR: ellint.c:244: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+>>>CVC5Real-Z3 exec time: 8.399796e+00 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 b)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 c)
+           0))
+complex:(FAddOverflowCheck (ReadLSB w64 0 a)
+                    (ReadLSB w64 0 b))
+>>>CVC5Real-Z3 exec time: 1.914000e-03 ms
+>>>CVC5Real-cvc5 exec time: 4.516130e+00 ms
+b
+[8,0,0,0,0,0,0,0,]
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 b)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 c)
+           0))
+complex:(FAddUnderflowCheck (ReadLSB w64 0 a)
+                     (ReadLSB w64 0 b))
+>>>CVC5Real-Z3 exec time: 3.177000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.556412e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 b)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 c)
+           0))
+complex:(FAddAccuracyCheck (ReadLSB w64 0 a)
+                    (ReadLSB w64 0 b))
+>>>CVC5Real-Z3 exec time: 2.535000e-03 ms
+>>>CVC5Real-cvc5 exec time: 7.154590e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: WARNING ONCE: calling external: fprintf(140692179654272, 94187276169856, 94187277215936, 253, 94187276062960, 94187277215920) at stream.c:46 1
+gsl: ellint.c:253: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140692179654496) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(FOLt (ReadLSB w64 0 a)
+       0)
+>>>CVC5Real-Z3 exec time: 2.165000e-03 ms
+>>>CVC5Real-cvc5 exec time: 6.882200e-01 ms
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           0))
+complex:(FOLt (ReadLSB w64 0 b)
+       0)
+>>>CVC5Real-Z3 exec time: 2.064000e-03 ms
+>>>CVC5Real-cvc5 exec time: 6.565890e-01 ms
+b
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 b)
+           0))
+complex:(FOLt (ReadLSB w64 0 c)
+       0)
+>>>CVC5Real-Z3 exec time: 2.175000e-03 ms
+>>>CVC5Real-cvc5 exec time: 7.035380e-01 ms
+b
+[8,0,0,0,0,0,0,0,]
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Ult (Mul w64 8
+               (ZExt w64 (And w32 (ReadLSB w32 0 e)
+                                  7)))
+      17)
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 b)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 c)
+           0))
+complex:(Eq false
+     (FOLt (FAdd w64 (ReadLSB w64 0 a)
+                     (ReadLSB w64 0 b))
+           3076306301500289166))
+>>>CVC5Real-Z3 exec time: 2.014000e-03 ms
+>>>CVC5Real-cvc5 exec time: 9.138290e-01 ms
+b
+[8,0,0,0,0,0,0,0,]
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+
+KLEE: done: total instructions = 193
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 1.384809e+04 ms

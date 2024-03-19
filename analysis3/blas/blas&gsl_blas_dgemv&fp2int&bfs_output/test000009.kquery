@@ -1,0 +1,17 @@
+array TransA[8] : w32 -> w8 = symbolic
+array alpha[8] : w32 -> w8 = symbolic
+array beta[8] : w32 -> w8 = symbolic
+(query [N0:(Eq 111
+                N1:(ReadLSB w32 0 TransA))
+         (Eq false (Eq 113 N1))
+         N0
+         (FOEq (ReadLSB w64 0 alpha)
+               0)
+         (Eq false
+             N2:(FOEq N3:(ReadLSB w64 0 beta)
+                      4607182418800017408))
+         N0
+         (Eq false (FOEq N3 0))
+         (Not N2)
+         (FMulAccuracyCheck 4652104065864433664 N3)]
+        false)

@@ -1,0 +1,62 @@
+KLEE: KLEE: WATCHDOG: watching 53895
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_Dcomp_e&dreal-is&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Dreal-dreal exec time: 6.379730e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: ellint.c:485: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 1.422510e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>Dreal-dreal exec time: 7.174600e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>Dreal-dreal exec time: 2.118730e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 1.348070e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>Dreal-dreal exec time: 1.101890e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>Dreal-dreal exec time: 1.523800e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 1.587310e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.009000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+KLEE: ERROR: ellint.c:119: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 1.150080e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(139897860335232, 94628159253984, 94628160325792, 486, 94628159148176, 94628160325776) at stream.c:46 1
+gsl: ellint.c:486: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139897860335456) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 1.303668e+01 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: ellint.c:120: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+
+KLEE: done: total instructions = 179
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 4
+KLEE: done: generated tests = 4
+Total exec time: 1.240725e+04 ms

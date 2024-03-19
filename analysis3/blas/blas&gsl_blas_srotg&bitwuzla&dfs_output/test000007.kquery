@@ -1,0 +1,8 @@
+array a0[4] : w32 -> w8 = symbolic
+array b0[4] : w32 -> w8 = symbolic
+(query [(FOGt N0:(FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+               N1:(FAbs w64 (FPExt w64 N2:(ReadLSB w32 0 b0))))
+         (Not (FOEq (FPExt w64 N3:(FPTrunc w32 (FAdd w64 N0 N1)))
+                    0))
+         (FMulAccuracyCheck N4:(FDiv w32 N2 N3) N4)]
+        false)

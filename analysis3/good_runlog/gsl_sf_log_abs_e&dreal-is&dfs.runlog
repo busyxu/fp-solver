@@ -1,0 +1,43 @@
+KLEE: KLEE: WATCHDOG: watching 11312
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_log_abs_e&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: calling external: fprintf(139911546111616, 94782905060448, 94782904942064, 132, 94782904938608, 94782902720176) at stream.c:46 1
+gsl: log.c:132: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139911546111840) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 3.548950e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>dreal-dreal exec time: 2.742310e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 3.434120e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 1.430820e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 2.461890e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+
+KLEE: done: total instructions = 103
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 2
+Total exec time: 1.471548e+04 ms

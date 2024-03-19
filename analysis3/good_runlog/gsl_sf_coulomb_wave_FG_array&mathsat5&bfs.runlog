@@ -1,0 +1,36 @@
+KLEE: KLEE: WATCHDOG: watching 61492
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_wave_FG_array&mathsat5&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: ERROR: coulomb.c:1266: FloatPointCheck: FDiv Divide-By-Zero found !
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 3.265803e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: ERROR: coulomb.c:1266: FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 2.504172e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+MathSAT5 Timeout !
+>>>MathSAT5 exec time: 3.213810e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 2.424870e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+
+KLEE: done: total instructions = 70
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 4.575314e+04 ms

@@ -1,0 +1,40 @@
+array Trans[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+array beta0[4] : w32 -> w8 = symbolic
+array beta1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                N1:(Eq 111
+                       N2:(ReadLSB w32 0 Trans)))
+         N0
+         N0
+         N3:(Eq false
+                (Eq 121
+                    N4:(ReadLSB w32 0 Uplo)))
+         N5:(Eq 122 N4)
+         N0
+         (Eq false (Eq 112 N2))
+         (Eq 113 N2)
+         N6:(Eq false
+                (FOEq (FPExt w64 N7:(ReadLSB w32 0 alpha0))
+                      0))
+         (FOEq N8:(FPExt w64 (ReadLSB w32 0 beta0))
+               0)
+         (Eq false
+             (FOEq (FPExt w64 (ReadLSB w32 0 beta1))
+                   0))
+         (Eq false (FOEq N8 4607182418800017408))
+         N3
+         N6
+         N3
+         N3
+         N5
+         (Eq false
+             (Eq 111 N9:(Select w32 N1 111 112)))
+         N5
+         (Eq 112 N9)
+         (FSubUnderflowCheck (FMul w32 N7 1073741824)
+                             (FMul w32 (ReadLSB w32 0 alpha1)
+                                       0))]
+        false)

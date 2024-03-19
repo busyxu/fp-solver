@@ -1,0 +1,85 @@
+KLEE: KLEE: WATCHDOG: watching 52281
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/solveEqu/solveEqu&gsl_odeiv2_driver_apply&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+>>>Dreal-dreal exec time: 5.866160e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: driver.c:352: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.218520e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.538000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 2.774170e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 3.252490e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.128000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 3.768270e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: driver.c:361: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.565080e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.198000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 7.754800e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140350292670080, 94310131284864, 94310132351312, 356, 94310131176576, 94310132384448) at stream.c:46 1
+gsl: driver.c:356: ERROR: integration limits and/or step direction not consistent
+KLEE: WARNING ONCE: calling external: fflush(140350292670304) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 9.349800e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 3.786300e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 3.579510e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.249000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+KLEE: ERROR: evolve.c:125: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 4.265310e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: evolve.c:125: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 4.164820e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.359000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 9.847700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.692520e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+
+KLEE: done: total instructions = 1515
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 6
+Total exec time: 7.741936e+03 ms

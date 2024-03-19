@@ -1,0 +1,712 @@
+KLEE: KLEE: WATCHDOG: watching 25715
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_mult_err_e10_e&cvc5-real&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+complex:(FOEq (ReadLSB w64 0 c)
+       0)
+complex:(FMulOverflowCheck (ReadLSB w64 0 d)
+                    (EXP w64 (ReadLSB w64 0 a)))
+>>>CVC5Real-cvc5 exec time: 9.788616e+01 ms
+c
+[8,0,0,0,0,0,0,0,]
+d
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FOEq (ReadLSB w64 0 c)
+       0)
+complex:(FMulUnderflowCheck (ReadLSB w64 0 d)
+                     (EXP w64 (ReadLSB w64 0 a)))
+>>>CVC5Real-cvc5 exec time: 1.825241e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOEq (ReadLSB w64 0 c)
+       0)
+complex:(FMulAccuracyCheck (ReadLSB w64 0 d)
+                    (EXP w64 (ReadLSB w64 0 a)))
+>>>CVC5Real-cvc5 exec time: 8.590292e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+>>>CVC5Real-cvc5 exec time: 1.305433e+00 ms
+c
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FInvalidLogCheck w64 (FAbs w64 (ReadLSB w64 0 c)))
+>>>CVC5Real-cvc5 exec time: 3.382794e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.121506e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.029061e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.004385e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.489006e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.205536e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.208211e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.298714e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.181059e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.441516e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.054980e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.373677e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.198314e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FDivOverflowCheck (ReadLSB w64 0 d)
+                    (FAbs w64 (ReadLSB w64 0 c)))
+>>>CVC5Real-cvc5 exec time: 1.137828e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FDivUnderflowCheck (ReadLSB w64 0 d)
+                     (FAbs w64 (ReadLSB w64 0 c)))
+>>>CVC5Real-cvc5 exec time: 4.133000e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FDivAccuracyCheck (ReadLSB w64 0 d)
+                    (FAbs w64 (ReadLSB w64 0 c)))
+>>>CVC5Real-cvc5 exec time: 4.339913e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FDivInvalidCheck (ReadLSB w64 0 d)
+                   (FAbs w64 (ReadLSB w64 0 c)))
+>>>CVC5Real-cvc5 exec time: 3.038148e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FDivZeroCheck (ReadLSB w64 0 d)
+                (FAbs w64 (ReadLSB w64 0 c)))
+>>>CVC5Real-cvc5 exec time: 3.407742e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FAddOverflowCheck (FDiv w64 (ReadLSB w64 0 d)
+                              (FAbs w64 (ReadLSB w64 0 c)))
+                    (ReadLSB w64 0 b))
+>>>CVC5Real-cvc5 exec time: 7.491067e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FAddUnderflowCheck (FDiv w64 (ReadLSB w64 0 d)
+                               (FAbs w64 (ReadLSB w64 0 c)))
+                     (ReadLSB w64 0 b))
+>>>CVC5Real-cvc5 exec time: 4.662226e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+complex:(FAddAccuracyCheck (FDiv w64 (ReadLSB w64 0 d)
+                              (FAbs w64 (ReadLSB w64 0 c)))
+                    (ReadLSB w64 0 b))
+>>>CVC5Real-cvc5 exec time: 1.722045e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.753890e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.408664e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.119733e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.139571e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 1.058117e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.431928e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.836167e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.620717e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.594957e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.568698e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.569348e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.545765e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.206338e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.119943e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.117719e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.465562e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.247597e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.280850e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(Eq false
+     (FOLt (ReadLSB w64 0 a)
+           4644950930959776239))
+>>>CVC5Real-cvc5 exec time: 1.309280e+00 ms
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(Eq false
+     (FOGt (ReadLSB w64 0 a)
+           13868310773840395474))
+>>>CVC5Real-cvc5 exec time: 1.928559e+00 ms
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(Eq false
+     (FOLt (FAbs w64 (ReadLSB w64 0 c))
+           6911223988162763161))
+>>>CVC5Real-cvc5 exec time: 3.162204e+00 ms
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(FOGt (FAbs w64 (ReadLSB w64 0 c))
+       2306743729139168051)
+>>>CVC5Real-cvc5 exec time: 3.372244e+00 ms
+c
+[8,0,0,0,0,0,0,0,]
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.775860e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOEq (ReadLSB w64 0 c)
+           0))
+complex:(FOLt (ReadLSB w64 0 a)
+       4644950930959776239)
+complex:(FOGt (ReadLSB w64 0 a)
+       13868310773840395474)
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 c))
+       6911223988162763161)
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 c))
+           2306743729139168051))
+>>>CVC5Real-cvc5 exec time: 3.396650e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+
+KLEE: done: total instructions = 167
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 2
+Total exec time: 1.161263e+04 ms

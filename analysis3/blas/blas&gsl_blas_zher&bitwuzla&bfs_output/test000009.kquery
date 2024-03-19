@@ -1,0 +1,12 @@
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha[8] : w32 -> w8 = symbolic
+(query [N0:(Eq 121
+                (ReadLSB w32 0 Uplo))
+         (Eq false
+             (FOEq N1:(ReadLSB w64 0 alpha)
+                   0))
+         N0
+         (FAddAccuracyCheck 4596734067664517857
+                            (FSub w64 (FMul w64 4607182418800017408 N2:(FMul w64 N1 4607182418800017408))
+                                      (FMul w64 9223372036854775808 (FMul w64 N2 0))))]
+        false)

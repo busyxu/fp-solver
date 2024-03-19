@@ -1,0 +1,62 @@
+array Trans[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+array beta0[4] : w32 -> w8 = symbolic
+array beta1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                N1:(Eq 111
+                       N2:(ReadLSB w32 0 Trans)))
+         N0
+         N0
+         N3:(Eq false
+                (Eq 121
+                    N4:(ReadLSB w32 0 Uplo)))
+         N5:(Eq 122 N4)
+         N0
+         (Eq false (Eq 112 N2))
+         (Eq 113 N2)
+         N6:(FOEq (FPExt w64 (ReadLSB w32 0 alpha0))
+                  0)
+         N7:(Eq false
+                (FOEq (FPExt w64 (ReadLSB w32 0 alpha1))
+                      0))
+         (FOEq N8:(FPExt w64 (ReadLSB w32 0 beta0))
+               0)
+         (Eq false
+             (FOEq (FPExt w64 N9:(ReadLSB w32 0 beta1))
+                   0))
+         (Eq false (FOEq N8 4607182418800017408))
+         N3
+         N10:(Not (FOEq (FAbs w32 N9) 0))
+         N11:(FOEq (FDiv w32 N12:(FMul w32 N9 1149042688) N9)
+                   1149042688)
+         N13:(FOEq (FDiv w32 N12 1149042688) N9)
+         N10
+         N14:(FOEq (FDiv w32 N15:(FMul w32 N9 1149026304) N9)
+                   1149026304)
+         N16:(FOEq (FDiv w32 N15 1149026304) N9)
+         N10
+         N11
+         N13
+         N10
+         N14
+         N16
+         N10
+         (FOEq (FDiv w32 N17:(FMul w32 N9 1038174126) N9)
+               1038174126)
+         (FOEq (FDiv w32 N17 1038174126) N9)
+         N10
+         (FOEq (FDiv w32 N18:(FMul w32 N9 1149190144) N9)
+               1149190144)
+         (FOEq (FDiv w32 N18 1149190144) N9)
+         N6
+         N7
+         N3
+         N3
+         N5
+         (Eq false
+             (Eq 111 N19:(Select w32 N1 111 112)))
+         N5
+         (Eq 112 N19)]
+        false)

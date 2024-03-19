@@ -1,0 +1,71 @@
+KLEE: KLEE: WATCHDOG: watching 53788
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_Dcomp_e&smt&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Z3 exec time: 2.881974e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:485: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 3.549844e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:485: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 6.657330e+02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:485: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 9.103315e+03 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 6.876000e-02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:488: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 2.264400e-02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:488: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 8.786236e+02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140514577737344, 94561167216096, 94561168287904, 486, 94561167110288, 94561168287888) at stream.c:46 1
+gsl: ellint.c:486: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140514577737568) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.681808e+02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+>>>Z3 exec time: 2.179522e+03 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 2.350790e+03 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.528146e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:488: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 4.449000e-03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:119: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.919700e-02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: ellint.c:120: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+
+KLEE: done: total instructions = 895
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 9
+KLEE: done: generated tests = 9
+Total exec time: 3.670293e+04 ms

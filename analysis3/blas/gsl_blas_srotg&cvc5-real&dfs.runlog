@@ -1,0 +1,603 @@
+KLEE: KLEE: WATCHDOG: watching 28263
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/blas/blas&gsl_blas_srotg&cvc5-real&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(FAddOverflowCheck (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                    (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 8.396921e+00 ms
+b0
+[80,17,52,4,]
+a0
+[80,17,52,4,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(FAddUnderflowCheck (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                     (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 2.991460e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(FAddAccuracyCheck (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                    (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 1.003158e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+>>>CVC5Real-cvc5 exec time: 2.639581e+00 ms
+b0
+[64,20,52,4,]
+a0
+[64,20,52,4,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivOverflowCheck N0:(ReadLSB w32 0 a0)
+                    (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 1.170634e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivUnderflowCheck N0:(ReadLSB w32 0 a0)
+                     (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                            (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 2.589214e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivAccuracyCheck N0:(ReadLSB w32 0 a0)
+                    (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 1.288356e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivInvalidCheck N0:(ReadLSB w32 0 a0)
+                   (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                          (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 1.006525e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivZeroCheck N0:(ReadLSB w32 0 a0)
+                (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 8.448150e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivOverflowCheck N0:(ReadLSB w32 0 b0)
+                    (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                           (FAbs w64 (FPExt w64 N0)))))
+>>>CVC5Real-cvc5 exec time: 7.225804e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivUnderflowCheck N0:(ReadLSB w32 0 b0)
+                     (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                            (FAbs w64 (FPExt w64 N0)))))
+>>>CVC5Real-cvc5 exec time: 1.846523e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivAccuracyCheck N0:(ReadLSB w32 0 b0)
+                    (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                           (FAbs w64 (FPExt w64 N0)))))
+>>>CVC5Real-cvc5 exec time: 8.766747e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivInvalidCheck N0:(ReadLSB w32 0 b0)
+                   (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                          (FAbs w64 (FPExt w64 N0)))))
+>>>CVC5Real-cvc5 exec time: 1.177048e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivZeroCheck N0:(ReadLSB w32 0 b0)
+                (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                       (FAbs w64 (FPExt w64 N0)))))
+>>>CVC5Real-cvc5 exec time: 9.005930e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulOverflowCheck N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                        (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.658527e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulUnderflowCheck N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                  (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                         (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+                     N0)
+>>>CVC5Real-cvc5 exec time: 2.742055e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulAccuracyCheck N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                        (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+                    N0)
+>>>CVC5Real-cvc5 exec time: 3.134228e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulOverflowCheck N0:(FDiv w32 N1:(ReadLSB w32 0 b0)
+                                 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                                        (FAbs w64 (FPExt w64 N1)))))
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.452963e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulUnderflowCheck N0:(FDiv w32 N1:(ReadLSB w32 0 b0)
+                                  (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                                         (FAbs w64 (FPExt w64 N1)))))
+                     N0)
+>>>CVC5Real-cvc5 exec time: 2.707992e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulAccuracyCheck N0:(FDiv w32 N1:(ReadLSB w32 0 b0)
+                                 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                                        (FAbs w64 (FPExt w64 N1)))))
+                    N0)
+>>>CVC5Real-cvc5 exec time: 2.999736e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FAddOverflowCheck (FMul w32 N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                           N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                                     (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 b0))))))
+                              N0)
+                    (FMul w32 N4:(FDiv w32 N3 N2) N4))
+>>>CVC5Real-cvc5 exec time: 5.902352e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FAddUnderflowCheck (FMul w32 N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                            N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                                      (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 b0))))))
+                               N0)
+                     (FMul w32 N4:(FDiv w32 N3 N2) N4))
+>>>CVC5Real-cvc5 exec time: 3.467185e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FAddAccuracyCheck (FMul w32 N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                           N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                                     (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 b0))))))
+                              N0)
+                    (FMul w32 N4:(FDiv w32 N3 N2) N4))
+>>>CVC5Real-cvc5 exec time: 8.510800e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FInvalidSqrtCheck w64 (FPExt w64 (FAdd w32 (FMul w32 N0:(FDiv w32 N1:(ReadLSB w32 0 a0)
+                                                                    N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1))
+                                                                                              (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 b0))))))
+                                                       N0)
+                                             (FMul w32 N4:(FDiv w32 N3 N2) N4))))
+>>>CVC5Real-cvc5 exec time: 5.655868e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulOverflowCheck (FPExt w64 N0:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1:(ReadLSB w32 0 a0)))
+                                                         (FAbs w64 (FPExt w64 N2:(ReadLSB w32 0 b0))))))
+                    (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N3:(FDiv w32 N1 N0) N3)
+                                                    (FMul w32 N4:(FDiv w32 N2 N0) N4)))))
+>>>CVC5Real-cvc5 exec time: 3.102870e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulUnderflowCheck (FPExt w64 N0:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1:(ReadLSB w32 0 a0)))
+                                                          (FAbs w64 (FPExt w64 N2:(ReadLSB w32 0 b0))))))
+                     (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N3:(FDiv w32 N1 N0) N3)
+                                                     (FMul w32 N4:(FDiv w32 N2 N0) N4)))))
+>>>CVC5Real-cvc5 exec time: 3.986933e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulAccuracyCheck (FPExt w64 N0:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N1:(ReadLSB w32 0 a0)))
+                                                         (FAbs w64 (FPExt w64 N2:(ReadLSB w32 0 b0))))))
+                    (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N3:(FDiv w32 N1 N0) N3)
+                                                    (FMul w32 N4:(FDiv w32 N2 N0) N4)))))
+>>>CVC5Real-cvc5 exec time: 8.112202e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulOverflowCheck (SIToFP w32 (Select w32 (FOGe N0:(FPExt w64 N1:(ReadLSB w32 0 b0))
+                                                  0)
+                                            1
+                                            4294967295))
+                    (FPTrunc w32 (FMul w64 (FPExt w64 N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 a0)))
+                                                                                (FAbs w64 N0))))
+                                           (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N3 N2) N4)
+                                                                           (FMul w32 N5:(FDiv w32 N1 N2) N5)))))))
+>>>CVC5Real-cvc5 exec time: 3.022749e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulUnderflowCheck (SIToFP w32 (Select w32 (FOGe N0:(FPExt w64 N1:(ReadLSB w32 0 b0))
+                                                   0)
+                                             1
+                                             4294967295))
+                     (FPTrunc w32 (FMul w64 (FPExt w64 N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 a0)))
+                                                                                 (FAbs w64 N0))))
+                                            (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N3 N2) N4)
+                                                                            (FMul w32 N5:(FDiv w32 N1 N2) N5)))))))
+>>>CVC5Real-cvc5 exec time: 6.959578e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FMulAccuracyCheck (SIToFP w32 (Select w32 (FOGe N0:(FPExt w64 N1:(ReadLSB w32 0 b0))
+                                                  0)
+                                            1
+                                            4294967295))
+                    (FPTrunc w32 (FMul w64 (FPExt w64 N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 a0)))
+                                                                                (FAbs w64 N0))))
+                                           (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N3 N2) N4)
+                                                                           (FMul w32 N5:(FDiv w32 N1 N2) N5)))))))
+>>>CVC5Real-cvc5 exec time: 5.176129e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: ERROR: (location information missing) FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivOverflowCheck N0:(ReadLSB w32 0 a0)
+                    (FMul w32 (SIToFP w32 (Select w32 (FOGe N1:(FPExt w64 N2:(ReadLSB w32 0 b0))
+                                                            0)
+                                                      1
+                                                      4294967295))
+                              (FPTrunc w32 (FMul w64 (FPExt w64 N3:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                          (FAbs w64 N1))))
+                                                     (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N0 N3) N4)
+                                                                                     (FMul w32 N5:(FDiv w32 N2 N3) N5))))))))
+>>>CVC5Real-cvc5 exec time: 6.380924e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivUnderflowCheck N0:(ReadLSB w32 0 a0)
+                     (FMul w32 (SIToFP w32 (Select w32 (FOGe N1:(FPExt w64 N2:(ReadLSB w32 0 b0))
+                                                             0)
+                                                       1
+                                                       4294967295))
+                               (FPTrunc w32 (FMul w64 (FPExt w64 N3:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                           (FAbs w64 N1))))
+                                                      (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N0 N3) N4)
+                                                                                      (FMul w32 N5:(FDiv w32 N2 N3) N5))))))))
+>>>CVC5Real-cvc5 exec time: 3.330154e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivInvalidCheck N0:(ReadLSB w32 0 a0)
+                   (FMul w32 (SIToFP w32 (Select w32 (FOGe N1:(FPExt w64 N2:(ReadLSB w32 0 b0))
+                                                           0)
+                                                     1
+                                                     4294967295))
+                             (FPTrunc w32 (FMul w64 (FPExt w64 N3:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                         (FAbs w64 N1))))
+                                                    (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N0 N3) N4)
+                                                                                    (FMul w32 N5:(FDiv w32 N2 N3) N5))))))))
+>>>CVC5Real-cvc5 exec time: 1.726896e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivZeroCheck N0:(ReadLSB w32 0 a0)
+                (FMul w32 (SIToFP w32 (Select w32 (FOGe N1:(FPExt w64 N2:(ReadLSB w32 0 b0))
+                                                        0)
+                                                  1
+                                                  4294967295))
+                          (FPTrunc w32 (FMul w64 (FPExt w64 N3:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                      (FAbs w64 N1))))
+                                                 (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N0 N3) N4)
+                                                                                 (FMul w32 N5:(FDiv w32 N2 N3) N5))))))))
+>>>CVC5Real-cvc5 exec time: 2.726141e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(Not (FOEq (FAbs w32 (FMul w32 (SIToFP w32 (Select w32 (FOGe N0:(FPExt w64 N1:(ReadLSB w32 0 b0))
+                                                              0)
+                                                        1
+                                                        4294967295))
+                                (FPTrunc w32 (FMul w64 (FPExt w64 N2:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N3:(ReadLSB w32 0 a0)))
+                                                                                            (FAbs w64 N0))))
+                                                       (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N3 N2) N4)
+                                                                                       (FMul w32 N5:(FDiv w32 N1 N2) N5))))))))
+            0))
+complex:(Not (FOEq (FMul w32 (FDiv w32 N0:(ReadLSB w32 0 a0)
+                                N1:(FMul w32 (SIToFP w32 (Select w32 (FOGe N2:(FPExt w64 N3:(ReadLSB w32 0 b0))
+                                                                           0)
+                                                                     1
+                                                                     4294967295))
+                                             (FPTrunc w32 (FMul w64 (FPExt w64 N4:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                                         (FAbs w64 N2))))
+                                                                    (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N5:(FDiv w32 N0 N4) N5)
+                                                                                                    (FMul w32 N6:(FDiv w32 N3 N4) N6))))))))
+                      N1)
+            N0))
+complex:(Not (FOEq (FAbs w32 (FDiv w32 N0:(ReadLSB w32 0 a0)
+                                (FMul w32 (SIToFP w32 (Select w32 (FOGe N1:(FPExt w64 N2:(ReadLSB w32 0 b0))
+                                                                        0)
+                                                                  1
+                                                                  4294967295))
+                                          (FPTrunc w32 (FMul w64 (FPExt w64 N3:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                                      (FAbs w64 N1))))
+                                                                 (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N4:(FDiv w32 N0 N3) N4)
+                                                                                                 (FMul w32 N5:(FDiv w32 N2 N3) N5)))))))))
+            0))
+complex:(FOEq (FDiv w32 N0:(ReadLSB w32 0 a0)
+                 (FDiv w32 N0
+                           N1:(FMul w32 (SIToFP w32 (Select w32 (FOGe N2:(FPExt w64 N3:(ReadLSB w32 0 b0))
+                                                                      0)
+                                                                1
+                                                                4294967295))
+                                        (FPTrunc w32 (FMul w64 (FPExt w64 N4:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                                                                    (FAbs w64 N2))))
+                                                               (FSqrt w64 (FPExt w64 (FAdd w32 (FMul w32 N5:(FDiv w32 N0 N4) N5)
+                                                                                               (FMul w32 N6:(FDiv w32 N3 N4) N6)))))))))
+       N1)
+>>>CVC5Real-cvc5 exec time: 1.154576e+03 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 2.687461e+00 ms
+b0
+[32,20,52,4,]
+a0
+[64,20,52,4,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(FAddOverflowCheck (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                    (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 6.629399e+00 ms
+b0
+[80,17,52,4,]
+a0
+[80,17,52,4,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(FAddUnderflowCheck (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                     (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 3.265541e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(FAddAccuracyCheck (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                    (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+>>>CVC5Real-cvc5 exec time: 9.821390e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: ERROR: (location information missing) FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivOverflowCheck N0:(ReadLSB w32 0 a0)
+                    (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                           (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 1.148152e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivUnderflowCheck N0:(ReadLSB w32 0 a0)
+                     (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                            (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 2.987973e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivInvalidCheck N0:(ReadLSB w32 0 a0)
+                   (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                          (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 1.102215e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(FDivZeroCheck N0:(ReadLSB w32 0 a0)
+                (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+>>>CVC5Real-cvc5 exec time: 1.090233e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                              (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(Not (FOEq (FAbs w32 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                             (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+            0))
+complex:(Not (FOEq (FMul w32 (FDiv w32 N0:(ReadLSB w32 0 a0)
+                                N1:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                          (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+                      N1)
+            N0))
+complex:(Not (FOEq (FAbs w32 (FDiv w32 N0:(ReadLSB w32 0 a0)
+                                (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))))
+            0))
+complex:(FOEq (FDiv w32 N0:(ReadLSB w32 0 a0)
+                 (FDiv w32 N0
+                           N1:(FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 N0))
+                                                     (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0)))))))
+       N1)
+>>>CVC5Real-cvc5 exec time: 1.186136e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+       (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))
+complex:(Eq false
+     (Not (FOEq (FPExt w64 (FPTrunc w32 (FAdd w64 (FAbs w64 (FPExt w64 (ReadLSB w32 0 a0)))
+                                                  (FAbs w64 (FPExt w64 (ReadLSB w32 0 b0))))))
+                0)))
+>>>CVC5Real-cvc5 exec time: 2.895547e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+
+KLEE: done: total instructions = 213
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 3
+Total exec time: 7.900336e+04 ms

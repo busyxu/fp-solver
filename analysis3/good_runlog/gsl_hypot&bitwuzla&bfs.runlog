@@ -1,0 +1,47 @@
+KLEE: KLEE: WATCHDOG: watching 8756
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_hypot&bitwuzla&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Bitwuzla exec time: 3.438281e+00 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+>>>Bitwuzla exec time: 4.519569e+00 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+>>>Bitwuzla exec time: 5.425173e+00 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+>>>Bitwuzla exec time: 5.814212e+00 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+>>>Bitwuzla exec time: 2.992592e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
+>>>Bitwuzla exec time: 1.558063e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hypot.c:52: FloatPointCheck: FDiv Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ctrl-c detected, requesting interpreter to halt.
+>>>Bitwuzla exec time: 1.422758e+04 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hypot.c:52: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Bitwuzla exec time: 8.789539e+00 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
+>>>Bitwuzla exec time: 8.249794e+00 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 186
+KLEE: done: completed paths = 4
+KLEE: done: partially completed paths = 8
+KLEE: done: generated tests = 7
+Total exec time: 2.792532e+04 ms

@@ -1,0 +1,36 @@
+KLEE: KLEE: WATCHDOG: watching 53481
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawf&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: calling external: fprintf(139927983371904, 94556888302464, 94556885949792, 42, 94556888158840, 94556889121200) at stream.c:46 1
+gsl: qmomof.c:42: ERROR: table length n must be positive integer
+KLEE: WARNING ONCE: calling external: fflush(139927983372128) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 7.300586e+00 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: Large alloc: 18446744073709551416 bytes.  KLEE may run out of memory.
+tcmalloc: large alloc 0 bytes == (nil) @  0x7f4387a5c1e7 0x55ffa7df75d6 0x55ffa7dbada9 0x55ffa7df8c91 0x55ffa7dfb64b 0x55ffa7db69c3 0x55ffa7dbd9dd 0x55ffa7e151d4 0x55ffa7dd0570 0x55ffa7dd0f89 0x55ffa7d5a261 0x7f4385818c87 0x55ffa7d9cb7a
+gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 402
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 1
+Total exec time: 1.241704e+04 ms

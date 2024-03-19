@@ -1,0 +1,34 @@
+array Diag[8] : w32 -> w8 = symbolic
+array Side[8] : w32 -> w8 = symbolic
+array Trans[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+(query [N0:(Eq 141
+                (ReadLSB w32 0 Side))
+         N0
+         N0
+         N1:(Eq false
+                (Eq 121
+                    N2:(ReadLSB w32 0 Uplo)))
+         N3:(Eq 122 N2)
+         (Eq false
+             N4:(Eq 111
+                    N5:(ReadLSB w32 0 Trans)))
+         (Eq 112 N5)
+         N6:(Eq 131
+                (ReadLSB w32 0 Diag))
+         N0
+         N1
+         N0
+         N1
+         N0
+         N3
+         (Eq false
+             (Eq 111 N7:(Select w32 N4 111 112)))
+         N0
+         N3
+         (Eq 112 N7)
+         N6
+         N6
+         N6
+         N6]
+        false)

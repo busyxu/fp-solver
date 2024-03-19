@@ -1,0 +1,68 @@
+KLEE: KLEE: WATCHDOG: watching 57369
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exprel_n_e&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Dreal-Z3 exec time: 1.062477e+01 ms
+>>>dreal-dreal exec time: 2.656540e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>Dreal-Z3 exec time: 2.305252e+03 ms
+>>>Dreal-Z3 exec time: 3.751619e+03 ms
+>>>Dreal-Z3 exec time: 1.060414e+04 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: exp.c:433: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 8.826000e-03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+>>>dreal-dreal exec time: 5.781500e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 2.360980e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: exp.c:117: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 2.464290e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 1.575890e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140169103779456, 94594298211808, 94594298106104, 113, 94594298106000, 94594295883616) at stream.c:46 1
+gsl: exp.c:113: ERROR: underflow
+KLEE: WARNING ONCE: calling external: fflush(140169103779680) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 2.572900e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+gsl: exp.c:110: ERROR: overflow
+Default GSL error handler invoked.
+>>>dreal-dreal exec time: 1.438850e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 3.351580e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 1.484330e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-Z3 exec time: 1.384408e+01 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+gsl: exp.c:426: ERROR: domain error
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 302
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 5
+Total exec time: 3.110176e+04 ms

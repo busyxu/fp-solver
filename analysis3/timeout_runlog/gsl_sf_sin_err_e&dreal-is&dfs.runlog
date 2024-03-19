@@ -1,0 +1,91 @@
+KLEE: KLEE: WATCHDOG: watching 50804
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_sin_err_e&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>dreal-dreal exec time: 6.430230e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 1.398070e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>dreal-dreal exec time: 1.057100e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>dreal-dreal exec time: 1.198870e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 1.252390e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 3.049000e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 1.391860e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 1.524900e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 5.921000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 1.361900e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 1.498050e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>dreal-dreal exec time: 3.628490e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: trig.c:177: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 9.096300e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>dreal-dreal exec time: 1.147890e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: trig.c:183: FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 1.399570e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 2.626090e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 8.593300e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>dreal-dreal exec time: 4.963340e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 4.924460e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 4.641630e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 2.341260e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 2.474500e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 6.873270e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 2.180208e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f49aee5d973 in filib::interval<double, (filib::rounding_strategy)0, (filib::interval_mode)1> filib::operator-<double, (filib::rounding_strategy)0, (filib::interval_mode)1>(filib::interval<double, (filib::rounding_strategy)0, (filib::interval_mode)1> const&, filib::interval<double, (filib::rounding_strategy)0, (filib::interval_mode)1> const&) () from /usr/lib/libdreal.so
+'halt_execution' has unknown return type; cast the call to its declared return type
+KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
+

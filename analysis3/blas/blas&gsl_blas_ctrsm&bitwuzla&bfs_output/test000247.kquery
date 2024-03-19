@@ -1,0 +1,54 @@
+array Diag[8] : w32 -> w8 = symbolic
+array Side[8] : w32 -> w8 = symbolic
+array Trans[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                (Eq 141
+                    N1:(ReadLSB w32 0 Side)))
+         N2:(Eq 142 N1)
+         N0
+         N0
+         N2
+         N3:(Eq false
+                (Eq 121
+                    N4:(ReadLSB w32 0 Uplo)))
+         N5:(Eq 122 N4)
+         N6:(Eq 111
+                N7:(ReadLSB w32 0 Trans))
+         N8:(Eq 131
+                (ReadLSB w32 0 Diag))
+         N0
+         N0
+         N0
+         N0
+         N2
+         N3
+         N2
+         N3
+         N2
+         N5
+         (Eq 111 (Select w32 N6 111 112))
+         (Eq false
+             (FOEq (FPExt w64 N9:(ReadLSB w32 0 alpha0))
+                   4607182418800017408))
+         N8
+         (Eq false
+             (FOLt 4607182418800017408
+                   N10:(FAbs w64 (FPExt w64 N11:(FMul w32 (SIToFP w32 (Select w32 (Eq 113 N7) 4294967295 1))
+                                                          0)))))
+         (FOEq N10 0)
+         (FSubUnderflowCheck (FAdd w32 (FMul w32 N9 1149042688)
+                                       (FMul w32 N12:(ReadLSB w32 0 alpha1)
+                                                 1149026304))
+                             (FAdd w32 (FMul w32 1065353216
+                                                 (FDiv w32 (FSub w32 (FMul w32 N13:(FAdd w32 (FMul w32 N9 1038174126) (FMul w32 N12 1149190144))
+                                                                               1065353216)
+                                                                     (FMul w32 N14:(FSub w32 (FMul w32 N9 1149190144) (FMul w32 N12 1038174126))
+                                                                               N15:(FDiv w32 N11 1065353216)))
+                                                           1065353216))
+                                       (FMul w32 N11
+                                                 (FDiv w32 (FAdd w32 (FMul w32 N14 1065353216) (FMul w32 N13 N15))
+                                                           1065353216))))]
+        false)

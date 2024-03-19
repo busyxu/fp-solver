@@ -1,0 +1,34 @@
+KLEE: KLEE: WATCHDOG: watching 37080
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawo&fp2int&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: calling external: fprintf(139958845924992, 94834487796128, 94834488290064, 42, 94834487747904, 94834488603088) at stream.c:46 1
+gsl: qmomof.c:42: ERROR: table length n must be positive integer
+KLEE: WARNING ONCE: calling external: fflush(139958845925216) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 8.108935e+00 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: Large alloc: 18446744073709551416 bytes.  KLEE may run out of memory.
+tcmalloc: large alloc 0 bytes == (nil) @  0x7f4ab732f1e7 0x564049b51916 0x564049b15119 0x564049b52fd1 0x564049b5598b 0x564049b10d33 0x564049b17d4d 0x564049b8fc6f 0x564049b2a870 0x564049b2b289 0x564049ab45d1 0x7f4ab50ebc87 0x564049af6faa
+gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 301
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 1
+Total exec time: 1.037010e+04 ms

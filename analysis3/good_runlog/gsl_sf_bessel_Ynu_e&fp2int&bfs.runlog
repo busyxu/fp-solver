@@ -1,0 +1,34 @@
+KLEE: KLEE: WATCHDOG: watching 17273
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_Ynu_e&fp2int&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: calling external: fprintf(140507913201280, 94143771716480, 94143772226272, 126, 94143771706192, 94143772226256) at stream.c:46 1
+gsl: bessel_Ynu.c:126: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140507913201504) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.238279e+01 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+
+KLEE: done: total instructions = 879898
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 4
+KLEE: done: generated tests = 2
+Total exec time: 3.656401e+06 ms

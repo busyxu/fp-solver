@@ -1,0 +1,20 @@
+/home/aaa/klee-float-solver/build/bin/klee -watchdog --max-solver-time=30 --search=dfs --max-concrete-instructions=0 -max-time=3600 --max-loop-time=3 --solver-type=smt-dreal --json-config-path=/home/aaa/gsl_runtime_lib/gsl_config.json --link-llvm-lib=/home/aaa/klee-uclibc/lib/libm.a -output-dir=/home/aaa/analysis3/benchmark3/blas/blas&gsl_blas_ctrsm&smt-dreal&dfs_output gsl_blas_ctrsm_gsl.bc
+PID: 16981
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2023-08-17 15:00:19
+BEGIN searcher description
+DFSSearcher
+END searcher description
+Finished: 2023-08-17 16:00:45
+Elapsed: 01:00:26
+KLEE: done: explored paths = 239
+KLEE: done: avg. constructs per query = 339
+KLEE: done: total queries = 248
+KLEE: done: valid queries = 105
+KLEE: done: invalid queries = 143
+KLEE: done: query cex = 248
+
+KLEE: done: total instructions = 18442
+KLEE: done: completed paths = 7
+KLEE: done: partially completed paths = 246
+KLEE: done: generated tests = 33

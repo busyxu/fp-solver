@@ -1,0 +1,2184 @@
+KLEE: KLEE: WATCHDOG: watching 12957
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_polar_to_rect&cvc5-real&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+complex:(FDivOverflowCheck (FAbs w64 (ReadLSB w64 0 b))
+                    4618760256179416344)
+>>>CVC5Real-cvc5 exec time: 7.573744e+00 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FDivUnderflowCheck (FAbs w64 (ReadLSB w64 0 b))
+                     4618760256179416344)
+>>>CVC5Real-cvc5 exec time: 1.446951e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FDivAccuracyCheck (FAbs w64 (ReadLSB w64 0 b))
+                    4618760256179416344)
+>>>CVC5Real-cvc5 exec time: 1.123693e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck (SIToFP w64 (Mul w32 2
+                                         (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                           0)
+                                                     1
+                                                     4294967295)))
+                    (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+>>>CVC5Real-cvc5 exec time: 1.082997e+01 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FMulUnderflowCheck (SIToFP w64 (Mul w32 2
+                                          (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                            0)
+                                                      1
+                                                      4294967295)))
+                     (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+>>>CVC5Real-cvc5 exec time: 2.687923e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck (SIToFP w64 (Mul w32 2
+                                         (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                           0)
+                                                     1
+                                                     4294967295)))
+                    (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+>>>CVC5Real-cvc5 exec time: 2.728667e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                   (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                     0)
+                                                               1
+                                                               4294967295)))
+                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                    4614256656212033536)
+>>>CVC5Real-cvc5 exec time: 1.161965e+01 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FMulUnderflowCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                    (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                      0)
+                                                                1
+                                                                4294967295)))
+                               (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                     4614256656212033536)
+>>>CVC5Real-cvc5 exec time: 2.866261e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                   (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                     0)
+                                                               1
+                                                               4294967295)))
+                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                    4614256656212033536)
+>>>CVC5Real-cvc5 exec time: 5.295424e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubOverflowCheck N0:(ReadLSB w64 0 b)
+                    (FMul w64 (FMul w64 (SIToFP w64 (Mul w32 2
+                                                             (Select w32 (FOGe N0 0) 1 4294967295)))
+                                        (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                              4614256656212033536))
+>>>CVC5Real-cvc5 exec time: 1.447855e+01 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FSubUnderflowCheck N0:(ReadLSB w64 0 b)
+                     (FMul w64 (FMul w64 (SIToFP w64 (Mul w32 2
+                                                              (Select w32 (FOGe N0 0) 1 4294967295)))
+                                         (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                               4614256656212033536))
+>>>CVC5Real-cvc5 exec time: 3.459581e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubAccuracyCheck N0:(ReadLSB w64 0 b)
+                    (FMul w64 (FMul w64 (SIToFP w64 (Mul w32 2
+                                                             (Select w32 (FOGe N0 0) 1 4294967295)))
+                                        (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                              4614256656212033536))
+>>>CVC5Real-cvc5 exec time: 1.171269e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                   (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                     0)
+                                                               1
+                                                               4294967295)))
+                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                    4504800487341555712)
+>>>CVC5Real-cvc5 exec time: 6.178650e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulUnderflowCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                    (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                      0)
+                                                                1
+                                                                4294967295)))
+                               (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                     4504800487341555712)
+>>>CVC5Real-cvc5 exec time: 5.652250e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                   (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                     0)
+                                                               1
+                                                               4294967295)))
+                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                    4504800487341555712)
+>>>CVC5Real-cvc5 exec time: 7.759508e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubOverflowCheck (FSub w64 N0:(ReadLSB w64 0 b)
+                              (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                          (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                     (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                        4614256656212033536))
+                    (FMul w64 N1 4504800487341555712))
+>>>CVC5Real-cvc5 exec time: 1.210939e+01 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FSubUnderflowCheck (FSub w64 N0:(ReadLSB w64 0 b)
+                               (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                           (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                      (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                         4614256656212033536))
+                     (FMul w64 N1 4504800487341555712))
+>>>CVC5Real-cvc5 exec time: 3.516908e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubAccuracyCheck (FSub w64 N0:(ReadLSB w64 0 b)
+                              (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                          (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                     (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                        4614256656212033536))
+                    (FMul w64 N1 4504800487341555712))
+>>>CVC5Real-cvc5 exec time: 1.209129e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                   (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                     0)
+                                                               1
+                                                               4294967295)))
+                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                    4397842657339789680)
+>>>CVC5Real-cvc5 exec time: 6.141380e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulUnderflowCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                    (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                      0)
+                                                                1
+                                                                4294967295)))
+                               (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                     4397842657339789680)
+>>>CVC5Real-cvc5 exec time: 8.906030e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck (FMul w64 (SIToFP w64 (Mul w32 2
+                                                   (Select w32 (FOGe N0:(ReadLSB w64 0 b)
+                                                                     0)
+                                                               1
+                                                               4294967295)))
+                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                    4397842657339789680)
+>>>CVC5Real-cvc5 exec time: 7.135150e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubOverflowCheck (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                        (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                    (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                               (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                  4614256656212033536))
+                              (FMul w64 N1 4504800487341555712))
+                    (FMul w64 N1 4397842657339789680))
+>>>CVC5Real-cvc5 exec time: 1.197656e+01 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FSubUnderflowCheck (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+>>>CVC5Real-cvc5 exec time: 3.539472e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubAccuracyCheck (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                        (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                    (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                               (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                  4614256656212033536))
+                              (FMul w64 N1 4504800487341555712))
+                    (FMul w64 N1 4397842657339789680))
+>>>CVC5Real-cvc5 exec time: 1.250548e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FSubOverflowCheck (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                  (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                              (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                         (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                            4614256656212033536))
+                                        (FMul w64 N1 4504800487341555712))
+                              (FMul w64 N1 4397842657339789680))
+                    N0)
+>>>CVC5Real-cvc5 exec time: 6.495734e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FSubUnderflowCheck (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                   (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                               (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                          (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                             4614256656212033536))
+                                         (FMul w64 N1 4504800487341555712))
+                               (FMul w64 N1 4397842657339789680))
+                     N0)
+>>>CVC5Real-cvc5 exec time: 4.020116e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FSubAccuracyCheck (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                  (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                              (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                         (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                            4614256656212033536))
+                                        (FMul w64 N1 4504800487341555712))
+                              (FMul w64 N1 4397842657339789680))
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.863053e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck 4377498837804122112
+                    (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                      (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                  (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                             (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                4614256656212033536))
+                                                            (FMul w64 N1 4504800487341555712))
+                                                  (FMul w64 N1 4397842657339789680))
+                                        N0)))
+>>>CVC5Real-cvc5 exec time: 1.787119e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck 4377498837804122112
+                     (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                       (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                   (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                              (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                 4614256656212033536))
+                                                             (FMul w64 N1 4504800487341555712))
+                                                   (FMul w64 N1 4397842657339789680))
+                                         N0)))
+>>>CVC5Real-cvc5 exec time: 1.776569e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck 4377498837804122112
+                    (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                      (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                  (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                             (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                4614256656212033536))
+                                                            (FMul w64 N1 4504800487341555712))
+                                                  (FMul w64 N1 4397842657339789680))
+                                        N0)))
+>>>CVC5Real-cvc5 exec time: 8.606428e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (ReadLSB w64 0 a)
+                    (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680))))
+>>>CVC5Real-cvc5 exec time: 1.113881e+05 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (ReadLSB w64 0 a)
+                     (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                            (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                        (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                      4614256656212033536))
+                                                  (FMul w64 N1 4504800487341555712))
+                                        (FMul w64 N1 4397842657339789680))))
+>>>CVC5Real-cvc5 exec time: 8.097100e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (ReadLSB w64 0 a)
+                    (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680))))
+>>>CVC5Real-cvc5 exec time: 1.539699e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (ReadLSB w64 0 a)
+                    (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680))))
+>>>CVC5Real-cvc5 exec time: 3.008638e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (ReadLSB w64 0 a)
+                     (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                            (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                        (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                      4614256656212033536))
+                                                  (FMul w64 N1 4504800487341555712))
+                                        (FMul w64 N1 4397842657339789680))))
+>>>CVC5Real-cvc5 exec time: 1.754071e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (ReadLSB w64 0 a)
+                    (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680))))
+>>>CVC5Real-cvc5 exec time: 1.343370e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680)))
+                    4372995238176751616)
+>>>CVC5Real-cvc5 exec time: 2.251512e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                            (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                        (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                      4614256656212033536))
+                                                  (FMul w64 N1 4504800487341555712))
+                                        (FMul w64 N1 4397842657339789680)))
+                     4372995238176751616)
+>>>CVC5Real-cvc5 exec time: 1.895224e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680)))
+                    4372995238176751616)
+>>>CVC5Real-cvc5 exec time: 1.865235e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (FMul w64 (SIN w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                        (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                    (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                               (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                  4614256656212033536))
+                                                              (FMul w64 N2 4504800487341555712))
+                                                    (FMul w64 N2 4397842657339789680)))
+                              4372995238176751616)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 2.048656e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (FMul w64 (SIN w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                         (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                     (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                   4614256656212033536))
+                                                               (FMul w64 N2 4504800487341555712))
+                                                     (FMul w64 N2 4397842657339789680)))
+                               4372995238176751616)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 1.812027e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (FMul w64 (SIN w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                        (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                    (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                               (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                  4614256656212033536))
+                                                              (FMul w64 N2 4504800487341555712))
+                                                    (FMul w64 N2 4397842657339789680)))
+                              4372995238176751616)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 2.367889e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (ReadLSB w64 0 a)
+                    (FAbs w64 (FMul w64 (FMul w64 (SIN w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                                            (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                        (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                                      4614256656212033536))
+                                                                                  (FMul w64 N2 4504800487341555712))
+                                                                        (FMul w64 N2 4397842657339789680)))
+                                                  4372995238176751616)
+                                        N0)))
+>>>CVC5Real-cvc5 exec time: 2.082451e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (ReadLSB w64 0 a)
+                     (FAbs w64 (FMul w64 (FMul w64 (SIN w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                                             (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                         (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                                    (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                                       4614256656212033536))
+                                                                                   (FMul w64 N2 4504800487341555712))
+                                                                         (FMul w64 N2 4397842657339789680)))
+                                                   4372995238176751616)
+                                         N0)))
+>>>CVC5Real-cvc5 exec time: 1.824419e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (ReadLSB w64 0 a)
+                    (FAbs w64 (FMul w64 (FMul w64 (SIN w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                                            (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                        (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                                      4614256656212033536))
+                                                                                  (FMul w64 N2 4504800487341555712))
+                                                                        (FMul w64 N2 4397842657339789680)))
+                                                  4372995238176751616)
+                                        N0)))
+>>>CVC5Real-cvc5 exec time: 7.385848e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck 4377498837804122112
+                    (FAbs w64 (FMul w64 (ReadLSB w64 0 a)
+                                        (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                               (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                           (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                                      (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                         4614256656212033536))
+                                                                     (FMul w64 N1 4504800487341555712))
+                                                           (FMul w64 N1 4397842657339789680))))))
+>>>CVC5Real-cvc5 exec time: 1.736102e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck 4377498837804122112
+                     (FAbs w64 (FMul w64 (ReadLSB w64 0 a)
+                                         (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                                (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                            (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                                       (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                          4614256656212033536))
+                                                                      (FMul w64 N1 4504800487341555712))
+                                                            (FMul w64 N1 4397842657339789680))))))
+>>>CVC5Real-cvc5 exec time: 1.697759e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck 4377498837804122112
+                    (FAbs w64 (FMul w64 (ReadLSB w64 0 a)
+                                        (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                               (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                           (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                                      (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                         4614256656212033536))
+                                                                     (FMul w64 N1 4504800487341555712))
+                                                           (FMul w64 N1 4397842657339789680))))))
+>>>CVC5Real-cvc5 exec time: 1.711628e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FAddOverflowCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAbs w64 (FMul w64 (FMul w64 (SIN w64 N1:(FSub w64 (FSub w64 (FSub w64 N2:(ReadLSB w64 0 b)
+                                                                                                      (FMul w64 N3:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                                  (Select w32 (FOGe N2 0) 1 4294967295)))
+                                                                                                                             (FLOOR w64 (FDiv w64 (FAbs w64 N2) 4618760256179416344)))
+                                                                                                                4614256656212033536))
+                                                                                            (FMul w64 N3 4504800487341555712))
+                                                                                  (FMul w64 N3 4397842657339789680)))
+                                                            4372995238176751616)
+                                                  N1)))
+                    (FMul w64 4377498837804122112
+                              (FAbs w64 (FMul w64 N0 (COS w64 N1)))))
+>>>CVC5Real-cvc5 exec time: 1.833215e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FAddUnderflowCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAbs w64 (FMul w64 (FMul w64 (SIN w64 N1:(FSub w64 (FSub w64 (FSub w64 N2:(ReadLSB w64 0 b)
+                                                                                                       (FMul w64 N3:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                                   (Select w32 (FOGe N2 0) 1 4294967295)))
+                                                                                                                              (FLOOR w64 (FDiv w64 (FAbs w64 N2) 4618760256179416344)))
+                                                                                                                 4614256656212033536))
+                                                                                             (FMul w64 N3 4504800487341555712))
+                                                                                   (FMul w64 N3 4397842657339789680)))
+                                                             4372995238176751616)
+                                                   N1)))
+                     (FMul w64 4377498837804122112
+                               (FAbs w64 (FMul w64 N0 (COS w64 N1)))))
+>>>CVC5Real-cvc5 exec time: 1.766590e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FAddAccuracyCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAbs w64 (FMul w64 (FMul w64 (SIN w64 N1:(FSub w64 (FSub w64 (FSub w64 N2:(ReadLSB w64 0 b)
+                                                                                                      (FMul w64 N3:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                                  (Select w32 (FOGe N2 0) 1 4294967295)))
+                                                                                                                             (FLOOR w64 (FDiv w64 (FAbs w64 N2) 4618760256179416344)))
+                                                                                                                4614256656212033536))
+                                                                                            (FMul w64 N3 4504800487341555712))
+                                                                                  (FMul w64 N3 4397842657339789680)))
+                                                            4372995238176751616)
+                                                  N1)))
+                    (FMul w64 4377498837804122112
+                              (FAbs w64 (FMul w64 N0 (COS w64 N1)))))
+>>>CVC5Real-cvc5 exec time: 1.757071e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680)))
+                    4372995238176751616)
+>>>CVC5Real-cvc5 exec time: 1.736694e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                            (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                        (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                      4614256656212033536))
+                                                  (FMul w64 N1 4504800487341555712))
+                                        (FMul w64 N1 4397842657339789680)))
+                     4372995238176751616)
+>>>CVC5Real-cvc5 exec time: 1.693149e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (COS w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                           (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                       (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                  (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                     4614256656212033536))
+                                                 (FMul w64 N1 4504800487341555712))
+                                       (FMul w64 N1 4397842657339789680)))
+                    4372995238176751616)
+>>>CVC5Real-cvc5 exec time: 1.880315e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (FMul w64 (COS w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                        (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                    (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                               (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                  4614256656212033536))
+                                                              (FMul w64 N2 4504800487341555712))
+                                                    (FMul w64 N2 4397842657339789680)))
+                              4372995238176751616)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.946914e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (FMul w64 (COS w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                         (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                     (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                   4614256656212033536))
+                                                               (FMul w64 N2 4504800487341555712))
+                                                     (FMul w64 N2 4397842657339789680)))
+                               4372995238176751616)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 1.828137e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (FMul w64 (COS w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                        (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                    (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                               (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                  4614256656212033536))
+                                                              (FMul w64 N2 4504800487341555712))
+                                                    (FMul w64 N2 4397842657339789680)))
+                              4372995238176751616)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.111626e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck (ReadLSB w64 0 a)
+                    (FAbs w64 (FMul w64 (FMul w64 (COS w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                                            (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                        (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                                      4614256656212033536))
+                                                                                  (FMul w64 N2 4504800487341555712))
+                                                                        (FMul w64 N2 4397842657339789680)))
+                                                  4372995238176751616)
+                                        N0)))
+>>>CVC5Real-cvc5 exec time: 1.939800e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck (ReadLSB w64 0 a)
+                     (FAbs w64 (FMul w64 (FMul w64 (COS w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                                             (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                         (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                                    (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                                       4614256656212033536))
+                                                                                   (FMul w64 N2 4504800487341555712))
+                                                                         (FMul w64 N2 4397842657339789680)))
+                                                   4372995238176751616)
+                                         N0)))
+>>>CVC5Real-cvc5 exec time: 1.808120e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck (ReadLSB w64 0 a)
+                    (FAbs w64 (FMul w64 (FMul w64 (COS w64 N0:(FSub w64 (FSub w64 (FSub w64 N1:(ReadLSB w64 0 b)
+                                                                                            (FMul w64 N2:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                        (Select w32 (FOGe N1 0) 1 4294967295)))
+                                                                                                                   (FLOOR w64 (FDiv w64 (FAbs w64 N1) 4618760256179416344)))
+                                                                                                      4614256656212033536))
+                                                                                  (FMul w64 N2 4504800487341555712))
+                                                                        (FMul w64 N2 4397842657339789680)))
+                                                  4372995238176751616)
+                                        N0)))
+>>>CVC5Real-cvc5 exec time: 6.955929e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulOverflowCheck 4377498837804122112
+                    (FAbs w64 (FMul w64 (ReadLSB w64 0 a)
+                                        (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                               (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                           (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                                      (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                         4614256656212033536))
+                                                                     (FMul w64 N1 4504800487341555712))
+                                                           (FMul w64 N1 4397842657339789680))))))
+>>>CVC5Real-cvc5 exec time: 1.825041e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulUnderflowCheck 4377498837804122112
+                     (FAbs w64 (FMul w64 (ReadLSB w64 0 a)
+                                         (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                                (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                            (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                                       (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                          4614256656212033536))
+                                                                      (FMul w64 N1 4504800487341555712))
+                                                            (FMul w64 N1 4397842657339789680))))))
+>>>CVC5Real-cvc5 exec time: 1.743024e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FMulAccuracyCheck 4377498837804122112
+                    (FAbs w64 (FMul w64 (ReadLSB w64 0 a)
+                                        (SIN w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                                               (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                           (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                                      (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                                         4614256656212033536))
+                                                                     (FMul w64 N1 4504800487341555712))
+                                                           (FMul w64 N1 4397842657339789680))))))
+>>>CVC5Real-cvc5 exec time: 1.044510e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FAddOverflowCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAbs w64 (FMul w64 (FMul w64 (COS w64 N1:(FSub w64 (FSub w64 (FSub w64 N2:(ReadLSB w64 0 b)
+                                                                                                      (FMul w64 N3:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                                  (Select w32 (FOGe N2 0) 1 4294967295)))
+                                                                                                                             (FLOOR w64 (FDiv w64 (FAbs w64 N2) 4618760256179416344)))
+                                                                                                                4614256656212033536))
+                                                                                            (FMul w64 N3 4504800487341555712))
+                                                                                  (FMul w64 N3 4397842657339789680)))
+                                                            4372995238176751616)
+                                                  N1)))
+                    (FMul w64 4377498837804122112
+                              (FAbs w64 (FMul w64 N0 (SIN w64 N1)))))
+>>>CVC5Real-cvc5 exec time: 2.051232e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FAddUnderflowCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAbs w64 (FMul w64 (FMul w64 (COS w64 N1:(FSub w64 (FSub w64 (FSub w64 N2:(ReadLSB w64 0 b)
+                                                                                                       (FMul w64 N3:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                                   (Select w32 (FOGe N2 0) 1 4294967295)))
+                                                                                                                              (FLOOR w64 (FDiv w64 (FAbs w64 N2) 4618760256179416344)))
+                                                                                                                 4614256656212033536))
+                                                                                             (FMul w64 N3 4504800487341555712))
+                                                                                   (FMul w64 N3 4397842657339789680)))
+                                                             4372995238176751616)
+                                                   N1)))
+                     (FMul w64 4377498837804122112
+                               (FAbs w64 (FMul w64 N0 (SIN w64 N1)))))
+>>>CVC5Real-cvc5 exec time: 1.824369e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                   4614256656212033536))
+                                               (FMul w64 N1 4504800487341555712))
+                                     (FMul w64 N1 4397842657339789680))
+                           N0))
+       4614256656552045848)
+complex:(FAddAccuracyCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAbs w64 (FMul w64 (FMul w64 (COS w64 N1:(FSub w64 (FSub w64 (FSub w64 N2:(ReadLSB w64 0 b)
+                                                                                                      (FMul w64 N3:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                                                                  (Select w32 (FOGe N2 0) 1 4294967295)))
+                                                                                                                             (FLOOR w64 (FDiv w64 (FAbs w64 N2) 4618760256179416344)))
+                                                                                                                4614256656212033536))
+                                                                                            (FMul w64 N3 4504800487341555712))
+                                                                                  (FMul w64 N3 4397842657339789680)))
+                                                            4372995238176751616)
+                                                  N1)))
+                    (FMul w64 4377498837804122112
+                              (FAbs w64 (FMul w64 N0 (SIN w64 N1)))))
+>>>CVC5Real-cvc5 exec time: 1.796207e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4706261610602168320))
+complex:(Eq false
+     (FOLt (FAbs w64 (FSub w64 (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                                             (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                                         (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                                    (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                                       4614256656212033536))
+                                                   (FMul w64 N1 4504800487341555712))
+                                         (FMul w64 N1 4397842657339789680))
+                               N0))
+           4614256656552045848))
+>>>CVC5Real-cvc5 exec time: 5.293949e+00 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(Eq false
+     (FOGt (FAbs w64 (ReadLSB w64 0 b))
+           4823355200913801216))
+complex:(FOGt (FAbs w64 (ReadLSB w64 0 b))
+       4706261610602168320)
+>>>CVC5Real-cvc5 exec time: 4.908615e+00 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(Eq false
+     (FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           13837628693406821656))
+complex:(FOGt (FAbs w64 (ReadLSB w64 0 b))
+       4823355200913801216)
+>>>CVC5Real-cvc5 exec time: 1.170619e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                         (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                     (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                                (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                                   4614256656212033536))
+                               (FMul w64 N1 4504800487341555712))
+                     (FMul w64 N1 4397842657339789680))
+           4614256656552045848))
+complex:(FOLt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                     (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                 (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                            (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                               4614256656212033536))
+                           (FMul w64 N1 4504800487341555712))
+                 (FMul w64 N1 4397842657339789680))
+       13837628693406821656)
+>>>CVC5Real-cvc5 exec time: 4.303955e+00 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FOGt (FSub w64 (FSub w64 (FSub w64 N0:(ReadLSB w64 0 b)
+                                     (FMul w64 N1:(FMul w64 (SIToFP w64 (Mul w32 2
+                                                                                 (Select w32 (FOGe N0 0) 1 4294967295)))
+                                                            (FLOOR w64 (FDiv w64 (FAbs w64 N0) 4618760256179416344)))
+                                               4614256656212033536))
+                           (FMul w64 N1 4504800487341555712))
+                 (FMul w64 N1 4397842657339789680))
+       4614256656552045848)
+>>>CVC5Real-cvc5 exec time: 3.499404e+00 ms
+b
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+
+KLEE: done: total instructions = 207
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 1
+Total exec time: 1.592148e+05 ms

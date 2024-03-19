@@ -1,0 +1,52 @@
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                (Eq 121
+                    N1:(ReadLSB w32 0 Uplo)))
+         N2:(Eq 122 N1)
+         (FOEq (FPExt w64 N3:(ReadLSB w32 0 alpha0))
+               0)
+         (Eq false
+             (FOEq (FPExt w64 N4:(ReadLSB w32 0 alpha1))
+                   0))
+         N0
+         N2
+         N5:(Not (FOEq (FAbs w32 N4) 0))
+         (FOEq (FDiv w32 N6:(FMul w32 N4 1039516303) N4)
+               1039516303)
+         (FOEq (FDiv w32 N6 1039516303) N4)
+         N5
+         (FOEq (FDiv w32 N7:(FMul w32 N4 1038174126) N4)
+               1038174126)
+         (FOEq (FDiv w32 N7 1038174126) N4)
+         N5
+         (FOEq (FDiv w32 N8:(FMul w32 N4 1149042688) N4)
+               1149042688)
+         (FOEq (FDiv w32 N8 1149042688) N4)
+         (Not (FOEq (FAbs w32 N9:(FSub w32 2147483648 N4))
+                    0))
+         (FOEq (FDiv w32 N10:(FMul w32 N9 1149026304) N9)
+               1149026304)
+         (FOEq (FDiv w32 N10 1149026304) N9)
+         (Not (FOEq (FAbs w32 N11:(FSub w32 (FMul w32 N3 1038174126) N6))
+                    0))
+         (FOEq (FDiv w32 N12:(FMul w32 N11 1149026304) N11)
+               1149026304)
+         (FOEq (FDiv w32 N12 1149026304) N11)
+         (Not (FOEq (FAbs w32 N13:(FAdd w32 N7 (FMul w32 N3 1039516303)))
+                    0))
+         (FOEq (FDiv w32 N14:(FMul w32 N13 1149042688) N13)
+               1149042688)
+         (FOEq (FDiv w32 N14 1149042688) N13)
+         (FOEq (FSub w32 N15:(FAdd w32 1045891645
+                                       N16:(FMul w32 1073741824 (FAdd w32 N12 N14)))
+                         1045891645)
+               N16)
+         (FOEq (FSub w32 N15 N16) 1045891645)
+         (Not (FOEq (FAbs w32 N17:(FSub w32 (FMul w32 N3 1040522936) N7))
+                    0))
+         (FOEq (FDiv w32 N18:(FMul w32 N17 1149026304) N17)
+               1149026304)
+         (FOEq (FDiv w32 N18 1149026304) N17)]
+        false)

@@ -1,0 +1,57 @@
+array Trans[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[8] : w32 -> w8 = symbolic
+array alpha1[8] : w32 -> w8 = symbolic
+array beta0[8] : w32 -> w8 = symbolic
+array beta1[8] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                (Eq 111
+                    N1:(ReadLSB w32 0 Trans)))
+         N0
+         N0
+         N0
+         N0
+         N2:(Eq false
+                (Eq 121
+                    N3:(ReadLSB w32 0 Uplo)))
+         N4:(Eq 122 N3)
+         N0
+         N5:(Eq 112 N1)
+         N6:(Eq false
+                (FOEq N7:(ReadLSB w64 0 alpha0)
+                      0))
+         (Eq false
+             (FOEq N8:(ReadLSB w64 0 beta0)
+                   0))
+         (Eq false (FOEq N8 4607182418800017408))
+         N2
+         N6
+         N2
+         N2
+         N4
+         N0
+         N4
+         N5
+         (FOEq (FSub w64 N9:(FAdd w64 N10:(FAdd w64 (FMul w64 N8 4652200822887677952)
+                                                    (FMul w64 N11:(ReadLSB w64 0 beta1)
+                                                              0))
+                                      N12:(FAdd w64 (FAdd w64 (FMul w64 N13:(FSub w64 (FMul w64 N7 4607182418800017408)
+                                                                                      (FMul w64 N14:(ReadLSB w64 0 alpha1)
+                                                                                                0))
+                                                                        4652112861957455872)
+                                                              (FMul w64 N15:(FAdd w64 (FMul w64 N7 0) (FMul w64 N14 4607182418800017408))
+                                                                        4652104065864433664))
+                                                    N16:(FAdd w64 (FMul w64 (FSub w64 (FMul w64 N7 4652192026794655744) (FMul w64 N14 4592590756007337001))
+                                                                            0)
+                                                                  (FMul w64 (FAdd w64 (FMul w64 N7 4592590756007337001) (FMul w64 N14 4652192026794655744))
+                                                                            4607182418800017408))))
+                         N10)
+               N12)
+         (FOEq (FSub w64 N9 N12) N10)
+         (FOEq (FSub w64 N17:(FAdd w64 N18:(FAdd w64 (FMul w64 N8 4652253599445811200) (FMul w64 N11 4652249201399300096))
+                                       N19:(FAdd w64 (FAdd w64 (FMul w64 N13 4592590756007337001) (FMul w64 N15 4652192026794655744))
+                                                     N16))
+                         N18)
+               N19)
+         (FOEq (FSub w64 N17 N19) N18)]
+        false)

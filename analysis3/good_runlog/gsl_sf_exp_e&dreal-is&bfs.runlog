@@ -1,0 +1,46 @@
+KLEE: KLEE: WATCHDOG: watching 18195
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&dreal-is&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>dreal-dreal exec time: 7.757960e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>dreal-dreal exec time: 1.972550e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: exp.c:117: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 2.147480e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>dreal-dreal exec time: 6.887100e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>dreal-dreal exec time: 6.394200e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140022635398784, 94208639069280, 94208638947544, 110, 94208638947440, 94208636725056) at stream.c:46 1
+gsl: exp.c:110: ERROR: overflow
+KLEE: WARNING ONCE: calling external: fflush(140022635399008) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>dreal-dreal exec time: 1.542040e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+gsl: exp.c:113: ERROR: underflow
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 169
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 3
+Total exec time: 1.359416e+04 ms

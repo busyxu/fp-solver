@@ -1,0 +1,50 @@
+KLEE: KLEE: WATCHDOG: watching 60472
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_geometric_Q&dreal-is&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Dreal-Z3 exec time: 5.327111e+01 ms
+>>>Dreal-Z3 exec time: 2.123970e+02 ms
+>>>Dreal-Z3 exec time: 2.733524e+02 ms
+KLEE: ERROR: exponential.c:55: FloatPointCheck: FDiv Invalid found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 1.474524e+03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: exponential.c:55: FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 9.966147e+02 ms
+>>>Dreal-dreal exec time: 1.218620e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 7.498386e+03 ms
+>>>Dreal-dreal exec time: 2.127100e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.854993e+02 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: exponential.c:55: FloatPointCheck: FDiv Divide-By-Zero found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 8.247057e+01 ms
+>>>Dreal-dreal exec time: 2.052800e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.496995e+01 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+
+KLEE: done: total instructions = 35
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 4
+Total exec time: 2.301466e+04 ms

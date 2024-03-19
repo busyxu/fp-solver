@@ -1,0 +1,16 @@
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha[4] : w32 -> w8 = symbolic
+array beta[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 121
+                 N0:(ReadLSB w32 0 Uplo)))
+         (Eq 122 N0)
+         (Eq false
+             (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+                   0))
+         (Eq false
+             (FOEq N1:(FPExt w64 N2:(ReadLSB w32 0 beta))
+                   0))
+         (Not (FOEq N1 4607182418800017408))
+         (FMulOverflowCheck 1149026304 N2)]
+        false)

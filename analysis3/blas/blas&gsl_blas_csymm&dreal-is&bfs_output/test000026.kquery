@@ -1,0 +1,62 @@
+array Side[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array beta0[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                (Eq 141
+                    N1:(ReadLSB w32 0 Side)))
+         N2:(Eq 142 N1)
+         N0
+         N0
+         N2
+         N3:(Eq false
+                (Eq 121
+                    N4:(ReadLSB w32 0 Uplo)))
+         N5:(Eq 122 N4)
+         N6:(Eq false
+                (FOEq (FPExt w64 N7:(ReadLSB w32 0 alpha0))
+                      0))
+         (Eq false
+             (FOEq N8:(FPExt w64 N9:(ReadLSB w32 0 beta0))
+                   0))
+         (Eq false (FOEq N8 4607182418800017408))
+         N10:(Not (FOEq (FAbs w32 N9) 0))
+         (FOEq (FDiv w32 N11:(FMul w32 N9 1045891645) N9)
+               1045891645)
+         (FOEq (FDiv w32 N11 1045891645) N9)
+         N10
+         (FOEq (FDiv w32 N12:(FMul w32 N9 1046562734) N9)
+               1046562734)
+         (FOEq (FDiv w32 N12 1046562734) N9)
+         N10
+         (FOEq (FDiv w32 N13:(FMul w32 N9 1047233823) N9)
+               1047233823)
+         (FOEq (FDiv w32 N13 1047233823) N9)
+         N10
+         (FOEq (FDiv w32 N14:(FMul w32 N9 1149206528) N9)
+               1149206528)
+         (FOEq (FDiv w32 N14 1149206528) N9)
+         N10
+         (FOEq (FDiv w32 N15:(FMul w32 N9 1149296640) N9)
+               1149296640)
+         (FOEq (FDiv w32 N15 1149296640) N9)
+         N10
+         (FOEq (FDiv w32 N16:(FMul w32 N9 1149304832) N9)
+               1149304832)
+         (FOEq (FDiv w32 N16 1149304832) N9)
+         N6
+         N0
+         N0
+         N2
+         N3
+         N2
+         N5
+         N17:(Not (FOEq (FAbs w32 N7) 0))
+         (FOEq (FDiv w32 N18:(FMul w32 N7 1149026304) N7)
+               1149026304)
+         (FOEq (FDiv w32 N18 1149026304) N7)
+         N17
+         (FOEq (FDiv w32 N19:(FMul w32 N7 1149042688) N7)
+               1149042688)
+         (FOEq (FDiv w32 N19 1149042688) N7)]
+        false)

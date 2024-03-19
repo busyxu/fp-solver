@@ -1,0 +1,758 @@
+KLEE: KLEE: WATCHDOG: watching 56973
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_hermite_prob_deriv_array&smt-dreal&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>Synergy-Z3 exec time: 1.352242e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140440381605504, 93955920006912, 93955921078736, 666, 93955919900840, 93955921078720) at stream.c:46 1
+gsl: hermite.c:666: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140440381605728) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.308362e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+gsl: hermite.c:666: ERROR: domain error
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 1.342939e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+gsl: hermite.c:143: ERROR: gsl_sf_hermite_prob_e(n, x, &result)
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 1.333202e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.253294e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.268941e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: hermite.c:714: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.105093e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.178148e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.165132e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.352978e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.146300e-02 ms
+>>>Synergy-dreal exec time: 8.073350e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.049000e-02 ms
+>>>Synergy-dreal exec time: 3.350180e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.711362e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:111: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.384700e-02 ms
+>>>Synergy-dreal exec time: 4.906730e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.571583e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:111: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.365665e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.283519e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: WARNING ONCE: flushing 7152 bytes on read, may be slow and/or crash: MO11590[7152] allocated at global:doub_fact_table
+>>>Synergy-Z3 exec time: 3.377400e-02 ms
+>>>Synergy-dreal exec time: 1.054776e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.448410e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 4.823100e-02 ms
+>>>Synergy-dreal exec time: 8.254300e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.772383e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 8.661400e-02 ms
+>>>Synergy-dreal exec time: 1.326383e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.317014e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.302166e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 7.544474e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 6.824085e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 7.245816e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 7.378829e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.464800e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 8.214859e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+gsl: hermite.c:143: ERROR: gsl_sf_hermite_prob_e(n, x, &result)
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 9.537513e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: hermite.c:712: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 7.175184e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 9.315230e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+gsl: hermite.c:143: ERROR: gsl_sf_hermite_prob_e(n, x, &result)
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 9.412586e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 9.046841e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 7.950767e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.629445e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.031424e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.173300e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 2.759300e-02 ms
+>>>Synergy-dreal exec time: 4.037480e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.579000e-02 ms
+>>>Synergy-dreal exec time: 2.495150e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.724303e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:125: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.347111e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: hermite.c:125: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 9.419000e-03 ms
+>>>Synergy-dreal exec time: 2.733290e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.693324e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:103: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.284400e-02 ms
+>>>Synergy-dreal exec time: 4.352680e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.140200e-02 ms
+>>>Synergy-dreal exec time: 2.560370e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.041000e-02 ms
+>>>Synergy-dreal exec time: 2.181050e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.047114e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.988126e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.151215e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 4.218063e+03 ms
+>>>Synergy-Z3 exec time: 3.492618e+03 ms
+>>>Synergy-Z3 exec time: 3.062797e+03 ms
+>>>Synergy-Z3 exec time: 1.684539e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 4.117479e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.303269e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.354286e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.340383e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 2.476375e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.445800e-02 ms
+>>>Synergy-dreal exec time: 4.336140e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.371600e-02 ms
+>>>Synergy-dreal exec time: 3.563880e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.821918e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 1.808600e-02 ms
+>>>Synergy-dreal exec time: 5.802530e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.754741e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.623661e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 2.255133e+03 ms
+>>>Synergy-Z3 exec time: 2.235345e+03 ms
+>>>Synergy-Z3 exec time: 2.145282e+03 ms
+>>>Synergy-Z3 exec time: 8.705700e-02 ms
+>>>Synergy-dreal exec time: 1.064274e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.781533e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.670400e-02 ms
+>>>Synergy-dreal exec time: 9.985180e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.309305e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 3.057113e+04 ms
+>>>Synergy-Z3 exec time: 1.044293e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 4.015600e-02 ms
+>>>Synergy-dreal exec time: 9.730400e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.554111e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 8.974000e-02 ms
+>>>Synergy-dreal exec time: 1.279844e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.691834e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 6.729700e-02 ms
+>>>Synergy-dreal exec time: 1.144345e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.305417e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 7.580500e-02 ms
+>>>Synergy-dreal exec time: 2.288300e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.286103e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 6.851000e-02 ms
+>>>Synergy-dreal exec time: 1.478900e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.257322e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 3.733301e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 2.225670e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 4.119486e+03 ms
+>>>Synergy-Z3 exec time: 4.932012e+03 ms
+>>>Synergy-Z3 exec time: 2.906920e+03 ms
+>>>Synergy-Z3 exec time: 4.994392e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.047000e-02 ms
+>>>Synergy-dreal exec time: 4.267410e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 8.416000e-03 ms
+>>>Synergy-dreal exec time: 3.264200e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.751961e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.171100e-02 ms
+>>>Synergy-dreal exec time: 8.137470e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.830136e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 3.334296e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+gsl: hermite.c:143: ERROR: gsl_sf_hermite_prob_e(n, x, &result)
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 3.343365e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.637900e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 2.770400e-02 ms
+>>>Synergy-dreal exec time: 4.754830e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.922500e-02 ms
+>>>Synergy-dreal exec time: 3.478810e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.269680e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 7.215700e-02 ms
+>>>Synergy-dreal exec time: 2.308400e-02 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 6.227800e-02 ms
+>>>Synergy-dreal exec time: 6.705750e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 4.381400e-02 ms
+>>>Synergy-dreal exec time: 4.401270e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.740480e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:129: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 4.232000e-02 ms
+>>>Synergy-dreal exec time: 7.244270e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.843775e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:129: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 4.561600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.065900e-02 ms
+>>>Synergy-dreal exec time: 5.338440e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.262300e-02 ms
+>>>Synergy-dreal exec time: 3.789910e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.993600e-02 ms
+>>>Synergy-dreal exec time: 6.472000e-03 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 5.306200e-02 ms
+>>>Synergy-dreal exec time: 3.548040e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.263200e-02 ms
+>>>Synergy-dreal exec time: 3.674690e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.276216e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 7.222700e-02 ms
+>>>Synergy-dreal exec time: 7.658670e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.271809e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 6.296000e-02 ms
+>>>Synergy-dreal exec time: 6.199900e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.351300e-02 ms
+>>>Synergy-dreal exec time: 4.172730e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.839500e-02 ms
+>>>Synergy-dreal exec time: 6.302000e-03 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.674677e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.481600e-02 ms
+>>>Synergy-dreal exec time: 3.909930e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 9.337000e-03 ms
+>>>Synergy-dreal exec time: 6.653650e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.727084e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 1.583100e-02 ms
+>>>Synergy-dreal exec time: 4.146600e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.108000e-02 ms
+>>>Synergy-dreal exec time: 3.178950e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.024900e-02 ms
+>>>Synergy-dreal exec time: 7.123750e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.254988e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 5.421300e-02 ms
+>>>Synergy-dreal exec time: 6.688220e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 4.135900e-02 ms
+>>>Synergy-dreal exec time: 5.305580e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.746100e-02 ms
+>>>Synergy-dreal exec time: 1.134487e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.280571e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 5.600700e-02 ms
+>>>Synergy-dreal exec time: 5.879880e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.904600e-02 ms
+>>>Synergy-dreal exec time: 4.528310e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.822400e-02 ms
+>>>Synergy-dreal exec time: 5.971000e-03 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+gsl: hermite.c:143: ERROR: gsl_sf_hermite_prob_e(n, x, &result)
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 3.253246e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 2.395853e+03 ms
+>>>Synergy-Z3 exec time: 1.991776e+03 ms
+>>>Synergy-Z3 exec time: 2.502421e+03 ms
+>>>Synergy-Z3 exec time: 1.863600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 5.347200e-02 ms
+>>>Synergy-dreal exec time: 5.029560e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.563800e-02 ms
+>>>Synergy-dreal exec time: 3.553850e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.712511e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 1.521403e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 2.716200e-02 ms
+>>>Synergy-dreal exec time: 4.206790e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.738685e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.022800e-02 ms
+>>>Synergy-dreal exec time: 4.968340e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.805400e-02 ms
+>>>Synergy-dreal exec time: 3.380130e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.516900e-02 ms
+>>>Synergy-dreal exec time: 2.409290e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.837263e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.640900e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.171018e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.162288e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.342592e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.377182e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+gsl: hermite.c:143: ERROR: gsl_sf_hermite_prob_e(n, x, &result)
+Default GSL error handler invoked.
+>>>Synergy-Z3 exec time: 3.001643e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 4.728000e-02 ms
+>>>Synergy-dreal exec time: 1.124809e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.657809e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.095680e-01 ms
+>>>Synergy-dreal exec time: 1.348784e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.399133e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 6.391200e-02 ms
+>>>Synergy-dreal exec time: 9.246790e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.486249e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.280600e-02 ms
+>>>Synergy-dreal exec time: 1.443746e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.494315e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.101200e-01 ms
+>>>Synergy-dreal exec time: 1.590504e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.551947e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 3.082532e+04 ms
+>>>Synergy-Z3 exec time: 1.424298e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.953800e-02 ms
+>>>Synergy-dreal exec time: 8.756040e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.728598e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 2.440500e-02 ms
+>>>Synergy-dreal exec time: 6.452260e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.762415e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 3.083232e+04 ms
+>>>Synergy-Z3 exec time: 1.315302e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 6.329000e-02 ms
+>>>Synergy-dreal exec time: 2.405600e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.270070e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 7.614500e-02 ms
+>>>Synergy-dreal exec time: 1.734200e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.272565e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 3.066456e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.429159e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.812388e+03 ms
+>>>Synergy-Z3 exec time: 3.286598e+03 ms
+>>>Synergy-Z3 exec time: 3.707735e+03 ms
+>>>Synergy-Z3 exec time: 1.039780e-01 ms
+>>>Synergy-dreal exec time: 3.036700e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.250518e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.040480e-01 ms
+>>>Synergy-dreal exec time: 1.938600e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.284031e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 5.275691e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.658000e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.682746e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.219581e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.203182e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 2.992695e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.818103e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.738300e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.359091e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 1.034900e-02 ms
+>>>Synergy-dreal exec time: 4.998410e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 8.886000e-03 ms
+>>>Synergy-dreal exec time: 8.570190e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.704643e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 1.746200e-02 ms
+>>>Synergy-dreal exec time: 1.177610e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.673227e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 3.478174e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.971493e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.230484e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.422742e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 4.176192e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.380563e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.505000e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.242000e-02 ms
+>>>Synergy-dreal exec time: 3.837590e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.756200e-02 ms
+>>>Synergy-dreal exec time: 2.891010e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.529281e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 7.371523e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 3.048900e-02 ms
+>>>Synergy-dreal exec time: 5.670580e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.696854e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.646100e-02 ms
+>>>Synergy-dreal exec time: 5.084760e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.421700e-02 ms
+>>>Synergy-dreal exec time: 3.149890e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 9.939000e-03 ms
+>>>Synergy-dreal exec time: 9.783800e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.541094e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+KLEE: ERROR: hermite.c:103: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 4.399400e-02 ms
+>>>Synergy-dreal exec time: 5.112320e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.712300e-02 ms
+>>>Synergy-dreal exec time: 3.502460e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.688408e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.075900e-02 ms
+>>>Synergy-dreal exec time: 5.591030e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.582200e-02 ms
+>>>Synergy-dreal exec time: 4.641920e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.190200e-02 ms
+>>>Synergy-dreal exec time: 5.568280e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 3.251721e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.568100e-02 ms
+>>>Synergy-dreal exec time: 7.830180e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 3.778300e-02 ms
+>>>Synergy-dreal exec time: 4.019450e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.717200e-02 ms
+>>>Synergy-dreal exec time: 6.367006e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.658635e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 4.729867e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.464914e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.850500e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 1.332358e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.025049e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+>>>Synergy-Z3 exec time: 3.143554e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 5.521400e-02 ms
+>>>Synergy-dreal exec time: 2.818911e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.258132e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.542200e-02 ms
+>>>Synergy-dreal exec time: 1.257273e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.753088e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.284930e-01 ms
+>>>Synergy-dreal exec time: 3.292690e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.360933e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.055610e-01 ms
+>>>Synergy-dreal exec time: 4.991039e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.344717e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.131360e-01 ms
+>>>Synergy-dreal exec time: 4.908082e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.555539e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 4.251298e+03 ms
+>>>Synergy-Z3 exec time: 1.211700e-01 ms
+>>>Synergy-dreal exec time: 2.157100e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.356005e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.361490e-01 ms
+>>>Synergy-dreal exec time: 2.261400e-02 ms
+KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
+>>>JFS exec time: 3.366950e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.175540e-01 ms
+>>>Synergy-dreal exec time: 4.648298e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.467325e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.091380e-01 ms
+>>>Synergy-dreal exec time: 4.406709e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.323816e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.685310e-01 ms
+>>>Synergy-dreal exec time: 5.568035e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.546606e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.356980e-01 ms
+>>>Synergy-dreal exec time: 6.344383e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.566344e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.235060e-01 ms
+>>>Synergy-dreal exec time: 6.473770e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.715921e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.303490e-01 ms
+>>>Synergy-dreal exec time: 6.082325e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.469567e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.427520e-01 ms
+>>>Synergy-dreal exec time: 4.505216e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.738298e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.201880e-01 ms
+>>>Synergy-dreal exec time: 5.512691e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.444863e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 3.086066e+04 ms
+>>>Synergy-Z3 exec time: 1.321520e-01 ms
+>>>Synergy-dreal exec time: 6.860122e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.732263e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.405870e-01 ms
+>>>Synergy-dreal exec time: 6.302192e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.792424e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 9.778700e-02 ms
+>>>Synergy-dreal exec time: 4.359818e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.449094e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.293650e-01 ms
+>>>Synergy-dreal exec time: 1.207464e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.602736e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.162610e-01 ms
+>>>Synergy-dreal exec time: 1.261332e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.831688e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.384140e-01 ms
+>>>Synergy-dreal exec time: 1.125346e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.393048e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.085470e-01 ms
+>>>Synergy-dreal exec time: 8.444495e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.481059e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.163510e-01 ms
+>>>Synergy-dreal exec time: 1.173153e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.367664e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.318100e-01 ms
+>>>Synergy-dreal exec time: 1.237660e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.505977e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.165220e-01 ms
+>>>Synergy-dreal exec time: 9.456048e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.802343e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.557860e-01 ms
+>>>Synergy-dreal exec time: 1.325511e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.495626e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 1.835300e-01 ms
+>>>Synergy-dreal exec time: 1.204133e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.875797e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+KLEE: ERROR: hermite.c:723: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>Synergy-Z3 exec time: 1.700574e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 8.003200e-02 ms
+>>>Synergy-dreal exec time: 2.681661e+05 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.606434e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 8.129500e-02 ms
+>>>Synergy-dreal exec time: 2.515602e+05 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 5.624952e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Synergy-Z3 exec time: 7.396100e-02 ms
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007fbad87c9f4e in void ibex::CompiledFunction::forward<ibex::Eval>(ibex::Eval const&, int) const () from /usr/lib/libibex.so
+'halt_execution' has unknown return type; cast the call to its declared return type
+KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
+

@@ -1,0 +1,27 @@
+KLEE: KLEE: WATCHDOG: watching 7407
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_multifit_nlinear_driver&fp2int&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+KLEE: WARNING ONCE: calling external: getenv(93851884909248) at default.c:34 15
+KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
+tcmalloc: large alloc 1073741824 bytes == 0x555be43ea000 @  0x7f549fe5f887 0x555b81e92fa8 0x555b81e603fd 0x555b81e7fd08 0x555b81e843eb 0x555b81eeb60e 0x555b81e86870 0x555b81e87289 0x555b81e105d1 0x7f549dc19c87 0x555b81e52faa
+tcmalloc: large alloc 2147483648 bytes == 0x555c243ea000 @  0x7f549fe5f887 0x555b81e92fa8 0x555b81e603fd 0x555b81e7fd08 0x555b81e843eb 0x555b81eeb60e 0x555b81e86870 0x555b81e87289 0x555b81e105d1 0x7f549dc19c87 0x555b81e52faa
+KLEE: WARNING: killing 1 states (over memory cap: 2542MB)
+
+KLEE: done: total instructions = 134283264
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 134248744
+KLEE: done: generated tests = 1
+Total exec time: 3.884279e+04 ms

@@ -1,0 +1,131 @@
+KLEE: KLEE: WATCHDOG: watching 21499
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_exponential_Pinv&cvc5-real&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+complex:(FSubOverflowCheck 9223372036854775808
+                    (ReadLSB w64 0 mu))
+>>>CVC5Real-cvc5 exec time: 6.814301e+00 ms
+mu
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FSubUnderflowCheck 9223372036854775808
+                     (ReadLSB w64 0 mu))
+>>>CVC5Real-cvc5 exec time: 1.285684e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubAccuracyCheck 9223372036854775808
+                    (ReadLSB w64 0 mu))
+>>>CVC5Real-cvc5 exec time: 6.979060e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubOverflowCheck 9223372036854775808
+                    (ReadLSB w64 0 x))
+>>>CVC5Real-cvc5 exec time: 2.872631e+00 ms
+x
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FSubUnderflowCheck 9223372036854775808
+                     (ReadLSB w64 0 x))
+>>>CVC5Real-cvc5 exec time: 1.196584e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FSubAccuracyCheck 9223372036854775808
+                    (ReadLSB w64 0 x))
+>>>CVC5Real-cvc5 exec time: 6.408390e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddOverflowCheck 4850376798678024192
+                    (FSub w64 9223372036854775808
+                              (ReadLSB w64 0 x)))
+>>>CVC5Real-cvc5 exec time: 3.408406e+00 ms
+x
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FAddUnderflowCheck 4850376798678024192
+                     (FSub w64 9223372036854775808
+                               (ReadLSB w64 0 x)))
+>>>CVC5Real-cvc5 exec time: 1.718996e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FAddAccuracyCheck 4850376798678024192
+                    (FSub w64 9223372036854775808
+                              (ReadLSB w64 0 x)))
+>>>CVC5Real-cvc5 exec time: 8.438640e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAdd w64 4850376798678024192
+                 (FSub w64 9223372036854775808
+                           (ReadLSB w64 0 x)))
+       0)
+complex:(FMulOverflowCheck (FSub w64 9223372036854775808
+                              (ReadLSB w64 0 mu))
+                    (FSub w64 9223372036854775808
+                              (ReadLSB w64 0 x)))
+>>>CVC5Real-cvc5 exec time: 3.877836e+01 ms
+mu
+[8,0,0,0,0,0,0,0,]
+x
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(FOGt (FAdd w64 4850376798678024192
+                 (FSub w64 9223372036854775808
+                           (ReadLSB w64 0 x)))
+       0)
+complex:(FMulUnderflowCheck (FSub w64 9223372036854775808
+                               (ReadLSB w64 0 mu))
+                     (FSub w64 9223372036854775808
+                               (ReadLSB w64 0 x)))
+>>>CVC5Real-cvc5 exec time: 1.735399e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAdd w64 4850376798678024192
+                 (FSub w64 9223372036854775808
+                           (ReadLSB w64 0 x)))
+       0)
+complex:(FMulAccuracyCheck (FSub w64 9223372036854775808
+                              (ReadLSB w64 0 mu))
+                    (FSub w64 9223372036854775808
+                              (ReadLSB w64 0 x)))
+>>>CVC5Real-cvc5 exec time: 5.826017e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOGt (FAdd w64 4850376798678024192
+                 (FSub w64 9223372036854775808
+                           (ReadLSB w64 0 x)))
+       0)
+>>>CVC5Real-cvc5 exec time: 1.213747e+00 ms
+x
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOGt (FAdd w64 4850376798678024192
+                     (FSub w64 9223372036854775808
+                               (ReadLSB w64 0 x)))
+           0))
+>>>CVC5Real-cvc5 exec time: 9.838200e-01 ms
+x
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>CVC5Real-cvc5 exec time: 5.292560e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 5.094390e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 5.062520e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+
+KLEE: done: total instructions = 100
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 1
+Total exec time: 1.211745e+04 ms

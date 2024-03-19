@@ -1,0 +1,104 @@
+KLEE: KLEE: WATCHDOG: watching 45920
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_multifit_wlinear&cvc5-real&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 x0)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 3.002921e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 x0)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 2.210673e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 x0)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 3.041180e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 x1)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 3.039119e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 x1)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 1.703449e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 x1)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.912867e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 x2)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 3.060719e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 x2)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 1.625951e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 x2)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.937935e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 e0)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 3.043014e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 e0)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 2.359307e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 e0)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 4.798183e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: ERROR: (location information missing) FloatPointCheck: FDiv Divide-By-Zero found !
+KLEE: NOTE: now ignoring this error at this location
+complex:(FDivOverflowCheck 4607182418800017408
+                    (FMul w64 N0:(ReadLSB w64 0 e0)
+                              N0))
+>>>CVC5Real-cvc5 exec time: 3.855069e+00 ms
+e0
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+KLEE: ERROR: (location information missing) FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+complex:(FDivUnderflowCheck 4607182418800017408
+                     (FMul w64 N0:(ReadLSB w64 0 e0)
+                               N0))
+>>>CVC5Real-cvc5 exec time: 8.422010e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FDivAccuracyCheck 4607182418800017408
+                    (FMul w64 N0:(ReadLSB w64 0 e0)
+                              N0))
+>>>CVC5Real-cvc5 exec time: 2.580677e+00 ms
+e0
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Not (FOEq (FMul w64 N0:(ReadLSB w64 0 e0)
+                      N0)
+            0))
+>>>CVC5Real-cvc5 exec time: 1.668434e+00 ms
+e0
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+
+KLEE: done: total instructions = 941
+KLEE: done: completed paths = 0
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 1.362475e+05 ms

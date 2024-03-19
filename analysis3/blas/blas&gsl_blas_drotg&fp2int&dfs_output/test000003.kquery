@@ -1,0 +1,7 @@
+array a0[8] : w32 -> w8 = symbolic
+array b0[8] : w32 -> w8 = symbolic
+(query [(Eq false
+             (FOGt N0:(FAbs w64 (ReadLSB w64 0 a0))
+                   N1:(FAbs w64 (ReadLSB w64 0 b0))))
+         (FAddAccuracyCheck N0 N1)]
+        false)

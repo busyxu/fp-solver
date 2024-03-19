@@ -1,0 +1,464 @@
+KLEE: KLEE: WATCHDOG: watching 35447
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/blas/blas&gsl_blas_ssyr&cvc5-real&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: calling external: fprintf(140124503152256, 94566542452608, 2, 94566539990480) at [no debug info]
+Parameter 2 to routine ./source_syr.h was incorrect
+KLEE: WARNING ONCE: calling external: vfprintf(140124503152256, 94566542228984, 94566544739584) at [no debug info]
+KLEE: ERROR: (location information missing) abort failure
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+>>>CVC5Real-Z3 exec time: 1.169444e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+>>>CVC5Real-Z3 exec time: 1.040188e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+>>>CVC5Real-Z3 exec time: 3.206000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.955161e+00 ms
+alpha
+[160,100,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FMulOverflowCheck (ReadLSB w32 0 alpha)
+                    1065353216)
+>>>CVC5Real-Z3 exec time: 4.479000e-03 ms
+>>>CVC5Real-cvc5 exec time: 4.839237e+00 ms
+alpha
+[176,97,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FMulUnderflowCheck (ReadLSB w32 0 alpha)
+                     1065353216)
+>>>CVC5Real-Z3 exec time: 5.810000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.062884e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FMulAccuracyCheck (ReadLSB w32 0 alpha)
+                    1065353216)
+>>>CVC5Real-Z3 exec time: 4.138000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.264684e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FMulOverflowCheck 1065353216
+                    (FMul w32 (ReadLSB w32 0 alpha)
+                              1065353216))
+>>>CVC5Real-Z3 exec time: 5.931000e-03 ms
+>>>CVC5Real-cvc5 exec time: 5.160936e+00 ms
+alpha
+[160,97,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FMulUnderflowCheck 1065353216
+                     (FMul w32 (ReadLSB w32 0 alpha)
+                               1065353216))
+>>>CVC5Real-Z3 exec time: 6.333000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.378705e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FMulAccuracyCheck 1065353216
+                    (FMul w32 (ReadLSB w32 0 alpha)
+                              1065353216))
+>>>CVC5Real-Z3 exec time: 4.549000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.427296e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: ERROR: (location information missing) FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FAddOverflowCheck 1045891645
+                    (FMul w32 1065353216
+                              (FMul w32 (ReadLSB w32 0 alpha)
+                                        1065353216)))
+>>>CVC5Real-Z3 exec time: 7.324000e-03 ms
+>>>CVC5Real-cvc5 exec time: 6.526294e+00 ms
+alpha
+[192,97,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FAddUnderflowCheck 1045891645
+                     (FMul w32 1065353216
+                               (FMul w32 (ReadLSB w32 0 alpha)
+                                         1065353216)))
+>>>CVC5Real-Z3 exec time: 7.224000e-03 ms
+>>>CVC5Real-cvc5 exec time: 3.560473e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FAddAccuracyCheck 1045891645
+                    (FMul w32 1065353216
+                              (FMul w32 (ReadLSB w32 0 alpha)
+                                        1065353216)))
+>>>CVC5Real-Z3 exec time: 5.630000e-03 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+>>>CVC5Real-Z3 exec time: 2.956000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.043015e+00 ms
+alpha
+[160,100,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FMulOverflowCheck (ReadLSB w32 0 alpha)
+                    1065353216)
+>>>CVC5Real-Z3 exec time: 5.780000e-03 ms
+>>>CVC5Real-cvc5 exec time: 4.897486e+00 ms
+alpha
+[176,97,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FMulUnderflowCheck (ReadLSB w32 0 alpha)
+                     1065353216)
+>>>CVC5Real-Z3 exec time: 7.675000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.339390e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FMulAccuracyCheck (ReadLSB w32 0 alpha)
+                    1065353216)
+>>>CVC5Real-Z3 exec time: 6.433000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.519897e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FMulOverflowCheck 1065353216
+                    (FMul w32 (ReadLSB w32 0 alpha)
+                              1065353216))
+>>>CVC5Real-Z3 exec time: 8.366000e-03 ms
+>>>CVC5Real-cvc5 exec time: 5.424868e+00 ms
+alpha
+[160,97,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FMulUnderflowCheck 1065353216
+                     (FMul w32 (ReadLSB w32 0 alpha)
+                               1065353216))
+>>>CVC5Real-Z3 exec time: 7.604000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.449229e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FMulAccuracyCheck 1065353216
+                    (FMul w32 (ReadLSB w32 0 alpha)
+                              1065353216))
+>>>CVC5Real-Z3 exec time: 7.133000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.616558e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: ERROR: (location information missing) FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FAddOverflowCheck 1045891645
+                    (FMul w32 1065353216
+                              (FMul w32 (ReadLSB w32 0 alpha)
+                                        1065353216)))
+>>>CVC5Real-Z3 exec time: 9.769000e-03 ms
+>>>CVC5Real-cvc5 exec time: 7.611407e+00 ms
+alpha
+[192,97,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FAddUnderflowCheck 1045891645
+                     (FMul w32 1065353216
+                               (FMul w32 (ReadLSB w32 0 alpha)
+                                         1065353216)))
+>>>CVC5Real-Z3 exec time: 1.077200e-02 ms
+>>>CVC5Real-cvc5 exec time: 4.365985e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FAddAccuracyCheck 1045891645
+                    (FMul w32 1065353216
+                              (FMul w32 (ReadLSB w32 0 alpha)
+                                        1065353216)))
+>>>CVC5Real-Z3 exec time: 1.300400e-02 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+>>>CVC5Real-Z3 exec time: 1.253483e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving UNSAT and evaluate SUCCESS and remove the state !
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+complex:(FOEq (FSub w32 (FAdd w32 1045891645
+                           N0:(FMul w32 1065353216
+                                        (FMul w32 (ReadLSB w32 0 alpha)
+                                                  1065353216)))
+                 1045891645)
+       N0)
+complex:(FOEq (FSub w32 (FAdd w32 1045891645
+                           N0:(FMul w32 1065353216
+                                        (FMul w32 (ReadLSB w32 0 alpha)
+                                                  1065353216)))
+                 N0)
+       1045891645)
+>>>CVC5Real-Z3 exec time: 7.735000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.563146e+00 ms
+alpha
+[160,100,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq 121
+     (ReadLSB w32 0 Uplo))
+>>>CVC5Real-Z3 exec time: 1.031000e-02 ms
+KLEE: WARNING: CVC5Real: Z3 solving UNSAT and evaluate SUCCESS and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq false
+     (Eq 122
+         (ReadLSB w32 0 Uplo)))
+>>>CVC5Real-Z3 exec time: 1.433458e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving UNSAT and evaluate SUCCESS and remove the state !
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(Eq false
+     (FOEq (FPExt w64 (ReadLSB w32 0 alpha))
+           0))
+intCons:(Eq false
+     (Eq 121
+         (ReadLSB w32 0 Uplo)))
+intCons:(Eq 122
+     (ReadLSB w32 0 Uplo))
+complex:(FOEq (FSub w32 (FAdd w32 1045891645
+                           N0:(FMul w32 1065353216
+                                        (FMul w32 (ReadLSB w32 0 alpha)
+                                                  1065353216)))
+                 1045891645)
+       N0)
+complex:(FOEq (FSub w32 (FAdd w32 1045891645
+                           N0:(FMul w32 1065353216
+                                        (FMul w32 (ReadLSB w32 0 alpha)
+                                                  1065353216)))
+                 N0)
+       1045891645)
+>>>CVC5Real-Z3 exec time: 9.598000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.862976e+00 ms
+alpha
+[160,100,214,62,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+
+KLEE: done: total instructions = 5213
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 5
+Total exec time: 1.234540e+04 ms

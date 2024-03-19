@@ -1,0 +1,41 @@
+KLEE: KLEE: WATCHDOG: watching 19325
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&jfs&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+>>>jfs exec time: 3.267832e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
+>>>jfs exec time: 3.267889e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
+>>>jfs exec time: 3.261101e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
+>>>jfs exec time: 1.676627e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(139776456988288, 94602448874592, 94602448752856, 113, 94602448752752, 94602446530384) at stream.c:46 1
+gsl: exp.c:113: ERROR: underflow
+KLEE: WARNING ONCE: calling external: fflush(139776456988512) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>jfs exec time: 1.526434e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: exp.c:110: ERROR: overflow
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 169
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 1.177620e+05 ms

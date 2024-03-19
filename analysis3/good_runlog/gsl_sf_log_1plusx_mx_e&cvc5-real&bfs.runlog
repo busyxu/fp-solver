@@ -1,0 +1,923 @@
+KLEE: KLEE: WATCHDOG: watching 12893
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_log_1plusx_mx_e&cvc5-real&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck (ReadLSB w64 0 a)
+                    13815242216921733530)
+>>>CVC5Real-cvc5 exec time: 7.928428e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck (ReadLSB w64 0 a)
+                     13815242216921733530)
+>>>CVC5Real-cvc5 exec time: 2.726224e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck (ReadLSB w64 0 a)
+                    13815242216921733530)
+>>>CVC5Real-cvc5 exec time: 2.710894e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 4592670820000712476
+                    (FMul w64 (ReadLSB w64 0 a)
+                              13815242216921733530))
+>>>CVC5Real-cvc5 exec time: 4.388185e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 4592670820000712476
+                     (FMul w64 (ReadLSB w64 0 a)
+                               13815242216921733530))
+>>>CVC5Real-cvc5 exec time: 2.488973e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 4592670820000712476
+                    (FMul w64 (ReadLSB w64 0 a)
+                              13815242216921733530))
+>>>CVC5Real-cvc5 exec time: 9.907940e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))
+>>>CVC5Real-cvc5 exec time: 2.499935e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))
+>>>CVC5Real-cvc5 exec time: 3.106028e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))
+>>>CVC5Real-cvc5 exec time: 3.286989e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 13817043656772681728
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))
+>>>CVC5Real-cvc5 exec time: 2.967224e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 13817043656772681728
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))
+>>>CVC5Real-cvc5 exec time: 3.441154e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 13817043656772681728
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))
+>>>CVC5Real-cvc5 exec time: 1.323197e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 13817043656772681728
+                              (FMul w64 N0
+                                        (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))
+>>>CVC5Real-cvc5 exec time: 2.456675e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 13817043656772681728
+                               (FMul w64 N0
+                                         (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))
+>>>CVC5Real-cvc5 exec time: 3.549920e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 13817043656772681728
+                              (FMul w64 N0
+                                        (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))
+>>>CVC5Real-cvc5 exec time: 6.490931e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 4594314991293244562
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 13817043656772681728
+                                        (FMul w64 N0
+                                                  (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))
+>>>CVC5Real-cvc5 exec time: 3.107303e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 4594314991293244562
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 13817043656772681728
+                                         (FMul w64 N0
+                                                   (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))
+>>>CVC5Real-cvc5 exec time: 4.323884e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 4594314991293244562
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 13817043656772681728
+                                        (FMul w64 N0
+                                                  (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))
+>>>CVC5Real-cvc5 exec time: 1.820443e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4594314991293244562
+                              (FMul w64 N0
+                                        (FAdd w64 13817043656772681728
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))
+>>>CVC5Real-cvc5 exec time: 3.211162e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 4594314991293244562
+                               (FMul w64 N0
+                                         (FAdd w64 13817043656772681728
+                                                   (FMul w64 N0
+                                                             (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))
+>>>CVC5Real-cvc5 exec time: 1.915773e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4594314991293244562
+                              (FMul w64 N0
+                                        (FAdd w64 13817043656772681728
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))
+>>>CVC5Real-cvc5 exec time: 8.608469e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 13818544856648471893
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4594314991293244562
+                                        (FMul w64 N0
+                                                  (FAdd w64 13817043656772681728
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))
+>>>CVC5Real-cvc5 exec time: 3.529489e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 13818544856648471893
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 4594314991293244562
+                                         (FMul w64 N0
+                                                   (FAdd w64 13817043656772681728
+                                                             (FMul w64 N0
+                                                                       (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))
+>>>CVC5Real-cvc5 exec time: 4.965844e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 13818544856648471893
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4594314991293244562
+                                        (FMul w64 N0
+                                                  (FAdd w64 13817043656772681728
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))
+>>>CVC5Real-cvc5 exec time: 2.181158e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 4.587846e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     N0)
+>>>CVC5Real-cvc5 exec time: 1.503110e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    N0)
+>>>CVC5Real-cvc5 exec time: 1.559803e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 13818544856648471893
+                              (FMul w64 N0
+                                        (FAdd w64 4594314991293244562
+                                                  (FMul w64 N0
+                                                            (FAdd w64 13817043656772681728
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))
+>>>CVC5Real-cvc5 exec time: 4.284906e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 13818544856648471893
+                               (FMul w64 N0
+                                         (FAdd w64 4594314991293244562
+                                                   (FMul w64 N0
+                                                             (FAdd w64 13817043656772681728
+                                                                       (FMul w64 N0
+                                                                                 (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))
+>>>CVC5Real-cvc5 exec time: 5.273781e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 13818544856648471893
+                              (FMul w64 N0
+                                        (FAdd w64 4594314991293244562
+                                                  (FMul w64 N0
+                                                            (FAdd w64 13817043656772681728
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))
+>>>CVC5Real-cvc5 exec time: 2.507731e+03 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 4596373779694328218
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 13818544856648471893
+                                        (FMul w64 N0
+                                                  (FAdd w64 4594314991293244562
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 13817043656772681728
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))
+>>>CVC5Real-cvc5 exec time: 9.290921e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 4596373779694328218
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 13818544856648471893
+                                         (FMul w64 N0
+                                                   (FAdd w64 4594314991293244562
+                                                             (FMul w64 N0
+                                                                       (FAdd w64 13817043656772681728
+                                                                                 (FMul w64 N0
+                                                                                           (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))
+>>>CVC5Real-cvc5 exec time: 9.635145e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 4596373779694328218
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 13818544856648471893
+                                        (FMul w64 N0
+                                                  (FAdd w64 4594314991293244562
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 13817043656772681728
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))
+>>>CVC5Real-cvc5 exec time: 4.481273e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4596373779694328218
+                              (FMul w64 N0
+                                        (FAdd w64 13818544856648471893
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4594314991293244562
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 13817043656772681728
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))
+>>>CVC5Real-cvc5 exec time: 8.916097e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 4596373779694328218
+                               (FMul w64 N0
+                                         (FAdd w64 13818544856648471893
+                                                   (FMul w64 N0
+                                                             (FAdd w64 4594314991293244562
+                                                                       (FMul w64 N0
+                                                                                 (FAdd w64 13817043656772681728
+                                                                                           (FMul w64 N0
+                                                                                                     (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))
+>>>CVC5Real-cvc5 exec time: 1.028388e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4596373779694328218
+                              (FMul w64 N0
+                                        (FAdd w64 13818544856648471893
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4594314991293244562
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 13817043656772681728
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))
+>>>CVC5Real-cvc5 exec time: 5.108195e+03 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 13821547256400052224
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4596373779694328218
+                                        (FMul w64 N0
+                                                  (FAdd w64 13818544856648471893
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 4594314991293244562
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 13817043656772681728
+                                                                                                    (FMul w64 N0
+                                                                                                              (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))
+>>>CVC5Real-cvc5 exec time: 5.866263e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 13821547256400052224
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 4596373779694328218
+                                         (FMul w64 N0
+                                                   (FAdd w64 13818544856648471893
+                                                             (FMul w64 N0
+                                                                       (FAdd w64 4594314991293244562
+                                                                                 (FMul w64 N0
+                                                                                           (FAdd w64 13817043656772681728
+                                                                                                     (FMul w64 N0
+                                                                                                               (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))
+>>>CVC5Real-cvc5 exec time: 6.898962e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 13821547256400052224
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4596373779694328218
+                                        (FMul w64 N0
+                                                  (FAdd w64 13818544856648471893
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 4594314991293244562
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 13817043656772681728
+                                                                                                    (FMul w64 N0
+                                                                                                              (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))
+>>>CVC5Real-cvc5 exec time: 3.460763e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 13821547256400052224
+                              (FMul w64 N0
+                                        (FAdd w64 4596373779694328218
+                                                  (FMul w64 N0
+                                                            (FAdd w64 13818544856648471893
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 4594314991293244562
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 13817043656772681728
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))
+>>>CVC5Real-cvc5 exec time: 8.031050e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 13821547256400052224
+                               (FMul w64 N0
+                                         (FAdd w64 4596373779694328218
+                                                   (FMul w64 N0
+                                                             (FAdd w64 13818544856648471893
+                                                                       (FMul w64 N0
+                                                                                 (FAdd w64 4594314991293244562
+                                                                                           (FMul w64 N0
+                                                                                                     (FAdd w64 13817043656772681728
+                                                                                                               (FMul w64 N0
+                                                                                                                         (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))
+>>>CVC5Real-cvc5 exec time: 7.096526e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 13821547256400052224
+                              (FMul w64 N0
+                                        (FAdd w64 4596373779694328218
+                                                  (FMul w64 N0
+                                                            (FAdd w64 13818544856648471893
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 4594314991293244562
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 13817043656772681728
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))
+>>>CVC5Real-cvc5 exec time: 5.023502e+03 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 4599676419421066581
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 13821547256400052224
+                                        (FMul w64 N0
+                                                  (FAdd w64 4596373779694328218
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 13818544856648471893
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 4594314991293244562
+                                                                                                    (FMul w64 N0
+                                                                                                              (FAdd w64 13817043656772681728
+                                                                                                                        (FMul w64 N0
+                                                                                                                                  (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))))
+>>>CVC5Real-cvc5 exec time: 9.666649e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 4599676419421066581
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 13821547256400052224
+                                         (FMul w64 N0
+                                                   (FAdd w64 4596373779694328218
+                                                             (FMul w64 N0
+                                                                       (FAdd w64 13818544856648471893
+                                                                                 (FMul w64 N0
+                                                                                           (FAdd w64 4594314991293244562
+                                                                                                     (FMul w64 N0
+                                                                                                               (FAdd w64 13817043656772681728
+                                                                                                                         (FMul w64 N0
+                                                                                                                                   (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))))
+>>>CVC5Real-cvc5 exec time: 7.709161e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 4599676419421066581
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 13821547256400052224
+                                        (FMul w64 N0
+                                                  (FAdd w64 4596373779694328218
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 13818544856648471893
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 4594314991293244562
+                                                                                                    (FMul w64 N0
+                                                                                                              (FAdd w64 13817043656772681728
+                                                                                                                        (FMul w64 N0
+                                                                                                                                  (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))))
+>>>CVC5Real-cvc5 exec time: 4.037899e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4599676419421066581
+                              (FMul w64 N0
+                                        (FAdd w64 13821547256400052224
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4596373779694328218
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 13818544856648471893
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 4594314991293244562
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 13817043656772681728
+                                                                                                                                  (FMul w64 N0
+                                                                                                                                            (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))
+>>>CVC5Real-cvc5 exec time: 8.342718e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     (FAdd w64 4599676419421066581
+                               (FMul w64 N0
+                                         (FAdd w64 13821547256400052224
+                                                   (FMul w64 N0
+                                                             (FAdd w64 4596373779694328218
+                                                                       (FMul w64 N0
+                                                                                 (FAdd w64 13818544856648471893
+                                                                                           (FMul w64 N0
+                                                                                                     (FAdd w64 4594314991293244562
+                                                                                                               (FMul w64 N0
+                                                                                                                         (FAdd w64 13817043656772681728
+                                                                                                                                   (FMul w64 N0
+                                                                                                                                             (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))
+>>>CVC5Real-cvc5 exec time: 8.894667e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    (FAdd w64 4599676419421066581
+                              (FMul w64 N0
+                                        (FAdd w64 13821547256400052224
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4596373779694328218
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 13818544856648471893
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 4594314991293244562
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 13817043656772681728
+                                                                                                                                  (FMul w64 N0
+                                                                                                                                            (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))
+>>>CVC5Real-cvc5 exec time: 9.883588e+03 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddOverflowCheck 13826050856027422720
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4599676419421066581
+                                        (FMul w64 N0
+                                                  (FAdd w64 13821547256400052224
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 4596373779694328218
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 13818544856648471893
+                                                                                                    (FMul w64 N0
+                                                                                                              (FAdd w64 4594314991293244562
+                                                                                                                        (FMul w64 N0
+                                                                                                                                  (FAdd w64 13817043656772681728
+                                                                                                                                            (FMul w64 N0
+                                                                                                                                                      (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 1.017913e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddUnderflowCheck 13826050856027422720
+                     (FMul w64 N0:(ReadLSB w64 0 a)
+                               (FAdd w64 4599676419421066581
+                                         (FMul w64 N0
+                                                   (FAdd w64 13821547256400052224
+                                                             (FMul w64 N0
+                                                                       (FAdd w64 4596373779694328218
+                                                                                 (FMul w64 N0
+                                                                                           (FAdd w64 13818544856648471893
+                                                                                                     (FMul w64 N0
+                                                                                                               (FAdd w64 4594314991293244562
+                                                                                                                         (FMul w64 N0
+                                                                                                                                   (FAdd w64 13817043656772681728
+                                                                                                                                             (FMul w64 N0
+                                                                                                                                                       (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 9.683859e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FAddAccuracyCheck 13826050856027422720
+                    (FMul w64 N0:(ReadLSB w64 0 a)
+                              (FAdd w64 4599676419421066581
+                                        (FMul w64 N0
+                                                  (FAdd w64 13821547256400052224
+                                                            (FMul w64 N0
+                                                                      (FAdd w64 4596373779694328218
+                                                                                (FMul w64 N0
+                                                                                          (FAdd w64 13818544856648471893
+                                                                                                    (FMul w64 N0
+                                                                                                              (FAdd w64 4594314991293244562
+                                                                                                                        (FMul w64 N0
+                                                                                                                                  (FAdd w64 13817043656772681728
+                                                                                                                                            (FMul w64 N0
+                                                                                                                                                      (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 5.200842e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                              N0)
+                    (FAdd w64 13826050856027422720
+                              (FMul w64 N0
+                                        (FAdd w64 4599676419421066581
+                                                  (FMul w64 N0
+                                                            (FAdd w64 13821547256400052224
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 4596373779694328218
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 13818544856648471893
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 4594314991293244562
+                                                                                                                                  (FMul w64 N0
+                                                                                                                                            (FAdd w64 13817043656772681728
+                                                                                                                                                      (FMul w64 N0
+                                                                                                                                                                (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 4.779012e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                               N0)
+                     (FAdd w64 13826050856027422720
+                               (FMul w64 N0
+                                         (FAdd w64 4599676419421066581
+                                                   (FMul w64 N0
+                                                             (FAdd w64 13821547256400052224
+                                                                       (FMul w64 N0
+                                                                                 (FAdd w64 4596373779694328218
+                                                                                           (FMul w64 N0
+                                                                                                     (FAdd w64 13818544856648471893
+                                                                                                               (FMul w64 N0
+                                                                                                                         (FAdd w64 4594314991293244562
+                                                                                                                                   (FMul w64 N0
+                                                                                                                                             (FAdd w64 13817043656772681728
+                                                                                                                                                       (FMul w64 N0
+                                                                                                                                                                 (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 8.667945e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck (FMul w64 N0:(ReadLSB w64 0 a)
+                              N0)
+                    (FAdd w64 13826050856027422720
+                              (FMul w64 N0
+                                        (FAdd w64 4599676419421066581
+                                                  (FMul w64 N0
+                                                            (FAdd w64 13821547256400052224
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 4596373779694328218
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 13818544856648471893
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 4594314991293244562
+                                                                                                                                  (FMul w64 N0
+                                                                                                                                            (FAdd w64 13817043656772681728
+                                                                                                                                                      (FMul w64 N0
+                                                                                                                                                                (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 4.707334e+03 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulOverflowCheck 4372995238176751616
+                    (FAbs w64 (FMul w64 (FMul w64 N0:(ReadLSB w64 0 a)
+                                                  N0)
+                                        (FAdd w64 13826050856027422720
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4599676419421066581
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 13821547256400052224
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 4596373779694328218
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 13818544856648471893
+                                                                                                                                  (FMul w64 N0
+                                                                                                                                            (FAdd w64 4594314991293244562
+                                                                                                                                                      (FMul w64 N0
+                                                                                                                                                                (FAdd w64 13817043656772681728
+                                                                                                                                                                          (FMul w64 N0
+                                                                                                                                                                                    (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 1.458082e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulUnderflowCheck 4372995238176751616
+                     (FAbs w64 (FMul w64 (FMul w64 N0:(ReadLSB w64 0 a)
+                                                   N0)
+                                         (FAdd w64 13826050856027422720
+                                                   (FMul w64 N0
+                                                             (FAdd w64 4599676419421066581
+                                                                       (FMul w64 N0
+                                                                                 (FAdd w64 13821547256400052224
+                                                                                           (FMul w64 N0
+                                                                                                     (FAdd w64 4596373779694328218
+                                                                                                               (FMul w64 N0
+                                                                                                                         (FAdd w64 13818544856648471893
+                                                                                                                                   (FMul w64 N0
+                                                                                                                                             (FAdd w64 4594314991293244562
+                                                                                                                                                       (FMul w64 N0
+                                                                                                                                                                 (FAdd w64 13817043656772681728
+                                                                                                                                                                           (FMul w64 N0
+                                                                                                                                                                                     (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 1.017766e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
+       4559965403835706970)
+complex:(FMulAccuracyCheck 4372995238176751616
+                    (FAbs w64 (FMul w64 (FMul w64 N0:(ReadLSB w64 0 a)
+                                                  N0)
+                                        (FAdd w64 13826050856027422720
+                                                  (FMul w64 N0
+                                                            (FAdd w64 4599676419421066581
+                                                                      (FMul w64 N0
+                                                                                (FAdd w64 13821547256400052224
+                                                                                          (FMul w64 N0
+                                                                                                    (FAdd w64 4596373779694328218
+                                                                                                              (FMul w64 N0
+                                                                                                                        (FAdd w64 13818544856648471893
+                                                                                                                                  (FMul w64 N0
+                                                                                                                                            (FAdd w64 4594314991293244562
+                                                                                                                                                      (FMul w64 N0
+                                                                                                                                                                (FAdd w64 13817043656772681728
+                                                                                                                                                                          (FMul w64 N0
+                                                                                                                                                                                    (FAdd w64 4592670820000712476 (FMul w64 N0 13815242216921733530)))))))))))))))))))
+>>>CVC5Real-cvc5 exec time: 2.172105e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+complex:(FOLe (ReadLSB w64 0 a)
+       13830554455654793216)
+>>>CVC5Real-cvc5 exec time: 1.239437e+00 ms
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+complex:(Eq false
+     (FOLe (ReadLSB w64 0 a)
+           13830554455654793216))
+complex:(Eq false
+     (FOLt (FAbs w64 (ReadLSB w64 0 a))
+           4559965403835706970))
+>>>CVC5Real-cvc5 exec time: 1.664286e+00 ms
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+
+KLEE: done: total instructions = 102
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 1
+Total exec time: 4.942290e+04 ms

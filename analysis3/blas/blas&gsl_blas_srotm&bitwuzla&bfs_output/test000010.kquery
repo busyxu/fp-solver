@@ -1,0 +1,14 @@
+array a0[4] : w32 -> w8 = symbolic
+array b0[4] : w32 -> w8 = symbolic
+array c0[4] : w32 -> w8 = symbolic
+array c1[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (FOEq N0:(FPExt w64 (ReadLSB w32 0 c0))
+                   13830554455654793216))
+         (Eq false (FOEq N0 0))
+         (FOEq N0 4607182418800017408)
+         (FAddAccuracyCheck (FMul w32 (ReadLSB w32 0 c1)
+                                      (ReadLSB w32 0 a0))
+                            (FMul w32 1065353216
+                                      (ReadLSB w32 0 b0)))]
+        false)

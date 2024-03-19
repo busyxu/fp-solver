@@ -1,0 +1,77 @@
+KLEE: KLEE: WATCHDOG: watching 28964
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k0_scaled_e&smt&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: calling external: fprintf(140038743266944, 94418776255456, 94418777302448, 89, 94418776125552, 94418777302432) at stream.c:46 1
+gsl: bessel_k.c:89: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140038743267168) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.311798e+01 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+>>>Z3 exec time: 5.004570e+02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 9.318117e+02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 5.371075e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 4.108000e-03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+>>>Z3 exec time: 2.133764e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 7.256864e+02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 8.659872e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.159097e+02 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.192200e-02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+>>>Z3 exec time: 4.156848e+03 ms
+KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Z3 exec time: 1.164026e+04 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:93: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.278851e+04 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+KLEE: ERROR: bessel_k.c:93: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Z3 exec time: 1.090100e-02 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+>>>Z3 exec time: 1.331185e+03 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+gsl: bessel_k.c:94: ERROR: underflow
+Default GSL error handler invoked.
+
+KLEE: done: total instructions = 166
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 10
+KLEE: done: generated tests = 10
+Total exec time: 6.259317e+04 ms

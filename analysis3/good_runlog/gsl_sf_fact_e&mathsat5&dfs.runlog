@@ -1,0 +1,41 @@
+KLEE: KLEE: WATCHDOG: watching 6140
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&mathsat5&dfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7982[4104] allocated at global:fact_table
+>>>MathSAT5 exec time: 5.391791e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 1.066072e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 6.106391e+02 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
+MathSAT5 Timeout !
+>>>MathSAT5 exec time: 3.009941e+04 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 1.835079e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140346771818112, 93914535554144, 93914535432400, 1489, 93914535432304, 93914533210016) at stream.c:46 1
+gsl: gamma.c:1489: ERROR: overflow
+KLEE: WARNING ONCE: calling external: fflush(140346771818336) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+
+KLEE: done: total instructions = 125
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 3
+Total exec time: 5.512260e+04 ms

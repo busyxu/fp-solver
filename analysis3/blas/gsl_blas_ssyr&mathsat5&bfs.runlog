@@ -1,0 +1,36 @@
+KLEE: KLEE: WATCHDOG: watching 10862
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/blas/blas&gsl_blas_ssyr&mathsat5&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+KLEE: WARNING ONCE: calling external: fprintf(140021742487168, 94659532162944, 2, 94659529700816) at [no debug info]
+Parameter 2 to routine ./source_syr.h was incorrect
+KLEE: WARNING ONCE: calling external: vfprintf(140021742487168, 94659531939320, 94659534449920) at [no debug info]
+KLEE: ERROR: (location information missing) abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>MathSAT5 exec time: 5.846493e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 4.735490e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
+>>>MathSAT5 exec time: 3.429399e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+>>>MathSAT5 exec time: 3.566222e+01 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
+
+KLEE: done: total instructions = 5097
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 3
+Total exec time: 1.343221e+04 ms

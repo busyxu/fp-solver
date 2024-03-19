@@ -1,0 +1,22 @@
+array Diag[8] : w32 -> w8 = symbolic
+array Trans[8] : w32 -> w8 = symbolic
+array Uplo[8] : w32 -> w8 = symbolic
+(query [(Eq false
+             N0:(Eq 113
+                    N1:(ReadLSB w32 0 Trans)))
+         N2:(Eq false
+                (Eq 121
+                    N3:(ReadLSB w32 0 Uplo)))
+         N4:(Eq 122 N3)
+         N5:(Eq 111 N1)
+         N6:(Eq 131
+                (ReadLSB w32 0 Diag))
+         N5
+         N2
+         N5
+         N4
+         N6
+         (FOLt 4652104065864433664
+               (FAbs w64 (FMul w64 (SIToFP w64 (Select w32 N0 4294967295 1))
+                                   4652112861957455872)))]
+        false)

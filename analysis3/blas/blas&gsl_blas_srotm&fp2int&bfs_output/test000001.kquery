@@ -1,0 +1,6 @@
+array c0[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (FOEq N0:(FPExt w64 (ReadLSB w32 0 c0))
+                   13830554455654793216))
+         (FOEq N0 0)]
+        false)

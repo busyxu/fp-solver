@@ -1,0 +1,19 @@
+array Uplo[8] : w32 -> w8 = symbolic
+array alpha0[4] : w32 -> w8 = symbolic
+array alpha1[4] : w32 -> w8 = symbolic
+(query [N0:(Eq false
+                (Eq 121
+                    N1:(ReadLSB w32 0 Uplo)))
+         N2:(Eq 122 N1)
+         (FOEq (FPExt w64 N3:(ReadLSB w32 0 alpha0))
+               0)
+         (Eq false
+             (FOEq (FPExt w64 N4:(ReadLSB w32 0 alpha1))
+                   0))
+         N0
+         N2
+         (FSubAccuracyCheck (FMul w32 (FAdd w32 (FMul w32 N4 1040522936) (FMul w32 N3 1038174126))
+                                      1149026304)
+                            (FMul w32 (FSub w32 (FMul w32 N3 1040522936) (FMul w32 N4 1038174126))
+                                      1149042688))]
+        false)

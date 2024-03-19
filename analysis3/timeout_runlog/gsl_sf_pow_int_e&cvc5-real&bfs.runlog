@@ -1,0 +1,1025 @@
+KLEE: KLEE: WATCHDOG: watching 32506
+
+KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_pow_int_e&cvc5-real&bfs_output"
+KLEE: Using Z3 solver backend
+KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
+KLEE: Replacing function "__isnan" with "klee_internal_isnan"
+KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
+KLEE: Replacing function "__isinff" with "klee_internal_isinff"
+KLEE: Replacing function "__isinf" with "klee_internal_isinf"
+KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
+KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
+KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
+KLEE: Replacing function "__finitef" with "klee_internal_finitef"
+KLEE: Replacing function "__finite" with "klee_internal_finite"
+KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
+KLEE: Replacing function "fabs" with "klee_internal_fabs"
+KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    N0)
+>>>CVC5Real-Z3 exec time: 1.059881e+01 ms
+>>>CVC5Real-cvc5 exec time: 3.087281e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     N0)
+>>>CVC5Real-Z3 exec time: 2.625900e-02 ms
+>>>CVC5Real-cvc5 exec time: 2.361980e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    N0)
+>>>CVC5Real-Z3 exec time: 5.881000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.391623e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Slt (ReadLSB w32 0 b)
+      0)
+>>>CVC5Real-Z3 exec time: 1.536803e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: pow_int.c:42: FloatPointCheck: FDiv Divide-By-Zero found !
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Slt (ReadLSB w32 0 b)
+      0)
+complex:(FOEq (ReadLSB w64 0 a)
+       0)
+complex:(FDivOverflowCheck 4607182418800017408
+                    (ReadLSB w64 0 a))
+>>>CVC5Real-Z3 exec time: 3.767000e-03 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+KLEE: ERROR: pow_int.c:42: FloatPointCheck: FDiv Overflow found !
+KLEE: NOTE: now ignoring this error at this location
+intCons:(Slt (ReadLSB w32 0 b)
+      0)
+complex:(FOEq (ReadLSB w64 0 a)
+       0)
+complex:(FDivUnderflowCheck 4607182418800017408
+                     (ReadLSB w64 0 a))
+>>>CVC5Real-Z3 exec time: 1.813000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.189651e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Slt (ReadLSB w32 0 b)
+      0)
+complex:(FOEq (ReadLSB w64 0 a)
+       0)
+complex:(FDivAccuracyCheck 4607182418800017408
+                    (ReadLSB w64 0 a))
+>>>CVC5Real-Z3 exec time: 2.445000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.410121e+00 ms
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+>>>CVC5Real-Z3 exec time: 1.406502e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+complex:(FMulOverflowCheck 4607182418800017408
+                    (ReadLSB w64 0 a))
+>>>CVC5Real-Z3 exec time: 3.777000e-03 ms
+>>>CVC5Real-cvc5 exec time: 5.529095e+00 ms
+a
+[8,0,0,0,0,0,0,0,]
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+complex:(FMulUnderflowCheck 4607182418800017408
+                     (ReadLSB w64 0 a))
+>>>CVC5Real-Z3 exec time: 7.134000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.291527e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+complex:(FMulAccuracyCheck 4607182418800017408
+                    (ReadLSB w64 0 a))
+>>>CVC5Real-Z3 exec time: 4.188000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.821667e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+complex:(FMulOverflowCheck N0:(ReadLSB w64 0 a)
+                    N0)
+>>>CVC5Real-Z3 exec time: 7.644000e-03 ms
+>>>CVC5Real-cvc5 exec time: 3.038825e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+complex:(FMulUnderflowCheck N0:(ReadLSB w64 0 a)
+                     N0)
+>>>CVC5Real-Z3 exec time: 1.198300e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.789984e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+complex:(FMulAccuracyCheck N0:(ReadLSB w64 0 a)
+                    N0)
+>>>CVC5Real-Z3 exec time: 4.227000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.838331e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+intCons:(Eq 0
+     (AShr w32 (ReadLSB w32 0 b)
+               1))
+complex:(FMulOverflowCheck 4382002437431492608
+                    (FAbs w64 (FMul w64 4607182418800017408
+                                        (ReadLSB w64 0 a))))
+>>>CVC5Real-Z3 exec time: 1.176200e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.179493e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+intCons:(Eq 0
+     (AShr w32 (ReadLSB w32 0 b)
+               1))
+complex:(FMulUnderflowCheck 4382002437431492608
+                     (FAbs w64 (FMul w64 4607182418800017408
+                                         (ReadLSB w64 0 a))))
+>>>CVC5Real-Z3 exec time: 1.311600e-02 ms
+>>>CVC5Real-cvc5 exec time: 7.610780e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq false
+     (Eq 0
+         (And w32 (ReadLSB w32 0 b)
+                  1)))
+intCons:(Eq 0
+     (AShr w32 (ReadLSB w32 0 b)
+               1))
+complex:(FMulAccuracyCheck 4382002437431492608
+                    (FAbs w64 (FMul w64 4607182418800017408
+                                        (ReadLSB w64 0 a))))
+>>>CVC5Real-Z3 exec time: 1.202300e-02 ms
+>>>CVC5Real-cvc5 exec time: 3.525463e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+>>>CVC5Real-Z3 exec time: 1.650179e+01 ms
+KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+complex:(FMulOverflowCheck N0:(FMul w64 N1:(ReadLSB w64 0 a)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.048000e-02 ms
+>>>CVC5Real-cvc5 exec time: 3.033817e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+complex:(FMulUnderflowCheck N0:(FMul w64 N1:(ReadLSB w64 0 a)
+                                  N1)
+                     N0)
+>>>CVC5Real-Z3 exec time: 3.403400e-02 ms
+>>>CVC5Real-cvc5 exec time: 2.490156e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+complex:(FMulAccuracyCheck N0:(FMul w64 N1:(ReadLSB w64 0 a)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.619000e-02 ms
+>>>CVC5Real-cvc5 exec time: 5.672699e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+complex:(FMulOverflowCheck N0:(FMul w64 N1:(FMul w64 N2:(ReadLSB w64 0 a)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.609000e-02 ms
+>>>CVC5Real-cvc5 exec time: 3.027049e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+complex:(FMulUnderflowCheck N0:(FMul w64 N1:(FMul w64 N2:(ReadLSB w64 0 a)
+                                               N2)
+                                  N1)
+                     N0)
+>>>CVC5Real-Z3 exec time: 3.890400e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.932816e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+complex:(FMulAccuracyCheck N0:(FMul w64 N1:(FMul w64 N2:(ReadLSB w64 0 a)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.197200e-02 ms
+>>>CVC5Real-cvc5 exec time: 8.377971e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulOverflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(ReadLSB w64 0 a)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.594800e-02 ms
+>>>CVC5Real-cvc5 exec time: 9.175860e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulUnderflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(ReadLSB w64 0 a)
+                                                            N3)
+                                               N2)
+                                  N1)
+                     N0)
+>>>CVC5Real-Z3 exec time: 3.070800e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.708027e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulAccuracyCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(ReadLSB w64 0 a)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.242200e-02 ms
+>>>CVC5Real-cvc5 exec time: 7.174989e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulOverflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(ReadLSB w64 0 a)
+                                                                        N4)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.823300e-02 ms
+>>>CVC5Real-cvc5 exec time: 6.019456e+04 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulUnderflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(ReadLSB w64 0 a)
+                                                                         N4)
+                                                            N3)
+                                               N2)
+                                  N1)
+                     N0)
+>>>CVC5Real-Z3 exec time: 3.295300e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.756160e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulAccuracyCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(ReadLSB w64 0 a)
+                                                                        N4)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 3.223100e-02 ms
+>>>CVC5Real-cvc5 exec time: 8.470073e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                           1)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                                1)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulOverflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(FMul w64 N5:(ReadLSB w64 0 a)
+                                                                                     N5)
+                                                                        N4)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 3.173100e-02 ms
+>>>CVC5Real-cvc5 exec time: 2.880636e+05 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                           1)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                                1)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulUnderflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(FMul w64 N5:(ReadLSB w64 0 a)
+                                                                                      N5)
+                                                                         N4)
+                                                            N3)
+                                               N2)
+                                  N1)
+                     N0)
+>>>CVC5Real-Z3 exec time: 3.660000e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.699362e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                           1)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                                1)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulAccuracyCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(FMul w64 N5:(ReadLSB w64 0 a)
+                                                                                     N5)
+                                                                        N4)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 2.578000e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.143659e+02 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+intCons:(Eq false
+     (Slt (ReadLSB w32 0 b)
+          0))
+intCons:(Eq 0
+     (And w32 (ReadLSB w32 0 b)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (ReadLSB w32 0 b)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (ReadLSB w32 0 b)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                           1)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                                1)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+intCons:(Eq false
+     (Eq 0
+         (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                                     1)
+                                                           1)
+                                                 1)
+                                       1)
+                             1)
+                   1)))
+intCons:(Eq 0
+     (And w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (AShr w32 (ReadLSB w32 0 b)
+                                                                          1)
+                                                                1)
+                                                      1)
+                                            1)
+                                  1)
+                        1)
+              1))
+complex:(FMulOverflowCheck N0:(FMul w64 N1:(FMul w64 N2:(FMul w64 N3:(FMul w64 N4:(FMul w64 N5:(FMul w64 N6:(ReadLSB w64 0 a)
+                                                                                                  N6)
+                                                                                     N5)
+                                                                        N4)
+                                                           N3)
+                                              N2)
+                                 N1)
+                    N0)
+>>>CVC5Real-Z3 exec time: 4.961400e-02 ms
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
+
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f1e29eba99d in __gmpn_mul_basecase () from /usr/local/lib/libgmp.so.10
+'halt_execution' has unknown return type; cast the call to its declared return type
+KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
+
