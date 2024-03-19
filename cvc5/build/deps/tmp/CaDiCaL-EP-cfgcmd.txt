@@ -1,0 +1,1 @@
+cmd='mkdir;-p;<SOURCE_DIR>/build;COMMAND;/usr/local/bin/cmake;-E;copy;<SOURCE_DIR>/makefile.in;<SOURCE_DIR>/build/makefile;COMMAND;sed;-i.orig;-e;s,@CXX@,/usr/bin/c++,;-e;s,@CXXFLAGS@,-fPIC -O3 -DNDEBUG -DQUIET -std=c++11 -DNUNLOCKED,;-e;s,@MAKEFLAGS@,,;<SOURCE_DIR>/build/makefile'

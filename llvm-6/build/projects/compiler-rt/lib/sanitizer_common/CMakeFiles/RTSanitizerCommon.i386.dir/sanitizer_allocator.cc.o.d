@@ -1,0 +1,34 @@
+projects/compiler-rt/lib/sanitizer_common/CMakeFiles/RTSanitizerCommon.i386.dir/sanitizer_allocator.cc.o: \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator.cc \
+ /usr/include/stdc-predef.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_internal_defs.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_platform.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_common.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_flags.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_flags.inc \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_interface_internal.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_libc.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_list.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_mutex.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_atomic.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_atomic_clang.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_atomic_clang_x86.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_lfstack.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_procmaps.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_linux.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_platform_limits_netbsd.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_platform_limits_posix.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_platform_limits_solaris.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_posix.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_mac.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_size_class_map.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_stats.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_primary64.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_bytemap.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_primary32.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_local_cache.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_secondary.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_combined.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_checks.h \
+ /home/aaa/fp-solver/llvm-6/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator_internal.h
