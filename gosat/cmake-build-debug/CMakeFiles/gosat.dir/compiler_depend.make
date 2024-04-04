@@ -1838,7 +1838,6 @@ CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o: /home/aaa/fp-solver/gosat/src/Uti
   /usr/include/c++/7/bits/streambuf_iterator.h \
   /usr/include/c++/7/bits/stringfwd.h \
   /usr/include/c++/7/bits/uniform_int_dist.h \
-  /usr/include/c++/7/bitset \
   /usr/include/c++/7/cassert \
   /usr/include/c++/7/cctype \
   /usr/include/c++/7/cerrno \
@@ -2268,7 +2267,6 @@ CMakeFiles/gosat.dir/src/main.cpp.o: /home/aaa/fp-solver/gosat/src/main.cpp \
   /usr/include/c++/7/limits \
   /usr/include/c++/7/locale \
   /usr/include/c++/7/map \
-  /usr/include/c++/7/math.h \
   /usr/include/c++/7/memory \
   /usr/include/c++/7/mutex \
   /usr/include/c++/7/new \
@@ -3176,8 +3174,6 @@ CMakeFiles/gosat.dir/src/main.cpp.o: /home/aaa/fp-solver/gosat/src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /home/aaa/fp-solver/llvm-6/install/include/llvm/Config/Targets.def:
-
-/usr/include/c++/7/math.h:
 
 /usr/include/c++/7/ostream:
 

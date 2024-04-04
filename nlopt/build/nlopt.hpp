@@ -83,8 +83,7 @@ namespace nlopt {
     LD_SLSQP,
     LD_CCSAQ,
     GN_ESCH,
-    GN_BYTEEA, //add by yx
-    GN_GA, //add by yx
+    GN_BYTEEA,
     GN_AGS,
     NUM_ALGORITHMS        /* not an algorithm, just the number of them */
   };
@@ -469,7 +468,6 @@ namespace nlopt {
     bool has_param(const char *name) const { return bool(nlopt_has_param(o, name)); }
     const char *nth_param(unsigned n) const { return nlopt_nth_param(o, n); }
     unsigned num_params() const { return nlopt_num_params(o); }
-      void set_outData(double *seed, int seed_size) { mythrow(nlopt_set_outData(o, seed, seed_size)); }
 #define NLOPT_GETSET_VEC(name)						 \
     void set_##name(double val) {					 \
       mythrow(nlopt_set_##name##1(o, val)); \

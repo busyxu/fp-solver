@@ -46,15 +46,12 @@ double myvconstraint(const std::vector<double> &x, std::vector<double> &grad, vo
 
 int main() {
 
-//  nlopt::opt opt("GN_ISRES", 2);
-  nlopt_opt opt = nlopt_create(NLOPT_LD_MMA,2);
+  nlopt::opt opt("LD_MMA", 2);
+//  nlopt_opt opt = nlopt_create(NLOPT_LD_MMA,2);
 
   std::vector<double> lb(2);
-    std::vector<double> ub(2);
   lb[0] = -HUGE_VAL; lb[1] = 0;//lower bounds
-    ub[0] = 100; ub[1] = 100;//lower bounds
   opt.set_lower_bounds(lb);
-  opt.set_upper_bounds(ub);
   opt.set_min_objective(myvfunc, NULL);
   my_constraint_data data[2] = { {2,0}, {-1,1} };
   opt.add_inequality_constraint(myvconstraint, &data[0], 1e-8);

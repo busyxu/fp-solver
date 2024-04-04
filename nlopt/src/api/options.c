@@ -287,15 +287,6 @@ nlopt_result nlopt_set_param(nlopt_opt opt, const char *name, double val) {
     return NLOPT_SUCCESS;
 }
 
-//add by yx
-nlopt_result nlopt_set_outData(nlopt_opt opt, double *seed, int seed_size) {
-    if (!opt) RETURN_ERR(NLOPT_INVALID_ARGS, opt, "invalid NULL opt");
-    if (!seed) RETURN_ERR(NLOPT_INVALID_ARGS, opt, "invalid NULL seed");
-    opt->seed = seed;
-    opt->seed_size = seed_size;
-    return NLOPT_SUCCESS;
-}
-
 double nlopt_get_param(const nlopt_opt opt, const char *name, double defaultval)
 {
     unsigned i;

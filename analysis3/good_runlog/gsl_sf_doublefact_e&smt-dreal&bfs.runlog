@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 57167
+KLEE: KLEE: WATCHDOG: watching 1509298
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_doublefact_e&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,36 +8,30 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: flushing 7152 bytes on read, may be slow and/or crash: MO11587[7152] allocated at global:doub_fact_table
->>>Synergy-Z3 exec time: 7.630422e+00 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
->>>Synergy-Z3 exec time: 8.025000e-03 ms
->>>Synergy-dreal exec time: 6.706550e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 5.327104e+04 ms
+KLEE: WARNING ONCE: flushing 7152 bytes on read, may be slow and/or crash: MO11564[7152] allocated at global:doub_fact_table
+>>>Synergy-Z3 exec time: 1.560312e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 1.491400e-02 ms
+>>>Synergy-dreal exec time: 1.248047e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.388172e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 2.496800e-02 ms
->>>Synergy-dreal exec time: 6.721790e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 5.710921e+04 ms
+>>>Synergy-Z3 exec time: 3.567300e-02 ms
+>>>Synergy-dreal exec time: 9.195130e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.353587e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 2.836400e-02 ms
->>>Synergy-dreal exec time: 7.430640e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 5.603644e+04 ms
+>>>Synergy-Z3 exec time: 3.578200e-02 ms
+>>>Synergy-dreal exec time: 8.183060e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
+>>>JFS exec time: 1.364238e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.356179e+01 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(139658638698112, 93917189090400, 93917188968656, 1509, 93917188968560, 93917186746272) at stream.c:46 1
+>>>Synergy-Z3 exec time: 1.657330e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140555192407488, 94640014964800, 94640014928280, 1509, 94640014928184, 94640012115712) at stream.c:46 1
 gsl: gamma.c:1509: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(139658638698336) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140555192407712) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -46,4 +40,4 @@ KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 1.821786e+05 ms
+Total exec time: 5.338719e+04 ms

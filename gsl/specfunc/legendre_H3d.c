@@ -41,7 +41,6 @@
  *               = |Gamma(ell + 1 + I lambda)|^2  lambda sinh(Pi lambda) / Pi
  * Assumes ell >= 0.
  */
-static
 int
 legendre_H3d_lnnorm(const int ell, const double lambda, double * result)
 {
@@ -92,7 +91,6 @@ legendre_H3d_lnnorm(const int ell, const double lambda, double * result)
  * And recall
  * H3d = sqrt(Pi Norm /(2 lam^2 sinh(eta))) P^{-l-1/2}_{-1/2 + I lam}(cosh(eta))
  */
-static
 int
 legendre_H3d_series(const int ell, const double lambda, const double eta,
                     gsl_sf_result * result)
@@ -137,7 +135,6 @@ legendre_H3d_series(const int ell, const double lambda, const double eta,
  * by continued fraction.
  */
 #if 0
-static
 int
 legendre_H3d_CF1(const int ell, const double lambda, const double coth_eta,
                  gsl_sf_result * result)
@@ -205,7 +202,6 @@ legendre_H3d_CF1(const int ell, const double lambda, const double coth_eta,
   * for J_nu once or twice. Then we should probably use
   * the method above.
   */
-static
 int
 legendre_H3d_CF1_ser(const int ell, const double lambda, const double coth_eta,
                      gsl_sf_result * result)
@@ -358,7 +354,6 @@ gsl_sf_legendre_H3d_1_e(const double lambda, const double eta, gsl_sf_result * r
     return GSL_SUCCESS;
   }
 }
-
 
 int
 gsl_sf_legendre_H3d_e(const int ell, const double lambda, const double eta,

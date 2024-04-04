@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 6259
+KLEE: KLEE: WATCHDOG: watching 2300001
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&cvc5-real&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,30 +8,24 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7982[4104] allocated at global:fact_table
->>>CVC5Real-Z3 exec time: 1.308931e+01 ms
+KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7959[4104] allocated at global:fact_table
+>>>CVC5Real-Z3 exec time: 9.413363e+00 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
->>>CVC5Real-Z3 exec time: 1.099100e-02 ms
->>>CVC5Real-cvc5 exec time: 2.359626e+00 ms
+>>>CVC5Real-Z3 exec time: 9.202000e-03 ms
+>>>CVC5Real-cvc5 exec time: 2.120778e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 1.569100e-02 ms
->>>CVC5Real-cvc5 exec time: 6.524900e-01 ms
+>>>CVC5Real-Z3 exec time: 1.794300e-02 ms
+>>>CVC5Real-cvc5 exec time: 5.413830e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 1.267400e-02 ms
->>>CVC5Real-cvc5 exec time: 6.599950e-01 ms
+>>>CVC5Real-Z3 exec time: 1.334500e-02 ms
+>>>CVC5Real-cvc5 exec time: 4.873740e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 1.373445e+01 ms
+>>>CVC5Real-Z3 exec time: 8.924446e+00 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140226049357440, 94016881896544, 94016881774800, 1489, 94016881774704, 94016879552416) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139885480109504, 94745329555520, 94745329519000, 1489, 94745329518904, 94745326706432) at stream.c:46 1
 gsl: gamma.c:1489: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(140226049357664) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139885480109728) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -40,4 +34,4 @@ KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 1.279949e+04 ms
+Total exec time: 9.619280e+03 ms

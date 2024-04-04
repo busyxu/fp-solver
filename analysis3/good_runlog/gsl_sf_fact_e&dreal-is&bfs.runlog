@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 6373
+KLEE: KLEE: WATCHDOG: watching 2300624
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&dreal-is&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,33 +8,27 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7982[4104] allocated at global:fact_table
->>>Dreal-Z3 exec time: 1.221307e+01 ms
+KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7959[4104] allocated at global:fact_table
+>>>Dreal-Z3 exec time: 1.688198e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 1.127200e-02 ms
->>>Dreal-dreal exec time: 1.238050e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 1.028200e-02 ms
+>>>Dreal-dreal exec time: 1.204900e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 8.937000e-03 ms
->>>Dreal-dreal exec time: 4.189000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 7.475000e-03 ms
+>>>Dreal-dreal exec time: 3.439000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 7.855000e-03 ms
->>>Dreal-dreal exec time: 2.996000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 6.710000e-03 ms
+>>>Dreal-dreal exec time: 2.665000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 1.145654e+01 ms
+>>>Dreal-Z3 exec time: 1.468969e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140435292186240, 93883566263392, 93883566141648, 1489, 93883566141552, 93883563919264) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140281050940864, 94694994360384, 94694994323864, 1489, 94694994323768, 94694991511296) at stream.c:46 1
 gsl: gamma.c:1489: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(140435292186464) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140281050941088) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -43,4 +37,4 @@ KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 1.400527e+04 ms
+Total exec time: 8.116473e+03 ms

@@ -55,7 +55,6 @@
 #include "esch.h"
 #include "slsqp.h"
 #include "byteea.h"
-#include "ga.h"
 
 /*********************************************************************/
 
@@ -364,8 +363,7 @@ static int elimdim_wrapcheck(nlopt_opt opt)
     case NLOPT_LN_SBPLX:
     case NLOPT_GN_ISRES:
     case NLOPT_GN_ESCH:
-    case NLOPT_GN_BYTEEA: //add by yx
-    case NLOPT_GN_GA://add by yx
+    case NLOPT_GN_BYTEEA:
     case NLOPT_GN_AGS:
     case NLOPT_GD_STOGO:
     case NLOPT_GD_STOGO_RAND:
@@ -779,25 +777,14 @@ static nlopt_result nlopt_optimize_(nlopt_opt opt, double *x, double *minf)
     case NLOPT_GN_ESCH:
         if (!finite_domain(n, lb, ub))
             RETURN_ERR(NLOPT_INVALID_ARGS, opt, "finite domain required for global algorithm");
-//        printf("esch\n");
-        return chevolutionarystrategy(n, f, f_data, lb, ub, x, minf, &stop, (unsigned) POP(0), (unsigned) (POP(0) * 1.5), opt->params->val);
+        return chevolutionarystrategy(n, f, f_data, lb, ub, x, minf, &stop, (unsigned) POP(0), (unsigned) (POP(0) * 1.5));
 
-        //add by yx
     case NLOPT_GN_BYTEEA:
-//      if (!finite_domain(n, lb, ub))
-//        RETURN_ERR(NLOPT_INVALID_ARGS, opt, "finite domain required for global algorithm");
-//        don't check finite domain for Byteea
-      return byteevolutionarystrategy(n, f, f_data, lb, ub, x, minf, &stop, (unsigned) POP(0), (unsigned) (POP(0) * 1.5), opt->seed, opt->seed_size);
+      if (!finite_domain(n, lb, ub))
+        RETURN_ERR(NLOPT_INVALID_ARGS, opt, "finite domain required for global algorithm");
+      return byteevolutionarystrategy(n, f, f_data, lb, ub, x, minf, &stop, (unsigned) POP(0), (unsigned) (POP(0) * 1.5));
 
-      //add by yx
-    case NLOPT_GN_GA:
-        if (!finite_domain(n, lb, ub))
-            RETURN_ERR(NLOPT_INVALID_ARGS, opt, "finite domain required for global algorithm");
-//        printf("esch\n");
-        return ga_sbx_pm_strategy(n, f, f_data, lb, ub, x, minf, &stop, (unsigned) POP(0), (unsigned) (POP(0) * 1.5));
-
-
-        case NLOPT_LD_SLSQP:
+    case NLOPT_LD_SLSQP:
         return nlopt_slsqp(n, f, f_data, opt->m, opt->fc, opt->p, opt->h, lb, ub, x, minf, &stop);
 
     default:
@@ -872,15 +859,16 @@ nlopt_result NLOPT_STDCALL nlopt_optimize(nlopt_opt opt, double *x, double *opt_
         if (elimdim_wrapcheck(opt)) {
             elim_opt = elimdim_create(opt);
             if (!elim_opt) {
+                nlopt_set_errmsg(opt, "failure allocating elim_opt");
                 ret = NLOPT_OUT_OF_MEMORY;
                 goto done;
             }
             elimdim_shrink(opt->n, x, opt->lb, opt->ub);
             opt->force_stop_child = elim_opt;
         }
-//        printf("nl_optimize_before\n");
+
         ret = nlopt_optimize_(elim_opt, x, opt_f);
-//        printf("nl_optimize_after\n");
+
         if (elim_opt != opt) {
             opt->numevals = elim_opt->numevals;
             opt->errmsg = elim_opt->errmsg; elim_opt->errmsg = NULL;

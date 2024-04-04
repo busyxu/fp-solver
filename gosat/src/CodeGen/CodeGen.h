@@ -79,18 +79,6 @@ enum class SymbolKind : unsigned {
     kUnknown = 32
 };
 
-//enum class SymbolKind : unsigned {
-//    kExpr = 0,
-//    kNegatedExpr = 1,
-//    kFP32Const = 2,
-//    kFP64Const = 3,
-//    kRealConst = 4,
-//    kFP32Var = 5,
-//    kFP64Var = 6,
-//    kRealVar = 7,
-//    kUnknown = 8
-//};
-
 enum class FPVarKind : unsigned {
     kUnknown,
     kFP32,

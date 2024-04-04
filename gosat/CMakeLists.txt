@@ -18,11 +18,13 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # add by zgf
 set(libz3-path /home/aaa/fp-solver/z3-4.6.2/install/lib/libz3.so)
-set(libnlopt-path /home/aaa/fp-solver/nlopt/install/lib/libnlopt.so)
 set(Z3_INCLUDE_DIR /home/aaa/fp-solver/z3-4.6.2/install/include)
+
+#set(libnlopt-path /home/aaa/fp-solver/nlopt/build/libnlopt.so)
+set(libnlopt-path /home/aaa/fp-solver/nlopt/cmake-build-debug/libnlopt.so)
 set(NLOPT_INCLUDE_DIR /home/aaa/fp-solver/nlopt/install/include)
+
 set(LLVM_DIR /home/aaa/fp-solver/llvm-6/install/lib/cmake/llvm)
-#set(LLVM_DIR /home/aaa/llvm-6/install/lib/cmake/llvm)
 
 # Finds and configures LLVM build directories
 find_package(LLVM REQUIRED CONFIG)
@@ -71,7 +73,6 @@ llvm_map_components_to_libnames(llvm_libs_required
 
 set(SOURCE_FILES
     src/main.cpp
-#    src/main1.cpp
     src/Utils/FPAUtils.cpp
     src/ExprAnalyzer/FPExprAnalyzer.cpp
     src/IRGen/FPIRGenerator.cpp

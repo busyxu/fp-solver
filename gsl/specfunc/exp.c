@@ -30,7 +30,6 @@
 /* Evaluate the continued fraction for exprel.
  * [Abramowitz+Stegun, 4.2.41]
  */
-static
 int
 exprel_n_CF(const double N, const double x, gsl_sf_result * result)
 {

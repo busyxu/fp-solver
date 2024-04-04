@@ -35,9 +35,8 @@
 /* [Abramowitz+Stegun, 9.6.11]
  * assumes n >= 1
  */
-static
-int
-bessel_Kn_scaled_small_x(const int n, const double x, gsl_sf_result * result)
+
+int bessel_Kn_scaled_small_x(const int n, const double x, gsl_sf_result * result)
 {
   int k;
   double y = 0.25 * x * x;

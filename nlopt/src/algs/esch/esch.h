@@ -21,7 +21,7 @@
  */
 
 #ifndef ES_POP_H
-#define ES_POP_H
+#define ES_POP_H 1
 
 #include "nlopt-util.h"
 
@@ -40,8 +40,7 @@ nlopt_result chevolutionarystrategy(
      double*,
      nlopt_stopping*, 		/* nlopt stop condition */
      unsigned, 			/* Number of Parents */
-     unsigned,          /* Number of Offsprings */
-     double grad);
+     unsigned); 			/* Number of Offsprings */
 
 #ifdef __cplusplus
 }  /* extern "C" */

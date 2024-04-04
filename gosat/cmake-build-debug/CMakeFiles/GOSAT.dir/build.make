@@ -208,7 +208,7 @@ libGOSAT.so: CMakeFiles/GOSAT.dir/src/CodeGen/CodeGen.cpp.o
 libGOSAT.so: CMakeFiles/GOSAT.dir/src/Optimizer/ModelValidator.cpp.o
 libGOSAT.so: CMakeFiles/GOSAT.dir/build.make
 libGOSAT.so: /home/aaa/fp-solver/z3-4.6.2/install/lib/libz3.so
-libGOSAT.so: /home/aaa/fp-solver/nlopt/install/lib/libnlopt.so
+libGOSAT.so: /home/aaa/fp-solver/nlopt/cmake-build-debug/libnlopt.so
 libGOSAT.so: /home/aaa/fp-solver/llvm-6/install/lib/libLLVMCore.a
 libGOSAT.so: /home/aaa/fp-solver/llvm-6/install/lib/libLLVMExecutionEngine.a
 libGOSAT.so: /home/aaa/fp-solver/llvm-6/install/lib/libLLVMMCJIT.a

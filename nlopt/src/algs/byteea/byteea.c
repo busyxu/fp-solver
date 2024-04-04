@@ -29,12 +29,10 @@
 
 
 /****************************************************************************/
-static int randByteInt(const double params[7]) {
+static double randint(const double params[7]) {
 
-//  int xl = params[1];
-//  int xu = params[2];
-    int xl = 0;
-    int xu = 255;
+  int xl = params[1];
+  int xu = params[2];
 
   // Generate random integer in range [0, 99]
   int random_integer = rand() % (xu-xl+1);
@@ -42,25 +40,14 @@ static int randByteInt(const double params[7]) {
   return random_integer;
 }
 
-static void doubleToBytes(double *x, int nvar, double *parameters){
-    for (int i = 0; i < nvar; i++) {
-        uint8_t bytes[8];
-        memcpy(bytes, &x[i], sizeof(double));
-        for (int j = 0; j < 8; j++) {
-            parameters[i*8+j] = bytes[j];
-        }
-    }
-//    return;
-}
-
-static void bytesToDouble(double *parameters, int nvar, double *dval){
+static double* bytesToDouble(double * parameters, int nparameters){
 //  printf("bytes:\n");
 //  for(int j=0; j<nparameters; j++){
 //    printf("%d ",(int)parameters[j]);
 //  }
 //  printf("\n");
-//  int nvar = nparameters/8;
-//  double *dval = malloc(sizeof(double) * nvar);
+  int nvar = nparameters/8;
+  double *dval = malloc(sizeof(double) * nvar);
   for (int i = 0; i < nvar; i++) {
     uint8_t bytes[8];
     for (int j = 0; j < 8; j++) {
@@ -70,7 +57,7 @@ static void bytesToDouble(double *parameters, int nvar, double *dval){
     memcpy(&d, bytes, sizeof(double));
     dval[i] = d;
   }
-//  return dval;
+  return dval;
 }
 
 /****************************************************************************/
@@ -89,7 +76,7 @@ static int CompareIndividuals(void *unused, const void *a_, const void *b_) {
 }
 
 nlopt_result byteevolutionarystrategy(
-     unsigned nvar, /* Number of input parameters */
+     unsigned nparameters, /* Number of input parameters */
      nlopt_func f,	/* Recursive Objective Funtion Call */
      void * data_f,	/* Data to Objective Function */
      const double* lb,			/* Lower bound values */
@@ -98,19 +85,14 @@ nlopt_result byteevolutionarystrategy(
      double* minf,
      nlopt_stopping* stop, 		/* nlopt stop condition */
      unsigned np, 			/* Number of Parents */
-     unsigned no,           /* Number of Offsprings */
-     double *seed,
-     int seed_size) { 			/* Number of Offsprings */
+     unsigned no) { 			/* Number of Offsprings */
 
-     double *gradPr = malloc(sizeof(double));
-     *gradPr = 1024;
-      unsigned nparameters = nvar*8; // add by yx a variable is 8 byte
 
       srand(time(NULL));
 
      /* variables from nlopt */
      nlopt_result ret = NLOPT_SUCCESS;//init ret
-//     double vetor[8];
+     double vetor[8];
      unsigned  i, id, item;
      int  parent1, parent2;
      unsigned crosspoint;  /* crossover parameteres */
@@ -126,7 +108,6 @@ nlopt_result byteevolutionarystrategy(
      /*********************************
       * controling the population size
       *********************************/
-//    printf("np:%d no:%d\n",np,no);
      if (!np) np = 40;
      if (!no) no = 60;
      if ((np < 1)||(no<1)) {
@@ -150,60 +131,42 @@ nlopt_result byteevolutionarystrategy(
 	    return NLOPT_INVALID_ARGS;
      */
      /* main vector of parameters to randcauchy */
-//     vetor[0] = 4; /* ignored */
-//     vetor[3] = 0;
-//     vetor[4] = 1;
-//     vetor[5] = 10;
-//     vetor[6] = 1;
-//     vetor[7] = 0; /* ignored */
+     vetor[0] = 4; /* ignored */
+     vetor[3] = 0;
+     vetor[4] = 1;
+     vetor[5] = 10;
+     vetor[6] = 1;
+     vetor[7] = 0; /* ignored */
      /**************************************
       * Initializing parents population
       **************************************/
-//    printf("nparameters:%d\n",nparameters);
-    double *x_t = malloc(sizeof(double) * nvar);
-    double *seedParam = malloc(sizeof(double) * nparameters);
      for (id=0; id < np; id++) {
 	  esparents[id].parameters = (double*) malloc(sizeof(double) * nparameters);
 	  if (!esparents[id].parameters) {
 	       ret = NLOPT_OUT_OF_MEMORY;
 	       goto done;
 	  }
-
-      if(id<seed_size){
-          for(int j=0; j<nvar; j++){
-              x[j] = seed[id];
-          }
-          doubleToBytes(x, nvar, seedParam);
-          memcpy(esparents[id].parameters, seedParam, nparameters * sizeof(double));
-          for(item=0; item<nparameters; item++)
-              esparents[id].parameters[item] = seed[id];
-      } else{
-          for (item=0; item<nparameters; item++) {
-//              vetor[1] = lb[item];
-//              vetor[2] = ub[item];
-//              vetor[7] = vetor[7]+1;
-              //	       int rnd = randByteInt(vetor);
-              esparents[id].parameters[item] = nlopt_iurand(256);
-          }
-      }
+	  for (item=0; item<nparameters; item++) {
+	       vetor[1] = lb[item];
+	       vetor[2] = ub[item];
+	       vetor[7] = vetor[7]+1;
+	       int rnd = randint(vetor);
+	       esparents[id].parameters[item] = rnd;
+	  }
      }
 
-    double *initParam = malloc(sizeof(double) * nparameters);
-    doubleToBytes(x, nvar, initParam);
-     memcpy(esparents[np-1].parameters, initParam, nparameters * sizeof(double));
-    free(initParam);
-    free(x_t);
-    free(seedParam);
-//    for(int i=0; i<np; i++){
-//        for(int j=0; j<nparameters; j++){
-//            printf("%f ",esparents[i].parameters[j]);
-//        }
-//        printf("\n");
-//    }
+//     for(int i=0; i<np; i++){
+//       for(int j=0; j<nparameters; j++){
+//         printf("%f ",esparents[i].parameters[j]);
+//       }
+//       printf("\n");
+//     }
+
+     memcpy(esparents[0].parameters, x, nparameters * sizeof(double));
+
      /**************************************
       * Initializing offsprings population
       **************************************/
-//    printf("no:%d\n",no);
      for (id=0; id < no; id++) {
 	  esoffsprings[id].parameters =
 	       (double*) malloc(sizeof(double) * nparameters);
@@ -212,46 +175,43 @@ nlopt_result byteevolutionarystrategy(
 	       goto done;
 	  }
 	  for (item=0; item<nparameters; item++) {
-//	       vetor[1] = lb[item];
-//	       vetor[2] = ub[item];
-//	       vetor[7] = vetor[7]+1;
-	       esoffsprings[id].parameters[item] = nlopt_iurand(256);
+	       vetor[1] = lb[item];
+	       vetor[2] = ub[item];
+	       vetor[7] = vetor[7]+1;
+	       esoffsprings[id].parameters[item] = randint(vetor);
 	  }
      }
      /**************************************
       * Parents fitness evaluation
       **************************************/
-//    printf("fitness evaluation\n");
      for (id=0; id < np; id++) {
-//     double *dval = bytesToDouble(esoffsprings[id].parameters, nparameters);
-      double *dval = malloc(sizeof(double) * nvar);
-      bytesToDouble(esparents[id].parameters, nvar, dval);
-	  esparents[id].fitness = f(nparameters, dval, gradPr, data_f);
-
+//       int nvar = nparameters/8;
+//       double *dval = malloc(sizeof(double) * nvar);
+//       for (int i = 0; i < nvar; i++) {
+//         uint8_t bytes[8];
+//         for (int j = 0; j < 8; j++) {
+//           bytes[j] = esparents[id].parameters[i*8+j];
+//         }
+//         double d;
+//         memcpy(&d, bytes, sizeof(double));
+//         dval[i] = d;
+//       }
+//       printf("bytes:\n");
+//       for(int j=0; j<nparameters; j++){
+//         printf("%d ",(int)esparents[id].parameters[j]);
+//       }
+//       printf("\n");
+       double *dval = bytesToDouble(esparents[id].parameters, nparameters);
+	  esparents[id].fitness = f(nparameters, dval, NULL, data_f);
 	  estotal[id].fitness = esparents[id].fitness;
 	  ++ *(stop->nevals_p);
 	  if (*minf > esparents[id].fitness) {
 	       *minf = esparents[id].fitness;
-//           *(minf+1) = grad; // add by yx
-//	       memcpy(x, esparents[id].parameters,
-//		      nparameters * sizeof(double));
-
-//          for(int j=0; j<nparameters; j++){
-//              if(j%8==0) printf("\n");
-//              printf("%f ",esparents[id].parameters[j]);
-//          }
-//          printf("\n");
-//          for(int j=0; j<nvar; j++){
-//              printf("dval: %lf; %e\n",*(dval+j),*(dval+j));
-//          }
-//          printf("fitness: %f; grad: %f\n--------------------\n",esparents[id].fitness, *gradPr);
-
-          memcpy(x, dval, nvar * sizeof(double));
+	       memcpy(x, esparents[id].parameters,
+		      nparameters * sizeof(double));
 	  }
-      free(dval);
 	  if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
-	  else if (*minf <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;//modfiy by yx
-//      else if (*(minf+1) <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;//add by yx
+	  else if (*minf < stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
 	  else if (nlopt_stop_evals(stop)) ret = NLOPT_MAXEVAL_REACHED;
 	  else if (nlopt_stop_time(stop)) ret = NLOPT_MAXTIME_REACHED;
 	  if (ret != NLOPT_SUCCESS) goto done;
@@ -259,7 +219,6 @@ nlopt_result byteevolutionarystrategy(
      /**************************************
       * Main Loop - Generations
       **************************************/
-//    printf("Main Loop - Generations\n");
      while (1) {
 	  /**************************************
 	   * Crossover 单点交叉  交叉300次，产生300个子代
@@ -279,51 +238,52 @@ nlopt_result byteevolutionarystrategy(
 	  /**************************************
 	   * Gaussian Mutation
 	   **************************************/
-//         printf("Gaussian Mutation\n");
 	  totalmutation = (int) ((no * nparameters) / 10);//变异数量等于子代数量*决策变量数/10
 	  if (totalmutation < 1) totalmutation = 1;
 	  for (contmutation=0; contmutation < totalmutation; contmutation++) {
 	       idoffmutation = nlopt_iurand((int) no);//select mutation off
 	       paramoffmutation = nlopt_iurand((int) nparameters);//select mutation point
-//	       vetor[1] = lb[paramoffmutation];//找到该决策变量的上界
-//	       vetor[2] = ub[paramoffmutation];//找到该决策变量的下界
-//	       vetor[7] = vetor[7]+contmutation;
-	       esoffsprings[idoffmutation].parameters[paramoffmutation] = nlopt_iurand(256);
+	       vetor[1] = lb[paramoffmutation];//找到该决策变量的上界
+	       vetor[2] = ub[paramoffmutation];//找到该决策变量的下界
+	       vetor[7] = vetor[7]+contmutation;
+	       esoffsprings[idoffmutation].parameters[paramoffmutation] = randint(vetor);
+
 	  }
 	  /**************************************
 	   * Offsprings fitness evaluation
 	   **************************************/
-//         printf("Offsprings fitness evaluation -no: %d\n",no);
 	  for (id=0; id < no; id++){
 	       /*esoffsprings[id].fitness = (double)fitness(esoffsprings[id].parameters, nparameters,fittype);*/
-//           double *dval = bytesToDouble(esoffsprings[id].parameters, nparameters);
-           double *dval = malloc(sizeof(double) * nvar);
-           bytesToDouble(esoffsprings[id].parameters, nvar, dval);
-	       esoffsprings[id].fitness = f(nparameters, dval, gradPr, data_f);
-           estotal[id+np].fitness = esoffsprings[id].fitness;
+//            int nvar = nparameters/8;
+//            double *dval = malloc(sizeof(double) * nvar);
+//            for (int i = 0; i < nvar; i++) {
+//              uint8_t bytes[8];
+//              for (int j = 0; j < 8; j++) {
+//                bytes[j] = esoffsprings[id].parameters[i*8+j];
+//              }
+//              double d;
+//              memcpy(&d, bytes, sizeof(double));
+//              dval[i] = d;
+//            }
+
+//            printf("bytes:\n");
+//            for(int j=0; j<nparameters; j++){
+//              printf("%d ",(int)esoffsprings[id].parameters[j]);
+//            }
+//            printf("\n");
+          double *dval = bytesToDouble(esoffsprings[id].parameters, nparameters);
+
+	       esoffsprings[id].fitness = f(nparameters, dval, NULL, data_f);
+	       estotal[id+np].fitness = esoffsprings[id].fitness;
 	       ++ *(stop->nevals_p);
 	       if (*minf > esoffsprings[id].fitness) {
 		    *minf = esoffsprings[id].fitness;
-//            *(minf+1) = grad; // add by yx
-//		    memcpy(x, esoffsprings[id].parameters,
-//			   nparameters * sizeof(double));
-
-//               for(int j=0; j<nparameters; j++){
-//                   if(j%8==0) printf("\n");
-//                   printf("%f ",esoffsprings[id].parameters[j]);
-//               }
-//               printf("\n");
-//               for(int j=0; j<nvar; j++){
-//                   printf("dval: %lf; %e\n",*(dval+j),*(dval+j));
-//               }
-//               printf("fitness: %f; grad: %f\n--------------------\n",esoffsprings[id].fitness, *gradPr);
-
-            memcpy(x, dval, nvar * sizeof(double));
+		    memcpy(x, esoffsprings[id].parameters,
+			   nparameters * sizeof(double));
 	       }
-           free(dval);
 	       if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
-	       else if (*minf <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED; // modify by yx
-//           else if (*(minf+1) <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED; //add by yx
+	       else if (*minf < stop->minf_max)
+		    ret = NLOPT_MINF_MAX_REACHED;
 	       else if (nlopt_stop_evals(stop)) ret = NLOPT_MAXEVAL_REACHED;
 	       else if (nlopt_stop_time(stop)) ret = NLOPT_MAXTIME_REACHED;
 	       if (ret != NLOPT_SUCCESS) goto done;
@@ -331,7 +291,6 @@ nlopt_result byteevolutionarystrategy(
 	  /**************************************
 	   * Individual selection
 	   **************************************/
-//         printf("Individual selection\n");
 	  /* all the individuals are copied to one vector to easily identify best solutions */
 	  for (i=0; i < np; i++)
 	       estotal[i] = esparents[i];
@@ -340,13 +299,6 @@ nlopt_result byteevolutionarystrategy(
 	  /* Sorting */
 	  nlopt_qsort_r(estotal, no+np, sizeof(Individual), NULL, CompareIndividuals);
 
-//     for(int i=0; i<np+no; i++){
-//         for(int j=0; j<nparameters; j++){
-//             printf("%f ",estotal[i].parameters[j]);
-//         }
-//         printf("\n%f",estotal[i].fitness);
-//         printf("\n");
-//     }
 //	  printf("best solution:\n");
 //	  for(int j=0; j<nparameters; j++){
 //        printf("%d ",(int)estotal[0].parameters[j]);
@@ -366,7 +318,7 @@ nlopt_result byteevolutionarystrategy(
 		    esoffsprings[i-np] = estotal[i];
 	  }
      } /* generations loop */
-//    printf("done\n");
+
 done:
      for (id=0; id < np; id++) free(esparents[id].parameters);
      for (id=0; id < no; id++) free(esoffsprings[id].parameters);
@@ -374,8 +326,5 @@ done:
      if (esparents) 	free(esparents);
      if (esoffsprings) 	free(esoffsprings);
      if (estotal) 		free(estotal);
-
-     if(gradPr) free(gradPr);
-//    printf("ret:%d\n",ret);
      return ret;
 }

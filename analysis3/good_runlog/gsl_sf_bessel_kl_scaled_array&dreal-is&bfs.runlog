@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 60573
+KLEE: KLEE: WATCHDOG: watching 85528
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_kl_scaled_array&dreal-is&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,152 +8,84 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140047542691456, 94462045220224, 94462046291392, 196, 94462045114504, 94462046291376) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140275570734528, 94600904046944, 94600904138016, 196, 94600904010064, 94600904138000) at stream.c:46 1
 gsl: bessel_k.c:196: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140047542691680) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140275570734752) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.233914e+01 ms
+>>>Dreal-Z3 exec time: 1.506354e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:196: ERROR: domain error
 Default GSL error handler invoked.
->>>Dreal-Z3 exec time: 1.133144e+01 ms
->>>Dreal-dreal exec time: 2.530510e-01 ms
+>>>Dreal-Z3 exec time: 1.516172e+01 ms
+>>>Dreal-dreal exec time: 3.233770e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 9.168000e-03 ms
->>>Dreal-dreal exec time: 4.795910e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 8.475000e-03 ms
->>>Dreal-dreal exec time: 1.346070e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-Z3 exec time: 8.685000e-03 ms
+>>>Dreal-dreal exec time: 6.315960e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 9.410000e-03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 7.755000e-03 ms
->>>Dreal-dreal exec time: 2.338850e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 9.271000e-03 ms
+>>>Dreal-dreal exec time: 3.402370e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 6.532000e-03 ms
+>>>Dreal-Z3 exec time: 7.493000e-03 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 7.564000e-03 ms
->>>Dreal-dreal exec time: 1.157190e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-Z3 exec time: 5.521000e-03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Overflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 7.484000e-03 ms
+>>>Dreal-Z3 exec time: 8.170000e-03 ms
+>>>Dreal-dreal exec time: 1.743580e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 7.858000e-03 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Accuracy found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 7.183000e-03 ms
->>>Dreal-dreal exec time: 1.980260e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 1.207058e+01 ms
+>>>Dreal-Z3 exec time: 8.357000e-03 ms
+>>>Dreal-dreal exec time: 2.828280e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 9.867000e-03 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 3.466000e-03 ms
->>>Dreal-dreal exec time: 3.577900e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 2.744000e-03 ms
->>>Dreal-dreal exec time: 1.915830e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.756000e-03 ms
->>>Dreal-dreal exec time: 2.525610e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 6.000000e-03 ms
+>>>Dreal-dreal exec time: 4.923810e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 7.634000e-03 ms
->>>Dreal-dreal exec time: 4.929400e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 7.815000e-03 ms
->>>Dreal-dreal exec time: 1.223020e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:93: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 8.166000e-03 ms
->>>Dreal-dreal exec time: 4.068440e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 8.052000e-03 ms
+>>>Dreal-dreal exec time: 1.987710e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 7.354000e-03 ms
->>>Dreal-dreal exec time: 3.314210e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:93: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 2.615000e-03 ms
+>>>Dreal-Z3 exec time: 8.386000e-03 ms
+>>>Dreal-dreal exec time: 3.557740e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 1.636701e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 2.094000e-03 ms
->>>Dreal-dreal exec time: 1.388840e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.465000e-03 ms
-KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.984000e-03 ms
->>>Dreal-dreal exec time: 1.167520e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.335000e-03 ms
->>>Dreal-dreal exec time: 4.654900e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.093000e-03 ms
->>>Dreal-dreal exec time: 6.087600e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:108: ERROR: overflow
 Default GSL error handler invoked.
->>>Dreal-Z3 exec time: 7.685000e-03 ms
->>>Dreal-dreal exec time: 1.563370e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 2.274000e-03 ms
->>>Dreal-dreal exec time: 1.194960e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 2.134000e-03 ms
->>>Dreal-dreal exec time: 1.795510e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.905000e-03 ms
->>>Dreal-dreal exec time: 1.510480e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 2.565000e-03 ms
->>>Dreal-dreal exec time: 1.432620e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 1.888000e-02 ms
+>>>Dreal-dreal exec time: 1.185480e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 8.653000e-03 ms
+>>>Dreal-dreal exec time: 1.956150e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.174000e-03 ms
->>>Dreal-dreal exec time: 1.081160e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.103000e-03 ms
-KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.993000e-03 ms
->>>Dreal-dreal exec time: 1.754720e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.264000e-03 ms
->>>Dreal-dreal exec time: 1.886890e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.375000e-03 ms
-KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 5.952000e-03 ms
->>>Dreal-dreal exec time: 1.896100e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.214000e-03 ms
->>>Dreal-dreal exec time: 1.887500e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.915000e-03 ms
+>>>Dreal-dreal exec time: 6.247700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 2.126000e-03 ms
+>>>Dreal-dreal exec time: 8.802900e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 
-KLEE: done: total instructions = 295
+KLEE: done: total instructions = 289
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 16
-KLEE: done: generated tests = 14
-Total exec time: 1.149429e+04 ms
+KLEE: done: partially completed paths = 6
+KLEE: done: generated tests = 5
+Total exec time: 1.059179e+04 ms

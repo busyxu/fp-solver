@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 6346
+KLEE: KLEE: WATCHDOG: watching 3871490
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_sqrt_real&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,28 +8,34 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Synergy-Z3 exec time: 1.160846e+01 ms
->>>Synergy-Z3 exec time: 1.135619e+01 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
->>>Synergy-Z3 exec time: 3.913538e+01 ms
->>>Synergy-Z3 exec time: 4.625182e+01 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 x)) at math.c:319 7
+>>>Synergy-Z3 exec time: 9.923020e+00 ms
+>>>Synergy-dreal exec time: 1.837280e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 7.560648e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 2.628000e-03 ms
+>>>Synergy-dreal exec time: 4.128050e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 2.211000e-03 ms
+>>>Synergy-dreal exec time: 1.198260e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 5.958540e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
 KLEE: ERROR: math.c:323: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.767134e+01 ms
->>>Synergy-Z3 exec time: 4.268000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
->>>Synergy-Z3 exec time: 1.336742e+01 ms
+>>>Synergy-Z3 exec time: 4.818000e-03 ms
+>>>Synergy-dreal exec time: 1.451200e-02 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+>>>Synergy-Z3 exec time: 1.461000e-03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+>>>Synergy-Z3 exec time: 4.330000e-03 ms
+>>>Synergy-dreal exec time: 1.615880e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
 
-KLEE: done: total instructions = 582
+KLEE: done: total instructions = 570
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 1.184035e+04 ms
+Total exec time: 8.609566e+03 ms

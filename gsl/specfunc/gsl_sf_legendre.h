@@ -307,6 +307,11 @@ double gsl_sf_legendre_H3d_1(const double lambda, const double eta);
 int gsl_sf_legendre_H3d_e(const int l, const double lambda, const double eta, gsl_sf_result * result);
 double gsl_sf_legendre_H3d(const int l, const double lambda, const double eta);
 
+int legendre_H3d_series(const int ell, const double lambda, const double eta,
+                    gsl_sf_result * result);
+int legendre_H3d_lnnorm(const int ell, const double lambda, double * result);
+int legendre_H3d_CF1_ser(const int ell, const double lambda, const double coth_eta,
+                     gsl_sf_result * result);
 
 /* Array of H3d(ell),  0 <= ell <= lmax
  */

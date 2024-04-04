@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 29732
+KLEE: KLEE: WATCHDOG: watching 3733173
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_angle_restrict_symm_err_e&dreal-is&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,47 +8,40 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Dreal-dreal exec time: 5.396460e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.365890e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 1.980770e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 2.768870e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.717860e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 6.169780e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.180470e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: trig.c:541: FloatPointCheck: FDiv Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 2.263210e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: trig.c:541: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.155790e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.977250e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 9.131450e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 1.050942e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.388850e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.529610e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 2.795940e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 3.159550e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 9.111320e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 9.606800e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.426420e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
+>>>Dreal-dreal exec time: 2.773930e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
 KLEE: ctrl-c detected, requesting interpreter to halt.
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
 
-[Thread debugging using libthread_db enabled]
-Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
-0x00007f97ebb3e41d in ibex::Interval::is_subset(ibex::Interval const&) const () from /usr/lib/libibex.so
-'halt_execution' has unknown return type; cast the call to its declared return type
+sh: 1: gdb: not found
 KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
 

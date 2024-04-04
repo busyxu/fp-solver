@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 58302
+KLEE: KLEE: WATCHDOG: watching 2778023
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_y1_e&cvc5-real&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,42 +8,24 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140372764522112, 94737447906400, 94737448961520, 103, 94737447784560, 94737448961504) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140368867112384, 94500287469632, 94500287561040, 103, 94500287433016, 94500287561024) at stream.c:46 1
 gsl: bessel_y.c:103: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140372764522336) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140368867112608) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-complex:(Eq false
-     (FOLe (ReadLSB w64 0 a)
-           0))
->>>CVC5Real-cvc5 exec time: 2.685316e+00 ms
-a
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+>>>CVC5Real-cvc5 exec time: 3.147322e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
 gsl: bessel_y.c:106: ERROR: overflow
 Default GSL error handler invoked.
-complex:(Eq false
-     (FOLe (ReadLSB w64 0 a)
-           0))
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 a)
-           2301339409586323457))
->>>CVC5Real-cvc5 exec time: 1.104269e+00 ms
-a
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 1.500165e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 
 KLEE: done: total instructions = 164
 KLEE: done: completed paths = 0
 KLEE: done: partially completed paths = 2
 KLEE: done: generated tests = 1
-Total exec time: 1.024393e+04 ms
+Total exec time: 9.138243e+03 ms

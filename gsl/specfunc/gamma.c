@@ -1014,7 +1014,6 @@ static const cheb_series gamma_5_10_cs = {
 /* gamma(x) for x >= 1/2
  * assumes x >= 1/2
  */
-static
 int
 gamma_xgthalf(const double x, gsl_sf_result * result)
 {

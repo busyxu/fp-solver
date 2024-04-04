@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 12016
+KLEE: KLEE: WATCHDOG: watching 3601299
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_log_abs_e&jfs&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,32 +8,26 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140310261450368, 94096057609312, 94096057490928, 132, 94096057487472, 94096055269040) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140688113558976, 94591779592256, 94591779559096, 132, 94591779555640, 94591779679760) at stream.c:46 1
 gsl: log.c:132: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140310261450592) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140688113559200) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>jfs exec time: 1.391854e+03 ms
+>>>JFS exec time: 7.016376e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>jfs exec time: 3.264125e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
->>>jfs exec time: 3.264141e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
->>>jfs exec time: 3.265561e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
->>>jfs exec time: 3.241234e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
+>>>JFS exec time: 3.149307e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.132875e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.150131e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146670e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
 
 KLEE: done: total instructions = 103
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 2
-Total exec time: 1.481098e+05 ms
+Total exec time: 1.384388e+05 ms

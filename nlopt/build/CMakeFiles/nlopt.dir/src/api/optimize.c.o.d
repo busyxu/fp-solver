@@ -81,5 +81,4 @@ CMakeFiles/nlopt.dir/src/api/optimize.c.o: \
  /home/aaa/fp-solver/nlopt/src/algs/isres/isres.h \
  /home/aaa/fp-solver/nlopt/src/algs/esch/esch.h \
  /home/aaa/fp-solver/nlopt/src/algs/slsqp/slsqp.h \
- /home/aaa/fp-solver/nlopt/src/algs/byteea/byteea.h \
- /home/aaa/fp-solver/nlopt/src/algs/ga/ga.h
+ /home/aaa/fp-solver/nlopt/src/algs/byteea/byteea.h

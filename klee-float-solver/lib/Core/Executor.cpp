@@ -5083,6 +5083,7 @@ void Executor::getConcreteAssignSeedGoSAT(ExecutionState &state, bool &checkVali
       getConstraintVarName(cons,z3VarName);
       continue;
     }
+
 //    llvm::outs()<<"[gosat support cons]:\n"<<cons<<"\n";
     gosatCons.push_back(cons);
     getConstraintVarName(cons,gosatVarName);

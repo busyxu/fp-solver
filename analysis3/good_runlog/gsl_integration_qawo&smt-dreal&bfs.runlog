@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 28448
+KLEE: KLEE: WATCHDOG: watching 2536102
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawo&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,24 +8,18 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139962644412032, 94030297818112, 94030295465328, 42, 94030297674368, 94030298637056) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140350669891008, 93965719956736, 93965720016080, 42, 93965719898952, 93965720799152) at stream.c:46 1
 gsl: qmomof.c:42: ERROR: table length n must be positive integer
-KLEE: WARNING ONCE: calling external: fflush(139962644412256) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140350669891232) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.194959e+01 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evalueate SUCCESS !
+>>>Synergy-Z3 exec time: 9.341908e+00 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 KLEE: WARNING ONCE: Large alloc: 18446744073709551416 bytes.  KLEE may run out of memory.
-tcmalloc: large alloc 0 bytes == (nil) @  0x7f4b999b41e7 0x55850d8be5d6 0x55850d881da9 0x55850d8bfc91 0x55850d8c264b 0x55850d87d9c3 0x55850d8849dd 0x55850d8dc1d4 0x55850d897570 0x55850d897f89 0x55850d821261 0x7f4b97770c87 0x55850d863b7a
+tcmalloc: large alloc 0 bytes == (nil) @  0x7fa5f1539680 0x7fa5f155a824 0x557602dda1f8 0x557602d8e4d6 0x557602ddb7a5 0x557602dde8c4 0x557602d8b8ab 0x557602d97f1d 0x557602df8764 0x557602db0cdb 0x557602db1ec7 0x557602d34663 0x7fa5efb61083 0x557602d756de
 gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
 Default GSL error handler invoked.
 
@@ -33,4 +27,4 @@ KLEE: done: total instructions = 301
 KLEE: done: completed paths = 0
 KLEE: done: partially completed paths = 2
 KLEE: done: generated tests = 1
-Total exec time: 1.153494e+04 ms
+Total exec time: 7.564152e+03 ms

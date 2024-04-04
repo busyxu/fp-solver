@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 31575
+KLEE: KLEE: WATCHDOG: watching 2558376
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_wave_sphF_array&gosat&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,47 +8,50 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.883915e+02 ms
+>>>GoSat-gosat exec time: 7.978472e+02 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.716415e+03 ms
+>>>GoSat-gosat exec time: 3.000771e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.201514e+02 ms
+>>>GoSat-gosat exec time: 5.106757e+02 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+KLEE: WARNING ONCE: calling external: sqrt(4607182418800017408) at coulomb.c:1393 7
 [into case Z3_OP_FPA_EQ]
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.643344e+02 ms
+>>>GoSat-gosat exec time: 1.716448e+02 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.182547e+02 ms
+>>>GoSat-gosat exec time: 1.164979e+02 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.683754e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.746646e+01 ms
+>>>GoSat-gosat exec time: 3.699563e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1390: memory error: out of bound pointer
+KLEE: WARNING ONCE: calling external: fprintf(140671660299712, 94056228969600, 94056229068592, 1399, 94056228940184, 94056229068624) at stream.c:46 1
+gsl: coulomb.c:1399: ERROR: underflow
+KLEE: WARNING ONCE: calling external: fflush(140671660299936) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 5.196308e+00 ms
+[into case Z3_OP_FPA_EQ]
+[into case Z3_OP_FPA_EQ]
+>>>GoSat-gosat exec time: 3.665636e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 6.010302e+02 ms
+>>>GoSat-gosat exec time: 3.633011e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 5.870817e+02 ms
+>>>GoSat-gosat exec time: 4.295816e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 2.332704e+02 ms
+>>>GoSat-gosat exec time: 3.000414e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000404e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000358e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 1509
+KLEE: done: total instructions = 174
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 2
-Total exec time: 2.231497e+04 ms
+Total exec time: 1.346986e+05 ms

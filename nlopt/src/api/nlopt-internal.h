@@ -47,8 +47,6 @@ extern "C" {
         int maximize;           /* nonzero if we are maximizing, not minimizing */
 
         nlopt_opt_param *params;
-        double *seed; //add by yx
-        double seed_size; //add by yx
         unsigned nparams;
 
         double *lb, *ub;        /* lower and upper bounds (length n) */

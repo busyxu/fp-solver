@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 50290
+KLEE: KLEE: WATCHDOG: watching 3586669
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_sequence_Jnu_e&jfs&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,58 +8,46 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140195271186048, 94790971903872, 94790973016224, 65, 94790971797680, 94790972891416) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140615713686976, 94305492491040, 94305493546048, 65, 94305492453752, 94305492457952) at stream.c:46 1
 gsl: bessel_sequence.c:65: ERROR: error
-KLEE: WARNING ONCE: calling external: fflush(140195271186272) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140615713687200) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.624681e+03 ms
+>>>JFS exec time: 9.036028e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: bessel_sequence.c:62: ERROR: domain error
 Default GSL error handler invoked.
->>>JFS exec time: 1.546020e+03 ms
+>>>JFS exec time: 9.222162e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_sequence.c:70: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.679698e+03 ms
+>>>JFS exec time: 9.133573e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.588464e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_sequence.c:73: FloatPointCheck: FPow Invalid found !
+KLEE: ERROR: bessel_sequence.c:73: FloatPointCheck: FP Invalid found !
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.579932e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_sequence.c:75: memory error: out of bound pointer
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.725167e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_sequence.c:75: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.271506e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.265902e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.695712e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.781588e+03 ms
+>>>JFS exec time: 8.482356e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: bessel_Jnu.c:182: ERROR: domain error
 Default GSL error handler invoked.
->>>JFS exec time: 2.662636e+03 ms
+>>>JFS exec time: 8.053997e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_sequence.c:75: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>JFS exec time: 3.148857e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.151660e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 8.681610e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 9.288452e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: bessel_Jnu.c:182: ERROR: domain error
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 414
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 9
-KLEE: done: generated tests = 5
-Total exec time: 9.178669e+04 ms
+KLEE: done: partially completed paths = 8
+KLEE: done: generated tests = 4
+Total exec time: 8.193391e+04 ms

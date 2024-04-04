@@ -38,8 +38,9 @@ set(Z3_DIR /home/aaa/fp-solver/z3-4.6.2/install)
 set(Z3_INCLUDE_DIRS /home/aaa/fp-solver/z3-4.6.2/install/include)
 set(Z3_LIBRARIES /home/aaa/fp-solver/z3-4.6.2/install/lib/libz3.so)
 
-set(NLOPT_LIBRARIES /home/aaa/fp-solver/nlopt/build/libnlopt.so)
-set(NLOPT_INCLUDE_DIRS /home/aaa/fp-solver/nlopt/install/include)
+#set(NLOPT_LIBRARIES /home/aaa/fp-solver/nlopt2/build/libnlopt.so)
+set(NLOPT_LIBRARIES /home/aaa/fp-solver/nlopt2/build-debug/libnlopt.so)
+set(NLOPT_INCLUDE_DIRS /home/aaa/fp-solver/nlopt2/install/include)
 
 set(json-c_INCLUDE_DIR /home/aaa/fp-solver/json-c/install/include)
 set(json-c_LIBRARIES /home/aaa/fp-solver/json-c/install/lib/libjson-c.so)
@@ -48,8 +49,9 @@ set(GMP_LIBRARIES /usr/local/lib/libgmp.so)
 set(GMPxx_LIBRARIES /usr/local/lib/libgmpxx.so)
 
 ##add by yx
-set(GOSAT_INCLUDE_DIRS /home/aaa/fp-solver/gosat/src)
-set(GOSAT_LIBRARIES /home/aaa/fp-solver/gosat/build/libGOSAT.so)
+set(GOSAT_INCLUDE_DIRS /home/aaa/fp-solver/optsat/src)
+set(GOSAT_LIBRARIES /home/aaa/fp-solver/optsat/build/libOPTSAT.so)
+#set(GOSAT_LIBRARIES /home/aaa/fp-solver/optsat/build-debug/libOPTSAT.so)
 set(Bitwuzla_INCLUDE_DIRS /home/aaa/fp-solver/bitwuzla/install/include)
 set(Bitwuzla_LIBRARIES /home/aaa/fp-solver/bitwuzla/install/lib/libbitwuzla.so)
 #set(BitwuzlaMain_LIBRARIES /home/aaa/bitwuzla/build/src/CMakeFiles/bitwuzla-bin.dir/bzlamain.c.o)

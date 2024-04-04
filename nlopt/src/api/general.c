@@ -83,8 +83,7 @@ static const char nlopt_algorithm_names[NLOPT_NUM_ALGORITHMS][256] = {
     "Sequential Quadratic Programming (SQP) (local, derivative)",
     "CCSA (Conservative Convex Separable Approximations) with simple quadratic approximations (local, derivative)",
     "ESCH evolutionary strategy",
-    "BYTEEA evolutionary strategy", //add by yx
-    "GA genetic algorithm", //add by yx
+    "BYTEEA evolutionary strategy",
 #ifdef NLOPT_CXX11
     "AGS (global, no-derivative)"
 #else
@@ -149,8 +148,7 @@ const char *nlopt_algorithm_to_string(nlopt_algorithm algorithm)
     case NLOPT_LD_SLSQP: return "LD_SLSQP";
     case NLOPT_LD_CCSAQ: return "LD_CCSAQ";
     case NLOPT_GN_ESCH: return "GN_ESCH";
-    case NLOPT_GN_BYTEEA: return "GN_BYTEEA"; // add by yx
-    case NLOPT_GN_GA: return "GN_GA"; //add by yx
+    case NLOPT_GN_BYTEEA: return "GN_BYTEEA";
     case NLOPT_GN_AGS: return "GN_AGS";
     case NLOPT_NUM_ALGORITHMS: return NULL;
   }

@@ -224,7 +224,7 @@ bin/gosat: CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o
 bin/gosat: CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o
 bin/gosat: CMakeFiles/gosat.dir/build.make
 bin/gosat: /home/aaa/fp-solver/z3-4.6.2/install/lib/libz3.so
-bin/gosat: /home/aaa/fp-solver/nlopt/install/lib/libnlopt.so
+bin/gosat: /home/aaa/fp-solver/nlopt/cmake-build-debug/libnlopt.so
 bin/gosat: /home/aaa/fp-solver/llvm-6/install/lib/libLLVMCore.a
 bin/gosat: /home/aaa/fp-solver/llvm-6/install/lib/libLLVMExecutionEngine.a
 bin/gosat: /home/aaa/fp-solver/llvm-6/install/lib/libLLVMMCJIT.a

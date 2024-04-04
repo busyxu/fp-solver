@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 48192
+KLEE: KLEE: WATCHDOG: watching 3414547
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qagi&dreal-is&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,38 +8,31 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140020479948416, 94892414409856, 94892415213664, 240, 94892414308824, 94892414906496) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139702786426304, 94485242144224, 94485242075432, 240, 94485242071712, 94485242622976) at stream.c:46 1
 gsl: qags.c:240: ERROR: tolerance cannot be achieved with given epsabs and epsrel
-KLEE: WARNING ONCE: calling external: fflush(140020479948640) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139702786426528) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.185726e+01 ms
->>>Dreal-dreal exec time: 3.124440e-01 ms
+>>>Dreal-Z3 exec time: 9.863605e+00 ms
+>>>Dreal-dreal exec time: 2.820110e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 4.276000e-03 ms
+>>>Dreal-dreal exec time: 5.730800e-02 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt(4607182418800017408) at [no debug info]
 KLEE: ERROR: (location information missing) FloatPointCheck: FP Invalid found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 3.206000e-03 ms
->>>Dreal-dreal exec time: 1.001990e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.355000e-03 ms
->>>Dreal-dreal exec time: 5.892200e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 1.087941e+01 ms
+>>>Dreal-Z3 exec time: 8.925277e+00 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
 gsl: qags.c:232: ERROR: iteration limit exceeds available workspace
 Default GSL error handler invoked.
 
-KLEE: done: total instructions = 886
+KLEE: done: total instructions = 676
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 4
+KLEE: done: partially completed paths = 3
 KLEE: done: generated tests = 2
-Total exec time: 1.201522e+04 ms
+Total exec time: 7.696847e+03 ms

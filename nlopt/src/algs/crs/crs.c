@@ -22,7 +22,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
+
 #include "crs.h"
 #include "redblack.h"
 
@@ -122,7 +122,7 @@ static void random_trial(crs_data *d, double *x, rb_node *best)
 
 #define NUM_MUTATION 1 /* # "local mutation" steps to try if trial fails */
 
-static nlopt_result crs_trial(crs_data *d, double *grad)
+static nlopt_result crs_trial(crs_data *d)
 {
      rb_node *best = nlopt_rb_tree_min(&d->t);
      rb_node *worst = nlopt_rb_tree_max(&d->t);
@@ -130,7 +130,7 @@ static nlopt_result crs_trial(crs_data *d, double *grad)
      int i, n = d->n;
      random_trial(d, d->p + 1, best);
      do {
-     	  d->p[0] = d->f(n, d->p + 1, grad, d->f_data);
+     	  d->p[0] = d->f(n, d->p + 1, NULL, d->f_data);
 	  ++ *(d->stop->nevals_p);
 	  if (nlopt_stop_forced(d->stop)) return NLOPT_FORCED_STOP;
 	  if (d->p[0] < worst->k[0]) break;
@@ -165,7 +165,7 @@ static void crs_destroy(crs_data *d)
 static nlopt_result crs_init(crs_data *d, int n, const double *x,
 			     const double *lb, const double *ub,
 			     nlopt_stopping *stop, nlopt_func f, void *f_data,
-			     int population, int lds, double *grad)
+			     int population, int lds)
 {
      int i;
 
@@ -202,11 +202,10 @@ static nlopt_result crs_init(crs_data *d, int n, const double *x,
 
      /* generate initial points randomly, plus starting guess x */
      memcpy(d->ps + 1, x, sizeof(double) * n);
-     d->ps[0] = f(n, x, grad, f_data);
+     d->ps[0] = f(n, x, NULL, f_data);
      ++ *(stop->nevals_p);
      if (!nlopt_rb_tree_insert(&d->t, d->ps)) return NLOPT_OUT_OF_MEMORY;
-//     if (d->ps[0] <= stop->minf_max) return NLOPT_MINF_MAX_REACHED;
-     if (d->ps[0] <= stop->minf_max) return NLOPT_MINF_MAX_REACHED;//add by yx
+     if (d->ps[0] < stop->minf_max) return NLOPT_MINF_MAX_REACHED;
      if (nlopt_stop_evals(stop)) return NLOPT_MAXEVAL_REACHED;
      if (nlopt_stop_time(stop)) return NLOPT_MAXTIME_REACHED;
      for (i = 1; i < d->N; ++i) {
@@ -218,16 +217,15 @@ static nlopt_result crs_init(crs_data *d, int n, const double *x,
 	       for (j = 0; j < n; ++j) 
 		    k[1 + j] = nlopt_urand(lb[j], ub[j]);
 	  }
-	  k[0] = f(n, k + 1, grad, f_data);
+	  k[0] = f(n, k + 1, NULL, f_data);
 	  ++ *(stop->nevals_p);
 	  if (!nlopt_rb_tree_insert(&d->t, k)) return NLOPT_OUT_OF_MEMORY;
-//	  if (k[0] <= stop->minf_max) return NLOPT_MINF_MAX_REACHED;
-      if (k[0] <= stop->minf_max) return NLOPT_MINF_MAX_REACHED;//add by yx
+	  if (k[0] < stop->minf_max) return NLOPT_MINF_MAX_REACHED;
 	  if (nlopt_stop_evals(stop)) return NLOPT_MAXEVAL_REACHED;
 	  if (nlopt_stop_time(stop)) return NLOPT_MAXTIME_REACHED;	  
      }
 
-     return NLOPT_SUCCESS;
+     return NLOPT_SUCCESS;;
 }
 
 nlopt_result crs_minimize(int n, nlopt_func f, void *f_data,
@@ -242,9 +240,7 @@ nlopt_result crs_minimize(int n, nlopt_func f, void *f_data,
      crs_data d;
      rb_node *best;
 
-     double *grad = malloc(sizeof(double));;//add by yx
-//     *grad = 1024;//add by yx
-     ret = crs_init(&d, n, x, lb, ub, stop, f, f_data, population, lds, grad);
+     ret = crs_init(&d, n, x, lb, ub, stop, f, f_data, population, lds);
      if (ret < 0) return ret;
      
      best = nlopt_rb_tree_min(&d.t);
@@ -252,12 +248,11 @@ nlopt_result crs_minimize(int n, nlopt_func f, void *f_data,
      memcpy(x, best->k + 1, sizeof(double) * n);
 
      while (ret == NLOPT_SUCCESS) {
-	  if (NLOPT_SUCCESS == (ret = crs_trial(&d, grad))) {
+	  if (NLOPT_SUCCESS == (ret = crs_trial(&d))) {
 	       best = nlopt_rb_tree_min(&d.t);
 	       if (best->k[0] < *minf) {
-//		    if (best->k[0] <= stop->minf_max)
-//			 ret = NLOPT_MINF_MAX_REACHED;
-            if (best->k[0] <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;//add by yx
+		    if (best->k[0] < stop->minf_max)
+			 ret = NLOPT_MINF_MAX_REACHED;
 		    else if (nlopt_stop_f(stop, best->k[0], *minf))
 			 ret = NLOPT_FTOL_REACHED;
 		    else if (nlopt_stop_x(stop, best->k + 1, x))
@@ -273,8 +268,6 @@ nlopt_result crs_minimize(int n, nlopt_func f, void *f_data,
 	       }
 	  }
      }
-//    printf("grad:%f\n",*grad);//add by yx
-    free(grad);//add by yx
      crs_destroy(&d);
      return ret;
 }

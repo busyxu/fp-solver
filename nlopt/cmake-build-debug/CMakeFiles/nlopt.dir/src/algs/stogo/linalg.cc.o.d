@@ -1,6 +1,6 @@
 CMakeFiles/nlopt.dir/src/algs/stogo/linalg.cc.o: \
- /home/aaa/nlopt/src/algs/stogo/linalg.cc /usr/include/stdc-predef.h \
- /usr/include/c++/7/iostream \
+ /home/aaa/fp-solver/nlopt/src/algs/stogo/linalg.cc \
+ /usr/include/stdc-predef.h /usr/include/c++/7/iostream \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -140,5 +140,5 @@ CMakeFiles/nlopt.dir/src/algs/stogo/linalg.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /home/aaa/nlopt/src/algs/stogo/linalg.h \
+ /home/aaa/fp-solver/nlopt/src/algs/stogo/linalg.h \
  /usr/lib/gcc/x86_64-linux-gnu/7/include/float.h

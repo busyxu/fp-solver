@@ -32,9 +32,8 @@ FPIRGenerator::FPIRGenerator
 {}
 
 const IRSymbol* FPIRGenerator::genNumeralIR
-        (llvm::IRBuilder<>& builder, const z3::expr& expr, std::vector<double>& init_number) noexcept
+        (llvm::IRBuilder<>& builder, const z3::expr& expr) noexcept
 {
-//    llvm::outs()<<"numermal expr>>>"<<expr.to_string()<<"\n";
     using namespace llvm;
     if (expr.get_sort().sort_kind() == Z3_FLOATING_POINT_SORT) {
         unsigned sigd = Z3_fpa_get_sbits(expr.ctx(), expr.get_sort());
@@ -46,8 +45,7 @@ const IRSymbol* FPIRGenerator::genNumeralIR
             }
             // TODO: handling FP32 should be configurable
             float numeral = fpa_util::toFloat32(expr);
-            init_number.push_back(numeral);// add by yx
-            Value* value = ConstantFP::get(builder.getDoubleTy(), numeral);// to_double, to type consistency
+            Value* value = ConstantFP::get(builder.getDoubleTy(), numeral);
             auto res_pair = insertSymbol(SymbolKind::kFP32Const, expr, value, 0);
             return res_pair.first;
         } else {
@@ -60,7 +58,6 @@ const IRSymbol* FPIRGenerator::genNumeralIR
                 return &(*result_iter).second;
             }
             double numeral = fpa_util::toFloat64(expr);
-            init_number.push_back(numeral);// add by yx
             Value* value = ConstantFP::get(builder.getDoubleTy(), numeral);
             auto res_pair = insertSymbol(SymbolKind::kFP64Const, expr, value, 0);
             return res_pair.first;
@@ -76,18 +73,17 @@ const IRSymbol* FPIRGenerator::genNumeralIR
           return &(*result_iter).second;
         }
         std::string numeral_str = Z3_ast_to_string(expr.ctx(),static_cast<z3::ast>(expr));
+//        numeral_str.replace(0, 1, 1, '0');
+//        int valInt = std::stoi(numeral_str);
+//        float numeral = valInt;
 
         std::string hex_string = numeral_str.substr(2,numeral_str.size()-2);
 //        char* hex_string = "3fe0000000000000";
         uint32_t int_value;
         sscanf(hex_string.c_str(), "%x", &int_value);
 //        double* numeral = (double*)&int_value;
-////        printf("numeral: %lf\n", *numeral);
-//        init_number.push_back(*numeral);
-//        Value* value = ConstantFP::get(builder.getDoubleTy(),*numeral);
-//        auto res_pair = insertSymbol(SymbolKind::kFP32Const, expr, value, 0);
-//          init_number.push_back(int_value);
-        Value* value = ConstantFP::get(builder.getDoubleTy(), int_value);// to_double, to type consistency
+
+        Value* value = ConstantFP::get(builder.getDoubleTy(), int_value);
         auto res_pair = insertSymbol(SymbolKind::kFP32Const, expr, value, 0);
         return res_pair.first;
       }else{
@@ -96,36 +92,21 @@ const IRSymbol* FPIRGenerator::genNumeralIR
           return &(*result_iter).second;
 
         std::string numeral_str = Z3_ast_to_string(expr.ctx(),static_cast<z3::ast>(expr));
+//        numeral_str.replace(0, 1, 1, '0');//delete "#"
+//        double dval = std::stod(numeral_str);
+//        long valInt = std::stoi(numeral_str,0,16);
+//        double numeral = valInt;
         std::string hex_string = numeral_str.substr(2,numeral_str.size()-2);//delete "#x"
 //        char* hex_string = "3fe0000000000000";
         uint64_t int_value;
         sscanf(hex_string.c_str(), "%lx", &int_value);
 //        double* numeral = (double*)&int_value;
-////        printf("numeral: int>%ld; double>%lf\n",int_value, *numeral);
-//        init_number.push_back(*numeral);
-//        Value* value = ConstantFP::get(builder.getDoubleTy(),*numeral);
-//        auto res_pair = insertSymbol(SymbolKind::kFP64Const, expr, value, 0);
-//          init_number.push_back(int_value);
-          Value* value = ConstantFP::get(builder.getDoubleTy(), int_value);
-          auto res_pair = insertSymbol(SymbolKind::kFP64Const, expr, value, 0);
-        return res_pair.first;
-      }
-    }
+//        printf("%lf\n", *double_value);
 
-    // add by yx support real const
-    if (expr.get_sort().sort_kind() == Z3_REAL_SORT) {
-        auto result_iter = findSymbol(SymbolKind::kFP64Const, &expr);
-        if (result_iter != m_expr_sym_map.cend())
-            return &(*result_iter).second;
-
-        std::string numeral_str = Z3_ast_to_string(expr.ctx(),static_cast<z3::ast>(expr));
-        double numeral = std::stod(numeral_str);
-        init_number.push_back(numeral);
-//        printf("numeral: str>%s; double>%lf\n",numeral_str.c_str(), numeral);
-
-        Value* value = ConstantFP::get(builder.getDoubleTy(),numeral);
+        Value* value = ConstantFP::get(builder.getDoubleTy(), int_value);
         auto res_pair = insertSymbol(SymbolKind::kFP64Const, expr, value, 0);
         return res_pair.first;
+      }
     }
 
     if (expr.decl().decl_kind() == Z3_OP_BNUM) {
@@ -136,66 +117,11 @@ const IRSymbol* FPIRGenerator::genNumeralIR
         std::string numeral_str = Z3_ast_to_string(expr.ctx(),
                                                    static_cast<z3::ast>(expr));
         numeral_str.replace(0, 1, 1, '0');
-        double numeral = std::stod(numeral_str);
-        init_number.push_back(numeral);
-        Value* value = ConstantFP::get(builder.getDoubleTy(), numeral);
+        Value* value = ConstantFP::get(builder.getDoubleTy(),
+                                       std::stod(numeral_str));
         auto res_pair = insertSymbol(SymbolKind::kFP64Const, expr, value, 0);
         return res_pair.first;
     }
-
-    //add by yx support real expr
-    if (expr.decl().decl_kind() == Z3_OP_ANUM) {
-        auto result_iter = findSymbol(SymbolKind::kFP64Const, &expr);
-        if (result_iter != m_expr_sym_map.cend()) {
-            return &(*result_iter).second;
-        }
-        std::string numeral_str = Z3_ast_to_string(expr.ctx(),
-                                                   static_cast<z3::ast>(expr));
-//        numeral_str.replace(0, 1, 1, '0');
-        numeral_str = numeral_str.substr(1, numeral_str.size() - 2);
-        std::vector<std::string> tokens;
-        std::istringstream stream(numeral_str);
-        std::string token;
-        char delimiter = ' ';
-        while (std::getline(stream, token, delimiter)) {
-            tokens.push_back(token);
-        }
-        char* op = const_cast<char *>(tokens[0].c_str());
-        double resDouble = 0;
-        switch (*op) {
-            case '+':{
-                double op1 = std::stod(tokens[1]);
-                double op2 = std::stod(tokens[2]);
-                resDouble = op1 + op2;
-                break;
-            }
-            case '-':{
-                double op1 = std::stod(tokens[1]);
-                double op2 = std::stod(tokens[2]);
-                resDouble = op1 - op2;
-                break;
-            }
-            case '*':{
-                double op1 = std::stod(tokens[1]);
-                double op2 = std::stod(tokens[2]);
-                resDouble = op1 * op2;
-                break;
-            }
-            case '/':{
-                double op1 = std::stod(tokens[1]);
-                double op2 = std::stod(tokens[2]);
-                resDouble = op1 / op2;
-                break;
-            }
-            default:
-                assert(false && "unsupported op");
-        }
-        init_number.push_back(resDouble);//add by yx
-        Value* value = ConstantFP::get(builder.getDoubleTy(), resDouble);
-        auto res_pair = insertSymbol(SymbolKind::kFP64Const, expr, value, 0);
-        return res_pair.first;
-    }
-
     return nullptr;
 }
 
@@ -205,7 +131,7 @@ llvm::Function* FPIRGenerator::getDistanceFunction() const noexcept
 }
 
 llvm::Function* FPIRGenerator::genFunction
-        (const z3::expr& expr, std::vector<double>& init_number)  noexcept
+        (const z3::expr& expr)  noexcept
 {
     using namespace llvm;
     if (m_gofunc != nullptr) {
@@ -214,10 +140,9 @@ llvm::Function* FPIRGenerator::genFunction
     m_gofunc = cast<Function>(
             m_mod->getOrInsertFunction(StringRef(CodeGenStr::kFunName),
                                        Type::getDoubleTy(*m_ctx),
-//                                       StructType::create({Type::getDoubleTy(*m_ctx),Type::getDoubleTy(*m_ctx)})->getPointerTo(),
                                        Type::getInt32Ty(*m_ctx),
                                        Type::getDoublePtrTy(*m_ctx),
-                                       Type::getDoublePtrTy(*m_ctx),
+                                       Type::getDoublePtrTy((*m_ctx)),
                                        Type::getInt8PtrTy(*m_ctx)));
 //    llvm::outs()<<"[add by yx] m_gofunc:\n";
 //    m_gofunc->print(llvm::outs());
@@ -249,12 +174,6 @@ llvm::Function* FPIRGenerator::genFunction
     (*cur_arg).setName("data");
     (*cur_arg).addAttr(Attribute::NoCapture);
     (*cur_arg).addAttr(Attribute::ReadNone);
-//    cur_arg++;
-//    (*cur_arg).setName("cov");
-//    cur_arg++;
-//    (*cur_arg).setName("dis");
-//    cur_arg++;
-//    (*cur_arg).setName("func");
 
 //  llvm::outs()<<"[add by yx] m_gofunc2:\n";
 //  m_gofunc->print(llvm::outs());
@@ -266,9 +185,6 @@ llvm::Function* FPIRGenerator::genFunction
     BasicBlock* BB = BasicBlock::Create(*m_ctx, "EntryBlock", m_gofunc);
     IRBuilder<> builder(BB);
 
-//    // add by yx
-//    BasicBlock* trueBB = BasicBlock::Create(*m_ctx, "trueBlock", m_gofunc);
-//    IRBuilder<> builder_true(trueBB);
 
     // TBAA Metadata
     MDBuilder md_builder(*m_ctx);
@@ -514,47 +430,13 @@ llvm::Function* FPIRGenerator::genFunction
 //  }
     m_const_zero = ConstantFP::get(builder.getDoubleTy(), 0.0);
     m_const_one = ConstantFP::get(builder.getDoubleTy(), 1.0);
-//    m_const_min_double = ConstantFP::get(builder.getDoubleTy(), 1.0/__FP_LONG_MAX);
-//    m_const_max_double = ConstantFP::get(builder.getDoubleTy(), MAXFLOAT);
-
-//    //add by yx writing trueBlock
-//    Argument* cov_arg = &(*(m_gofunc->arg_begin()+2));
-    llvm::Value* cov = builder.CreateAlloca(Type::getDoubleTy(*m_ctx), nullptr, "cov");
-    llvm::Value* totalCov = builder.CreateAlloca(Type::getDoubleTy(*m_ctx), nullptr, "totalCov");
-    builder.CreateStore(m_const_zero, cov);
-    builder.CreateStore(m_const_zero, totalCov);
-//    builder.CreateAlloca()
-
-//    llvm::outs()<<"[add by yx] m_gofunc2:\n";
-//    m_gofunc->print(llvm::outs());
-//    llvm::outs()<<"\n";
-
     //这条语句写了entryblock
-
-    auto return_val_sym = genFuncRecursive(builder, expr, false, cov, totalCov, init_number);
-//      llvm::outs()<<"[add by yx] m_gofunc7:\n";
-//      m_gofunc->print(llvm::outs());
-//      llvm::outs()<<"\n";
-//      llvm::outs()<<*return_val_sym->getValue()<<"\n";
-//    builder.CreateRet(return_val_sym->getValue());
-
-    // add by yx
-    Argument* grad_arg = &(*(m_gofunc->arg_begin()+2));
-    llvm::Value* loadCover = builder.CreateLoad(cov);
-//    builder.CreateStore(builder.CreateLoad(totalCov),grad_arg);
-//    builder.CreateStore(return_val_sym->getValue(),grad_arg);
-
-//    llvm::Value* denominator = builder.CreateFAdd(builder.CreateLoad(cov), m_const_one); // cov+1
-//    llvm::Value* covObj = builder.CreateFDiv(m_const_one, denominator);  // 1/(cov+1)
-    llvm::Value* covObj = builder.CreateFSub(builder.CreateLoad(totalCov), loadCover); //totalCov - cov
-//    Argument* grad_arg = &(*(m_gofunc->arg_begin()+2));
-//    builder.CreateStore(return_val_sym->getValue(),grad_arg);
-//    llvm::Value* dis_load = builder.CreateLoad(grad_arg);
-//    llvm::Value* funcV = builder.CreateFAdd(covObj, dis_load);
-    llvm::Value* funcV = builder.CreateFAdd(covObj, return_val_sym->getValue());
-
-    builder.CreateStore(loadCover,grad_arg); //record the coverage info
-    builder.CreateRet(funcV);
+    auto return_val_sym = genFuncRecursive(builder, expr, false);
+//  llvm::outs()<<"[add by yx] m_gofunc7:\n";
+//  m_gofunc->print(llvm::outs());
+//  llvm::outs()<<"\n";
+//  llvm::outs()<<*return_val_sym->getValue()<<"\n";
+    builder.CreateRet(return_val_sym->getValue());
 
 //    llvm::outs()<<"[add by yx] m_gofunc8:\n";
 //    m_gofunc->print(llvm::outs());
@@ -565,7 +447,7 @@ llvm::Function* FPIRGenerator::genFunction
 
 const IRSymbol* FPIRGenerator::genFuncRecursive
         (llvm::IRBuilder<>& builder, const z3::expr expr,
-         bool is_negated, llvm::Value* cov, llvm::Value* totalCov, std::vector<double>& init_number) noexcept
+         bool is_negated) noexcept
 {
 //    std::cerr << "[yx dbg] expr : \n"<<expr.to_string()<<"\n";
     if (!expr.is_app()) {
@@ -580,8 +462,7 @@ const IRSymbol* FPIRGenerator::genFuncRecursive
         assert(false && "unsupport expr !");
     }
     if (expr.is_numeral()) {
-//        llvm::outs()<<"[add by yx]:\n"<<expr.to_string()<<"\n";
-        return genNumeralIR(builder, expr, init_number);
+        return genNumeralIR(builder, expr);
     }
     if (fpa_util::isFPVar(expr) || fpa_util::isBVVar(expr)) {
         // TODO: handle FP16 and FP128 variables
@@ -603,48 +484,30 @@ const IRSymbol* FPIRGenerator::genFuncRecursive
             return &(*result_iter).second;
         }
         using namespace llvm;
-        Argument* x_arg = &(*(m_gofunc->arg_begin()+1));
+        Argument* arg2 = &(*(m_gofunc->arg_begin()+1));
+//        Argument* arg2;
+//        int idx = 0;
+//        for (auto &arg : m_gofunc->args()){
+//          if (idx == 1){
+//            arg2 = &arg;
+//            break;
+//          }
+//          idx ++;
+//        }
 
         auto idx_ptr = builder.CreateInBoundsGEP
-                (llvm::cast<Value>(x_arg),
+                (llvm::cast<Value>(arg2),
                  builder.getInt64(getVarCount()));
         auto loaded_val = builder.CreateAlignedLoad(idx_ptr, 8);
         loaded_val->setMetadata(llvm::LLVMContext::MD_tbaa, m_tbaa_node);
         auto result_pair =
                 insertSymbol(kind, expr, loaded_val, getVarCount());
         m_var_sym_vec.emplace_back(result_pair.first);
-
         return result_pair.first;
     }
-    //add by yx
-    if (fpa_util::isREALVar(expr)) {
-        SymbolKind kind=SymbolKind::kFP64Const;
-        auto result_iter = findSymbol(kind, &expr);
-        if (result_iter != m_expr_sym_map.cend()) {
-            return &(*result_iter).second;
-        }
-
-        using namespace llvm;
-        Argument* x_arg = &(*(m_gofunc->arg_begin()+1));
-
-        auto idx_ptr = builder.CreateInBoundsGEP
-                (llvm::cast<Value>(x_arg),
-                 builder.getInt64(getVarCount()));
-        auto loaded_val = builder.CreateAlignedLoad(idx_ptr, 8);
-        loaded_val->setMetadata(llvm::LLVMContext::MD_tbaa, m_tbaa_node);
-        auto result_pair =
-                insertSymbol(kind, expr, loaded_val, getVarCount());
-        m_var_sym_vec.emplace_back(result_pair.first);
-
-        return result_pair.first;
-    }
-
 //    if (!fpa_util::isBoolExpr(expr)) {
 //        is_negated = false;
 //    } else if (expr.decl().decl_kind() == Z3_OP_NOT) {
-//        is_negated = !is_negated;
-//    }
-//    if (fpa_util::isBoolExpr(expr) || expr.decl().decl_kind() == Z3_OP_NOT) {
 //        is_negated = !is_negated;
 //    }
     if (expr.decl().decl_kind() == Z3_OP_NOT) {
@@ -666,17 +529,14 @@ const IRSymbol* FPIRGenerator::genFuncRecursive
     std::vector<const IRSymbol*> arg_syms;
     arg_syms.reserve(expr.num_args());
     for (uint i = 0; i < expr.num_args(); ++i) {
-//        llvm::outs()<<"expr>>>\n"<<expr.arg(i).to_string()<<"\n";
-//        if(expr.arg(i).decl().decl_kind() >= Z3_OP_FPA_RM_NEAREST_TIES_TO_EVEN &&
-//            expr.arg(i).decl().decl_kind() <= Z3_OP_FPA_RM_TOWARD_ZERO){
-//            continue;
-//        }
-        auto arg_sym = genFuncRecursive(builder, expr.arg(i), is_negated, cov, totalCov, init_number);
-        arg_syms.push_back(arg_sym);
+//        llvm::outs()<<expr.arg(i).to_string()<<"\n";
+        arg_syms.push_back(genFuncRecursive(builder, expr.arg(i), is_negated));
     }
     auto res_pair = insertSymbol(kind, expr, nullptr);
-    res_pair.first->setValue(genExprIR(builder, res_pair.first, arg_syms, cov, totalCov, init_number));
-//    llvm::outs()<<"IR>>>\n"<<*res_pair.first->getValue()<<"\n";
+//    llvm::errs()<<"==================="<<arg_syms.size()<<"===================\n";
+    res_pair.first->setValue(genExprIR(builder, res_pair.first, arg_syms));
+//    llvm::outs()<<res_pair.first->expr()->to_string()<<"\n";
+//    llvm::outs()<<*res_pair.first->getValue()<<"\n";
     if (expr.decl().decl_kind() == Z3_OP_FPA_TO_FP) {
       if (expr.num_args() == 1){
         if (fpa_util::isBVVar(expr.arg(0)))
@@ -688,48 +548,15 @@ const IRSymbol* FPIRGenerator::genFuncRecursive
                   std::make_pair(res_pair.first, arg_syms[1]));
       }
     }
-    //  add by yx
-    if((expr.decl().decl_kind() >= Z3_OP_FPA_EQ && expr.decl().decl_kind() <= Z3_OP_FPA_IS_POSITIVE) ||
-            (expr.decl().decl_kind() >= Z3_OP_LE && expr.decl().decl_kind() <= Z3_OP_GT) ||
-            (expr.decl().decl_kind() == Z3_OP_EQ)){
-        builder.CreateStore(builder.CreateFAdd(builder.CreateLoad(totalCov), m_const_one), totalCov);
-
-        llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-        llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//        llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-
-//        llvm::Argument* cov_arg = &(*(m_gofunc->arg_begin()+2));
-        auto comp_res = builder.CreateFCmpOLE(res_pair.first->getValue(), m_const_zero);
-        builder.CreateCondBr(comp_res, bb_true, bb_false);
-
-        builder.SetInsertPoint(bb_true);
-        llvm::Value* load_cov_value = builder.CreateLoad(cov);
-        llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-        builder.CreateStore(new_cov_value, cov);
-        builder.CreateBr(bb_false);
-
-        builder.SetInsertPoint(bb_false);
-    }
-//add by yx
-//    if(expr.decl().decl_kind()==Z3_OP_AND){
-//        for(unsigned i=0; i<arg_syms.size(); i++){
-//            llvm::Value* cond = builder.CreateFCmpOLE(arg_syms[i]->getValue(), m_const_zero);
-//            builder.CreateCondBr(cond, trueBB, BB);
-//        }
-//    }
-//    llvm::outs()<<"[add by yx] m_gofunc:\n";
-//    m_gofunc->print(llvm::outs());
-//    llvm::outs()<<"\n";
 
     return res_pair.first;
 }
 
 //[yx flag]
 llvm::Value* FPIRGenerator::genExprIR
-        (llvm::IRBuilder<>& builder, const IRSymbol* expr_sym, std::vector<const IRSymbol*>& arg_syms,
-         llvm::Value* cov, llvm::Value* totalCov, std::vector<double> &init_number) noexcept
+        (llvm::IRBuilder<>& builder, const IRSymbol* expr_sym,
+         std::vector<const IRSymbol*>& arg_syms) noexcept
 {
-//    llvm::outs()<<"genExprIR>>>\n"<<expr_sym->isNegated()<<" "<<expr_sym->expr()->decl().name().str()<<"\n";
     using namespace llvm;
     switch (expr_sym->expr()->decl().decl_kind()) {
         // Boolean operations
@@ -744,15 +571,12 @@ llvm::Value* FPIRGenerator::genExprIR
             else
                 return m_const_one;
         case Z3_OP_EQ:
-//          llvm::errs()<<"[into case Z3_OP_EQ]\n";
+          llvm::errs()<<"[into case Z3_OP_EQ]\n";
         case Z3_OP_FPA_EQ:
-//            llvm::errs()<<"[into case Z3_OP_FPA_EQ]\n";
+          llvm::errs()<<"[into case Z3_OP_FPA_EQ]\n";
             return genEqualityIR(builder, expr_sym, arg_syms);
         case Z3_OP_NOT:
-            // Do nothing, negation is handled with de-morgansS
-
-            //    handle not operator=======
-//            llvm::outs()<<"Z3_OP_NOT:"<<*arg_syms[0]->getValue()<<"\n";
+            // Do nothing, negation is handled with de-morgans
             return arg_syms[0]->getValue();
         case Z3_OP_AND:
             if (expr_sym->isNegated())
@@ -764,12 +588,7 @@ llvm::Value* FPIRGenerator::genExprIR
                 return genMultiArgAddIR(builder, arg_syms);
             else
                 return genMultiArgMulIR(builder, arg_syms);
-
-//        // Real operations
-//        case Z3_OP_UMINUS:
-//            return ConstantFP::get(builder.getDoubleTy(), -arg_syms[0]->getValue());
-
-        // Floating point operations
+            // Floating point operations
         case Z3_OP_FPA_PLUS_INF:
             return ConstantFP::get(builder.getDoubleTy(), INFINITY);
         case Z3_OP_FPA_MINUS_INF:
@@ -781,7 +600,6 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_FPA_MINUS_ZERO:
             return ConstantFP::get(builder.getDoubleTy(), -0.0);
         case Z3_OP_BADD:
-        case Z3_OP_ADD: // add by yx
             return builder.CreateFAdd(arg_syms[0]->getValue(),
                                     arg_syms[1]->getValue());
         case Z3_OP_FPA_ADD:
@@ -789,7 +607,6 @@ llvm::Value* FPIRGenerator::genExprIR
                                       arg_syms[2]->getValue());
 
         case Z3_OP_BSUB:
-        case Z3_OP_SUB: // add by yx
             return builder.CreateFSub(arg_syms[0]->getValue(),
                                       arg_syms[1]->getValue());
         case Z3_OP_FPA_SUB:
@@ -797,18 +614,13 @@ llvm::Value* FPIRGenerator::genExprIR
                                       arg_syms[2]->getValue());
 
         case Z3_OP_BNEG:
-//          llvm::errs()<<"[into case Z3_OP_BNEG]\n";
+          llvm::errs()<<"[into case Z3_OP_BNEG]\n";
         case Z3_OP_FPA_NEG:
-        case Z3_OP_UMINUS: // add by yx
-//          llvm::errs()<<"[into case Z3_OP_FPA_NEG]\n";
+          llvm::errs()<<"[into case Z3_OP_FPA_NEG]\n";
             return builder.CreateFSub(
                     ConstantFP::get(builder.getDoubleTy(), -0.0),
                     arg_syms[0]->getValue());
-        case Z3_OP_BMUL:// add by yx
-        case Z3_OP_MUL:// add by yx
-//            llvm::outs()<<"[add by yx] Z3_OP_MUL:\n";
-//            llvm::outs()<<*arg_syms[0]->getValue()<<"\n";
-//            llvm::outs()<<*arg_syms[1]->getValue()<<"\n";
+        case Z3_OP_BMUL:
             return builder.CreateFMul(arg_syms[0]->getValue(),
                                       arg_syms[1]->getValue());
         case Z3_OP_FPA_MUL:
@@ -840,59 +652,15 @@ llvm::Value* FPIRGenerator::genExprIR
             return builder.CreateCall(sqrt_func, arg_syms[1]->getValue());
         }
         case Z3_OP_SLT:
-//            if (expr_sym->isNegated()) {//a<-b
-//                auto comp_res = builder.CreateICmpSGE(arg_syms[0]->getValue(),
-//                                                      arg_syms[1]->getValue());
-//                return genBinArgCmpIR(builder, arg_syms, comp_res);
-////                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_LT);
-//            }
-//            else {//a<b   call genBinArgCmpIR2; theta+1
-//                //[add by yx]  CmpLT
-//              llvm::outs()<<*arg_syms[0]->getValue()<<"\n";
-//              llvm::outs()<<*arg_syms[1]->getValue()<<"\n";
-//                auto comp_res = builder.CreateICmpSLT(arg_syms[0]->getValue(),
-//                                                      arg_syms[1]->getValue());//comp_res is cmp result.
-//                return genBinArgCmpIR2(builder, arg_syms, comp_res);
-////                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_LT);
-//            }
         case Z3_OP_ULT:
-//            if (expr_sym->isNegated()) {//a<-b
-//                auto comp_res = builder.CreateICmpUGE(arg_syms[0]->getValue(),
-//                                                      arg_syms[1]->getValue());
-//                return genBinArgCmpIR(builder, arg_syms, comp_res);
-////                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_LT);
-//            }
-//            else {//a<b   call genBinArgCmpIR2; theta+1
-//                //[add by yx]  CmpLT
-////              llvm::outs()<<*arg_syms[0]->getValue()<<"\n";
-////              llvm::outs()<<*arg_syms[1]->getValue()<<"\n";
-//                auto comp_res = builder.CreateICmpULT(arg_syms[0]->getValue(),
-//                                                      arg_syms[1]->getValue());//comp_res is cmp result.
-//                return genBinArgCmpIR2(builder, arg_syms, comp_res);
-////                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_LT);
-//            }
         case Z3_OP_LT:
-//            if (expr_sym->isNegated()) {//a<-b
-//                auto comp_res = builder.CreateICmpSGE(arg_syms[0]->getValue(),
-//                                                      arg_syms[1]->getValue());
-//                return genBinArgCmpIR(builder, arg_syms, comp_res);
-////                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_LT);
-//            }
-//            else {//a<b   call genBinArgCmpIR2; theta+1
-//                //[add by yx]  CmpLT
-////              llvm::outs()<<*arg_syms[0]->getValue()<<"\n";
-////              llvm::outs()<<*arg_syms[1]->getValue()<<"\n";
-//                auto comp_res = builder.CreateICmpSLT(arg_syms[0]->getValue(),
-//                                                      arg_syms[1]->getValue());//comp_res is cmp result.
-//                return genBinArgCmpIR2(builder, arg_syms, comp_res);
-////                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_LT);
-//            }
+          llvm::errs()<<"[into case Z3_OP_LT]\n";
         case Z3_OP_FPA_LT:
 //          llvm::outs()<<*expr_sym->getValue()<<"\n";
 //          expr_sym->getValue()->print(llvm::outs());
 //          llvm::outs()<<"\n";
 //          llvm::outs()<<expr_sym->expr()->to_string()<<"\n";
-            if (expr_sym->isNegated()) {//not a<b
+            if (expr_sym->isNegated()) {//a<-b
                 auto comp_res = builder.CreateFCmpOGE(arg_syms[0]->getValue(),
                                                       arg_syms[1]->getValue());
                 return genBinArgCmpIR(builder, arg_syms, comp_res);
@@ -910,7 +678,7 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_SGT:
         case Z3_OP_UGT:
         case Z3_OP_GT:
-//          llvm::errs()<<"[into case Z3_OP_GT]\n";
+          llvm::errs()<<"[into case Z3_OP_GT]\n";
         case Z3_OP_FPA_GT:
             if (expr_sym->isNegated()) {//是否是一个非的表达式
                 auto comp_res = builder.CreateFCmpOLE(arg_syms[0]->getValue(),
@@ -928,7 +696,6 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_LE:
         case Z3_OP_FPA_LE:
             if (expr_sym->isNegated()) {
-
                 auto comp_res = builder.CreateFCmpOGT(arg_syms[0]->getValue(),
                                                       arg_syms[1]->getValue());
                 return genBinArgCmpIR2(builder, arg_syms, comp_res);
@@ -949,9 +716,6 @@ llvm::Value* FPIRGenerator::genExprIR
                 return genBinArgCmpIR2(builder, arg_syms, comp_res);
 //                return genBinArgCmpIR3(builder, arg_syms, comp_res, Z3_OP_FPA_GE);
             } else {
-//                llvm::outs()<<"Z3_OP_FPA_GE\n";
-//                llvm::outs()<<*arg_syms[0]->getValue()<<"\n";
-//                llvm::outs()<<*arg_syms[1]->getValue()<<"\n";
                 auto comp_res = builder.CreateFCmpOGE(arg_syms[0]->getValue(),
                                                       arg_syms[1]->getValue());
                 return genBinArgCmpIR(builder, arg_syms, comp_res);
@@ -960,12 +724,9 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_SIGN_EXT:
         case Z3_OP_ZERO_EXT:
         case Z3_OP_FPA_TO_FP_UNSIGNED:
-//        case Z3_OP_FPA_TO_FP:{
-//            return (arg_syms[arg_syms.size() - 1])->getValue();
-//        }
-//            add  by yx
         case Z3_OP_FPA_TO_FP:{
-//            llvm::outs()<<"expr>>>"<<arg_syms[arg_syms.size()-1]->expr()->to_string()<<"\n";
+//            return (arg_syms[arg_syms.size() - 1])->getValue();
+            //            llvm::outs()<<"expr>>>"<<arg_syms[arg_syms.size()-1]->expr()->to_string()<<"\n";
             if(arg_syms[arg_syms.size()-1]->kind()!=SymbolKind::kFP32Const && arg_syms[arg_syms.size()-1]->kind()!=SymbolKind::kFP64Const){
 //                llvm::outs()<<"getValue>>>"<<*arg_syms[arg_syms.size()-1]->getValue()<<"\n";
                 return arg_syms[arg_syms.size()-1]->getValue();
@@ -989,9 +750,7 @@ llvm::Value* FPIRGenerator::genExprIR
             else{
                 assert(true && "unsupport SymbolKind!");
             }
-
 //            llvm::outs()<<"numeral>>>"<<numeral<<"\n";
-            init_number.push_back(numeral);
             Value* value = ConstantFP::get(builder.getDoubleTy(),numeral);
             return value;
         }
@@ -999,40 +758,10 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_FPA_IS_NAN:
             if (expr_sym->isNegated()) {
                 auto call_res = builder.CreateCall(m_func_isnan, {arg_syms[0]->getValue(), m_const_one});
-////                add by yx
-//                llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//                auto comp_res = builder.CreateFCmpOLE(call_res, m_const_zero);
-//                builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//                builder.SetInsertPoint(bb_true);
-//                llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//                llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//                builder.CreateStore(new_cov_value, cov);
-//                builder.CreateBr(bb_false);
-//
-//                builder.SetInsertPoint(bb_false);
-
                 call_res->setTailCall(false);
                 return call_res;
             } else {
                 auto call_res = builder.CreateCall(m_func_isnan, {arg_syms[0]->getValue(), m_const_zero});
-////                add by yx
-//                llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//                auto comp_res = builder.CreateFCmpOLE(call_res, m_const_zero);
-//                builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//                builder.SetInsertPoint(bb_true);
-//                llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//                llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//                builder.CreateStore(new_cov_value, cov);
-//                builder.CreateBr(bb_false);
-//
-//                builder.SetInsertPoint(bb_false);
-
                 call_res->setTailCall(false);
                 return call_res;
             }
@@ -1061,40 +790,10 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_FPA_IS_INF:
             if (expr_sym->isNegated()) {
               auto call_res = builder.CreateCall(m_func_isinf, {arg_syms[0]->getValue(), m_const_one});
-////                add by yx
-//                llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//                auto comp_res = builder.CreateFCmpOLE(call_res, m_const_zero);
-//                builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//                builder.SetInsertPoint(bb_true);
-//                llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//                llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//                builder.CreateStore(new_cov_value, cov);
-//                builder.CreateBr(bb_false);
-//
-//                builder.SetInsertPoint(bb_false);
-
               call_res->setTailCall(false);
               return call_res;
             } else {
               auto call_res = builder.CreateCall(m_func_isinf, {arg_syms[0]->getValue(), m_const_zero});
-////                add by yx
-//                llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//                llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//                auto comp_res = builder.CreateFCmpOLE(call_res, m_const_zero);
-//                builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//                builder.SetInsertPoint(bb_true);
-//                llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//                llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//                builder.CreateStore(new_cov_value, cov);
-//                builder.CreateBr(bb_false);
-//
-//                builder.SetInsertPoint(bb_false);
-
               call_res->setTailCall(false);
               return call_res;
             }
@@ -1243,8 +942,8 @@ llvm::Value* FPIRGenerator::genExprIR
               return genFPCheckIR(builder, arg_syms, call_res, opcode ,mode);
             }
           }
-
         }
+
         default:
             std::cerr << "unsupported: " +
                          expr_sym->expr()->decl().name().str() + "\n";
@@ -1262,15 +961,10 @@ llvm::Value* FPIRGenerator::genBinArgCmpIR
     BasicBlock* bb_cur = builder.GetInsertBlock();
     builder.CreateCondBr(comp_result, bb_second, bb_first);
     builder.SetInsertPoint(bb_first);
-////    add by yx
-//    llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//    llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//    builder.CreateStore(new_cov_value, cov);
     auto call_res = builder.CreateCall(m_func_fp64_dis, {arg_syms[0]->getValue(),
                                                     arg_syms[1]->getValue()});
     call_res->setTailCall(false);
     builder.CreateBr(bb_second);
-
     builder.SetInsertPoint(bb_second);
     auto phi_inst = builder.CreatePHI(builder.getDoubleTy(), 2);
     phi_inst->addIncoming(call_res, bb_first);//要么是这个距离 call_res
@@ -1355,23 +1049,18 @@ llvm::Value* FPIRGenerator::genBinArgCmpIR2
     BasicBlock* bb_cur = builder.GetInsertBlock();
     builder.CreateCondBr(comp_result, bb_second, bb_first);
     builder.SetInsertPoint(bb_first);
-////    add by yx
-//    llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//    llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//    builder.CreateStore(new_cov_value, cov);
     auto call_res = builder.CreateCall(m_func_fp64_dis, {arg_syms[0]->getValue(),
                                                     arg_syms[1]->getValue()});
     call_res->setTailCall(false);
     auto dis_res = builder.CreateFAdd(call_res, m_const_one);//when <:      theta(e1,e2)+1
     builder.CreateBr(bb_second);
-
     builder.SetInsertPoint(bb_second);
     auto phi_inst = builder.CreatePHI(builder.getDoubleTy(), 2);
     phi_inst->addIncoming(dis_res, bb_first);
     phi_inst->addIncoming(m_const_zero, bb_cur);
     return phi_inst;
 }
-// add by yx flagADD
+
 llvm::Value* FPIRGenerator::genMultiArgAddIR
         (llvm::IRBuilder<>& builder,
          std::vector<const IRSymbol*>& arg_syms) noexcept
@@ -1412,42 +1101,11 @@ llvm::Value *FPIRGenerator::genEqualityIR
     if (expr_sym->expr()->decl().decl_kind() == Z3_OP_FPA_EQ || is_fpa_args) {
         if (expr_sym->isNegated()) {
             auto result = builder.CreateFCmpONE(arg_syms[0]->getValue(),
-                                                arg_syms[1]->getValue()); // Not equal
-////            add by yx
-//            llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//            llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//            llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//            builder.CreateCondBr(result, bb_true, bb_false);
-//
-//            builder.SetInsertPoint(bb_true);
-//            llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//            llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//            builder.CreateStore(new_cov_value, cov);
-//            builder.CreateBr(bb_false);
-//
-//            builder.SetInsertPoint(bb_false);
-
+                                                arg_syms[1]->getValue());
             return builder.CreateSelect(result, m_const_zero, m_const_one);
         } else {
             return builder.CreateCall(m_func_fp64_eq_dis, {arg_syms[0]->getValue(),
-                                                           arg_syms[1]->getValue()});
-//            llvm::Value* dis = builder.CreateCall(m_func_fp64_eq_dis, {arg_syms[0]->getValue(),
-//                                                        arg_syms[1]->getValue()});
-////            add by yx
-//            llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//            llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//            llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//            auto comp_res = builder.CreateFCmpOLE(dis, m_const_zero);
-//            builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//            builder.SetInsertPoint(bb_true);
-//            llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//            llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//            builder.CreateStore(new_cov_value, cov);
-//            builder.CreateBr(bb_false);
-//
-//            builder.SetInsertPoint(bb_false);
-//            return dis;
+                                                        arg_syms[1]->getValue()});
         }
     }
     // assuming Z3_OP_EQ
@@ -1455,49 +1113,10 @@ llvm::Value *FPIRGenerator::genEqualityIR
         return builder.CreateCall(m_func_fp64_neq_dis,
                                   {arg_syms[0]->getValue(),
                                    arg_syms[1]->getValue()});
-//        llvm::Value* dis = builder.CreateCall(m_func_fp64_neq_dis,
-//                                  {arg_syms[0]->getValue(),
-//                                   arg_syms[1]->getValue()});
-////        add by yx
-//        llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//        llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//        llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//        auto comp_res = builder.CreateFCmpOLE(dis, m_const_zero);
-//        builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//        builder.SetInsertPoint(bb_true);
-//        llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//        llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//        builder.CreateStore(new_cov_value, cov);
-//        builder.CreateBr(bb_false);
-//
-//        builder.SetInsertPoint(bb_false);
-//
-//        return dis;
     } else {
         return builder.CreateCall(m_func_fp64_eq_dis,
                                   {arg_syms[0]->getValue(),
                                    arg_syms[1]->getValue()});
-//        llvm::Value* dis = builder.CreateCall(m_func_fp64_eq_dis,
-//                                  {arg_syms[0]->getValue(),
-//                                   arg_syms[1]->getValue()});
-//
-////        add by yx
-//        llvm::BasicBlock* bb_true = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//        llvm::BasicBlock* bb_false = llvm::BasicBlock::Create(*m_ctx, "", m_gofunc);
-//        llvm::BasicBlock* bb_cur = builder.GetInsertBlock();
-//        auto comp_res = builder.CreateFCmpOLE(dis, m_const_zero);
-//        builder.CreateCondBr(comp_res, bb_true, bb_false);
-//
-//        builder.SetInsertPoint(bb_true);
-//        llvm::Value* load_cov_value = builder.CreateLoad(cov);
-//        llvm::Value* new_cov_value = builder.CreateFAdd(load_cov_value, m_const_one);
-//        builder.CreateStore(new_cov_value, cov);
-//        builder.CreateBr(bb_false);
-//
-//        builder.SetInsertPoint(bb_false);
-//
-//        return dis;
     }
 }
 

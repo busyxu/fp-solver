@@ -20,8 +20,8 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
  */
 
-#ifndef BYTEEA_H
-#define BYTEEA_H
+#ifndef ES_POP_H
+#define ES_POP_H 1
 
 #include "nlopt-util.h"
 
@@ -40,12 +40,10 @@ nlopt_result byteevolutionarystrategy(
      double*,
      nlopt_stopping*, 		/* nlopt stop condition */
      unsigned, 			/* Number of Parents */ 
-     unsigned,           /* Number of Offsprings */
-     double *seed,
-     int seed_size); 			/* Number of Offsprings */
+     unsigned); 			/* Number of Offsprings */
 
 #ifdef __cplusplus
 }  /* extern "C" */
 #endif /* __cplusplus */
 
-#endif /* BYTEEA_H */
+#endif /* ES_POP_H */

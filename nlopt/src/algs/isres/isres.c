@@ -83,7 +83,6 @@ nlopt_result isres_minimize(int n, nlopt_func f, void *f_data,
      double *results = 0; /* scratch space for mconstraint results */
      unsigned ires;
 
-     double *grad = malloc(sizeof(double));//add by yx
      *minf = HUGE_VAL;
 
      if (!population) population = 20 * (n + 1);
@@ -136,7 +135,7 @@ nlopt_result isres_minimize(int n, nlopt_func f, void *f_data,
 	       int feasible = 1;
 	       double gpenalty;
 	       ++ *(stop->nevals_p);
-	       fval[k] = f(n, xs + k*n, grad, f_data);
+	       fval[k] = f(n, xs + k*n, NULL, f_data);
 	       if (nlopt_stop_forced(stop)) { 
 		    ret = NLOPT_FORCED_STOP; goto done; }
 	       penalty[k] = 0;
@@ -176,9 +175,8 @@ nlopt_result isres_minimize(int n, nlopt_func f, void *f_data,
 		   && (fval[k] <= *minf || minf_gpenalty > 0)
 		   && ((feasible ? 0 : penalty[k]) != minf_penalty
 		       || fval[k] != *minf)) {
-//		    if (fval[k] < stop->minf_max && feasible)
-//			 ret = NLOPT_MINF_MAX_REACHED;
-           if (fval[k] <= stop->minf_max && feasible) ret = NLOPT_MINF_MAX_REACHED;//add by yx
+		    if (fval[k] < stop->minf_max && feasible) 
+			 ret = NLOPT_MINF_MAX_REACHED;
 		    else if (!nlopt_isinf(*minf)) {
 			 if (nlopt_stop_f(stop, fval[k], *minf)
 			     && nlopt_stop_f(stop, feasible ? 0 : penalty[k], 
@@ -283,7 +281,6 @@ nlopt_result isres_minimize(int n, nlopt_func f, void *f_data,
      }
 
 done:
-    if (grad) free(grad);//add by yx
      if (irank) free(irank);
      if (sigmas) free(sigmas);
      if (results) free(results);

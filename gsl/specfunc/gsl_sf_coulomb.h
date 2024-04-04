@@ -52,6 +52,13 @@ double gsl_sf_hydrogenicR_1(const double Z, const double r);
 int gsl_sf_hydrogenicR_e(const int n, const int l, const double Z, const double r, gsl_sf_result * result);
 double gsl_sf_hydrogenicR(const int n, const int l, const double Z, const double r);
 
+int coulomb_CF1(double lambda,
+                double eta, double x,
+                double * fcl_sign,
+                double * result,
+                int * count);
+int coulomb_FG_series(const double lam, const double eta, const double x,
+                  gsl_sf_result * F, gsl_sf_result * G);
 
 /* Coulomb wave functions F_{lam_F}(eta,x), G_{lam_G}(eta,x)
  * and their derivatives; lam_G := lam_F - k_lam_G

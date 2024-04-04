@@ -87,14 +87,6 @@ bool inline isFPVar(const z3::expr& expr) noexcept
             && expr.get_sort().sort_kind() == Z3_FLOATING_POINT_SORT);
 }
 
-// add by yx
-bool inline isREALVar(const z3::expr& expr) noexcept
-{
-    return (expr.num_args() == 0
-            && expr.decl().decl_kind() == Z3_OP_UNINTERPRETED
-            && expr.get_sort().sort_kind() == Z3_REAL_SORT);
-}
-
 // add by zgf
 bool inline isBV32(const unsigned width) noexcept{ return width == 32; }
 bool inline isBV64(const unsigned width) noexcept{ return width == 64; }

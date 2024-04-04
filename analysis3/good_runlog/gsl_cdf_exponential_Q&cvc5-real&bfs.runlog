@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 9503
+KLEE: KLEE: WATCHDOG: watching 2696988
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_exponential_Q&cvc5-real&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,103 +8,36 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FSubOverflowCheck 9223372036854775808
-                    (ReadLSB w64 0 x))
->>>CVC5Real-cvc5 exec time: 4.606428e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 5.157525e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FSubUnderflowCheck 9223372036854775808
-                     (ReadLSB w64 0 x))
->>>CVC5Real-cvc5 exec time: 1.184102e+00 ms
+>>>CVC5Real-cvc5 exec time: 1.413223e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FSubAccuracyCheck 9223372036854775808
-                    (ReadLSB w64 0 x))
->>>CVC5Real-cvc5 exec time: 7.056810e-01 ms
+>>>CVC5Real-cvc5 exec time: 7.456540e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
 KLEE: ERROR: exponential.c:55: FloatPointCheck: FDiv Invalid found !
 KLEE: NOTE: now ignoring this error at this location
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FDivOverflowCheck (FSub w64 9223372036854775808
-                              (ReadLSB w64 0 x))
-                    (ReadLSB w64 0 mu))
->>>CVC5Real-cvc5 exec time: 5.950444e+00 ms
-mu
-[8,0,0,0,0,0,0,0,]
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 6.759293e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FDivUnderflowCheck (FSub w64 9223372036854775808
-                               (ReadLSB w64 0 x))
-                     (ReadLSB w64 0 mu))
->>>CVC5Real-cvc5 exec time: 1.158813e+00 ms
+>>>CVC5Real-cvc5 exec time: 1.424647e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FDivAccuracyCheck (FSub w64 9223372036854775808
-                              (ReadLSB w64 0 x))
-                    (ReadLSB w64 0 mu))
->>>CVC5Real-cvc5 exec time: 2.440922e+00 ms
-mu
-[8,0,0,0,0,0,0,0,]
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 3.337047e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
-complex:(FDivZeroCheck (FSub w64 9223372036854775808
-                          (ReadLSB w64 0 x))
-                (ReadLSB w64 0 mu))
->>>CVC5Real-cvc5 exec time: 8.782900e-01 ms
-mu
-[8,0,0,0,0,0,0,0,]
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 1.016596e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-complex:(FOLt (ReadLSB w64 0 x)
-       0)
->>>CVC5Real-cvc5 exec time: 5.921750e-01 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 6.536240e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-complex:(Eq false
-     (FOLt (ReadLSB w64 0 x)
-           0))
->>>CVC5Real-cvc5 exec time: 5.683400e-01 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+>>>CVC5Real-cvc5 exec time: 5.782220e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
 
 KLEE: done: total instructions = 37
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 2
-Total exec time: 9.916437e+03 ms
+Total exec time: 7.287832e+03 ms

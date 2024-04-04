@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 4868
+KLEE: KLEE: WATCHDOG: watching 1731568
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_yl_array&cvc5-real&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,49 +8,38 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140340617295488, 94132337888864, 94132338959872, 237, 94132337782928, 94132338893032) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139707068237248, 94792666487328, 94792666578272, 237, 94792666450264, 94792666454448) at stream.c:46 1
 gsl: bessel_y.c:237: ERROR: error
-KLEE: WARNING ONCE: calling external: fflush(140340617295712) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139707068237472) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-Z3 exec time: 8.411309e+00 ms
->>>CVC5Real-cvc5 exec time: 2.336173e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
+>>>CVC5Real-Z3 exec time: 1.357756e+01 ms
+>>>CVC5Real-cvc5 exec time: 3.227868e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
 gsl: bessel_y.c:85: ERROR: overflow
 Default GSL error handler invoked.
->>>CVC5Real-Z3 exec time: 8.004000e-03 ms
->>>CVC5Real-cvc5 exec time: 8.874080e-01 ms
-b
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-Z3 exec time: 1.259900e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.403373e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-Z3 exec time: 8.386000e-03 ms
->>>CVC5Real-cvc5 exec time: 6.515590e-01 ms
+>>>CVC5Real-Z3 exec time: 1.112300e-02 ms
+>>>CVC5Real-cvc5 exec time: 9.706310e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 7.943758e+00 ms
+>>>CVC5Real-Z3 exec time: 1.367526e+01 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 gsl: bessel_y.c:106: ERROR: overflow
 Default GSL error handler invoked.
->>>CVC5Real-Z3 exec time: 2.685000e-03 ms
->>>CVC5Real-cvc5 exec time: 1.176698e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-Z3 exec time: 3.960000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.495646e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-Z3 exec time: 3.085000e-03 ms
->>>CVC5Real-cvc5 exec time: 7.108020e-01 ms
+>>>CVC5Real-Z3 exec time: 5.488000e-03 ms
+>>>CVC5Real-cvc5 exec time: 9.871670e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 8.203353e+00 ms
+>>>CVC5Real-Z3 exec time: 1.322807e+01 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 gsl: bessel_y.c:237: ERROR: error
 Default GSL error handler invoked.
@@ -59,4 +48,4 @@ KLEE: done: total instructions = 335
 KLEE: done: completed paths = 0
 KLEE: done: partially completed paths = 4
 KLEE: done: generated tests = 1
-Total exec time: 9.322698e+03 ms
+Total exec time: 1.008232e+04 ms

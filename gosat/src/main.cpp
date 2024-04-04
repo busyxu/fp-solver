@@ -20,8 +20,6 @@
 #include <nlopt.h>
 #include <Optimizer/NLoptOptimizer.h>
 #include <iomanip>
-#include <math.h>
-
 
 typedef std::numeric_limits<double> dbl;
 
@@ -39,8 +37,7 @@ enum goSATAlgorithm {
     kMLSL = NLOPT_G_MLSL,
     kDirect = NLOPT_GN_DIRECT_L,
     kESCH   = NLOPT_GN_ESCH,
-    kBYTEEA = NLOPT_GN_BYTEEA,
-    kGA = NLOPT_GN_GA,
+    kBYTEEA = NLOPT_GN_BYTEEA
 };
 
 llvm::cl::OptionCategory
@@ -128,35 +125,6 @@ bool isFileExist(const char *fileName)
     return infile.good();
 }
 
-//int main(int argc, const char** argv){
-//
-//    double number = 1.4772327111973845e-247;
-//    printf("%e\n", number);
-//
-////    std::cout<< MAXFLOAT <<"\n";
-////    std::cout<< __FP_LONG_MAX <<"\n";
-////
-////    float a=1.0;
-////    std::cout<<*((int *)(&a))<<"\n";
-////
-////    double floatValue = 1.0; // 你可以替换为你想要的浮点数
-////
-////    // 1. 得到浮点数的整数表示
-////    int intValue = static_cast<int>(floatValue);
-////    std::cout << "Integer value: " << intValue << std::endl;
-////
-////    // 2. 得到浮点数的二进制表示
-////    std::bitset<sizeof(double ) * 8> binaryRepresentation(*reinterpret_cast<unsigned long long*>(&floatValue));
-////    std::cout << "Binary representation: " << binaryRepresentation << std::endl;
-////
-////
-////    srand((unsigned int)time(NULL));
-////    int randomInt = rand();
-////    double temp = 0 + ((double)randomInt / RAND_MAX) * (10 - 0);
-////    printf("randomInt: %lf\n", temp);
-//
-//}
-
 int main(int argc, const char** argv)
 {
     //llvm::cl::SetVersionPrinter(versionPrinter);
@@ -221,10 +189,9 @@ int main(int argc, const char** argv)
                 StringRef(func_name), context);
         //浮点ir生成器
         gosat::FPIRGenerator ir_gen(&context, module.get());
-        std::vector<double> init_number;
-        auto ll_func_ptr = ir_gen.genFunction(smt_expr, init_number);
-////        [add by yx]
-//        llvm::outs()<<"[add by yx]\n";
+        auto ll_func_ptr = ir_gen.genFunction(smt_expr);
+//        [add by yx]
+//        llvm::outs()<<"\n";
 //        ll_func_ptr->print(llvm::outs());
 //        llvm::outs()<<"\n";
 
@@ -247,9 +214,8 @@ int main(int argc, const char** argv)
                 getPointerToFunction(ll_func_ptr));
 
         // Now working with optimization backend
-        goSATAlgorithm current_alg = (opt_go_algorithm == kUndefinedAlg) ? kBYTEEA : opt_go_algorithm;
-//        goSATAlgorithm::kBYTEEA;
-//        goSATAlgorithm current_alg = kDirect; kCRS2; kISRES; kMLSL; kESCH; kBYTEEA;
+        goSATAlgorithm current_alg = (opt_go_algorithm == kUndefinedAlg) ? kESCH : opt_go_algorithm;
+//        goSATAlgorithm current_alg = kESCH; kCRS2;kBYTEEA
 
         gosat::NLoptOptimizer nl_opt(static_cast<nlopt_algorithm>(current_alg));
 ////        gosat::NLoptOptimizer nl_opt;
@@ -257,57 +223,33 @@ int main(int argc, const char** argv)
 //        nl_opt.Config.RelTolerance = 1e-10;
 
         int status = 0;
-        double minima = 1024; /* minimum getValue */
-        double grad = 1024;// distance; unsat
-//        double minima[2]={0.0, MAXFLOAT}; /* minimum getValue */   // maximization problem
-//        std::vector<double> model_vec(ir_gen.getVarCount(), -1.2942268158338517e+36);
-        std::vector<double> model_vec(ir_gen.getVarCount(), 0);
-        for(int i=0; i<init_number.size()&&i<model_vec.size(); i++){
-//            printf("init_number>>%e\n",init_number[i]);
-          model_vec[i] = init_number[i];
-        }
-//        model_vec[0] = 1.271161006153646e+308;
-//        model_vec[1] = 1.271161006153646e+308;
-//        model_vec[2] = 0;
-//        model_vec[3] = 10;
-//        model_vec[4] = 1;
+        double minima = 1.0; /* minimum getValue */
+        std::vector<double> model_vec(ir_gen.getVarCount(), 0.0);
 //        std::vector<double> model_vec(ir_gen.getVarCount(), rand()/double(RAND_MAX));
         if (ir_gen.getVarCount() == 0) {
             // const function
             minima = (func_ptr)(0, nullptr, nullptr, nullptr);
         } else {
 //          auto start = std::chrono::high_resolution_clock::now();
-            double *seed = new double[init_number.size()];
-            for(int i=0; i<init_number.size(); i++){
-              seed[i] = init_number[i];
-            }
             status = nl_opt.optimize(func_ptr,
                                      static_cast<unsigned>(model_vec.size()),
                                      model_vec.data(),
-                                     seed,
-                                     init_number.size(),
                                      &minima);
 //          auto end = std::chrono::high_resolution_clock::now();
 //          std::chrono::duration<double> duration = end - start;
 //          double milliseconds = duration.count() * 1000.0;
 //          std::cout << ">>> exec time: " << milliseconds << " ms\n";
         }
-//        //add by yx
-//        double funcV = minima[0];
-//        double dis = minima[1];
         if (ir_gen.isFoundUnsupportedSMTExpr()) {
             std::cout<< "unsupported\n";
             assert(false && "unsupport expr !");
         }
-//        std::string result = (minima == 0 && !ir_gen.isFoundUnsupportedSMTExpr())
-//                             ? "sat" : "unknown";
-        std::string result = ((minima == 0||status==2) && !ir_gen.isFoundUnsupportedSMTExpr())
+        std::string result = (minima == 0 && !ir_gen.isFoundUnsupportedSMTExpr())
                              ? "sat" : "unknown";
         if (smtlib_compliant_output) {
             std::cout << result << std::endl;
         }
         else {
-////             add by yx, my ouput config
 //            if (status < 0) {
 //                std::cout << std::setprecision(4);
 //                std::cout << func_name << "," << result << ","
@@ -320,16 +262,13 @@ int main(int argc, const char** argv)
 //                std::cout << "result: " << result << "\n";
 //                std::cout << "elapsed time: " << elapsedTimeFrom(time_start) << "s\n";
 //                std::cout << "precision: " << std::setprecision(dbl::digits10) << "\n";
-//                std::cout << "minima(funcV): " << minima << "\n";
-////                std::cout << "cov:" << 1.0/funcV-1.0 << "\n";
-////                std::cout << "grad(dis): " << dis << "\n";
+//                std::cout << "minima: " << minima << "\n";
 //                std::cout << "status: " << status << "\n";
-//                printf("model: \n");
 //                for(int i=0; i<model_vec.size(); i++){
-//                  std::cout<< i << ": " <<model_vec[i]<<"\n";
+//                  std::cout<< i << " " <<model_vec[i]<<"\n";
 //                }
 //            }
-//            if ((minima == 0 || status==2) && validate_model) {
+//            if (minima == 0 && validate_model) {
 //                for (auto var : ir_gen.getVars()){
 //                  std::cout<<"\nVarname : "<<var->expr()->to_string();
 //                }
@@ -363,10 +302,10 @@ int main(int argc, const char** argv)
 
             if ((minima == 0 || status==2) && validate_model) {
                 for (auto var : ir_gen.getVars()){
-                  std::cout<<"\nVarname : "<<var->expr()->to_string();
+                    std::cout<<"\nVarname : "<<var->expr()->to_string();
                 }
                 for (auto val : model_vec){
-                  std::cout<<"\nResult : "<<val<<"  ";
+                    std::cout<<"\nResult : "<<val<<"  ";
 //                  printf("%lf\n",val);
                 }
             }

@@ -157,7 +157,7 @@ gsl_sf_coulomb_CL_array(double lam_min, int kmax, double eta, double * cl)
  *   x   < 10
  */
 #if 0
-static
+
 int
 coulomb_Phi_series(const double lam, const double eta, const double x,
                    double * result, double * result_star)
@@ -229,7 +229,7 @@ coulomb_Phi_series(const double lam, const double eta, const double x,
  * there is an underflow condition for large 
  * positive eta in any case.
  */
-static
+
 int
 coulomb_connection(const double lam, const double eta,
                    double * cos_phi, double * sin_phi)
@@ -270,7 +270,7 @@ coulomb_connection(const double lam, const double eta,
  *
  * Not appropriate for lam <= -1/2, lam = 0, or lam >= 1/2.
  */
-static
+
 int
 coulomb_FG_series(const double lam, const double eta, const double x,
                   gsl_sf_result * F, gsl_sf_result * G)
@@ -361,7 +361,7 @@ coulomb_FG_series(const double lam, const double eta, const double x,
  * See [Bardin et al., CPC 3, 73 (1972), (14)-(17)];
  * note the misprint in (17): nu_0=1 is correct, not nu_0=0.
  */
-static
+
 int
 coulomb_FG0_series(const double eta, const double x,
                    gsl_sf_result * F, gsl_sf_result * G)
@@ -444,7 +444,7 @@ coulomb_FG0_series(const double eta, const double x,
 /* Evaluate the Frobenius series for F_{-1/2}(eta,x) and G_{-1/2}(eta,x).
  * Homegrown algebra.
  */
-static
+
 int
 coulomb_FGmhalf_series(const double eta, const double x,
                        gsl_sf_result * F, gsl_sf_result * G)
@@ -513,7 +513,7 @@ coulomb_FGmhalf_series(const double eta, const double x,
  *    S_lam = lam/x + eta/lam
  *
  */
-static
+
 int
 coulomb_F_recur(double lam_min, int kmax,
                 double eta, double x,
@@ -552,7 +552,7 @@ coulomb_F_recur(double lam_min, int kmax,
  *
  * where S_lam and R_lam are as above in the F recursion.
  */
-static
+
 int
 coulomb_G_recur(const double lam_min, const int kmax,
                 const double eta, const double x,
@@ -588,9 +588,8 @@ coulomb_G_recur(const double lam_min, const int kmax,
  * since it is the sign of the last denominator
  * in the continued fraction.
  */
-static
-int
-coulomb_CF1(double lambda,
+
+int coulomb_CF1(double lambda,
             double eta, double x,
             double * fcl_sign,
             double * result,
@@ -646,7 +645,7 @@ coulomb_CF1(double lambda,
 
 
 #if 0
-static
+
 int
 old_coulomb_CF1(const double lambda,
                 double eta, double x,
@@ -728,7 +727,7 @@ old_coulomb_CF1(const double lambda,
  *    (G' + i F')/(G + i F) := P + i Q
  * at the specified lambda value.
  */
-static
+
 int
 coulomb_CF2(const double lambda, const double eta, const double x,
             double * result_P, double * result_Q, int * count
@@ -815,7 +814,7 @@ coulomb_CF2(const double lambda, const double eta, const double x,
  * to have a systematic method for improving the precision. See
  * the Abad+Sesma method discussion below.
  */
-static
+
 int
 coulomb_jwkb(const double lam, const double eta, const double x,
              gsl_sf_result * fjwkb, gsl_sf_result * gjwkb,
@@ -876,7 +875,7 @@ coulomb_jwkb(const double lam, const double eta, const double x,
  * expansion and could be controlled by simply using more terms.
  */
 #if 0
-static
+
 int
 coulomb_AS_xlt2eta(const double lam, const double eta, const double x,
                    gsl_sf_result * f_AS, gsl_sf_result * g_AS,

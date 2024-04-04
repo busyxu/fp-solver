@@ -45,7 +45,7 @@ int main()
         const auto dim = entry.second.second;
         std::vector<double> x(dim, 0.0);
         double minima = 1.0; /* minimum getValue */
-        status = opt.optimize(func, dim, x.data(), nullptr, &minima);
+        status = opt.optimize(func, dim, x.data(), &minima);
         if (status < 0) {
             std::cout << std::setprecision(4);
             std::cout << entry.first << ",error,"

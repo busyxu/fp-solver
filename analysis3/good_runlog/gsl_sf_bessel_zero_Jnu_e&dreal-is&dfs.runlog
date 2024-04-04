@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 58487
+KLEE: KLEE: WATCHDOG: watching 2043465
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_zero_Jnu_e&dreal-is&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,493 +8,567 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(139670908360320, 94195573149152, 94195570825072, 1106, 94195573043344, 94195573714464) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139807645435328, 94712867436960, 94712867524304, 1106, 94712867400024, 94712867813856) at stream.c:46 1
 gsl: bessel_zero.c:1106: ERROR: no zero-th root for nu = 0.0
-KLEE: WARNING ONCE: calling external: fflush(139670908360544) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139807645435552) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.198770e+01 ms
->>>Dreal-dreal exec time: 2.829190e-01 ms
+>>>Dreal-Z3 exec time: 9.258209e+00 ms
+>>>Dreal-dreal exec time: 3.289530e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 1.039593e+01 ms
+>>>Dreal-Z3 exec time: 7.829842e+00 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 1.042900e-02 ms
->>>Dreal-dreal exec time: 5.033670e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 1.069200e-02 ms
->>>Dreal-dreal exec time: 1.634210e-01 ms
+>>>Dreal-Z3 exec time: 7.585000e-03 ms
+>>>Dreal-dreal exec time: 4.793980e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 9.969000e-03 ms
+>>>Dreal-dreal exec time: 1.296090e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_zero.c:1165: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 9.318000e-03 ms
->>>Dreal-dreal exec time: 2.428810e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 8.185000e-03 ms
+>>>Dreal-dreal exec time: 2.089770e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 1.139255e+01 ms
+>>>Dreal-Z3 exec time: 8.185928e+00 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 3.517144e+03 ms
->>>Dreal-Z3 exec time: 1.152097e+03 ms
->>>Dreal-dreal exec time: 1.191470e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-Z3 exec time: 7.121061e+03 ms
->>>Dreal-dreal exec time: 1.462280e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-Z3 exec time: 9.099856e+01 ms
->>>Dreal-Z3 exec time: 8.881557e+01 ms
->>>Dreal-dreal exec time: 5.127650e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.134313e+03 ms
+>>>Dreal-Z3 exec time: 8.604038e+02 ms
+>>>Dreal-dreal exec time: 1.126980e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:1143: FloatPointCheck: FDiv Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 7.645461e+03 ms
+>>>Dreal-dreal exec time: 1.651650e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:1143: FloatPointCheck: FDiv Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-Z3 exec time: 1.193467e+02 ms
+>>>Dreal-Z3 exec time: 9.715757e+01 ms
+>>>Dreal-Z3 exec time: 4.546095e+01 ms
+>>>Dreal-dreal exec time: 1.219020e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.772960e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.722300e-02 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 5.051110e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.180260e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 1.650820e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 3.769360e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 4.910850e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.107720e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 4.228930e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.739000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 4.255580e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 2.304140e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.164620e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 4.901000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.839810e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.782790e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 2.766590e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 5.550600e-02 ms
->>>Dreal-dreal exec time: 5.391200e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 5.519340e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 4.818100e-02 ms
->>>Dreal-dreal exec time: 4.821300e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 5.646800e-02 ms
+>>>Dreal-dreal exec time: 6.582000e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 4.763000e-02 ms
->>>Dreal-dreal exec time: 4.861200e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 5.439800e-02 ms
+>>>Dreal-dreal exec time: 6.101000e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 4.674800e-02 ms
->>>Dreal-dreal exec time: 4.930400e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 5.199300e-02 ms
+>>>Dreal-dreal exec time: 5.875400e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 4.711900e-02 ms
->>>Dreal-dreal exec time: 5.139700e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 6.121700e-02 ms
+>>>Dreal-dreal exec time: 6.679300e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 4.547600e-02 ms
->>>Dreal-dreal exec time: 4.764100e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 5.194800e-02 ms
+>>>Dreal-dreal exec time: 6.007200e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 6.205000e-02 ms
+>>>Dreal-dreal exec time: 5.805100e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 KLEE: ERROR: bessel_zero.c:933: FloatPointCheck: Common Accuracy found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 5.614800e-02 ms
->>>Dreal-dreal exec time: 5.657700e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 6.510100e-02 ms
+>>>Dreal-dreal exec time: 7.492600e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 5.013600e-02 ms
->>>Dreal-dreal exec time: 4.934400e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 5.711700e-02 ms
+>>>Dreal-dreal exec time: 6.358900e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 7.344000e-02 ms
+>>>Dreal-Z3 exec time: 5.735700e-02 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 4.975500e-02 ms
->>>Dreal-dreal exec time: 5.328200e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 5.450800e-02 ms
+>>>Dreal-dreal exec time: 6.864700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 1.071746e+02 ms
+>>>Dreal-Z3 exec time: 1.610453e+02 ms
 KLEE: WARNING: DREAL-IS: Z3 solving UNSAT and evaluate SUCCESS and remove the state !
->>>Dreal-Z3 exec time: 3.879789e+01 ms
->>>Dreal-dreal exec time: 9.994000e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_zero.c:1151: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 3.964018e+03 ms
->>>Dreal-Z3 exec time: 1.836749e+02 ms
->>>Dreal-dreal exec time: 1.033050e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 8.459652e+01 ms
->>>Dreal-Z3 exec time: 1.708539e+02 ms
->>>Dreal-dreal exec time: 6.100500e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 1.194926e+01 ms
+>>>Dreal-Z3 exec time: 1.134167e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 1.185300e-02 ms
->>>Dreal-dreal exec time: 2.449550e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 1.219300e-02 ms
->>>Dreal-dreal exec time: 1.334140e-01 ms
+>>>Dreal-Z3 exec time: 1.125300e-02 ms
+>>>Dreal-dreal exec time: 2.104870e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 1.335100e-02 ms
+>>>Dreal-dreal exec time: 1.217900e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_zero.c:1123: FloatPointCheck: FDiv Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.199300e-02 ms
->>>Dreal-dreal exec time: 2.006310e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 1.254000e-02 ms
+>>>Dreal-dreal exec time: 2.311290e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.294000e-03 ms
->>>Dreal-dreal exec time: 5.543500e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_zero.c:1131: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.185200e-02 ms
->>>Dreal-dreal exec time: 1.110610e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 1.163300e-02 ms
->>>Dreal-dreal exec time: 9.030200e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_zero.c:1131: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 1.160300e-02 ms
->>>Dreal-dreal exec time: 5.123700e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 1.119100e-02 ms
->>>Dreal-dreal exec time: 2.829190e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.155000e-03 ms
+>>>Dreal-dreal exec time: 5.947600e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 9.759000e-03 ms
+>>>Dreal-Z3 exec time: 1.003200e-02 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 2.759300e-02 ms
->>>Dreal-dreal exec time: 1.053410e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.937600e-02 ms
->>>Dreal-dreal exec time: 1.120030e-01 ms
+>>>Dreal-Z3 exec time: 2.754500e-02 ms
+>>>Dreal-dreal exec time: 1.367310e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.024100e-02 ms
+>>>Dreal-dreal exec time: 1.206130e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_zero.c:933: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 3.012700e-02 ms
->>>Dreal-dreal exec time: 2.148680e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.117100e-02 ms
+>>>Dreal-dreal exec time: 2.550890e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 1.121543e+01 ms
+>>>Dreal-Z3 exec time: 1.086595e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving UNSAT and evaluate SUCCESS and remove the state !
->>>Dreal-Z3 exec time: 4.502600e-02 ms
+>>>Dreal-Z3 exec time: 4.521900e-02 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 2.973700e-02 ms
->>>Dreal-dreal exec time: 2.489540e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 3.609900e-02 ms
->>>Dreal-dreal exec time: 1.622490e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.719500e-02 ms
+>>>Dreal-dreal exec time: 2.156010e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.097200e-02 ms
+>>>Dreal-dreal exec time: 1.343400e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.915600e-02 ms
->>>Dreal-dreal exec time: 5.290000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 2.835500e-02 ms
->>>Dreal-dreal exec time: 1.345750e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 3.067800e-02 ms
->>>Dreal-dreal exec time: 1.384930e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.731600e-02 ms
+>>>Dreal-dreal exec time: 6.969000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 2.616300e-02 ms
+>>>Dreal-dreal exec time: 1.374240e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 2.852100e-02 ms
+>>>Dreal-dreal exec time: 1.610470e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.819300e-02 ms
->>>Dreal-dreal exec time: 2.579510e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.743900e-02 ms
+>>>Dreal-dreal exec time: 3.265870e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.103900e-02 ms
->>>Dreal-dreal exec time: 5.754000e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.810100e-02 ms
+>>>Dreal-dreal exec time: 7.744100e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.758300e-02 ms
->>>Dreal-dreal exec time: 5.547400e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 4.163300e-02 ms
+>>>Dreal-dreal exec time: 9.866700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.782300e-02 ms
->>>Dreal-dreal exec time: 5.620800e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.666300e-02 ms
+>>>Dreal-dreal exec time: 6.213800e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.610000e-02 ms
->>>Dreal-dreal exec time: 5.339100e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.574500e-02 ms
+>>>Dreal-dreal exec time: 5.973500e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.660100e-02 ms
->>>Dreal-dreal exec time: 5.328100e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.730200e-02 ms
+>>>Dreal-dreal exec time: 6.316200e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 2.775200e-02 ms
->>>Dreal-dreal exec time: 5.462400e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 2.716300e-02 ms
+>>>Dreal-dreal exec time: 5.809700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.573800e-02 ms
->>>Dreal-dreal exec time: 5.679700e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.253500e-02 ms
+>>>Dreal-dreal exec time: 6.277200e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.050800e-02 ms
->>>Dreal-dreal exec time: 5.500500e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.085600e-02 ms
+>>>Dreal-dreal exec time: 6.392100e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.147800e-02 ms
->>>Dreal-dreal exec time: 5.476500e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.041000e-02 ms
+>>>Dreal-dreal exec time: 6.114500e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.387300e-02 ms
->>>Dreal-dreal exec time: 1.769970e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 3.855300e-02 ms
->>>Dreal-dreal exec time: 1.471800e-01 ms
+>>>Dreal-Z3 exec time: 3.150500e-02 ms
+>>>Dreal-dreal exec time: 1.691250e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.459300e-02 ms
+>>>Dreal-dreal exec time: 1.260290e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 5.006500e-02 ms
->>>Dreal-dreal exec time: 2.252380e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.247500e-02 ms
+>>>Dreal-dreal exec time: 2.455940e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 1.328699e+01 ms
+>>>Dreal-Z3 exec time: 1.181376e+01 ms
 KLEE: WARNING: DREAL-IS: Z3 solving UNSAT and evaluate SUCCESS and remove the state !
->>>Dreal-Z3 exec time: 6.661600e-02 ms
+>>>Dreal-Z3 exec time: 4.848300e-02 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 3.925500e-02 ms
->>>Dreal-dreal exec time: 2.555260e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 4.182900e-02 ms
->>>Dreal-dreal exec time: 1.692320e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.084000e-02 ms
+>>>Dreal-dreal exec time: 2.137050e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.506600e-02 ms
+>>>Dreal-dreal exec time: 1.802570e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.438500e-02 ms
->>>Dreal-dreal exec time: 5.921000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 3.429500e-02 ms
->>>Dreal-dreal exec time: 1.454870e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-Z3 exec time: 3.486600e-02 ms
->>>Dreal-dreal exec time: 1.479320e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.173500e-02 ms
+>>>Dreal-dreal exec time: 6.259000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.071400e-02 ms
+>>>Dreal-dreal exec time: 1.455790e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 3.458900e-02 ms
+>>>Dreal-dreal exec time: 1.408630e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.455600e-02 ms
->>>Dreal-dreal exec time: 2.864650e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.318000e-02 ms
+>>>Dreal-dreal exec time: 3.118820e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.281300e-02 ms
->>>Dreal-dreal exec time: 6.204800e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.183000e-02 ms
+>>>Dreal-dreal exec time: 7.345200e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.274300e-02 ms
->>>Dreal-dreal exec time: 5.825200e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.143100e-02 ms
+>>>Dreal-dreal exec time: 6.476300e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.303200e-02 ms
->>>Dreal-dreal exec time: 5.662800e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.106100e-02 ms
+>>>Dreal-dreal exec time: 6.261700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 KLEE: ERROR: bessel_zero.c:933: FloatPointCheck: Common Accuracy found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-Z3 exec time: 3.565800e-02 ms
->>>Dreal-dreal exec time: 6.540500e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.591900e-02 ms
+>>>Dreal-dreal exec time: 7.748000e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.193000e-02 ms
->>>Dreal-dreal exec time: 5.903300e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-Z3 exec time: 3.114500e-02 ms
+>>>Dreal-dreal exec time: 7.209200e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.094900e-02 ms
+>>>Dreal-Z3 exec time: 3.127300e-02 ms
 KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 2.922600e-02 ms
->>>Dreal-dreal exec time: 7.226800e-02 ms
+>>>Dreal-Z3 exec time: 3.020400e-02 ms
+>>>Dreal-dreal exec time: 6.923500e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 2.115000e-03 ms
+>>>Dreal-dreal exec time: 5.893700e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-Z3 exec time: 8.083000e-03 ms
+KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 2.257730e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.601700e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 4.132800e-02 ms
->>>Dreal-dreal exec time: 7.079600e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.567800e-02 ms
->>>Dreal-dreal exec time: 5.743900e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.443600e-02 ms
-KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-Z3 exec time: 3.493600e-02 ms
->>>Dreal-dreal exec time: 6.070500e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-Z3 exec time: 3.056000e-03 ms
->>>Dreal-dreal exec time: 5.111800e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-gsl: bessel_zero.c:1114: ERROR: unimplemented
-Default GSL error handler invoked.
->>>Dreal-Z3 exec time: 9.478000e-03 ms
-KLEE: WARNING: DREAL-IS: Z3 solving SAT and evaluate SUCCESS !
->>>Dreal-dreal exec time: 2.432020e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.813450e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 2.524010e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.960720e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.804740e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 2.817170e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.932560e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.657350e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 5.631000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.868450e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.223520e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 6.022000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.901710e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.610970e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 3.911030e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 1.774780e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.643030e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 2.604150e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.064830e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.043690e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 4.684010e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 2.109610e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.865260e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.380130e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.421610e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.562270e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.032070e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 6.026360e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.926270e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.958020e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.288760e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.643920e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.766350e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.270830e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.506960e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.656360e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.246901e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 5.421710e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.315010e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.102536e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.156810e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-KLEE: ERROR: bessel_zero.c:960: FloatPointCheck: Common Accuracy found !
+KLEE: ERROR: bessel_zero.c:1175: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-dreal exec time: 2.705240e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 2.531220e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 2.948510e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.411080e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 1.143950e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.241400e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>Dreal-dreal exec time: 3.668390e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.079853e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 1.111500e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.097297e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 5.541030e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.201184e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.129278e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-KLEE: ERROR: bessel_zero.c:960: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-dreal exec time: 1.188861e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 4.854740e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 9.755550e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.016194e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 3.415700e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.058110e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.374110e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 1.260790e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 5.065600e-02 ms
+>>>Dreal-dreal exec time: 1.067870e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-gsl: bessel_zero.c:1100: ERROR: domain error
-Default GSL error handler invoked.
+>>>Dreal-dreal exec time: 1.985260e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.868620e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:1177: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.178310e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.707270e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.445970e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 1.762580e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.840220e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.746000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.863090e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.479730e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.234000e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.965090e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.637480e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.535770e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.001600e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.692450e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:1178: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.461940e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.476050e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 1.871480e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.221020e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:1178: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 5.502550e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:1178: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 1.588290e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 2.163120e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.884980e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.070010e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.043930e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.576260e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.880710e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.749750e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.170330e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.235670e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.928020e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.304560e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.171220e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.593720e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+KLEE: ERROR: bessel_zero.c:959: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 2.576920e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.274110e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.246245e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.458115e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:959: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 1.245564e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.212420e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.154672e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.027451e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 4.869170e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.614384e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.528295e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.924500e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.698223e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.660598e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.724210e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.626886e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.750268e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.626054e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.737530e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.622629e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.492870e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.125770e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.622931e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.481283e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.831720e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.628274e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.653891e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.734760e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.642212e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.698966e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.888110e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.646279e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.728853e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.591549e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.967190e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.568449e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.533771e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.976590e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.597570e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.534928e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.017800e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.629017e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.720722e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.850890e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.651590e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.770957e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.685080e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.729749e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.774262e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.925880e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.604685e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.789481e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.567158e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.894870e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.528430e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.498211e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+KLEE: ERROR: bessel_zero.c:963: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.761516e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.610012e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.330885e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 3.337628e+00 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 2.159410e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.275900e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 
-KLEE: done: total instructions = 560
+KLEE: done: total instructions = 422
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 18
-KLEE: done: generated tests = 12
-Total exec time: 3.166349e+04 ms
+KLEE: done: partially completed paths = 20
+KLEE: done: generated tests = 17
+Total exec time: 2.201224e+04 ms

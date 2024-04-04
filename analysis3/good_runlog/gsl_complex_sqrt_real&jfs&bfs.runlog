@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 6093
+KLEE: KLEE: WATCHDOG: watching 3865250
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_sqrt_real&jfs&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,32 +8,27 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>JFS exec time: 3.259450e+04 ms
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 x)) at math.c:319 7
+>>>JFS exec time: 3.130121e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.670532e+03 ms
+>>>JFS exec time: 6.472007e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.264581e+04 ms
+>>>JFS exec time: 3.130019e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.430181e+03 ms
+>>>JFS exec time: 5.894222e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 KLEE: ERROR: math.c:323: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.261615e+04 ms
+>>>JFS exec time: 3.131255e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.675326e+03 ms
+>>>JFS exec time: 6.758944e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.262042e+04 ms
+>>>JFS exec time: 3.135646e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 582
+KLEE: done: total instructions = 570
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 1.528701e+05 ms
+Total exec time: 1.382207e+05 ms

@@ -20,10 +20,8 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdio.h>/* printf */
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include "esch.h"
 
 /****************************************************************************/
@@ -75,8 +73,7 @@ nlopt_result chevolutionarystrategy(
      double* minf,
      nlopt_stopping* stop, 		/* nlopt stop condition */
      unsigned np, 			/* Number of Parents */
-     unsigned no,           /* Number of Offsprings */
-     double grad) {
+     unsigned no) { 			/* Number of Offsprings */
 
      /* variables from nlopt */
      nlopt_result ret = NLOPT_SUCCESS;//init ret
@@ -93,12 +90,9 @@ nlopt_result chevolutionarystrategy(
       * populations stablished and sorted; when the final iterations
       * is achieved, they are ranked and updated. */
 
-    srand((unsigned int)time(NULL));
-
      /*********************************
       * controling the population size
       *********************************/
-//    printf("controling the population size\n");
      if (!np) np = 40;
      if (!no) no = 60;
      if ((np < 1)||(no<1)) {
@@ -131,7 +125,6 @@ nlopt_result chevolutionarystrategy(
      /**************************************
       * Initializing parents population
       **************************************/
-//    printf("Initializing parents population\n");
      for (id=0; id < np; id++) {
 	  esparents[id].parameters =
 	       (double*) malloc(sizeof(double) * nparameters);
@@ -143,24 +136,14 @@ nlopt_result chevolutionarystrategy(
 	       vetor[1] = lb[item];
 	       vetor[2] = ub[item];
 	       vetor[7] = vetor[7]+1;
-//	       esparents[id].parameters[item] = randcauchy(vetor);
-          esparents[id].parameters[item] = vetor[1] + ((double)rand() / RAND_MAX) * (vetor[2] - vetor[1]);
+	       esparents[id].parameters[item] = randcauchy(vetor);
 	  }
      }
-
      memcpy(esparents[0].parameters, x, nparameters * sizeof(double));
-
-//     for(int i =0; i<np; i++){
-//         for(int j=0; j<nparameters; j++){
-//            printf("%lf ",esparents[i].parameters[j]);
-//         }
-//         printf("\n");
-//     }
 
      /**************************************
       * Initializing offsprings population
       **************************************/
-//    printf("Initializing offsprings population\n");
      for (id=0; id < no; id++) {
 	  esoffsprings[id].parameters =
 	       (double*) malloc(sizeof(double) * nparameters);
@@ -172,36 +155,24 @@ nlopt_result chevolutionarystrategy(
 	       vetor[1] = lb[item];
 	       vetor[2] = ub[item];
 	       vetor[7]=vetor[7]+1;
-//	       esoffsprings[id].parameters[item] = randcauchy(vetor);
-           esoffsprings[id].parameters[item] = vetor[1] + ((double)rand() / RAND_MAX) * (vetor[2] - vetor[1]);
+	       esoffsprings[id].parameters[item] = randcauchy(vetor);
 	  }
      }
      /**************************************
       * Parents fitness evaluation
       **************************************/
-//    printf("Parents fitness evaluation\n");
      for (id=0; id < np; id++) {
 	  esparents[id].fitness =
-	       f(nparameters, esparents[id
-           ].parameters, &grad, data_f);
+	       f(nparameters, esparents[id].parameters, NULL, data_f);
 	  estotal[id].fitness = esparents[id].fitness;
 	  ++ *(stop->nevals_p);
 	  if (*minf > esparents[id].fitness) {
 	       *minf = esparents[id].fitness;
-//           *(minf+1) = grad; // add by yx
 	       memcpy(x, esparents[id].parameters,
 		      nparameters * sizeof(double));
-
-          printf("X=[");
-          for(int j=0; j<nparameters; j++){
-              printf("%e ",esparents[id].parameters[j]);
-          }
-          printf("]\n");
-          printf("fitness: %f; grad: %f\n--------------------\n",esparents[id].fitness, grad);
-
 	  }
 	  if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
-	  else if (*minf <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;//modify by yx
+	  else if (*minf < stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
 	  else if (nlopt_stop_evals(stop)) ret = NLOPT_MAXEVAL_REACHED;
 	  else if (nlopt_stop_time(stop)) ret = NLOPT_MAXTIME_REACHED;
 	  if (ret != NLOPT_SUCCESS) goto done;
@@ -209,7 +180,6 @@ nlopt_result chevolutionarystrategy(
      /**************************************
       * Main Loop - Generations
       **************************************/
-//    printf("Main Loop - Generations\n");
      while (1) {
 	  /**************************************
 	   * Crossover
@@ -229,7 +199,6 @@ nlopt_result chevolutionarystrategy(
 	  /**************************************
 	   * Gaussian Mutation
 	   **************************************/
-//         printf("Gaussian Mutation\n");
 	  totalmutation = (int) ((no * nparameters) / 10);
 	  if (totalmutation < 1) totalmutation = 1;
 	  for (contmutation=0; contmutation < totalmutation;
@@ -239,33 +208,25 @@ nlopt_result chevolutionarystrategy(
 	       vetor[1] = lb[paramoffmutation];
 	       vetor[2] = ub[paramoffmutation];
 	       vetor[7] = vetor[7]+contmutation;
-//	       esoffsprings[idoffmutation].parameters[paramoffmutation]	= randcauchy(vetor);
-           esoffsprings[idoffmutation].parameters[paramoffmutation] = vetor[1] + ((double)rand() / RAND_MAX) * (vetor[2] - vetor[1]);
+	       esoffsprings[idoffmutation].parameters[paramoffmutation]
+		    = randcauchy(vetor);
 	  }
 	  /**************************************
 	   * Offsprings fitness evaluation
 	   **************************************/
-//         printf("Offsprings fitness evaluation\n");
 	  for (id=0; id < no; id++){
 	       /*esoffsprings[id].fitness = (double)fitness(esoffsprings[id].parameters, nparameters,fittype);*/
-	       esoffsprings[id].fitness = f(nparameters, esoffsprings[id].parameters, &grad, data_f);
+	       esoffsprings[id].fitness = f(nparameters, esoffsprings[id].parameters, NULL, data_f);
 	       estotal[id+np].fitness = esoffsprings[id].fitness;
 	       ++ *(stop->nevals_p);
 	       if (*minf > esoffsprings[id].fitness) {
 		    *minf = esoffsprings[id].fitness;
-//            *(minf+1) = grad; // add by yx
 		    memcpy(x, esoffsprings[id].parameters,
 			   nparameters * sizeof(double));
-
-               printf("X=[");
-               for(int j=0; j<nparameters; j++){
-                   printf("%e ",esoffsprings[id].parameters[j]);
-               }
-               printf("]\n");
-               printf("fitness: %f; grad: %f\n--------------------\n",esoffsprings[id].fitness, grad);
 	       }
 	       if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
-	       else if (*minf <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;//modify by yx
+	       else if (*minf < stop->minf_max)
+		    ret = NLOPT_MINF_MAX_REACHED;
 	       else if (nlopt_stop_evals(stop)) ret = NLOPT_MAXEVAL_REACHED;
 	       else if (nlopt_stop_time(stop)) ret = NLOPT_MAXTIME_REACHED;
 	       if (ret != NLOPT_SUCCESS) goto done;
@@ -273,7 +234,6 @@ nlopt_result chevolutionarystrategy(
 	  /**************************************
 	   * Individual selection
 	   **************************************/
-//         printf("Individual selection\n");
 	  /* all the individuals are copied to one vector to easily identify best solutions */
 	  for (i=0; i < np; i++)
 	       estotal[i] = esparents[i];
@@ -292,7 +252,6 @@ nlopt_result chevolutionarystrategy(
      } /* generations loop */
 
 done:
-//    printf("%lf\n",*minf);
      for (id=0; id < np; id++) free(esparents[id].parameters);
      for (id=0; id < no; id++) free(esoffsprings[id].parameters);
 

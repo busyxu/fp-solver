@@ -6,7 +6,7 @@ int main() {
   klee_make_symbolic(&a, sizeof(a), "a");
 
   gsl_sf_result result;
-  int status = gsl_sf_bessel_y0_e(a,&result);
+  int status = gsl_sf_bessel_Y0_e(a,&result);
   return 0;
 }
 

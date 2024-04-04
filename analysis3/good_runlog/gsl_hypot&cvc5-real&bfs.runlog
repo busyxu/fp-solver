@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 58953
+KLEE: KLEE: WATCHDOG: watching 3679496
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_hypot&cvc5-real&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,211 +8,55 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>CVC5Real-cvc5 exec time: 2.371170e+00 ms
+>>>CVC5Real-cvc5 exec time: 2.840013e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-cvc5 exec time: 6.870760e-01 ms
+>>>CVC5Real-cvc5 exec time: 8.078780e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(FOLt (FAbs w64 (ReadLSB w64 0 a))
-       (FAbs w64 (ReadLSB w64 0 b)))
->>>CVC5Real-cvc5 exec time: 2.315753e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-a
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 2.816600e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
->>>CVC5Real-cvc5 exec time: 2.595405e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-a
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FDivOverflowCheck (FAbs w64 (ReadLSB w64 0 b))
-                    (FAbs w64 (ReadLSB w64 0 a)))
->>>CVC5Real-cvc5 exec time: 1.132593e+01 ms
+>>>CVC5Real-cvc5 exec time: 2.998233e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>CVC5Real-cvc5 exec time: 1.552179e+01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FDivUnderflowCheck (FAbs w64 (ReadLSB w64 0 b))
-                     (FAbs w64 (ReadLSB w64 0 a)))
->>>CVC5Real-cvc5 exec time: 3.036565e+00 ms
+>>>CVC5Real-cvc5 exec time: 3.409142e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FDivAccuracyCheck (FAbs w64 (ReadLSB w64 0 b))
-                    (FAbs w64 (ReadLSB w64 0 a)))
->>>CVC5Real-cvc5 exec time: 4.706598e+01 ms
+>>>CVC5Real-cvc5 exec time: 5.885330e+01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FDivInvalidCheck (FAbs w64 (ReadLSB w64 0 b))
-                   (FAbs w64 (ReadLSB w64 0 a)))
->>>CVC5Real-cvc5 exec time: 1.300423e+00 ms
+>>>CVC5Real-cvc5 exec time: 1.259937e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FDivZeroCheck (FAbs w64 (ReadLSB w64 0 b))
-                (FAbs w64 (ReadLSB w64 0 a)))
->>>CVC5Real-cvc5 exec time: 2.638037e+00 ms
+>>>CVC5Real-cvc5 exec time: 3.105616e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FMulOverflowCheck N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                 (FAbs w64 (ReadLSB w64 0 a)))
-                    N0)
->>>CVC5Real-cvc5 exec time: 1.754334e+01 ms
+>>>CVC5Real-cvc5 exec time: 2.363157e+01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FMulUnderflowCheck N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
+>>>CVC5Real-cvc5 exec time: 1.854389e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 6.190389e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 2.055935e+01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 4.794118e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+>>>CVC5Real-cvc5 exec time: 1.510049e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
+KLEE: WARNING ONCE: calling external: sqrt((FAdd w64 4607182418800017408
+           (FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
                                   (FAbs w64 (ReadLSB w64 0 a)))
-                     N0)
->>>CVC5Real-cvc5 exec time: 3.511357e+00 ms
+                     N0))) at hypot.c:53 16
+>>>CVC5Real-cvc5 exec time: 6.502813e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FMulAccuracyCheck N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                 (FAbs w64 (ReadLSB w64 0 a)))
-                    N0)
->>>CVC5Real-cvc5 exec time: 4.804121e+01 ms
+>>>CVC5Real-cvc5 exec time: 8.579025e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>CVC5Real-cvc5 exec time: 4.722076e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FAddOverflowCheck 4607182418800017408
-                    (FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                           (FAbs w64 (ReadLSB w64 0 a)))
-                              N0))
->>>CVC5Real-cvc5 exec time: 1.631574e+01 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FAddUnderflowCheck 4607182418800017408
-                     (FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                            (FAbs w64 (ReadLSB w64 0 a)))
-                               N0))
->>>CVC5Real-cvc5 exec time: 3.996490e+00 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FAddAccuracyCheck 4607182418800017408
-                    (FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                           (FAbs w64 (ReadLSB w64 0 a)))
-                              N0))
->>>CVC5Real-cvc5 exec time: 1.332895e+00 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FInvalidSqrtCheck w64 (FAdd w64 4607182418800017408
-                                  (FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                                         (FAbs w64 (ReadLSB w64 0 a)))
-                                            N0)))
->>>CVC5Real-cvc5 exec time: 5.024556e+00 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FMulOverflowCheck N0:(FAbs w64 (ReadLSB w64 0 a))
-                    (FSqrt w64 (FAdd w64 4607182418800017408
-                                         (FMul w64 N1:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                                                N0)
-                                                   N1))))
->>>CVC5Real-cvc5 exec time: 3.842567e+04 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNKNOWN and Remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FMulUnderflowCheck N0:(FAbs w64 (ReadLSB w64 0 a))
-                     (FSqrt w64 (FAdd w64 4607182418800017408
-                                          (FMul w64 N1:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                                                 N0)
-                                                    N1))))
->>>CVC5Real-cvc5 exec time: 4.595479e+00 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
-complex:(Eq false
-     (FOLt (FAbs w64 (ReadLSB w64 0 a))
-           (FAbs w64 (ReadLSB w64 0 b))))
-complex:(Eq false
-     (FOEq (FAbs w64 (ReadLSB w64 0 b))
-           0))
-complex:(FMulAccuracyCheck N0:(FAbs w64 (ReadLSB w64 0 a))
-                    (FSqrt w64 (FAdd w64 4607182418800017408
-                                         (FMul w64 N1:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
-                                                                N0)
-                                                   N1))))
->>>CVC5Real-cvc5 exec time: 1.369089e+02 ms
+>>>CVC5Real-cvc5 exec time: 3.025749e+01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
 
-KLEE: done: total instructions = 141
+KLEE: done: total instructions = 135
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 0
 KLEE: done: generated tests = 2
-Total exec time: 5.181975e+04 ms
+Total exec time: 1.154616e+04 ms

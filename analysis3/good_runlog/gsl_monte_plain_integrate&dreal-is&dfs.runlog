@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 61228
+KLEE: KLEE: WATCHDOG: watching 3408555
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_plain_integrate&dreal-is&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,41 +8,22 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94051269747520) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94529975679648) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139711340193408, 94051268711808, 94051269321544, 52, 94051268596704, 94051269614080) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140709070202304, 94529975606016, 94529975548944, 52, 94529975545000, 94529976409984) at stream.c:46 1
 gsl: plain.c:52: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(139711340193632) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140709070202528) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-dreal exec time: 5.167930e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: plain.c:55: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-dreal exec time: 6.062130e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: plain.c:55: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Dreal-dreal exec time: 5.593940e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 5.781000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>Dreal-dreal exec time: 1.214210e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 5.502200e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 
-KLEE: done: total instructions = 26882
+KLEE: done: total instructions = 26873
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 3
-KLEE: done: generated tests = 3
-Total exec time: 1.375960e+04 ms
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 1
+Total exec time: 7.707528e+03 ms

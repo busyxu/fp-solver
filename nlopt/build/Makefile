@@ -653,30 +653,6 @@ src/algs/esch/esch.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nlopt.dir/build.make CMakeFiles/nlopt.dir/src/algs/esch/esch.c.s
 .PHONY : src/algs/esch/esch.c.s
 
-src/algs/ga/ga.o: src/algs/ga/ga.c.o
-.PHONY : src/algs/ga/ga.o
-
-# target to build an object file
-src/algs/ga/ga.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nlopt.dir/build.make CMakeFiles/nlopt.dir/src/algs/ga/ga.c.o
-.PHONY : src/algs/ga/ga.c.o
-
-src/algs/ga/ga.i: src/algs/ga/ga.c.i
-.PHONY : src/algs/ga/ga.i
-
-# target to preprocess a source file
-src/algs/ga/ga.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nlopt.dir/build.make CMakeFiles/nlopt.dir/src/algs/ga/ga.c.i
-.PHONY : src/algs/ga/ga.c.i
-
-src/algs/ga/ga.s: src/algs/ga/ga.c.s
-.PHONY : src/algs/ga/ga.s
-
-# target to generate assembly for a file
-src/algs/ga/ga.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nlopt.dir/build.make CMakeFiles/nlopt.dir/src/algs/ga/ga.c.s
-.PHONY : src/algs/ga/ga.c.s
-
 src/algs/isres/isres.o: src/algs/isres/isres.c.o
 .PHONY : src/algs/isres/isres.o
 
@@ -1490,9 +1466,6 @@ help:
 	@echo "... src/algs/esch/esch.o"
 	@echo "... src/algs/esch/esch.i"
 	@echo "... src/algs/esch/esch.s"
-	@echo "... src/algs/ga/ga.o"
-	@echo "... src/algs/ga/ga.i"
-	@echo "... src/algs/ga/ga.s"
 	@echo "... src/algs/isres/isres.o"
 	@echo "... src/algs/isres/isres.i"
 	@echo "... src/algs/isres/isres.s"

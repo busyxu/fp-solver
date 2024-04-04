@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 5673
+KLEE: KLEE: WATCHDOG: watching 2278339
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&smt&bfs_output"
 KLEE: Using Z3 solver backend
@@ -12,23 +12,21 @@ KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
 KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7982[4104] allocated at global:fact_table
->>>Z3 exec time: 1.175890e+01 ms
-KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
->>>Z3 exec time: 8.938224e+03 ms
+KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7984[4104] allocated at global:fact_table
+>>>Z3 exec time: 1.067573e+01 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+>>>Z3 exec time: 1.095356e+04 ms
 KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Z3 exec time: 3.552014e+03 ms
+>>>Z3 exec time: 4.513165e+03 ms
 KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Z3 exec time: 3.038275e+04 ms
+>>>Z3 exec time: 3.035788e+04 ms
 KLEE: WARNING: Z3: Z3 solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Z3 exec time: 7.765189e+01 ms
-KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140425263793792, 93960937540704, 93960937418960, 1489, 93960937418864, 93960935196576) at stream.c:46 1
+>>>Z3 exec time: 7.398433e+01 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(139926799410624, 93914545072800, 93914544951784, 1489, 93914544951688, 93914354149408) at stream.c:46 1
 gsl: gamma.c:1489: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(140425263794016) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139926799410848) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -37,4 +35,4 @@ KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 5.637591e+04 ms
+Total exec time: 6.248394e+04 ms

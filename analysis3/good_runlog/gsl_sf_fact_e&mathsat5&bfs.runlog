@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 6111
+KLEE: KLEE: WATCHDOG: watching 2292957
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&mathsat5&bfs_output"
 KLEE: Using Z3 solver backend
@@ -12,24 +12,22 @@ KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
 KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7982[4104] allocated at global:fact_table
->>>MathSAT5 exec time: 5.776633e+00 ms
-KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
->>>MathSAT5 exec time: 1.197604e+04 ms
+KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7984[4104] allocated at global:fact_table
+>>>MathSAT5 exec time: 5.498910e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate SUCCESS !
+>>>MathSAT5 exec time: 1.442625e+04 ms
 KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate FAILURE and remove the state !
->>>MathSAT5 exec time: 9.288445e+02 ms
+>>>MathSAT5 exec time: 1.207984e+03 ms
 KLEE: WARNING: MathSAT5: MathSAT5 solving UNSAT and evaluate FAILURE and remove the state !
 MathSAT5 Timeout !
->>>MathSAT5 exec time: 3.019908e+04 ms
+>>>MathSAT5 exec time: 3.022005e+04 ms
 KLEE: WARNING: MathSAT5: MathSAT5 solving UNKNOWN and evaluate FAILURE and remove the state !
->>>MathSAT5 exec time: 2.026783e+00 ms
-KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluation SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(139953397642880, 94629839498336, 94629839376592, 1489, 94629839376496, 94629837154208) at stream.c:46 1
+>>>MathSAT5 exec time: 1.615239e+00 ms
+KLEE: WARNING: MathSAT5: MathSAT5 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140668091143616, 94555582343840, 94555582222824, 1489, 94555582222728, 94555391420448) at stream.c:46 1
 gsl: gamma.c:1489: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(139953397643104) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140668091143840) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -38,4 +36,4 @@ KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 5.758236e+04 ms
+Total exec time: 6.107267e+04 ms

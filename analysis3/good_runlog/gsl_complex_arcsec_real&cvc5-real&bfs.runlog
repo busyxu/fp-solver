@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 7726
+KLEE: KLEE: WATCHDOG: watching 166314
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_arcsec_real&cvc5-real&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,75 +8,35 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: ERROR: math.c:789: FloatPointCheck: FDiv Divide-By-Zero found !
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-cvc5 exec time: 5.832282e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
+>>>CVC5Real-cvc5 exec time: 4.319132e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
 KLEE: ERROR: math.c:789: FloatPointCheck: FDiv Overflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-cvc5 exec time: 1.169425e+00 ms
+>>>CVC5Real-cvc5 exec time: 8.039260e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-cvc5 exec time: 3.107199e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
-KLEE: ERROR: math.c:789: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-cvc5 exec time: 1.191947e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 2.322805e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>CVC5Real-cvc5 exec time: 7.742390e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-cvc5 exec time: 1.099712e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 8.365870e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-cvc5 exec time: 1.121292e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-cvc5 exec time: 8.708000e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-cvc5 exec time: 1.269785e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
->>>CVC5Real-cvc5 exec time: 1.724654e+02 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-cvc5 exec time: 2.911647e+00 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-cvc5 exec time: 9.313500e-01 ms
-KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-cvc5 exec time: 1.279193e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-cvc5 exec time: 1.207898e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-cvc5 exec time: 1.215021e+00 ms
-x
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>CVC5Real-cvc5 exec time: 9.970860e-01 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+KLEE: WARNING ONCE: calling external: acosh((FDiv w64 4607182418800017408
+           (ReadLSB w64 0 x))) at math.c:789 11
 
-KLEE: done: total instructions = 348
+KLEE: done: total instructions = 301
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 3
-KLEE: done: generated tests = 4
-Total exec time: 1.375325e+04 ms
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 3
+Total exec time: 7.043118e+03 ms

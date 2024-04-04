@@ -87,6 +87,3 @@
 (assert _t_72)
 (check-sat)
 (exit)
-
-
-

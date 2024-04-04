@@ -83,8 +83,7 @@ namespace nlopt {
     LD_SLSQP,
     LD_CCSAQ,
     GN_ESCH,
-    GN_BYTEEA, //add by yx
-    GN_GA, //add by yx
+    GN_BYTEEA,
     GN_AGS,
     NUM_ALGORITHMS        /* not an algorithm, just the number of them */
   };

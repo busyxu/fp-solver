@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 19278
+KLEE: KLEE: WATCHDOG: watching 3702284
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&jfs&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,34 +8,34 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>jfs exec time: 3.264157e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
->>>jfs exec time: 3.240461e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
->>>jfs exec time: 3.268633e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and remove the state !
->>>jfs exec time: 1.675614e+03 ms
+>>>JFS exec time: 3.137663e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.563770e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140298333333120, 94661445880928, 94661445759192, 110, 94661445759088, 94661443536704) at stream.c:46 1
+KLEE: ERROR: exp.c:117: FloatPointCheck: Common Underflow found !
+KLEE: NOTE: now ignoring this error at this location
+>>>JFS exec time: 1.819553e+04 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: exp.c:117: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>JFS exec time: 8.651700e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 6.892725e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140236359165376, 94238999763008, 94238999726496, 110, 94238999726392, 94238996913824) at stream.c:46 1
 gsl: exp.c:110: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(140298333333344) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140236359165600) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>jfs exec time: 1.746437e+03 ms
+>>>JFS exec time: 6.968810e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: exp.c:113: ERROR: underflow
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 169
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 2
-Total exec time: 1.167605e+05 ms
+KLEE: done: partially completed paths = 4
+KLEE: done: generated tests = 4
+Total exec time: 7.740844e+04 ms

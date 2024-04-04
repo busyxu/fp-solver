@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 60517
+KLEE: KLEE: WATCHDOG: watching 85098
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_kl_scaled_array&cvc5-real&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,84 +8,73 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140379144533632, 94198093606272, 94198094677440, 196, 94198093500552, 94198094677424) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140258067703232, 94673211234656, 94673211325728, 196, 94673211197776, 94673211325712) at stream.c:46 1
 gsl: bessel_k.c:196: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140379144533856) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140258067703456) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-Z3 exec time: 7.911963e+00 ms
->>>CVC5Real-cvc5 exec time: 2.447844e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate SUCCESS !
->>>CVC5Real-Z3 exec time: 5.761000e-03 ms
->>>CVC5Real-cvc5 exec time: 3.060800e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-Z3 exec time: 1.549069e+01 ms
+>>>CVC5Real-cvc5 exec time: 3.683758e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search SUCCESS !
+>>>CVC5Real-Z3 exec time: 1.230100e-02 ms
+>>>CVC5Real-cvc5 exec time: 6.090479e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-Z3 exec time: 7.234000e-03 ms
+>>>CVC5Real-Z3 exec time: 1.886600e-02 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-Z3 exec time: 5.892000e-03 ms
->>>CVC5Real-cvc5 exec time: 8.866949e+00 ms
+>>>CVC5Real-Z3 exec time: 1.085700e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.683432e+01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 9.809000e-03 ms
->>>CVC5Real-cvc5 exec time: 7.065140e-01 ms
+>>>CVC5Real-Z3 exec time: 2.713000e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.197194e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 9.099780e+00 ms
+>>>CVC5Real-Z3 exec time: 1.631724e+01 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:108: ERROR: overflow
 Default GSL error handler invoked.
->>>CVC5Real-Z3 exec time: 1.894000e-03 ms
->>>CVC5Real-cvc5 exec time: 1.113657e+00 ms
-b
-[8,0,0,0,0,0,0,0,]
-KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evalueate FAILURE and use search !
+>>>CVC5Real-Z3 exec time: 5.716000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.735274e+00 ms
+KLEE: WARNING: CVC5Real: CVC5Real solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>CVC5Real-Z3 exec time: 2.785000e-03 ms
->>>CVC5Real-cvc5 exec time: 6.592330e-01 ms
+>>>CVC5Real-Z3 exec time: 6.717000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.314742e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 8.096000e-03 ms
+>>>CVC5Real-Z3 exec time: 1.429200e-02 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
->>>CVC5Real-Z3 exec time: 3.948000e-03 ms
+>>>CVC5Real-Z3 exec time: 6.342000e-03 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Overflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-Z3 exec time: 6.113000e-03 ms
->>>CVC5Real-cvc5 exec time: 6.378320e-01 ms
+>>>CVC5Real-Z3 exec time: 1.021400e-02 ms
+>>>CVC5Real-cvc5 exec time: 1.070325e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 8.065000e-03 ms
+>>>CVC5Real-Z3 exec time: 1.238700e-02 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Accuracy found !
 KLEE: NOTE: now ignoring this error at this location
->>>CVC5Real-Z3 exec time: 6.492000e-03 ms
->>>CVC5Real-cvc5 exec time: 7.285650e-01 ms
+>>>CVC5Real-Z3 exec time: 9.359000e-03 ms
+>>>CVC5Real-cvc5 exec time: 1.082187e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 7.444000e-03 ms
+>>>CVC5Real-Z3 exec time: 1.144000e-02 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
->>>CVC5Real-Z3 exec time: 4.869000e-03 ms
->>>CVC5Real-cvc5 exec time: 5.951920e-01 ms
+>>>CVC5Real-Z3 exec time: 6.044000e-03 ms
+>>>CVC5Real-cvc5 exec time: 8.567240e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 8.065000e-03 ms
->>>CVC5Real-cvc5 exec time: 5.856630e-01 ms
+>>>CVC5Real-Z3 exec time: 1.116500e-02 ms
+>>>CVC5Real-cvc5 exec time: 7.498250e-01 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 7.975000e-03 ms
->>>CVC5Real-cvc5 exec time: 3.423158e+00 ms
+>>>CVC5Real-Z3 exec time: 2.070000e-02 ms
+>>>CVC5Real-cvc5 exec time: 5.259882e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 6.823000e-03 ms
->>>CVC5Real-cvc5 exec time: 1.534107e+00 ms
+>>>CVC5Real-Z3 exec time: 1.927500e-02 ms
+>>>CVC5Real-cvc5 exec time: 2.841557e+00 ms
 KLEE: WARNING: CVC5Real: CVC5Real solving UNSAT and remove the state !
->>>CVC5Real-Z3 exec time: 7.871596e+00 ms
+>>>CVC5Real-Z3 exec time: 1.485188e+01 ms
 KLEE: WARNING: CVC5Real: Z3 solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:196: ERROR: domain error
 Default GSL error handler invoked.
@@ -94,4 +83,4 @@ KLEE: done: total instructions = 289
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 6
 KLEE: done: generated tests = 5
-Total exec time: 1.307886e+04 ms
+Total exec time: 1.281570e+04 ms

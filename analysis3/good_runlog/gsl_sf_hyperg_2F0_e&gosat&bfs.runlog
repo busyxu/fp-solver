@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 20894
+KLEE: KLEE: WATCHDOG: watching 729648
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_hyperg_2F0_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,21 +8,15 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>GoSat-gosat exec time: 2.602733e+02 ms
+>>>GoSat-gosat exec time: 3.000488e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 [into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.456763e+02 ms
+>>>GoSat-gosat exec time: 3.000562e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140660556719744, 94859452231552, 94859453303328, 52, 94859452125360, 94859453303312) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139744784987584, 94690947324704, 94690948620672, 52, 94690947287416, 94690948620656) at stream.c:46 1
 gsl: hyperg_2F0.c:52: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140660556719968) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139744784987808) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -31,4 +25,4 @@ KLEE: done: total instructions = 115
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 2
-Total exec time: 1.420973e+04 ms
+Total exec time: 7.163181e+04 ms

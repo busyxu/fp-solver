@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 59256
+KLEE: KLEE: WATCHDOG: watching 3680814
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_hypot&dreal-is&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,73 +8,69 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>dreal-dreal exec time: 9.730000e-01 ms
+>>>Dreal-dreal exec time: 1.106875e+00 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>dreal-dreal exec time: 1.797320e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 1.912210e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 5.286460e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hypot.c:52: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>dreal-dreal exec time: 1.046641e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 4.158400e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 8.287700e-02 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>dreal-dreal exec time: 1.622980e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>dreal-dreal exec time: 5.128550e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>dreal-dreal exec time: 7.872980e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 8.385450e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 9.760870e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 8.718600e-02 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.430110e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 5.706560e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 6.986990e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 6.878590e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 8.226140e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 5.176540e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 3.185550e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>dreal-dreal exec time: 5.419000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>dreal-dreal exec time: 1.717770e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving UNSAT and remove the state !
->>>dreal-dreal exec time: 9.142480e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 5.970280e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 1.202597e+00 ms
+>>>Dreal-dreal exec time: 3.379020e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.745000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+KLEE: WARNING ONCE: calling external: sqrt((FAdd w64 4607182418800017408
+           (FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 b))
+                                  (FAbs w64 (ReadLSB w64 0 a)))
+                     N0))) at hypot.c:53 16
+>>>Dreal-dreal exec time: 2.754200e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>Dreal-dreal exec time: 4.683840e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
+KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
+>>>Dreal-dreal exec time: 1.720720e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
 KLEE: ERROR: hypot.c:53: FloatPointCheck: Common Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>dreal-dreal exec time: 1.630412e+00 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search SUCCESS !
->>>dreal-dreal exec time: 5.121440e-01 ms
+>>>Dreal-dreal exec time: 7.753100e-01 ms
 KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
->>>dreal-dreal exec time: 4.916950e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+KLEE: ERROR: hypot.c:53: FloatPointCheck: Common Accuracy found !
+KLEE: NOTE: now ignoring this error at this location
+>>>Dreal-dreal exec time: 3.728960e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
+>>>Dreal-dreal exec time: 3.318420e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 6.061000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 5.127000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>dreal-dreal exec time: 3.096000e-03 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 2.442000e-03 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
 
-KLEE: done: total instructions = 141
+KLEE: done: total instructions = 135
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 2
 KLEE: done: generated tests = 4
-Total exec time: 1.207319e+04 ms
+Total exec time: 1.023848e+04 ms

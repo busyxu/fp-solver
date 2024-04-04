@@ -86,10 +86,8 @@
       parameter (NLOPT_GN_ESCH=42)
       integer NLOPT_GN_BYTEEA
       parameter (NLOPT_GN_BYTEEA=43)
-      integer NLOPT_GN_GA
-      parameter (NLOPT_GN_GA=44)
       integer NLOPT_GN_AGS
-      parameter (NLOPT_GN_AGS=45)
+      parameter (NLOPT_GN_AGS=44)
       integer NLOPT_FAILURE
       parameter (NLOPT_FAILURE=-1)
       integer NLOPT_INVALID_ARGS

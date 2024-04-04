@@ -75,4 +75,46 @@ gsl_sf_hyperg_2F0_series_e(const double a, const double b, const double x, int n
                               gsl_sf_result * result);
 
 
+int hyperg_1F1_asymp_negx(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_asymp_posx(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_largebx(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_large2bm4a(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_luke(const double a, const double c, const double xin,
+                      gsl_sf_result * result);
+int hyperg_1F1_1_series(const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_1_int(const int b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_1(const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_renorm_b0(const double a, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_CF1_p_ser(const double a, const double b, const double x,
+                      double * result);
+int hyperg_1F1_small_a_bgt0(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_beps_bgt0(const double eps, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_beq2a_pos(const double a, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_ab_posint(const int a, const int b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_a_negint_poly(const int a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_a_negint_lag(const int a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_ab_negint(const int a, const int b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_U(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_ab_pos(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+int hyperg_1F1_ab_neg(const double a, const double b, const double x,
+                      gsl_sf_result * result);
+
+
 #endif /* !_HYPERG_H_ */

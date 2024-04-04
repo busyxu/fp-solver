@@ -229,6 +229,8 @@ int gsl_sf_bessel_K1_scaled_e(const double x, gsl_sf_result * result);
 double gsl_sf_bessel_K1_scaled(const double x);
 
 
+int bessel_Kn_scaled_small_x(const int n, const double x, gsl_sf_result * result);
+
 /* Scaled irregular modified Bessel function
  *  exp(x) K_n(x)
  *

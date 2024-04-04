@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 54654
+KLEE: KLEE: WATCHDOG: watching 581710
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp2d_eval_deriv_yy&dreal-is&dfs_output"
 KLEE: Using Z3 solver backend
@@ -8,38 +8,21 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140674272601728, 93880104046144, 93880101707424, 101, 93880103908192, 93880104932944) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140218508015040, 94332653434432, 94332653508096, 101, 94332653374504, 94332654377584) at stream.c:46 1
 gsl: interp2d.c:101: ERROR: x values must be strictly increasing
-KLEE: WARNING ONCE: calling external: fflush(140674272601952) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140218508015264) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Dreal-dreal exec time: 5.690020e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-gsl: interp2d.c:143: ERROR: interpolation x value out of range
-Default GSL error handler invoked.
->>>Dreal-dreal exec time: 3.005020e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
+>>>Dreal-dreal exec time: 5.799680e-01 ms
+KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate FAILURE and use search !
 KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 9.075150e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evalueate FAILURE and use search !
-KLEE: WARNING: DReal-IS-Search: search FAILURE and remove the state !
->>>Dreal-dreal exec time: 2.791600e-01 ms
-KLEE: WARNING: DReal-IS: DReal solving SAT and evaluate SUCCESS !
-gsl: interp2d.c:109: ERROR: y values must be strictly increasing
-Default GSL error handler invoked.
 
-KLEE: done: total instructions = 831
+KLEE: done: total instructions = 482
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 3
+KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 1
-Total exec time: 1.194900e+04 ms
+Total exec time: 8.174771e+03 ms

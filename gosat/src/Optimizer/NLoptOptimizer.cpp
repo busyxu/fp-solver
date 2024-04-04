@@ -27,10 +27,9 @@ OptConfig::OptConfig() :
 OptConfig::OptConfig(nlopt_algorithm global_alg, nlopt_algorithm local_alg) :
         MaxEvalCount{500000000},
         MaxLocalEvalCount{100000},
-        RelTolerance{1e-10},
-        Bound{DBL_MAX},
-//        Bound(MAXFLOAT),
-//        Bound(1e9),
+        RelTolerance{1e-20},
+        Bound{DBL_MAX/2 + 1},
+//        Bound(DBL_MAX),
         StepSize{0.5},
         InitialPopulation{0}
 {
@@ -56,40 +55,31 @@ NLoptOptimizer::NLoptOptimizer(nlopt_algorithm global_alg,
 
 int
 NLoptOptimizer::optimize
-        (nlopt_func func, unsigned dim, double* x, double* seed, int seed_size, double* min) const noexcept
+        (nlopt_func func, unsigned dim, double* x, double* min) const noexcept
 {
-    double grad=1024;
-    double func_val = func(dim, x, &grad, nullptr);
-    if (func_val==0){
-        *min=0;
+    if (func(dim, x, nullptr, nullptr) == 0) {
+        // trivially satisfiable algorithm
+        *min = 0;
         return 0;
     }
-//    if (func(dim, x, grad, nullptr) == 0) {
-//        // trivially satisfiable algorithm
-//        *min = 0;
-//        return 0;
-//    }
     assert(NLoptOptimizer::isSupportedGlobalOptAlg(m_global_opt_alg)
            && "Unsupported global optimization algorithm");
     nlopt_opt opt;
     gosat::OptConfig Config(m_global_opt_alg, m_local_opt_alg);
-    opt = nlopt_create(m_global_opt_alg, dim);//add by yx.  a double variable is 8 bytes
+    opt = nlopt_create(m_global_opt_alg, dim);
     nlopt_set_min_objective(opt, func, NULL);
-//    nlopt_set_max_objective(opt, func, NULL);
-//    std::cout<<"bound:"<<Config.Bound<<"\n"<<DBL_MAX<<"\n"<<DBL_MAX<<"\n";
+//    std::cout<<"bound:"<<Config.Bound<<"\n"<<DBL_MAX<<"\n"<<DBL_MAX+1<<"\n";
     nlopt_set_upper_bounds1(opt, Config.Bound);
     nlopt_set_lower_bounds1(opt, -Config.Bound);
     std::vector<double> step_size_arr(dim, Config.StepSize);
     nlopt_set_initial_step(opt, step_size_arr.data());
     nlopt_set_stopval(opt, 0);
-//    nlopt_set_xtol_rel(opt, Config.RelTolerance);
-//    nlopt_set_maxeval(opt, Config.MaxEvalCount);
-    nlopt_set_maxtime(opt, 30);//60s
-    nlopt_set_population(opt, 200);
-//    nlopt_set_maxtime(opt, 90);//30s
+    nlopt_set_xtol_rel(opt, Config.RelTolerance);
+    nlopt_set_maxeval(opt, Config.MaxEvalCount);
+//    nlopt_set_maxtime(opt, 60);//60s
 //    nlopt_set_population(opt, 300);
-    nlopt_set_outData(opt, seed, seed_size);//add by yx, where, *grad is init value.What is the effect of the value
-
+    nlopt_set_maxtime(opt, 30);//30s
+    nlopt_set_population(opt, 200);
     if (NLoptOptimizer::isRequirePopulation(m_global_opt_alg)) {
         nlopt_set_population(opt, Config.InitialPopulation);
     }
@@ -103,7 +93,6 @@ NLoptOptimizer::optimize
     nlopt_opt local_opt;
     local_opt = nlopt_create(m_local_opt_alg, dim);
     nlopt_set_min_objective(local_opt, func, NULL);
-//    nlopt_set_max_objective(local_opt, func, NULL);
     nlopt_set_initial_step(local_opt, step_size_arr.data());
     nlopt_set_stopval(local_opt, 0);
     nlopt_set_maxeval(local_opt, Config.MaxLocalEvalCount);
@@ -142,8 +131,7 @@ NLoptOptimizer::isSupportedGlobalOptAlg(nlopt_algorithm opt_alg) noexcept
         case NLOPT_GN_CRS2_LM:
         case NLOPT_GN_ISRES:
         case NLOPT_GN_ESCH:
-        case NLOPT_GN_BYTEEA://add by yx
-        case NLOPT_GN_GA://add by yx
+        case NLOPT_GN_BYTEEA:
             return true;
         default:
             return false;
@@ -159,7 +147,6 @@ NLoptOptimizer::isRequirePopulation(nlopt_algorithm opt_alg) noexcept
         case NLOPT_GN_ISRES:
         case NLOPT_GN_ESCH:
         case NLOPT_GN_BYTEEA:
-        case NLOPT_GN_GA://add by yx
             return true;
         default:
             return false;
@@ -168,7 +155,7 @@ NLoptOptimizer::isRequirePopulation(nlopt_algorithm opt_alg) noexcept
 
 int
 NLoptOptimizer::refineResult
-        (nlopt_func func, unsigned dim, double* x, double* grad, double* min)
+        (nlopt_func func, unsigned dim, double* x, double* min)
 {
     nlopt_opt opt;
     opt = nlopt_create(NLOPT_LN_BOBYQA, dim);

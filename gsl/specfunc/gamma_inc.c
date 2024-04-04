@@ -34,7 +34,6 @@
 /* The dominant part,
  * D(a,x) := x^a e^(-x) / Gamma(a+1)
  */
-static
 int
 gamma_inc_D(const double a, const double x, gsl_sf_result * result)
 {
@@ -78,7 +77,6 @@ gamma_inc_D(const double a, const double x, gsl_sf_result * result)
 
 /* P series representation.
  */
-static
 int
 gamma_inc_P_series(const double a, const double x, gsl_sf_result * result)
 {
@@ -152,7 +150,6 @@ gamma_inc_P_series(const double a, const double x, gsl_sf_result * result)
 
 /* Q large x asymptotic
  */
-static
 int
 gamma_inc_Q_large_x(const double a, const double x, gsl_sf_result * result)
 {
@@ -187,7 +184,6 @@ gamma_inc_Q_large_x(const double a, const double x, gsl_sf_result * result)
 /* Uniform asymptotic for x near a, a and x large.
  * See [Temme, p. 285]
  */
-static
 int
 gamma_inc_Q_asymp_unif(const double a, const double x, gsl_sf_result * result)
 {
@@ -243,7 +239,7 @@ gamma_inc_Q_asymp_unif(const double a, const double x, gsl_sf_result * result)
  * See gamma_inc_Q_CF() below.
  *
  */
-static int
+int
 gamma_inc_F_CF(const double a, const double x, gsl_sf_result * result)
 {
   const int    nmax  =  5000;
@@ -316,7 +312,6 @@ gamma_inc_F_CF(const double a, const double x, gsl_sf_result * result)
  *    a_n = (n-1)/(2x)   for n odd
  *
  */
-static
 int
 gamma_inc_Q_CF(const double a, const double x, gsl_sf_result * result)
 {
@@ -334,7 +329,6 @@ gamma_inc_Q_CF(const double a, const double x, gsl_sf_result * result)
 
 /* Useful for small a and x. Handles the subtraction analytically.
  */
-static
 int
 gamma_inc_Q_series(const double a, const double x, gsl_sf_result * result)
 {
@@ -441,7 +435,7 @@ gamma_inc_Q_series(const double a, const double x, gsl_sf_result * result)
 
 
 /* series for small a and x, but not defined for a == 0 */
-static int
+int
 gamma_inc_series(double a, double x, gsl_sf_result * result)
 {
   gsl_sf_result Q;
@@ -456,7 +450,7 @@ gamma_inc_series(double a, double x, gsl_sf_result * result)
 }
 
 
-static int
+int
 gamma_inc_a_gt_0(double a, double x, gsl_sf_result * result)
 {
   /* x > 0 and a > 0; use result for Q */
@@ -473,7 +467,7 @@ gamma_inc_a_gt_0(double a, double x, gsl_sf_result * result)
 }
 
 
-static int
+int
 gamma_inc_CF(double a, double x, gsl_sf_result * result)
 {
   gsl_sf_result F;

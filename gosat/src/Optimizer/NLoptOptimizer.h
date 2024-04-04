@@ -9,8 +9,6 @@
 
 #pragma once
 
-//#include <iostream>
-//#include <vector>
 #include <nlopt.h>
 
 namespace gosat {
@@ -41,7 +39,7 @@ public:
     virtual ~NLoptOptimizer() = default;
 
     int optimize
-            (nlopt_func func, unsigned dim, double* x, double* seed, int seed_size,
+            (nlopt_func func, unsigned dim, double* x,
              double* min) const noexcept;
 
     double eval
@@ -59,7 +57,7 @@ public:
              double* x,
              double* min) const noexcept;
 
-    int refineResult(nlopt_func func, unsigned dim, double* x, double* grad, double* min);
+    int refineResult(nlopt_func func, unsigned dim, double* x, double* min);
 
     static bool isSupportedGlobalOptAlg(nlopt_algorithm opt_alg) noexcept;
 

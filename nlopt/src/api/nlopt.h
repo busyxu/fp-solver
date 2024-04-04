@@ -147,8 +147,7 @@ typedef enum {
     NLOPT_LD_CCSAQ,
 
     NLOPT_GN_ESCH,
-    NLOPT_GN_BYTEEA, //add by yx
-    NLOPT_GN_GA, //add by yx
+    NLOPT_GN_BYTEEA,
 
     NLOPT_GN_AGS,
 
@@ -225,7 +224,6 @@ NLOPT_EXTERN(double) nlopt_get_param(const nlopt_opt opt, const char *name, doub
 NLOPT_EXTERN(int) nlopt_has_param(const nlopt_opt opt, const char *name);
 NLOPT_EXTERN(unsigned) nlopt_num_params(const nlopt_opt opt);
 NLOPT_EXTERN(const char *) nlopt_nth_param(const nlopt_opt opt, unsigned n);
-NLOPT_EXTERN(nlopt_result) nlopt_set_outData(nlopt_opt opt, double *seed, int seed_size);
 
 /* constraints: */
 

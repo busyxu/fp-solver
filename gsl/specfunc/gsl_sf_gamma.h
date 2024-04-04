@@ -276,6 +276,18 @@ double gsl_sf_beta(const double a, const double b);
 int gsl_sf_beta_inc_e(const double a, const double b, const double x, gsl_sf_result * result);
 double gsl_sf_beta_inc(const double a, const double b, const double x);
 
+int gamma_inc_D(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_P_series(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_Q_large_x(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_Q_asymp_unif(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_F_CF(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_Q_CF(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_Q_series(const double a, const double x, gsl_sf_result * result);
+int gamma_inc_series(double a, double x, gsl_sf_result * result);
+int gamma_inc_a_gt_0(double a, double x, gsl_sf_result * result);
+int gamma_inc_CF(double a, double x, gsl_sf_result * result);
+int gamma_xgthalf(const double x, gsl_sf_result * result);
+
 
 /* The maximum x such that gamma(x) is not
  * considered an overflow.

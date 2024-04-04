@@ -8,5 +8,5 @@ int main()
     double x;
     klee_make_symbolic(&x,sizeof(x),"x");
     gsl_sf_result result;
-    gsl_sf_bessel_i0_scaled_e(x, &result);
+    gsl_sf_bessel_I0_scaled_e(x, &result);
 }

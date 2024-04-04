@@ -17,8 +17,16 @@ bool GMPEvaluateComm(double op1,double op2, int opcode, int type){
   mpq_set_d(hVal2,op2);
   mpq_set_d(hRes,0);
   mpq_set_d(FZero,0);
-  mpq_set_d(FMax,DBL_MAX);
-  mpq_set_d(FMin,DBL_MIN);
+	
+  long int_value1 = 0x7fefffffffffffff;
+  long int_value2 = 0x0000000000000001;
+  double *dmax = (double *)&int_value1;
+  double *dmin = (double *)&int_value2;
+  mpq_set_d(FMax,*dmax);
+  mpq_set_d(FMin,*dmin);
+  
+  //mpq_set_d(FMax,DBL_MAX);
+  //mpq_set_d(FMin,DBL_MIN);
 
   switch (opcode) {
     case 1: // opcode == 1 : FAdd

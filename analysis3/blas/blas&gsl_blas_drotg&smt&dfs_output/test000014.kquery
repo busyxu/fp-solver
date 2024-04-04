@@ -1,8 +1,0 @@
-array a0[8] : w32 -> w8 = symbolic
-array b0[8] : w32 -> w8 = symbolic
-(query [(Eq false
-             (FOGt N0:(FAbs w64 N1:(ReadLSB w64 0 a0))
-                   N2:(FAbs w64 (ReadLSB w64 0 b0))))
-         (Not (FOEq N3:(FAdd w64 N0 N2) 0))
-         (FDivAccuracyCheck N1 N3)]
-        false)

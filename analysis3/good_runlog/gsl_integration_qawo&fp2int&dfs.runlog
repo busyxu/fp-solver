@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 37085
+KLEE: KLEE: WATCHDOG: watching 2531625
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawo&fp2int&dfs_output"
 KLEE: Using Z3 solver backend
@@ -14,16 +14,16 @@ KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140302448707200, 94760634851744, 94760635345680, 42, 94760634803520, 94760635658704) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140403827021248, 93848252438112, 93848253008176, 42, 93848252402152, 93848253289536) at stream.c:46 1
 gsl: qmomof.c:42: ERROR: table length n must be positive integer
-KLEE: WARNING ONCE: calling external: fflush(140302448707424) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140403827021472) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Z3 exec time: 1.228118e+01 ms
+>>>Z3 exec time: 8.779256e+00 ms
 KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
 KLEE: WARNING ONCE: Large alloc: 18446744073709551416 bytes.  KLEE may run out of memory.
-tcmalloc: large alloc 0 bytes == (nil) @  0x7f9ab78551e7 0x562f172d9916 0x562f1729d119 0x562f172dafd1 0x562f172dd98b 0x562f17298d33 0x562f1729fd4d 0x562f17317c6f 0x562f172b2870 0x562f172b3289 0x562f1723c5d1 0x7f9ab5611c87 0x562f1727efaa
+tcmalloc: large alloc 0 bytes == (nil) @  0x7fb251bd0680 0x7fb251bf1824 0x555aa9fea1f8 0x555aa9f9e4d6 0x555aa9feb7a5 0x555aa9fee8c4 0x555aa9f9b8ab 0x555aa9fa7f1d 0x555aaa02adf6 0x555aa9fc0cdb 0x555aa9fc1ec7 0x555aa9f44663 0x7fb2501f8083 0x555aa9f856de
 gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
 Default GSL error handler invoked.
 
@@ -31,4 +31,4 @@ KLEE: done: total instructions = 301
 KLEE: done: completed paths = 0
 KLEE: done: partially completed paths = 2
 KLEE: done: generated tests = 1
-Total exec time: 1.054408e+04 ms
+Total exec time: 1.059913e+04 ms

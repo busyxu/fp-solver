@@ -43,7 +43,6 @@
  * [Abramowitz+stegun, 13.6.21]
  * Assumes x > 0, a > 1/2.
  */
-static
 int
 hyperg_lnU_beq2a(const double a, const double x, gsl_sf_result * result)
 {
@@ -66,7 +65,6 @@ hyperg_lnU_beq2a(const double a, const double x, gsl_sf_result * result)
  *
  * u_{N+1}/u_N = (a+N) U(a+N+1,b,x)/U(a+N,b,x)
  */
-static
 int
 hyperg_U_CF1(const double a, const double b, const int N, const double x,
              double * result, int * count)
@@ -139,7 +137,6 @@ hyperg_U_CF1(const double a, const double b, const int N, const double x,
  * relation is an equality, and the sum should be
  * evaluated directly [see below].
  */
-static
 int
 d9chu(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -211,7 +208,6 @@ d9chu(const double a, const double b, const double x, gsl_sf_result * result)
  * Assumes x > 0.
  * Also assumes a,b are not too large compared to x.
  */
-static
 int
 hyperg_zaU_asymp(const double a, const double b, const double x, gsl_sf_result *result)
 {
@@ -252,7 +248,6 @@ hyperg_zaU_asymp(const double a, const double b, const double x, gsl_sf_result *
 
 /* Evaluate finite sum which appears below.
  */
-static
 int
 hyperg_U_finite_sum(int N, double a, double b, double x, double xeps,
                     gsl_sf_result * result)
@@ -344,7 +339,6 @@ hyperg_U_finite_sum(int N, double a, double b, double x, double xeps,
 
 /* Evaluate infinite sum which appears below.
  */
-static
 int
 hyperg_U_infinite_sum_stable(int N, double a, double bint, double b, double beps, double x, double xeps, gsl_sf_result sum,
                              gsl_sf_result * result)
@@ -442,7 +436,6 @@ hyperg_U_infinite_sum_stable(int N, double a, double bint, double b, double beps
       }
 }
 
-static
 int
 hyperg_U_infinite_sum_simple(int N, double a, double bint, double b, double beps, double x, double xeps, gsl_sf_result sum,
                              gsl_sf_result * result)
@@ -542,7 +535,6 @@ hyperg_U_infinite_sum_simple(int N, double a, double bint, double b, double beps
 }
 
 
-static
 int
 hyperg_U_infinite_sum_improved(int N, double a, double bint, double b, double beps, double x, double xeps, gsl_sf_result sum,
                                gsl_sf_result * result)
@@ -675,7 +667,6 @@ hyperg_U_infinite_sum_improved(int N, double a, double bint, double b, double be
  *
  * I patched up the window for 1+a-b near zero. [GJ]
  */
-static
 int
 hyperg_U_series(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -735,7 +726,6 @@ double bint = ( b < 0.0 ? ceil(b-0.5) : floor(b+0.5) );
 
 /* Assumes b > 0 and x > 0.
  */
-static
 int
 hyperg_U_small_ab(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -772,7 +762,6 @@ hyperg_U_small_ab(const double a, const double b, const double x, gsl_sf_result 
 
 /* Assumes b > 0 and x > 0.
  */
-static
 int
 hyperg_U_small_a_bgt0(const double a, const double b, const double x,
                       gsl_sf_result * result,
@@ -855,7 +844,6 @@ do {                                       \
 /* Specialization to b >= 1, for integer parameters.
  * Assumes x > 0.
  */
-static
 int
 hyperg_U_int_bge1(const int a, const int b, const double x,
                   gsl_sf_result_e10 * result)
@@ -1151,7 +1139,6 @@ hyperg_U_int_bge1(const int a, const int b, const double x,
 
 /* Handle b >= 1 for generic a,b values.
  */
-static
 int
 hyperg_U_bge1(const double a, const double b, const double x,
               gsl_sf_result_e10 * result)
@@ -1468,7 +1455,7 @@ hyperg_U_bge1(const double a, const double b, const double x,
    I haven't implemented these yet - BJG
 */
 
-static int
+int
 hyperg_U_origin (const double a, const double b, gsl_sf_result_e10 * result)
 {
   gsl_sf_result r1, r2;
@@ -1483,7 +1470,7 @@ hyperg_U_origin (const double a, const double b, gsl_sf_result_e10 * result)
   return GSL_ERROR_SELECT_2(stat_1, stat_2);
 }  
 
-static int
+int
 hyperg_U_int_origin (const int a, const int b, gsl_sf_result_e10 * result)
 {
   return hyperg_U_origin (a, b, result);
@@ -1518,7 +1505,7 @@ hyperg_U_int_origin (const int a, const int b, gsl_sf_result_e10 * result)
 
 */
 
-static int
+int
 hyperg_U_negx (const double a, const double b, const double x, gsl_sf_result_e10 * result)
 {
   gsl_sf_result r1, r2;
@@ -1618,7 +1605,7 @@ hyperg_U_negx (const double a, const double b, const double x, gsl_sf_result_e10
   return status;
 }
 
-static int
+int
 hyperg_U_int_negx (const int a, const int b, const double x, gsl_sf_result_e10 * result)
 {
 /* Looking at the tests it seems that everything is handled correctly by hyperg_U_negx 

@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  ".0"
   "CMakeFiles/nlopt.dir/src/algs/ags/ags.cc.o"
   "CMakeFiles/nlopt.dir/src/algs/ags/ags.cc.o.d"
   "CMakeFiles/nlopt.dir/src/algs/ags/evolvent.cc.o"
@@ -32,8 +31,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/nlopt.dir/src/algs/direct/direct_wrap.c.o.d"
   "CMakeFiles/nlopt.dir/src/algs/esch/esch.c.o"
   "CMakeFiles/nlopt.dir/src/algs/esch/esch.c.o.d"
-  "CMakeFiles/nlopt.dir/src/algs/ga/ga.c.o"
-  "CMakeFiles/nlopt.dir/src/algs/ga/ga.c.o.d"
   "CMakeFiles/nlopt.dir/src/algs/isres/isres.c.o"
   "CMakeFiles/nlopt.dir/src/algs/isres/isres.c.o.d"
   "CMakeFiles/nlopt.dir/src/algs/luksan/mssubs.c.o"

@@ -7,10 +7,9 @@ import math
 argvs = sys.argv[1:]
 driver_name = argvs[0] #such as "gsl_sf_mathieu_b_e"
 opt = argvs[1]
-
-# driver_name = "gsl_cdf_beta_P"
-# opt = "/home/aaa/bench_test1/mathFunc/invhyp.c.gcov"
-# opt = "getFile"
+all_coverage_path = argvs[2]
+# driver_name = "gsl_fit_wlinear"
+# opt = "/home/aaa/fp-solver/analysis/benchmark3/compAndopt/linear.c.gcov"
 
 absolute_path = os.path.split(os.path.realpath(__file__))[0]
 f=open(absolute_path + "/gsl_functions_info.json",'r')
@@ -32,11 +31,10 @@ for func in func_info_Data:
 
     # gcov_path = file_path[:split_loc] + ".libs/" + file_path[split_loc:] + ".gcov"
     gcov_path = opt
-    gcov_dir = os.path.split(gcov_path)[0]
+    # gcov_dir = os.path.split(gcov_path)[0]
+    # all_coverage_path = gcov_dir + "/temp.out"
 
-    all_coverage_path = gcov_dir + "/temp.out"
     all_line_count = 0
-
     with open(str(all_coverage_path),'r') as f:
       line = f.readline()
       tokens = line.split(' ')

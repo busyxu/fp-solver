@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 65419
+KLEE: KLEE: WATCHDOG: watching 3750182
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_angle_restrict_symm_err_e&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
@@ -8,55 +8,48 @@ KLEE: Replacing function "__isnanl" with "klee_internal_isnanl"
 KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
-KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
-KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
-KLEE: Replacing function "__finitef" with "klee_internal_finitef"
-KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Synergy-dreal exec time: 4.855840e-01 ms
+>>>Synergy-dreal exec time: 6.133550e-01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-dreal exec time: 1.098180e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evalueate SUCCESS !
+>>>Synergy-dreal exec time: 1.174770e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 7.441189e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
 KLEE: ERROR: trig.c:541: FloatPointCheck: FDiv Underflow found !
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 1.794910e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evalueate SUCCESS !
+>>>Synergy-dreal exec time: 3.955950e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
 KLEE: ERROR: trig.c:541: FloatPointCheck: FDiv Accuracy found !
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 3.035670e-01 ms
+>>>Synergy-dreal exec time: 5.295340e-01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-dreal exec time: 2.805540e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 3.251758e+04 ms
+>>>Synergy-dreal exec time: 4.969250e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.138116e+04 ms
 KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-dreal exec time: 1.504031e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 3.262855e+04 ms
+>>>Synergy-dreal exec time: 1.775512e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.155260e+04 ms
 KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-dreal exec time: 3.628190e-01 ms
+>>>Synergy-dreal exec time: 4.097630e-01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-dreal exec time: 2.907720e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 3.261666e+04 ms
+>>>Synergy-dreal exec time: 3.365700e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149322e+04 ms
 KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-dreal exec time: 1.051008e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.390068e+03 ms
+>>>Synergy-dreal exec time: 1.129819e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 7.664018e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
 KLEE: ERROR: trig.c:542: FloatPointCheck: Common Accuracy found !
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 4.967660e-01 ms
+>>>Synergy-dreal exec time: 6.300440e-01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
 KLEE: ctrl-c detected, requesting interpreter to halt.
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
 
-[Thread debugging using libthread_db enabled]
-Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
-0x00007f13835c9749 in filib::interval<double, (filib::rounding_strategy)0, (filib::interval_mode)1> filib::operator*<double, (filib::rounding_strategy)0, (filib::interval_mode)1>(filib::interval<double, (filib::rounding_strategy)0, (filib::interval_mode)1> const&, filib::interval<double, (filib::rounding_strategy)0, (filib::interval_mode)1> const&) () from /usr/lib/libdreal.so
-'halt_execution' has unknown return type; cast the call to its declared return type
+sh: 1: gdb: not found
 KLEE: WARNING: KLEE: WATCHDOG: kill(9)ing child (I tried to be nice)
 

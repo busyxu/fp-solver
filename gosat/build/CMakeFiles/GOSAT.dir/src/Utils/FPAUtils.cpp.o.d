@@ -181,5 +181,4 @@ CMakeFiles/GOSAT.dir/src/Utils/FPAUtils.cpp.o: \
  /usr/include/c++/7/bits/stl_heap.h /usr/include/c++/7/bits/stl_tempbuf.h \
  /usr/include/c++/7/bits/stl_construct.h \
  /usr/include/c++/7/bits/uniform_int_dist.h /usr/include/c++/7/cfloat \
- /usr/lib/gcc/x86_64-linux-gnu/7/include/float.h /usr/local/include/gmp.h \
- /usr/include/c++/7/bitset
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/float.h /usr/local/include/gmp.h

@@ -288,8 +288,6 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
      int i;
      pt *p;
 
-     double *dis = malloc(sizeof(double)); // add by yux
-
      if (!Nsamples)
 	  d.N = 4; /* FIXME: what is good number of samples per iteration? */
      else
@@ -325,7 +323,7 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
 	proportionality constants. */
      d.dlm = 1.0; /* min distance/R to local minima (FIXME: good value?) */
      d.dbound = 1e-6; /* min distance/R to ub/lb boundaries (good value?) */
-
+     
 
      p = alloc_pt(n);
      if (!p) { ret = NLOPT_OUT_OF_MEMORY; goto done; }
@@ -334,8 +332,7 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
      nlopt_sobol_skip(d.s, (unsigned) (10*n+d.N), p->x);
 
      memcpy(p->x, x, n * sizeof(double));
-//     p->f = f(n, x, NULL, f_data);
-    p->f = f(n, x, dis, f_data);//add by yx
+     p->f = f(n, x, NULL, f_data);
      ++ *(stop->nevals_p);
      if (!nlopt_rb_tree_insert(&d.pts, (rb_key) p)) { 
 	  free(p); ret = NLOPT_OUT_OF_MEMORY; 
@@ -343,8 +340,7 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
      if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
      else if (nlopt_stop_evals(stop)) ret = NLOPT_MAXEVAL_REACHED;
      else if (nlopt_stop_time(stop)) ret = NLOPT_MAXTIME_REACHED;
-//     else if (p->f < stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
-     else if (p->f <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
+     else if (p->f < stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
 
      while (ret == NLOPT_SUCCESS) {
 	  rb_node *node;
@@ -361,8 +357,7 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
 		    int j;
 		    for (j = 0; j < n; ++j) p->x[j] = nlopt_urand(lb[j],ub[j]);
 	       }
-//	       p->f = f(n, p->x, NULL, f_data);
-          p->f = f(n, x, dis, f_data);//add by yx
+	       p->f = f(n, p->x, NULL, f_data);
 	       ++ *(stop->nevals_p);
 	       if (!nlopt_rb_tree_insert(&d.pts, (rb_key) p)) { 
 		    free(p); ret = NLOPT_OUT_OF_MEMORY;
@@ -370,8 +365,7 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
 	       if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
 	       else if (nlopt_stop_evals(stop)) ret = NLOPT_MAXEVAL_REACHED;
 	       else if (nlopt_stop_time(stop)) ret = NLOPT_MAXTIME_REACHED;
-//	       else if (p->f < stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
-           else if (p->f <= stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
+	       else if (p->f < stop->minf_max) ret = NLOPT_MINF_MAX_REACHED;
 	       else {
 		    find_closest_pt(n, &d.pts, p);
 		    find_closest_lm(n, &d.lms, p);
@@ -385,7 +379,7 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
 
 	  /* local search phase: do local opt. for promising points */
 	  node = nlopt_rb_tree_min(&d.pts);
-	  for (i = (int) (ceil(d.gamma * d.pts.N) + 0.5);
+	  for (i = (int) (ceil(d.gamma * d.pts.N) + 0.5); 
 	       node && i > 0 && ret == NLOPT_SUCCESS; --i) {
 	       p = (pt *) node->k;
 	       if (is_potential_minimizer(&d, p, 
@@ -417,10 +411,8 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
 			 free(lm); ret = NLOPT_OUT_OF_MEMORY;
 		    }
 		    else if (nlopt_stop_forced(stop)) ret = NLOPT_FORCED_STOP;
-//		    else if (*lm < stop->minf_max)
-//			 ret = NLOPT_MINF_MAX_REACHED;
-            else if (*lm <= stop->minf_max)
-                ret = NLOPT_MINF_MAX_REACHED;
+		    else if (*lm < stop->minf_max) 
+			 ret = NLOPT_MINF_MAX_REACHED;
 		    else if (nlopt_stop_evals(stop))
 			 ret = NLOPT_MAXEVAL_REACHED;
 		    else if (nlopt_stop_time(stop))
@@ -439,7 +431,6 @@ nlopt_result mlsl_minimize(int n, nlopt_func f, void *f_data,
      get_minf(&d, minf, x);
 
  done:
-    free(dis);
      nlopt_sobol_destroy(d.s);
      nlopt_rb_tree_destroy_with_keys(&d.lms);
      nlopt_rb_tree_destroy_with_keys(&d.pts);

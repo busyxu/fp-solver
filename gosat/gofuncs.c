@@ -41,19 +41,3 @@ return expr_2883938295;
 }
 
 
-double (unsigned n, const double * x, double * grad, void * data){ 
-const double expr_1010793773 = Unsupported expr:a_ack!1
-const double expr_165672123 = expr_1010793773;
-const double expr_3577401711 = 0x3ff0000000000000 ;
-const double expr_3303468021 = expr_3577401711;
-const double expr_754533101 = fp64_dis(expr_165672123,expr_3303468021);
-const double expr_3329830049 = Unsupported expr:b_ack!2
-const double expr_1133087327 = expr_3329830049;
-const double expr_2144113661 = 0x0000000000000000 ;
-const double expr_2449201227 = expr_2144113661;
-const double expr_3293811629 = fp64_dis(expr_1133087327,expr_2449201227);
-const double expr_2919235499 = expr_754533101 + expr_3293811629;
-return expr_2919235499;
-}
-
-

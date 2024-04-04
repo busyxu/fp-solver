@@ -39,7 +39,6 @@
 /* Asymptotic result for 1F1(a, b, x)  x -> -Infinity.
  * Assumes b-a != neg integer and b != neg integer.
  */
-static
 int
 hyperg_1F1_asymp_negx(const double a, const double b, const double x,
                      gsl_sf_result * result)
@@ -80,7 +79,6 @@ hyperg_1F1_asymp_negx(const double a, const double b, const double x,
 /* Asymptotic result for 1F1(a, b, x)  x -> +Infinity
  * Assumes b != neg integer and a != neg integer
  */
-static
 int
 hyperg_1F1_asymp_posx(const double a, const double b, const double x,
                       gsl_sf_result * result)
@@ -119,8 +117,8 @@ hyperg_1F1_asymp_posx(const double a, const double b, const double x,
   }
 }
 
-/* Asymptotic result from Slater 4.3.7 
- * 
+/* Asymptotic result from Slater 4.3.7
+ *
  * To get the general series, write M(a,b,x) as
  *
  *  M(a,b,x)=sum ((a)_n/(b)_n) (x^n / n!)
@@ -134,7 +132,7 @@ hyperg_1F1_asymp_posx(const double a, const double b, const double x,
  * using the standard algebraic formulas for finite sums of powers of
  * k.  This should then give
  *
- * M(a,b,x) = sum_(n=0)^(inf) (a_n/n!) (x/b)^n * (1 - n(n-1)/(2b) 
+ * M(a,b,x) = sum_(n=0)^(inf) (a_n/n!) (x/b)^n * (1 - n(n-1)/(2b)
  *                          + (n-1)n(n+1)(3n-2)/(24b^2) + ...
  *
  * which can be summed explicitly. The trick for summing it is to take
@@ -143,7 +141,6 @@ hyperg_1F1_asymp_posx(const double a, const double b, const double x,
  * [BJG 16/01/2007]
  */
 
-static 
 int
 hyperg_1F1_largebx(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -156,13 +153,12 @@ hyperg_1F1_largebx(const double a, const double b, const double x, gsl_sf_result
   result->err = 2*fabs(f*t3) + 2*GSL_DBL_EPSILON*fabs(result->val);
   return GSL_SUCCESS;
 }
- 
+
 /* Asymptotic result for x < 2b-4a, 2b-4a large.
  * [Abramowitz+Stegun, 13.5.21]
  *
  * assumes 0 <= x/(2b-4a) <= 1
  */
-static
 int
 hyperg_1F1_large2bm4a(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -204,7 +200,6 @@ hyperg_1F1_large2bm4a(const double a, const double b, const double x, gsl_sf_res
  * probably guaranteed to converge for x < 0, barring gross
  * numerical instability in the pre-asymptotic regime.
  */
-static
 int
 hyperg_1F1_luke(const double a, const double c, const double xin,
                 gsl_sf_result * result)
@@ -223,7 +218,7 @@ hyperg_1F1_luke(const double a, const double c, const double xin,
   double Bnm3 = 1.0;                                  /* B0 */
   double Bnm2 = 1.0 + t1 * x;                         /* B1 */
   double Bnm1 = 1.0 + t2 * x * (1.0 + t1/3.0 * x);    /* B2 */
- 
+
   double Anm3 = 1.0;                                                      /* A0 */
   double Anm2 = Bnm2 - t0 * x;                                            /* A1 */
   double Anm1 = Bnm1 - t0*(1.0 + t2*x)*x + t0 * t1 * (c/(c+1.0)) * x*x;   /* A2 */
@@ -290,7 +285,6 @@ hyperg_1F1_luke(const double a, const double c, const double xin,
 /* Series for 1F1(1,b,x)
  * b > 0
  */
-static
 int
 hyperg_1F1_1_series(const double b, const double x, gsl_sf_result * result)
 {
@@ -314,7 +308,6 @@ hyperg_1F1_1_series(const double b, const double x, gsl_sf_result * result)
 /* 1F1(1,b,x)
  * b >= 1, b integer
  */
-static
 int
 hyperg_1F1_1_int(const int b, const double x, gsl_sf_result * result)
 {
@@ -341,7 +334,6 @@ hyperg_1F1_1_int(const int b, const double x, gsl_sf_result * result)
  *
  * checked OK: [GJ] Thu Oct  1 16:46:35 MDT 1998
  */
-static
 int
 hyperg_1F1_1(const double b, const double x, gsl_sf_result * result)
 {
@@ -411,7 +403,6 @@ hyperg_1F1_1(const double b, const double x, gsl_sf_result * result)
 /* 1F1(a,b,x)/Gamma(b) for b->0
  * [limit of Abramowitz+Stegun 13.3.7]
  */
-static
 int
 hyperg_1F1_renorm_b0(const double a, const double x, gsl_sf_result * result)
 {
@@ -468,7 +459,7 @@ hyperg_1F1_renorm_b0(const double a, const double x, gsl_sf_result * result)
       return stat_e;
     }
   }
-  
+
 }
 
 
@@ -489,7 +480,6 @@ hyperg_1F1_renorm_b0(const double a, const double x, gsl_sf_result * result)
  * means you will never get them.
  */
 #if 0
-static
 int
 hyperg_1F1_CF1_p(const double a, const double b, const double x, double * result)
 {
@@ -532,7 +522,7 @@ hyperg_1F1_CF1_p(const double a, const double b, const double x, double * result
     old_fn = fn;
     fn = An/Bn;
     del = old_fn/fn;
-    
+
     if(fabs(del - 1.0) < 10.0*GSL_DBL_EPSILON) break;
   }
 
@@ -554,7 +544,6 @@ hyperg_1F1_CF1_p(const double a, const double b, const double x, double * result
  * when b > x.
  * Assumes a >= -1.
  */
-static
 int
 hyperg_1F1_CF1_p_ser(const double a, const double b, const double x, double * result)
 {
@@ -590,7 +579,6 @@ hyperg_1F1_CF1_p_ser(const double a, const double b, const double x, double * re
  * I could not find a region where it was truly useful.
  */
 #if 0
-static
 int
 hyperg_1F1_CF1(const double a, const double b, const double x, double * result)
 {
@@ -633,7 +621,7 @@ hyperg_1F1_CF1(const double a, const double b, const double x, double * result)
     old_fn = fn;
     fn = An/Bn;
     del = old_fn/fn;
-    
+
     if(fabs(del - 1.0) < 10.0*GSL_DBL_EPSILON) break;
   }
 
@@ -652,7 +640,6 @@ hyperg_1F1_CF1(const double a, const double b, const double x, double * result)
  * However, I have no theory for this recurrence.
  */
 #if 0
-static
 int
 hyperg_1F1_CF1_b(const double a, const double b, const double x, double * result)
 {
@@ -695,7 +682,7 @@ hyperg_1F1_CF1_b(const double a, const double b, const double x, double * result
     old_fn = fn;
     fn = An/Bn;
     del = old_fn/fn;
-    
+
     if(fabs(del - 1.0) < 10.0*GSL_DBL_EPSILON) break;
   }
 
@@ -711,7 +698,6 @@ hyperg_1F1_CF1_b(const double a, const double b, const double x, double * result
 /* 1F1(a,b,x)
  * |a| <= 1, b > 0
  */
-static
 int
 hyperg_1F1_small_a_bgt0(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -798,7 +784,6 @@ hyperg_1F1_small_a_bgt0(const double a, const double b, const double x, gsl_sf_r
 /* 1F1(b+eps,b,x)
  * |eps|<=1, b > 0
  */
-static
 int
 hyperg_1F1_beps_bgt0(const double eps, const double b, const double x, gsl_sf_result * result)
 {
@@ -858,7 +843,6 @@ hyperg_1F1_beps_bgt0(const double eps, const double b, const double x, gsl_sf_re
  *
  * a >= 1/2
  */
-static
 int
 hyperg_1F1_beq2a_pos(const double a, const double x, gsl_sf_result * result)
 {
@@ -933,7 +917,6 @@ hyperg_1F1_diag_end_step(const double a, const double b, const double x,
 /* Handle the case of a and b both positive integers.
  * Assumes a > 0 and b > 0.
  */
-static
 int
 hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * result)
 {
@@ -1064,7 +1047,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
     }
     else {
       /* b > a
-       * b < 2a + x 
+       * b < 2a + x
        * b <= x (otherwise we would have finished above)
        *
        * Gautschi anomalous convergence region. However, we can
@@ -1146,7 +1129,7 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
       /* Initialise the recurrence correctly BJG */
 
       if (a0 >= a)
-        { 
+        {
           Mn = Ma0b;
         }
       else if (a0 + 1>= a)
@@ -1178,7 +1161,6 @@ hyperg_1F1_ab_posint(const int a, const int b, const double x, gsl_sf_result * r
  * When the terms are all positive, this
  * must work. We will assume this here.
  */
-static
 int
 hyperg_1F1_a_negint_poly(const int a, const double b, const double x, gsl_sf_result * result)
 {
@@ -1218,7 +1200,6 @@ hyperg_1F1_a_negint_poly(const int a, const double b, const double x, gsl_sf_res
  *
  * assumes b is not a negative integer
  */
-static
 int
 hyperg_1F1_a_negint_lag(const int a, const double b, const double x, gsl_sf_result * result)
 {
@@ -1305,7 +1286,6 @@ hyperg_1F1_a_negint_U(const int a, const double b, const double x, gsl_sf_result
 
 /* Assumes a <= -1,  b <= -1, and b <= a.
  */
-static
 int
 hyperg_1F1_ab_negint(const int a, const int b, const double x, gsl_sf_result * result)
 {
@@ -1341,7 +1321,6 @@ hyperg_1F1_ab_negint(const int a, const int b, const double x, gsl_sf_result * r
  * b not an integer >= 2
  * a-b not a negative integer
  */
-static
 int
 hyperg_1F1_U(const double a, const double b, const double x, gsl_sf_result * result)
 {
@@ -1419,7 +1398,6 @@ hyperg_1F1_U(const double a, const double b, const double x, gsl_sf_result * res
 /* Handle case of generic positive a, b.
  * Assumes b-a is not a negative integer.
  */
-static
 int
 hyperg_1F1_ab_pos(const double a, const double b,
                   const double x,
@@ -1457,7 +1435,7 @@ hyperg_1F1_ab_pos(const double a, const double b,
     /* Use the Gautschi CF series, then
      * recurse backward to a near 0 for normalization.
      * This will work for either sign of x.
-     */ 
+     */
     double rap;
     int stat_CF1 = hyperg_1F1_CF1_p_ser(a, b, x, &rap);
     double ra = 1.0 + x/a * rap;
@@ -1549,7 +1527,7 @@ hyperg_1F1_ab_pos(const double a, const double b,
     }
     else {
       /* b > a
-       * b < 2a + x 
+       * b < 2a + x
        * b <= x
        *
        * Recurse forward on a from a=eps,eps+1.
@@ -1668,11 +1646,11 @@ hyperg_1F1_ab_pos(const double a, const double b,
         stat_a0 = GSL_ERROR_SELECT_2(stat_0, stat_1);
       }
 
-          
+
       /* Initialise the recurrence correctly BJG */
 
       if (a0 >= a - 0.1)
-        { 
+        {
           Mn = Ma0b;
         }
       else if (a0 + 1>= a - 0.1)
@@ -1703,7 +1681,6 @@ hyperg_1F1_ab_pos(const double a, const double b,
  * Assumes a != integer when x > 0
  * Assumes b-a != neg integer when x < 0
  */
-static
 int
 hyperg_1F1_ab_neg(const double a, const double b, const double x,
                   gsl_sf_result * result)

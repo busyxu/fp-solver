@@ -71,7 +71,7 @@ public:
 
     FPIRGenerator& operator=(FPIRGenerator&&) = default;
 
-    llvm::Function* genFunction(const z3::expr& expr, std::vector<double>& init_number) noexcept;
+    llvm::Function* genFunction(const z3::expr& expr) noexcept;
 
     llvm::Function* getDistanceFunction() const noexcept;
 
@@ -89,14 +89,14 @@ public:
 private:
     const IRSymbol* genFuncRecursive
             (llvm::IRBuilder<>& builder, const z3::expr expr,
-             bool is_negated, llvm::Value* cov, llvm::Value* totalCov, std::vector<double>& init_number) noexcept;
+             bool is_negated) noexcept;
 
     const IRSymbol*
-    genNumeralIR(llvm::IRBuilder<>& builder, const z3::expr& expr, std::vector<double>& init_number) noexcept;
+    genNumeralIR(llvm::IRBuilder<>& builder, const z3::expr& expr) noexcept;
 
     llvm::Value* genExprIR
-            (llvm::IRBuilder<>& builder, const IRSymbol* expr_sym, std::vector<const IRSymbol*>& arg_syms,
-             llvm::Value* cov, llvm::Value* totalCov, std::vector<double> &init_number) noexcept;
+            (llvm::IRBuilder<>& builder, const IRSymbol* expr_sym,
+             std::vector<const IRSymbol*>& arg_syms) noexcept;
 
     llvm::Value* genBinArgCmpIR
             (llvm::IRBuilder<>& builder,
@@ -193,8 +193,6 @@ private:
 
     llvm::Constant* m_const_zero;
     llvm::Constant* m_const_one;
-    llvm::Constant* m_const_max_double; // add by yx
-    llvm::Constant* m_const_min_double; // add by yx
     llvm::LLVMContext* m_ctx;
     llvm::Module* m_mod;
     llvm::MDNode* m_tbaa_node;

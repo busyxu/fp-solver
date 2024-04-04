@@ -1,9 +1,0 @@
-array TransA[8] : w32 -> w8 = symbolic
-array TransB[8] : w32 -> w8 = symbolic
-(query [N0:(Eq false
-                (Eq 111
-                    (ReadLSB w32 0 TransA)))
-         N0
-         (Eq 111
-             (ReadLSB w32 0 TransB))]
-        false)

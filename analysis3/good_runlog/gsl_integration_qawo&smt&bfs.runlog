@@ -1,4 +1,4 @@
-KLEE: KLEE: WATCHDOG: watching 27383
+KLEE: KLEE: WATCHDOG: watching 2528650
 
 KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawo&smt&bfs_output"
 KLEE: Using Z3 solver backend
@@ -12,20 +12,18 @@ KLEE: Replacing function "__fpclassifyf" with "klee_internal_fpclassifyf"
 KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
-KLEE: Replacing function "sqrt" with "klee_internal_sqrt"
-KLEE: Replacing function "fabs" with "klee_internal_fabs"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139713637475968, 94384338478080, 94384336125296, 42, 94384338334336, 94384339297024) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139970721658304, 94047192088416, 94047001198064, 42, 94047191987096, 94047192935952) at stream.c:46 1
 gsl: qmomof.c:42: ERROR: table length n must be positive integer
-KLEE: WARNING ONCE: calling external: fflush(139713637476192) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139970721658528) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Z3 exec time: 1.214849e+01 ms
-KLEE: WARNING: Z3: Z3 solving SAT and evalueate SUCCESS !
+>>>Z3 exec time: 9.647674e+00 ms
+KLEE: WARNING: Z3: Z3 solving SAT and evaluate SUCCESS !
 KLEE: WARNING ONCE: Large alloc: 18446744073709551416 bytes.  KLEE may run out of memory.
-tcmalloc: large alloc 0 bytes == (nil) @  0x7f119fa2f1e7 0x55d77bfa65d6 0x55d77bf69da9 0x55d77bfa7c91 0x55d77bfaa64b 0x55d77bf659c3 0x55d77bf6c9dd 0x55d77bfc41d4 0x55d77bf7f570 0x55d77bf7ff89 0x55d77bf09261 0x7f119d7ebc87 0x55d77bf4bb7a
+tcmalloc: large alloc 0 bytes == (nil) @  0x7f4d7aa5a680 0x7f4d7aa7b824 0x5588f09261f8 0x5588f08da4d6 0x5588f09277a5 0x5588f092a8c4 0x5588f08d78ab 0x5588f08e3f1d 0x5588f0944764 0x5588f08fccdb 0x5588f08fdec7 0x5588f0880663 0x7f4d79082083 0x5588f08c16de
 gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
 Default GSL error handler invoked.
 
@@ -33,4 +31,4 @@ KLEE: done: total instructions = 301
 KLEE: done: completed paths = 0
 KLEE: done: partially completed paths = 2
 KLEE: done: generated tests = 1
-Total exec time: 1.074689e+04 ms
+Total exec time: 1.144401e+04 ms

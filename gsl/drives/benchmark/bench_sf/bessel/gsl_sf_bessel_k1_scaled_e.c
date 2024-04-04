@@ -6,7 +6,7 @@ int main() {
   klee_make_symbolic(&a, sizeof(a), "a");
 
   gsl_sf_result result;
-  int status = gsl_sf_bessel_k1_scaled_e(a,&result);
+  int status = gsl_sf_bessel_K1_scaled_e(a,&result);
   return 0;
 }
 

@@ -217,7 +217,6 @@ set (NLOPT_SOURCES
   src/algs/slsqp/slsqp.c src/algs/slsqp/slsqp.h
   src/algs/esch/esch.c src/algs/esch/esch.h
   src/algs/byteea/byteea.c src/algs/byteea/byteea.h
-  src/algs/ga/ga.c src/algs/ga/ga.h
   src/api/general.c src/api/options.c src/api/optimize.c src/api/deprecated.c src/api/nlopt-internal.h src/api/nlopt.h src/api/f77api.c src/api/f77funcs.h src/api/f77funcs_.h ${PROJECT_BINARY_DIR}/nlopt.hpp
   src/util/mt19937ar.c src/util/sobolseq.c src/util/soboldata.h src/util/timer.c src/util/stop.c src/util/nlopt-util.h src/util/redblack.c src/util/redblack.h src/util/qsort_r.c src/util/rescale.c
 )
@@ -265,8 +264,7 @@ target_include_directories (${nlopt_lib} PRIVATE
   src/algs/isres
   src/algs/slsqp
   src/algs/esch
-  src/algs/byteea # add by yx
-  src/algs/ga # add by yx
+  src/algs/byteea
   src/api)
 
 get_target_property (NLOPT_PRIVATE_INCLUDE_DIRS ${nlopt_lib} INCLUDE_DIRECTORIES)

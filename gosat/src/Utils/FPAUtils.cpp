@@ -13,8 +13,6 @@
 #include <limits>
 #include <gmpxx.h>
 #include <stdio.h>
-//#include <iostream>
-#include <bitset>
 
 /**
  * /brief Provides a scaled distance value between representations
@@ -22,52 +20,46 @@
  */
 double fp64_dis(const double a, const double b)
 {
-//    return 0;
     /*
-   * Helpful. Ordered layout of FP32
-   * 1 11111111 ----------------------- -nan
-   * 1 11111111 00000000000000000000000 -oo
-   * 1 -------- ----------------------- -norm
-   * 1 00000000 ----------------------- -denorm
-   * 1 00000000 00000000000000000000000 -o
-   * 0 11111111 ----------------------- +nan
-   * 0 11111111 00000000000000000000000 +oo
-   * 0 -------- ----------------------- +norm
-   * 0 00000000 ----------------------- +denorm
-   * 0 00000000 00000000000000000000000 +o
-   */
+     * Helpful. Ordered layout of FP32
+     * 1 11111111 ----------------------- -nan
+     * 1 11111111 00000000000000000000000 -oo
+     * 1 -------- ----------------------- -norm
+     * 1 00000000 ----------------------- -denorm
+     * 1 00000000 00000000000000000000000 -o
+     * 0 11111111 ----------------------- +nan
+     * 0 11111111 00000000000000000000000 +oo
+     * 0 -------- ----------------------- +norm
+     * 0 00000000 ----------------------- +denorm
+     * 0 00000000 00000000000000000000000 +o
+     */
 //  printf("dis:\n%lf\n%lf\n________\n",a,b);
     if (a == b) {
-//        printf("a: %lf\nb: %lf\n",a,b);
         return 0;
     }
     if ( std::isnan(a) || std::isnan(b)) {
         // any non-zero should do
         return 1024;
     }
-
-//    integer representation of double, the degree of the distance of two integers as some as two integers
     const double scale = pow(2, 54);
-    //the double 'a' and 'b' as 'int' dereference
+    //为什么要转成int, 是不是为了缩小决策空间,会不会影响找不到解
     uint64_t a_uint = *(const uint64_t*) (&a);
     uint64_t b_uint = *(const uint64_t*) (&b);
     if ((a_uint & 0x8000000000000000) != (b_uint & 0x8000000000000000)) {
-        // signs are not equal return sum (a+b)
+        // signs are not equal return sum
         return ((double)
                 ((a_uint & 0x7FFFFFFFFFFFFFFF) +
                  (b_uint & 0x7FFFFFFFFFFFFFFF))) / scale;
     }
     b_uint &= 0x7FFFFFFFFFFFFFFF;
     a_uint &= 0x7FFFFFFFFFFFFFFF;
-
-//    printf("%d\n%d\n%lf\n________\n",a_uint,b_uint,((double) (b_uint - a_uint)) / scale);
     if (a_uint < b_uint) {
         return ((double) (b_uint - a_uint)) / scale;
     }
+//  printf("%d\n%d\n________\n",a_uint,b_uint);
     return ((double) (a_uint - b_uint)) / scale;
-
 //    printf("%lf\n%lf\n%lf\n________\n",a,b,fabs(a-b));
-//    return fabs(a-b);
+//    return (double) fabs(a-b);
 }
 
 double fp64_gt_dis(const double a, const double b)
@@ -76,10 +68,9 @@ double fp64_gt_dis(const double a, const double b)
   if(a>b){
     return 0;
   }
-  if (a == b) {
-//      printf("a: %lf\nb: %lf\n",a,b);
-    return DBL_MIN;
-  }
+    if (a == b) {
+        return DBL_MIN;
+    }
   if ( std::isnan(a) || std::isnan(b)) {
     // any non-zero should do
     return 1024;
@@ -89,7 +80,7 @@ double fp64_gt_dis(const double a, const double b)
 
 double fp64_lt_dis(const double a, const double b)
 {
-  printf("lt: %lf %lf\n",a,b);
+//  printf("lt: %lf %lf\n",a,b);
   if (a < b) {//理论上，进入这个距离函数了，说明a>=b
     return 0;
   }
@@ -105,6 +96,7 @@ double fp64_lt_dis(const double a, const double b)
 
 double fp64_ge_dis(const double a, const double b)
 {
+
   if (a >= b) {
     return 0;
   }
@@ -117,6 +109,20 @@ double fp64_ge_dis(const double a, const double b)
 
 double fp64_le_dis(const double a, const double b)
 {
+  /*
+   * Helpful. Ordered layout of FP32
+   * 1 11111111 ----------------------- -nan
+   * 1 11111111 00000000000000000000000 -oo
+   * 1 -------- ----------------------- -norm
+   * 1 00000000 ----------------------- -denorm
+   * 1 00000000 00000000000000000000000 -o
+   * 0 11111111 ----------------------- +nan
+   * 0 11111111 00000000000000000000000 +oo
+   * 0 -------- ----------------------- +norm
+   * 0 00000000 ----------------------- +denorm
+   * 0 00000000 00000000000000000000000 +o
+   */
+
   if (a <= b) {//理论上，进入这个距离函数了，说明a>=b
     return 0;
   }
@@ -124,49 +130,38 @@ double fp64_le_dis(const double a, const double b)
     // any non-zero should do
     return 1024;
   }
-  return fp64_dis(a, b);
+//  return ((double) (a-b));
+    return fp64_dis(a, b);
+
 }
 
 double fp64_eq_dis(const double a, const double b)
 {
-    if(a==b){
-//        printf("eq: %lf %lf\n",a,b);
-      return 0;
+    if (a == b) {
+        return 0;
     }
-    std::bitset<sizeof(double ) * 8> a_binary(*reinterpret_cast<const unsigned long long*>(&a));
-    std::bitset<sizeof(double ) * 8> b_binary(*reinterpret_cast<const unsigned long long*>(&b));
-    std::bitset<sizeof(double) * 8> result_binary = a_binary ^ b_binary;
-    int countOfOnes = result_binary.count();
-//    printf("a_binary: %s\nb_binary: %s\nresult_binary: %s\n",a_binary.to_string().c_str(),b_binary.to_string().c_str(),result_binary.to_string().c_str());
-//    printf("countOfOnes: %lf / 64.0 = %lf\n", (double) countOfOnes, (double) countOfOnes/64.0);
-    return (double) countOfOnes/64;
-//    return fp64_dis(a, b);
+
+    return fp64_dis(a, b);
 }
 
-double fp64_neq_dis(const double a, const double b)  //no apply
+double fp64_neq_dis(const double a, const double b)
 {
-//    if (a == 0 && b != 0) {
-//        return 0;
-//    }
-//    if (a != 0 && b == 0) {
-//        return 0;
-//    }
-//    if (a != b) {
-//        return 1.0/fp64_dis(a, b);
-//    }
-//    return 1;
-
-//    printf("neq: %lf %lf\n",a,b);
-    if(a!=b){
-      return 0;
+    if (a == 0 && b != 0) {
+        return 0;
+    }
+    if (a != 0 && b == 0) {
+        return 0;
+    }
+    if (a != b) {
+        // it is possible that both sides are false, i.e. a != 0 && b != 0,
+        // yet a == b and thus fp64_dis(a,b) would return 0 which is unsound.
+        return 0;
     }
     return 1;
 }
 
 double fp64_isnan(const double a, const double flag)
 {
-//    return 0;
-//    printf("%lf\n",a);
     if (flag != 0) {
         // flag set, invert result
         return std::isnan(a)? 1.0: 0.0;
