@@ -130,14 +130,21 @@ bool GMPEvaluateFDiv(double op1,double op2, int type){
   double absOp1 = fabs(op1);
   double absOp2 = fabs(op2);
 
+  long int_value1 = 0x7fefffffffffffff;
+  long int_value2 = 0x0000000000000001;
+  double *dmax = (double *)&int_value1;
+  double *dmin = (double *)&int_value2;
+  
   mpq_t hVal1, hVal2, DMax, DMin, DZero, hResMax, hResMin;
   mpq_init(hVal1);mpq_init(hVal2);
   mpq_init(DMax);mpq_init(DMin);mpq_init(DZero);
   mpq_init(hResMax);mpq_init(hResMin);
   mpq_set_d(hVal1,absOp1);
   mpq_set_d(hVal2,absOp2);
-  mpq_set_d(DMax,DBL_MAX);
-  mpq_set_d(DMin,DBL_MIN);
+//  mpq_set_d(DMax,DBL_MAX);
+//  mpq_set_d(DMin,DBL_MIN);
+  mpq_set_d(DMax,*dmax);
+  mpq_set_d(DMin,*dmin);
   mpq_set_d(DZero,0.0);
 
   mpq_mul(hResMax, hVal2, DMax);

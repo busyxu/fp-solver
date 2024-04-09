@@ -1,0 +1,50 @@
+import time
+import os
+
+group = ["blas", "cdf", "compAndopt", "complex", "diffAndInteg", "elementary", "sf", "solveEqu"]
+
+for file in group:
+  cmdStr = "find %s -type f -name \"*.runlog\" -exec grep -n \"FloatPointCheck: \" {} \;" % (file)
+  with os.popen(cmdStr, 'r') as f:
+    resAll = f.read()
+  if resAll == "":
+    continue
+  resList = resAll.split('\n')
+
+  resVec = [0, 0, 0, 0, 0, 0]
+  uniqOver = []
+  uniqUnder = []
+  uniqInvalid = []
+  uniqZero = []
+  uniqAccuray = []
+  for i in range(len(resList)):
+    lineStr = resList[i]
+    if "libm" in lineStr:
+      continue
+    if "FloatPointCheck" not in lineStr:
+      continue
+    resVec[0] += 1
+    locStr = lineStr.split("KLEE: ERROR: ")[1].split(": FloatPointCheck:")[0]
+    if "Overflow found" in lineStr:
+      resVec[1] += 1
+      if locStr not in uniqOver:
+        uniqOver.append(locStr)
+    if "Underflow found" in lineStr:
+      resVec[2] += 1
+      if locStr not in uniqUnder:
+        uniqUnder.append(locStr)
+    if "Invalid found" in lineStr:
+      resVec[3] += 1
+      if locStr not in uniqInvalid:
+        uniqInvalid.append(locStr)
+    if "Zero found" in lineStr:
+      resVec[4] += 1
+      if locStr not in uniqZero:
+        uniqZero.append(locStr)
+    if "Accuracy found" in lineStr:
+      resVec[5] += 1
+      if locStr not in uniqAccuray:
+        uniqAccuray.append(locStr)
+
+  print(resVec)
+  print(len(uniqOver),len(uniqUnder),len(uniqInvalid),len(uniqZero))

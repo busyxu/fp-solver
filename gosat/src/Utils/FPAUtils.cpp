@@ -224,6 +224,11 @@ double fp64_overflow_dis(double op1, double op2, int opcode, int type)
     dis = DBL_MAX;
   }
 
+    long int_value1 = 0x7fefffffffffffff;
+    long int_value2 = 0x0000000000000001;
+    double *dmax = (double *)&int_value1;
+    double *dmin = (double *)&int_value2;
+
   mpq_t hVal1, hVal2, hRes, FMax, FMin, FZero, hResMax, hResMin;
   mpq_init(hVal1);mpq_init(hVal2);mpq_init(hRes);
   mpq_init(FMax);mpq_init(FMin);mpq_init(FZero);
@@ -232,8 +237,10 @@ double fp64_overflow_dis(double op1, double op2, int opcode, int type)
   mpq_set_d(hVal2,op2);
   mpq_set_d(hRes,0);
   mpq_set_d(FZero,0);
-  mpq_set_d(FMax,DBL_MAX);
-  mpq_set_d(FMin,DBL_MIN);
+//  mpq_set_d(FMax,DBL_MAX);
+//  mpq_set_d(FMin,DBL_MIN);
+    mpq_set_d(FMax,*dmax);
+    mpq_set_d(FMin,*dmin);
 
   switch (opcode) {
     case 1: // opcode == 1 : FAdd
@@ -298,6 +305,11 @@ bool GMPEvaluateComm(double op1,double op2, int opcode, int type){
     return false;
 
   bool ret = false;
+
+    long int_value1 = 0x7fefffffffffffff;
+    long int_value2 = 0x0000000000000001;
+    double *dmax = (double *)&int_value1;
+    double *dmin = (double *)&int_value2;
   mpq_t hVal1, hVal2, hRes, FMax, FMin, FZero;
   mpq_init(hVal1);mpq_init(hVal2);mpq_init(hRes);
   mpq_init(FMax);mpq_init(FMin);mpq_init(FZero);
@@ -305,8 +317,10 @@ bool GMPEvaluateComm(double op1,double op2, int opcode, int type){
   mpq_set_d(hVal2,op2);
   mpq_set_d(hRes,0);
   mpq_set_d(FZero,0);
-  mpq_set_d(FMax,DBL_MAX);
-  mpq_set_d(FMin,DBL_MIN);
+//  mpq_set_d(FMax,DBL_MAX);
+//  mpq_set_d(FMin,DBL_MIN);
+    mpq_set_d(FMax,*dmax);
+    mpq_set_d(FMin,*dmin);
 
   switch (opcode) {
     case 1: // opcode == 1 : FAdd
@@ -400,14 +414,20 @@ bool GMPEvaluateFDiv(double op1,double op2, int type){
   double absOp1 = fabs(op1);
   double absOp2 = fabs(op2);
 
+    long int_value1 = 0x7fefffffffffffff;
+    long int_value2 = 0x0000000000000001;
+    double *dmax = (double *)&int_value1;
+    double *dmin = (double *)&int_value2;
   mpq_t hVal1, hVal2, DMax, DMin, DZero, hResMax, hResMin;
   mpq_init(hVal1);mpq_init(hVal2);
   mpq_init(DMax);mpq_init(DMin);mpq_init(DZero);
   mpq_init(hResMax);mpq_init(hResMin);
   mpq_set_d(hVal1,absOp1);
   mpq_set_d(hVal2,absOp2);
-  mpq_set_d(DMax,DBL_MAX);
-  mpq_set_d(DMin,DBL_MIN);
+//  mpq_set_d(DMax,DBL_MAX);
+//  mpq_set_d(DMin,DBL_MIN);
+    mpq_set_d(DMax,*dmax);
+    mpq_set_d(DMin,*dmin);
   mpq_set_d(DZero,0.0);
 
   mpq_mul(hResMax, hVal2, DMax);
@@ -480,6 +500,10 @@ double fpcheck_dis(double a, double b, int opcode, int mode){
   double dis = DBL_MAX;
   if(opcode <= 3){
     // GMP lib can not accept nan/inf
+      long int_value1 = 0x7fefffffffffffff;
+      long int_value2 = 0x0000000000000001;
+      double *dmax = (double *)&int_value1;
+      double *dmin = (double *)&int_value2;
     mpq_t hVal1, hVal2, hRes, FMax, FMin, FZero;
     mpq_init(hVal1);mpq_init(hVal2);mpq_init(hRes);
     mpq_init(FMax);mpq_init(FMin);mpq_init(FZero);
@@ -487,8 +511,10 @@ double fpcheck_dis(double a, double b, int opcode, int mode){
     mpq_set_d(hVal2,b);
     mpq_set_d(hRes,0);
     mpq_set_d(FZero,0);
-    mpq_set_d(FMax,DBL_MAX);
-    mpq_set_d(FMin,DBL_MIN);
+//    mpq_set_d(FMax,DBL_MAX);
+//    mpq_set_d(FMin,DBL_MIN);
+      mpq_set_d(FMax,*dmax);
+      mpq_set_d(FMin,*dmin);
 
     switch (opcode) {
       case 1: // opcode == 1 : FAdd
@@ -552,13 +578,19 @@ double fpcheck_dis(double a, double b, int opcode, int mode){
     double absOp2 = fabs(b);
 
     mpq_t hVal1, hVal2, DMax, DMin, DZero, hResMax, hResMin;
+      long int_value1 = 0x7fefffffffffffff;
+      long int_value2 = 0x0000000000000001;
+      double *dmax = (double *)&int_value1;
+      double *dmin = (double *)&int_value2;
     mpq_init(hVal1);mpq_init(hVal2);
     mpq_init(DMax);mpq_init(DMin);mpq_init(DZero);
     mpq_init(hResMax);mpq_init(hResMin);
     mpq_set_d(hVal1,absOp1);
     mpq_set_d(hVal2,absOp2);
-    mpq_set_d(DMax,DBL_MAX);
-    mpq_set_d(DMin,DBL_MIN);
+//    mpq_set_d(DMax,DBL_MAX);
+//    mpq_set_d(DMin,DBL_MIN);
+      mpq_set_d(DMax,*dmax);
+      mpq_set_d(DMin,*dmin);
     mpq_set_d(DZero,0.0);
 
     mpq_mul(hResMax, hVal2, DMax);
