@@ -49,7 +49,7 @@ def drawPlot(csv_files, filename):
                 ls=None,
                 label=label[i],
                 linewidth=2)
-        ax.fill_between(X, y_mean[i] - y_std[i], y_mean[i] + y_std[i], alpha=alpha[i])
+        ax.fill_between(X, y_mean[i] - y_std[i], y_mean[i] + y_std[i], alpha=0.5)
 
     ax.tick_params(right=True, top=True)
     ax.spines['bottom'].set_linewidth(0.1)
@@ -89,18 +89,17 @@ def getDataFromCSV(benchmark, searchtype, item):
     print("筛选后的 CSV 文件列表:", csv_files)
     return csv_files
 
-
-csv_files_bfs_algorithm = getDataFromCSV('algorithm', 'bfs', 'lines')
-csv_files_dfs_algorithm = getDataFromCSV('algorithm', 'dfs', 'lines')
 csv_files_bfs_elementary = getDataFromCSV('elementary', 'bfs', 'lines')
 csv_files_dfs_elementary = getDataFromCSV('elementary', 'dfs', 'lines')
+csv_files_bfs_algorithm = getDataFromCSV('algorithm', 'bfs', 'lines')
+csv_files_dfs_algorithm = getDataFromCSV('algorithm', 'dfs', 'lines')
 csv_files_bfs_sf = getDataFromCSV('sf', 'bfs', 'lines')
 csv_files_dfs_sf = getDataFromCSV('sf', 'dfs', 'lines')
-
-drawPlot(csv_files_bfs_algorithm, 'trend_pdf/algorithm_bfs_trend_lines.pdf')
-drawPlot(csv_files_dfs_algorithm, 'trend_pdf/algorithm_dfs_trend_lines.pdf')
+#
 drawPlot(csv_files_bfs_elementary, 'trend_pdf/elementary_bfs_trend_lines.pdf')
 drawPlot(csv_files_dfs_elementary, 'trend_pdf/elementary_dfs_trend_lines.pdf')
+drawPlot(csv_files_bfs_algorithm, 'trend_pdf/algorithm_bfs_trend_lines.pdf')
+drawPlot(csv_files_dfs_algorithm, 'trend_pdf/algorithm_dfs_trend_lines.pdf')
 drawPlot(csv_files_bfs_sf, 'trend_pdf/sf_bfs_trend_lines.pdf')
 drawPlot(csv_files_dfs_sf, 'trend_pdf/sf_dfs_trend_lines.pdf')
 

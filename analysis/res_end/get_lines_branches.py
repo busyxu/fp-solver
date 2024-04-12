@@ -69,7 +69,8 @@ if __name__ == '__main__':
 
     # txt_file = 'res_all_1.txt'
 
-    txt_files = ['res_all_1.txt', 'res_all3.txt']
+    txt_files = ['res_all_1.txt', 'res_all_2.txt', 'res_all_3.txt', 'res_all_4.txt', 'res_all_5.txt', 'res_all_6.txt',
+                 'res_all_7.txt', 'res_all_8.txt', 'res_all_9.txt', 'res_all_10.txt']
 
     lines_lists = []
     branches_lists = []
@@ -90,10 +91,10 @@ if __name__ == '__main__':
     std_list_lines = np.std(lines_lists, axis=0)
     mean_list_branches = np.mean(branches_lists, axis=0)
     std_list_branches = np.std(branches_lists, axis=0)
-    print("LoCC mean:\n", mean_list_lines)
-    print("LoCC std:\n", std_list_lines)
-    print("NoBC mean:\n", mean_list_branches)
-    print("NoBC std:\n", std_list_branches)
+    # print("LoCC mean:\n", mean_list_lines)
+    # print("LoCC std:\n", std_list_lines)
+    # print("NoBC mean:\n", mean_list_branches)
+    # print("NoBC std:\n", std_list_branches)
 
 
     write_data_lines = []

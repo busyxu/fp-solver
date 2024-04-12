@@ -673,26 +673,26 @@ Z3ASTHandle Z3Builder::constructFPCheckZ3(ref<Expr> e, int *width_out) {
     llvm::APFloat FZero(fzero);
     DZeroExpr = ConstantExpr::alloc(FZero);
 
-      int int_value1 = 0x7f7fffff;
-      int int_value2 = 0x00000001;
-      float *fmax = (float *)&int_value1;
-      float *fmin = (float *)&int_value2;
-      llvm::APFloat DZero(0.0), DMax(*fmax), DMin(*fmin);
+//      int int_value1 = 0x7f7fffff;
+//      int int_value2 = 0x00000001;
+//      float *fmax = (float *)&int_value1;
+//      float *fmin = (float *)&int_value2;
+//      llvm::APFloat DZero(0.0), DMax(*fmax), DMin(*fmin);
 
-//    double fmax = FLT_MAX, fmin = FLT_MIN;
-//    llvm::APFloat DZero(0.0), DMax(fmax), DMin(fmin);
+    double fmax = FLT_MAX, fmin = FLT_MIN;
+    llvm::APFloat DZero(0.0), DMax(fmax), DMin(fmin);
     DZeroExtExpr = ConstantExpr::alloc(DZero);
     DMaxExtExpr = ConstantExpr::alloc(DMax);
     DMinExtExpr = ConstantExpr::alloc(DMin);
   }else{
 
-      long int_value1 = 0x7fefffffffffffff;
-      long int_value2 = 0x0000000000000001;
-      double *dmax = (double *)&int_value1;
-      double *dmin = (double *)&int_value2;
-      llvm::APFloat DZero(0.0), DMax(*dmax), DMin(*dmin);
+//      long int_value1 = 0x7fefffffffffffff;
+//      long int_value2 = 0x0000000000000001;
+//      double *dmax = (double *)&int_value1;
+//      double *dmin = (double *)&int_value2;
+//      llvm::APFloat DZero(0.0), DMax(*dmax), DMin(*dmin);
 
-//    llvm::APFloat DZero(0.0), DMax(DBL_MAX), DMin(DBL_MIN);
+    llvm::APFloat DZero(0.0), DMax(DBL_MAX), DMin(DBL_MIN);
     DZeroExpr = ConstantExpr::alloc(DZero);
     DZeroExtExpr = FPExtExpr::create(ConstantExpr::alloc(DZero),128);
     DMaxExtExpr = FPExtExpr::create(ConstantExpr::alloc(DMax),128);
@@ -1034,15 +1034,15 @@ Z3ASTHandle Z3Builder::constructFPCheckZ3(ref<Expr> e, int *width_out) {
     if (e->getKind() == Expr::FInvalidLogCheck){
 //          ref<FOEqExpr> leftEq = FOEqExpr::create(leftExtAbs,DZeroExtExpr);
 //          ref<FOEqExpr> rightEq = FOEqExpr::create(rightExtAbs,DZeroExtExpr);
-      ref<Expr> limit = FOLeExpr::create(left,DZeroExpr);
+      ref<Expr> limit = FOLtExpr::create(left,DZeroExpr);
       return construct(limit,width_out);
     }
-    if (e->getKind() == Expr::FInvalidPowCheck){
-//          ref<FOEqExpr> leftEq = FOEqExpr::create(leftExtAbs,DZeroExtExpr);
-//          ref<FOEqExpr> rightEq = FOEqExpr::create(rightExtAbs,DZeroExtExpr);
-      ref<Expr> limit = FOEqExpr::create(left,DZeroExpr);
-      return construct(limit,width_out);
-    }
+//    if (e->getKind() == Expr::FInvalidPowCheck){
+////          ref<FOEqExpr> leftEq = FOEqExpr::create(leftExtAbs,DZeroExtExpr);
+////          ref<FOEqExpr> rightEq = FOEqExpr::create(rightExtAbs,DZeroExtExpr);
+//      ref<Expr> limit = FOEqExpr::create(left,DZeroExpr);
+//      return construct(limit,width_out);
+//    }
     else{
       assert(false && "unsupport fpcheck expr !");
     }

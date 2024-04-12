@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import csv
 
 class bench_cov:
   def __init__(self, bench_type, bench_name, solver_type, search_type):
@@ -161,17 +161,6 @@ def writeDate(cname, stype, search_type, bench_res):
     #print("=====",curr_covline)
 
   '''
-  write into .dat
-  '''
-  # res_file = "datyx/" + class_name + "_" + solver_type + "_" + search_type + "_" + "covtrend.dat"
-  # with open(res_file, 'w') as f:
-  #   for it in cov_trend_list:
-  #     # print(it[0],",",it[1])
-  #     minus = it[0] / 60
-  #     str_data = str(minus) + " " + str(it[1]) + '\n'
-  #     f.write(str_data)
-
-  '''
   drectry draw figure
   '''
   Xdata = []
@@ -230,40 +219,54 @@ if __name__ == "__main__":
         dataXDfs.append(Xdata)
         dataYDfs.append(Ydata)
 
+    csv_trend_bfs = "csv_lines/" + cname + "_trend_branches_bfs_1.csv"
+    with open(csv_trend_bfs, 'w', newline='') as file:
+      writer = csv.writer(file)
+      for i in range(len(dataXBfs)):
+        writer.writerows([dataXBfs[i]])
+        writer.writerows([dataYBfs[i]])
+    print(f'write lines into {csv_trend_bfs}.')
 
+    csv_trend_dfs = "csv_lines/" + cname + "_trend_branches_dfs_1.csv"
+    with open(csv_trend_dfs, 'w', newline='') as file:
+      writer = csv.writer(file)
+      for i in range(len(dataXDfs)):
+        writer.writerows([dataXDfs[i]])
+        writer.writerows([dataYDfs[i]])
+    print(f'write lines into {csv_trend_dfs}.')
 
-    # plt.rc('font', family='Times New Roman')
-
-    # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.','.']
-    # label = ['BVFP (z3)', 'BVFP (bitwuzla)', 'BVFP (mathsat5)', 'RSO (dreal)', 'RSO (cvc5)', 'ISC (z3)', 'FUZZ (jfs)', 'Search (gosat)', 'Synergy', 'smt-jfs']  # 标签序列参数
-    # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g', 'k']  # 颜色参数序列
-
-    marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.']
-    label = ['BVFP (Z3)', 'BVFP (Bitwuzla)', 'BVFP (MathSAT5)', 'RSO (dReal)', 'RSO (CVC5)', 'ISC (Z3)', 'FUZZ (JFS)', 'Search (goSAT)', 'Synergy']  # 标签序列参数
-    color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g']  # 颜色参数序列
-
-    fig, ax = plt.subplots()
-    f_line(ax, dataXBfs, dataYBfs, marker, label, color, cname)  # 调用函数
-    # plt.show()
-
-    plt.savefig("fig_branch_1/" + cname + "_bfs_covtrend_b.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    # plt.savefig("figyx/" + cname + "_bfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    plt.close()
-
-    # plt.rc('font', family='Times New Roman')
-
+    # # plt.rc('font', family='Times New Roman')
+    #
+    # # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.','.']
+    # # label = ['BVFP (z3)', 'BVFP (bitwuzla)', 'BVFP (mathsat5)', 'RSO (dreal)', 'RSO (cvc5)', 'ISC (z3)', 'FUZZ (jfs)', 'Search (gosat)', 'Synergy', 'smt-jfs']  # 标签序列参数
+    # # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g', 'k']  # 颜色参数序列
+    #
+    # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.']
+    # label = ['BVFP (Z3)', 'BVFP (Bitwuzla)', 'BVFP (MathSAT5)', 'RSO (dReal)', 'RSO (CVC5)', 'ISC (Z3)', 'FUZZ (JFS)', 'Search (goSAT)', 'Synergy']  # 标签序列参数
+    # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g']  # 颜色参数序列
+    #
+    # fig, ax = plt.subplots()
+    # f_line(ax, dataXBfs, dataYBfs, marker, label, color, cname)  # 调用函数
+    # # plt.show()
+    #
+    # plt.savefig("fig_branch_1/" + cname + "_bfs_covtrend_b.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
+    # # plt.savefig("figyx/" + cname + "_bfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
+    # plt.close()
+    #
+    # # plt.rc('font', family='Times New Roman')
+    #
+    # # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.', '.']
+    # # label = ['BVFP (z3)', 'BVFP (bitwuzla)', 'BVFP (mathsat5)', 'RSO (dreal)', 'RSO (cvc5)', 'ISC (z3)', 'FUZZ (jfs)',
+    # #          'Search (gosat)', 'Synergy', 'smt-jfs']  # 标签序列参数
+    # # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g', 'k']  # 颜色参数序列
+    #
     # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.', '.']
-    # label = ['BVFP (z3)', 'BVFP (bitwuzla)', 'BVFP (mathsat5)', 'RSO (dreal)', 'RSO (cvc5)', 'ISC (z3)', 'FUZZ (jfs)',
-    #          'Search (gosat)', 'Synergy', 'smt-jfs']  # 标签序列参数
-    # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g', 'k']  # 颜色参数序列
-
-    marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.', '.']
-    label = ['BVFP (Z3)', 'BVFP (Bitwuzla)', 'BVFP (MathSAT5)', 'RSO (dReal)', 'RSO (CVC5)', 'ISC (Z3)', 'FUZZ (JFS)', 'Search (goSAT)', 'Synergy']  # 标签序列参数
-    color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g']  # 颜色参数序列
-
-    fig, ax = plt.subplots()
-    f_line(ax, dataXDfs, dataYDfs, marker, label, color, cname)  # 调用函数
-    # plt.show()
-    plt.savefig("fig_branch_1/" + cname + "_dfs_covtrend_b.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    # plt.savefig("figyx/" + cname + "_dfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    plt.close()
+    # label = ['BVFP (Z3)', 'BVFP (Bitwuzla)', 'BVFP (MathSAT5)', 'RSO (dReal)', 'RSO (CVC5)', 'ISC (Z3)', 'FUZZ (JFS)', 'Search (goSAT)', 'Synergy']  # 标签序列参数
+    # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g']  # 颜色参数序列
+    #
+    # fig, ax = plt.subplots()
+    # f_line(ax, dataXDfs, dataYDfs, marker, label, color, cname)  # 调用函数
+    # # plt.show()
+    # plt.savefig("fig_branch_1/" + cname + "_dfs_covtrend_b.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
+    # # plt.savefig("figyx/" + cname + "_dfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
+    # plt.close()

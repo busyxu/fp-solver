@@ -577,7 +577,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term add = CVC5Realsolver.mkTerm(ADD, {left, right});
     Term addAbs = CVC5Realsolver.mkTerm(ABS, {add});
-    Term gt = CVC5Realsolver.mkTerm(GT, {addAbs, CVC5Realsolver.mkReal(std::to_string(*dmax))});
+    Term gt = CVC5Realsolver.mkTerm(GT, {addAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MAX))});
     return gt;
   }
   case Expr::FAddUnderflowCheck:{
@@ -586,7 +586,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term add = CVC5Realsolver.mkTerm(ADD, {left, right});
     Term addAbs = CVC5Realsolver.mkTerm(ABS, {add});
-    Term lt = CVC5Realsolver.mkTerm(LT, {addAbs, CVC5Realsolver.mkReal(std::to_string(*dmin))});
+    Term lt = CVC5Realsolver.mkTerm(LT, {addAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MIN))});
     Term gt = CVC5Realsolver.mkTerm(GT, {addAbs, CVC5Realsolver.mkReal("0")});
     return CVC5Realsolver.mkTerm(AND, {lt, gt});
   }
@@ -596,7 +596,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term sub = CVC5Realsolver.mkTerm(SUB, {left, right});
     Term subAbs = CVC5Realsolver.mkTerm(ABS, {sub});
-    Term gt = CVC5Realsolver.mkTerm(GT, {subAbs, CVC5Realsolver.mkReal(std::to_string(*dmax))});
+    Term gt = CVC5Realsolver.mkTerm(GT, {subAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MAX))});
     return gt;
   }
   case Expr::FSubUnderflowCheck:{
@@ -605,7 +605,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term sub = CVC5Realsolver.mkTerm(SUB, {left, right});
     Term subAbs = CVC5Realsolver.mkTerm(ABS, {sub});
-    Term lt = CVC5Realsolver.mkTerm(LT, {subAbs, CVC5Realsolver.mkReal(std::to_string(*dmin))});
+    Term lt = CVC5Realsolver.mkTerm(LT, {subAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MIN))});
     Term gt = CVC5Realsolver.mkTerm(GT, {subAbs, CVC5Realsolver.mkReal("0")});
     return CVC5Realsolver.mkTerm(AND, {lt, gt});
   }
@@ -615,7 +615,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term mult = CVC5Realsolver.mkTerm(MULT, {left, right});
     Term multAbs = CVC5Realsolver.mkTerm(ABS, {mult});
-    Term gt = CVC5Realsolver.mkTerm(GT, {multAbs, CVC5Realsolver.mkReal(std::to_string(*dmax))});
+    Term gt = CVC5Realsolver.mkTerm(GT, {multAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MAX))});
     return gt;
   }
   case Expr::FMulUnderflowCheck:{
@@ -624,7 +624,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term mult = CVC5Realsolver.mkTerm(MULT, {left, right});
     Term multAbs = CVC5Realsolver.mkTerm(ABS, {mult});
-    Term lt = CVC5Realsolver.mkTerm(LT, {multAbs, CVC5Realsolver.mkReal(std::to_string(*dmin))});
+    Term lt = CVC5Realsolver.mkTerm(LT, {multAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MIN))});
     Term gt = CVC5Realsolver.mkTerm(GT, {multAbs, CVC5Realsolver.mkReal("0")});
     return CVC5Realsolver.mkTerm(AND, {lt, gt});
   }
@@ -634,7 +634,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     Term right = construct(FPcheck->right);
     Term leftAbs = CVC5Realsolver.mkTerm(ABS, {left});
     Term rightAbs = CVC5Realsolver.mkTerm(ABS, {right});
-    Term mult = CVC5Realsolver.mkTerm(MULT, {rightAbs, CVC5Realsolver.mkReal(std::to_string(*dmax))});
+    Term mult = CVC5Realsolver.mkTerm(MULT, {rightAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MAX))});
     Term gt = CVC5Realsolver.mkTerm(GT,{leftAbs, mult});
     return gt;
   }
@@ -645,7 +645,7 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
 //    return 0 < CVC5Real::abs(left) && CVC5Real::abs(left) < CVC5Real::abs(right) * DBL_MIN;
     Term leftAbs = CVC5Realsolver.mkTerm(ABS, {left});
     Term rightAbs = CVC5Realsolver.mkTerm(ABS, {right});
-    Term mult = CVC5Realsolver.mkTerm(MULT, {rightAbs, CVC5Realsolver.mkReal(std::to_string(*dmin))});
+    Term mult = CVC5Realsolver.mkTerm(MULT, {rightAbs, CVC5Realsolver.mkReal(std::to_string(DBL_MIN))});
     Term lt = CVC5Realsolver.mkTerm(LT,{leftAbs, mult});
     Term gt = CVC5Realsolver.mkTerm(GT, {leftAbs, CVC5Realsolver.mkReal("0")});
     return CVC5Realsolver.mkTerm(AND, {lt, gt});
@@ -680,14 +680,14 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     FInvalidLogCheckExpr *FPcheck = cast<FInvalidLogCheckExpr>(e);
     Term left = construct(FPcheck->expr);
     Term zeros = CVC5Realsolver.mkReal("0");
-    return CVC5Realsolver.mkTerm(LEQ, {left, zeros});
+    return CVC5Realsolver.mkTerm(LT, {left, zeros});
   }
-  case Expr::FInvalidPowCheck:{//add by yx
-    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
-    Term left = construct(FPcheck->expr);
-    Term zeros = CVC5Realsolver.mkReal("0");
-    return CVC5Realsolver.mkTerm(EQUAL, {left, zeros});
-  }
+//  case Expr::FInvalidPowCheck:{//add by yx
+//    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
+//    Term left = construct(FPcheck->expr);
+//    Term zeros = CVC5Realsolver.mkReal("0");
+//    return CVC5Realsolver.mkTerm(EQUAL, {left, zeros});
+//  }
   case Expr::FAddAccuracyCheck:{//add by yx
     FAddAccuracyCheckExpr *FPcheck = cast<FAddAccuracyCheckExpr>(e);
     Term left = construct(FPcheck->left);

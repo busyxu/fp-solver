@@ -552,42 +552,48 @@ dreal::Formula DRealBuilder::constructFormular(ref<Expr> e) {
     dreal::Expression left = construct(FPcheck->left);
     dreal::Expression right = construct(FPcheck->right);
     dreal::Expression resAbs = dreal::abs(left + right);
-    return resAbs > *dmax;
+//    return resAbs > *dmax;
+    return resAbs > DBL_MAX;
   }
   case Expr::FAddUnderflowCheck:{
     FAddUnderflowCheckExpr *FPcheck = cast<FAddUnderflowCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);
     dreal::Expression right = construct(FPcheck->right);
     dreal::Expression resAbs = dreal::abs(left + right);
-    return 0 < resAbs && resAbs < *dmin;
+//    return 0 < resAbs && resAbs < *dmin;
+    return 0 < resAbs && resAbs < DBL_MIN;
   }
   case Expr::FSubOverflowCheck:{
     FSubOverflowCheckExpr *FPcheck = cast<FSubOverflowCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);
     dreal::Expression right = construct(FPcheck->right);
     dreal::Expression resAbs = dreal::abs(left - right);
-    return resAbs > *dmax;
+//    return resAbs > *dmax;
+    return resAbs > DBL_MAX;
   }
   case Expr::FSubUnderflowCheck:{
     FSubUnderflowCheckExpr *FPcheck = cast<FSubUnderflowCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);
     dreal::Expression right = construct(FPcheck->right);
     dreal::Expression resAbs = dreal::abs(left - right);
-    return 0 < resAbs && resAbs < *dmin;
+//    return 0 < resAbs && resAbs < *dmin;
+    return 0 < resAbs && resAbs < DBL_MIN;
   }
   case Expr::FMulOverflowCheck:{
     FMulOverflowCheckExpr *FPcheck = cast<FMulOverflowCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);
     dreal::Expression right = construct(FPcheck->right);
     dreal::Expression resAbs = dreal::abs(left * right);
-    return resAbs > *dmax;
+//    return resAbs > *dmax;
+    return resAbs > DBL_MAX;
   }
   case Expr::FMulUnderflowCheck:{
     FMulUnderflowCheckExpr *FPcheck = cast<FMulUnderflowCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);
     dreal::Expression right = construct(FPcheck->right);
     dreal::Expression resAbs = dreal::abs(left * right);
-    return 0 < resAbs && resAbs < *dmin;
+//    return 0 < resAbs && resAbs < *dmin;
+    return 0 < resAbs && resAbs < DBL_MIN;
   }
   case Expr::FDivOverflowCheck:{
     FDivOverflowCheckExpr *FPcheck = cast<FDivOverflowCheckExpr>(e);
@@ -623,14 +629,14 @@ dreal::Formula DRealBuilder::constructFormular(ref<Expr> e) {
     FInvalidLogCheckExpr *FPcheck = cast<FInvalidLogCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->expr);
 //    dreal::Expression right = construct(FPcheck->right);
-    return left <= 0;
+    return left < 0;
   }
-  case Expr::FInvalidPowCheck:{//need modify by yx
-    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
-    dreal::Expression left = construct(FPcheck->expr);
-//    dreal::Expression right = construct(FPcheck->right);
-    return left == 0;
-  }
+//  case Expr::FInvalidPowCheck:{//need modify by yx
+//    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
+//    dreal::Expression left = construct(FPcheck->expr);
+////    dreal::Expression right = construct(FPcheck->right);
+//    return left == 0;
+//  }
   case Expr::FAddAccuracyCheck:{
     FAddAccuracyCheckExpr *FPcheck = cast<FAddAccuracyCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);

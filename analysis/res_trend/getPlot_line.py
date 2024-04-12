@@ -42,7 +42,7 @@ def getDate():
   #method_list = ["smt","jfs","dreal_jfs","vmcai","gosat","smt_dreal"]
   method_list = ["is"]
   
-  trend_file = "cov_trend3.txt"
+  trend_file = "cov_trend_1.txt"
   #trend_file = "test.txt"
   bench_res = []
   
@@ -175,13 +175,13 @@ def writeDate(cname, stype, search_type, bench_res):
   for it in cov_trend_list:
       minus = it[0] / 60
       Xdata.append(minus)
-      # Ydata.append(it[1])
-      if cname == "elementary" and stype == 'smt-dreal':
-        Ydata.append(it[1])
-      elif cname == "algorithm" and stype == 'smt-dreal':
-        Ydata.append(it[1] + 400)
-      else:
-        Ydata.append(it[1])
+      Ydata.append(it[1])
+      # if cname == "elementary" and stype == 'smt-dreal':
+      #   Ydata.append(it[1])
+      # elif cname == "algorithm" and stype == 'smt-dreal':
+      #   Ydata.append(it[1] + 400)
+      # else:
+      #   Ydata.append(it[1])
 
   return Xdata, Ydata
 
@@ -259,7 +259,7 @@ if __name__ == "__main__":
     # f_line(ax, dataXBfs, dataYBfs, marker, label, color, cname)  # 调用函数
     # # plt.show()
     #
-    # plt.savefig("fig_line_2/" + cname + "_bfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
+    # plt.savefig("fig_line/" + cname + "_bfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
     # # plt.savefig("figyx/" + cname + "_bfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
     # plt.close()
     #
@@ -277,6 +277,6 @@ if __name__ == "__main__":
     # fig, ax = plt.subplots()
     # f_line(ax, dataXDfs, dataYDfs, marker, label, color, cname)  # 调用函数
     # # plt.show()
-    # plt.savefig("fig_line_2/" + cname + "_dfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
+    # plt.savefig("fig_line/" + cname + "_dfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
     # # plt.savefig("figyx/" + cname + "_dfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
     # plt.close()

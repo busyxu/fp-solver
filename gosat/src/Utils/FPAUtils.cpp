@@ -237,10 +237,10 @@ double fp64_overflow_dis(double op1, double op2, int opcode, int type)
   mpq_set_d(hVal2,op2);
   mpq_set_d(hRes,0);
   mpq_set_d(FZero,0);
-//  mpq_set_d(FMax,DBL_MAX);
-//  mpq_set_d(FMin,DBL_MIN);
-    mpq_set_d(FMax,*dmax);
-    mpq_set_d(FMin,*dmin);
+  mpq_set_d(FMax,DBL_MAX);
+  mpq_set_d(FMin,DBL_MIN);
+//    mpq_set_d(FMax,*dmax);
+//    mpq_set_d(FMin,*dmin);
 
   switch (opcode) {
     case 1: // opcode == 1 : FAdd
@@ -317,10 +317,10 @@ bool GMPEvaluateComm(double op1,double op2, int opcode, int type){
   mpq_set_d(hVal2,op2);
   mpq_set_d(hRes,0);
   mpq_set_d(FZero,0);
-//  mpq_set_d(FMax,DBL_MAX);
-//  mpq_set_d(FMin,DBL_MIN);
-    mpq_set_d(FMax,*dmax);
-    mpq_set_d(FMin,*dmin);
+  mpq_set_d(FMax,DBL_MAX);
+  mpq_set_d(FMin,DBL_MIN);
+//    mpq_set_d(FMax,*dmax);
+//    mpq_set_d(FMin,*dmin);
 
   switch (opcode) {
     case 1: // opcode == 1 : FAdd
@@ -424,10 +424,10 @@ bool GMPEvaluateFDiv(double op1,double op2, int type){
   mpq_init(hResMax);mpq_init(hResMin);
   mpq_set_d(hVal1,absOp1);
   mpq_set_d(hVal2,absOp2);
-//  mpq_set_d(DMax,DBL_MAX);
-//  mpq_set_d(DMin,DBL_MIN);
-    mpq_set_d(DMax,*dmax);
-    mpq_set_d(DMin,*dmin);
+  mpq_set_d(DMax,DBL_MAX);
+  mpq_set_d(DMin,DBL_MIN);
+//    mpq_set_d(DMax,*dmax);
+//    mpq_set_d(DMin,*dmin);
   mpq_set_d(DZero,0.0);
 
   mpq_mul(hResMax, hVal2, DMax);
@@ -478,7 +478,7 @@ bool GMPEvaluateFInvalid(double op1, int type){
 
   if (type == 1 && op1 < 0)
     return true;
-  if (type == 2 && op1 <= 0)
+  if (type == 2 && op1 < 0)
     return true;
   if (type == 3 && op1 == 0)//base == 0
     return true;
@@ -511,10 +511,10 @@ double fpcheck_dis(double a, double b, int opcode, int mode){
     mpq_set_d(hVal2,b);
     mpq_set_d(hRes,0);
     mpq_set_d(FZero,0);
-//    mpq_set_d(FMax,DBL_MAX);
-//    mpq_set_d(FMin,DBL_MIN);
-      mpq_set_d(FMax,*dmax);
-      mpq_set_d(FMin,*dmin);
+    mpq_set_d(FMax,DBL_MAX);
+    mpq_set_d(FMin,DBL_MIN);
+//      mpq_set_d(FMax,*dmax);
+//      mpq_set_d(FMin,*dmin);
 
     switch (opcode) {
       case 1: // opcode == 1 : FAdd
@@ -587,10 +587,10 @@ double fpcheck_dis(double a, double b, int opcode, int mode){
     mpq_init(hResMax);mpq_init(hResMin);
     mpq_set_d(hVal1,absOp1);
     mpq_set_d(hVal2,absOp2);
-//    mpq_set_d(DMax,DBL_MAX);
-//    mpq_set_d(DMin,DBL_MIN);
-      mpq_set_d(DMax,*dmax);
-      mpq_set_d(DMin,*dmin);
+    mpq_set_d(DMax,DBL_MAX);
+    mpq_set_d(DMin,DBL_MIN);
+//      mpq_set_d(DMax,*dmax);
+//      mpq_set_d(DMin,*dmin);
     mpq_set_d(DZero,0.0);
 
     mpq_mul(hResMax, hVal2, DMax);

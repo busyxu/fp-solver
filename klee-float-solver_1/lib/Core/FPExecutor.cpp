@@ -1368,13 +1368,13 @@ void FPExecutor::executeInstruction(ExecutionState &state, KInstruction *ki) {
             type = 2;
             errorCode = checkInvildRule(op, type);
           }
-          else if (f->getName() == "pow") {
-            ref<Expr> exprTemp = arguments[0];
-            ref<Expr> op = state.assignSeed.evaluate(exprTemp);
-            isCheck = true;
-            type = 3;
-            errorCode = checkInvildRule(op, type);
-          }
+//          else if (f->getName() == "pow") {
+//            ref<Expr> exprTemp = arguments[0];
+//            ref<Expr> op = state.assignSeed.evaluate(exprTemp);
+//            isCheck = true;
+//            type = 3;
+//            errorCode = checkInvildRule(op, type);
+//          }
         }
         if (errorCode > 0)
           state.forkDisabled = true;
