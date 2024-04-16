@@ -38,13 +38,8 @@ def getDate():
   driver_tag = "=== TestCase : "
   end_tag = "=== End"
   
-  #method_list = ["smt","jfs","dreal_jfs","vmcai","gosat","smt_dreal"]
-  method_list = ["is"]
-  
-  trend_file = "cov_trend_1.txt"
-  #trend_file = "test.txt"
+  trend_file = "cov_trend_3.txt"
   bench_res = []
-  
   flag = False
   
   with open(trend_file, 'r') as log:
@@ -85,14 +80,10 @@ def getDate():
           driver_bench.updateCoverage(sec,coverage)
           driver_bench.updateCovline(sec,covbranch)
 
-        # pre_sec = sec
-        # pre_coverage = coverage
-        # pre_covline = covline
-
   return bench_res
 
+
 def f_line(ax, dataX, dataY, marker, label, color, cname):
-  # 可扩展处  可自己添加画图数据
   for i in range(len(dataX)):
     ax.plot(np.array(dataX[i]), np.array(dataY[i]),
             marker=marker[i],
@@ -104,32 +95,15 @@ def f_line(ax, dataX, dataY, marker, label, color, cname):
             label=label[i],
             linewidth=2,
             c=color[i])
-  # 画框设置
-  # ax.spines['right'].set_visible(False)
-  # ax.spines['top'].set_visible(False)
   ax.tick_params(right=True, top=True)
   ax.spines['bottom'].set_linewidth(0.1)
   ax.spines['left'].set_linewidth(0.1)
   ax.spines['right'].set_linewidth(0.1)
   ax.spines['top'].set_linewidth(0.1)
-  # 参数设置
   ax.tick_params(direction='in', labelsize=12)
-  # 坐标轴标签设置
   ax.set_xlabel("Elapsed Timed (min)", fontsize=12)
   ax.set_ylabel("Total NoBC", fontsize=12)
-  # ax.set_ylim(0, 20000)
-  # # 设置横轴标签设置
-  # NUM = 7
-  # index = np.linspace(0, data[0].shape[0] - 1, NUM, dtype=int)
-  # ax.set_xticks(index, ['the' + str(i) for i in index])
-  # 图例设置
-  # ax.legend(fontsize=12, edgecolor='black', loc='lower right', ncol=3)
   ax.legend(bbox_to_anchor=(0.5, 1.2), loc='upper center', ncol=3)
-  # if cname == "sf":
-  #   # ax.legend(fontsize=12, edgecolor='black')
-  #   ax.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0)
-  # else:
-    # ax.legend.remove()
 
 
 def writeDate(cname, stype, search_type, bench_res):
@@ -160,21 +134,12 @@ def writeDate(cname, stype, search_type, bench_res):
       pre_covline = curr_covline
     #print("=====",curr_covline)
 
-  '''
-  drectry draw figure
-  '''
   Xdata = []
   Ydata = []
   for it in cov_trend_list:
       minus = it[0] / 60
       Xdata.append(minus)
       Ydata.append(it[1])
-      # if cname == "elementary" and stype == 'smt-dreal':
-      #   Ydata.append(it[1]+20)
-      # elif cname == "algorithm" and stype == 'smt-dreal':
-      #   Ydata.append(it[1]+200)
-      # else:
-      #   Ydata.append(it[1])
 
   return Xdata, Ydata
 
@@ -184,42 +149,23 @@ if __name__ == "__main__":
   bench_res = getDate()
 
   class_name = ["elementary", "algorithm", "sf"]
-  # class_name = ["elementary"]
-  # class_name = ["algorithm"]
-  # class_name = ["elementary", "diffAndInteg", "cdf", "solveEqu", "compAndopt", "sf"]
-  # solver_type = ["smt", "bitwuzla", "mathsat5", "dreal-is", "cvc5-real", "fp2int", "jfs", "gosat", "smt-dreal", "smt-jfs"]
   solver_type = ["smt", "bitwuzla", "mathsat5", "dreal-is", "cvc5-real", "fp2int", "jfs", "gosat", "smt-dreal"]
 
   for cname in class_name:
-    dataXBfs = []  # 数据序列参数
+    dataXBfs = []
     dataYBfs = []
-    dataXDfs = []  # 数据序列参数
+    dataXDfs = []
     dataYDfs = []
     for stype in solver_type:
       Xdata, Ydata = writeDate(cname, stype, "bfs", bench_res)
-      if stype == 'smt-dreal':
-        # import itertools
-        # merged_array = [max(a, b) for a, b in itertools.zip_longest(Ydata, dataYDfs[1], fillvalue=float('-inf'))]
-        # if dataYDfs[1][-1] > Ydata[-1]:
-        #   Ydata[-1] = dataYDfs[1][-1]
-        dataXBfs.append(Xdata)
-        dataYBfs.append(Ydata)
-      else:
-        dataXBfs.append(Xdata)
-        dataYBfs.append(Ydata)
-      Xdata, Ydata = writeDate(cname, stype, "dfs", bench_res)
-      if stype == 'smt-dreal':
-        # import itertools
-        # merged_array = [max(a, b) for a, b in itertools.zip_longest(Ydata, dataYDfs[1], fillvalue=float('-inf'))]
-        # if dataYDfs[1][-1] > Ydata[-1]:
-        #   Ydata[-1] = dataYDfs[1][-1]
-        dataXDfs.append(Xdata)
-        dataYDfs.append(Ydata)
-      else:
-        dataXDfs.append(Xdata)
-        dataYDfs.append(Ydata)
+      dataXBfs.append(Xdata)
+      dataYBfs.append(Ydata)
 
-    csv_trend_bfs = "csv_lines/" + cname + "_trend_branches_bfs_1.csv"
+      Xdata, Ydata = writeDate(cname, stype, "dfs", bench_res)
+      dataXDfs.append(Xdata)
+      dataYDfs.append(Ydata)
+
+    csv_trend_bfs = "csv_lines/" + cname + "_trend_branches_bfs_3.csv"
     with open(csv_trend_bfs, 'w', newline='') as file:
       writer = csv.writer(file)
       for i in range(len(dataXBfs)):
@@ -227,46 +173,10 @@ if __name__ == "__main__":
         writer.writerows([dataYBfs[i]])
     print(f'write lines into {csv_trend_bfs}.')
 
-    csv_trend_dfs = "csv_lines/" + cname + "_trend_branches_dfs_1.csv"
+    csv_trend_dfs = "csv_lines/" + cname + "_trend_branches_dfs_3.csv"
     with open(csv_trend_dfs, 'w', newline='') as file:
       writer = csv.writer(file)
       for i in range(len(dataXDfs)):
         writer.writerows([dataXDfs[i]])
         writer.writerows([dataYDfs[i]])
     print(f'write lines into {csv_trend_dfs}.')
-
-    # # plt.rc('font', family='Times New Roman')
-    #
-    # # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.','.']
-    # # label = ['BVFP (z3)', 'BVFP (bitwuzla)', 'BVFP (mathsat5)', 'RSO (dreal)', 'RSO (cvc5)', 'ISC (z3)', 'FUZZ (jfs)', 'Search (gosat)', 'Synergy', 'smt-jfs']  # 标签序列参数
-    # # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g', 'k']  # 颜色参数序列
-    #
-    # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.']
-    # label = ['BVFP (Z3)', 'BVFP (Bitwuzla)', 'BVFP (MathSAT5)', 'RSO (dReal)', 'RSO (CVC5)', 'ISC (Z3)', 'FUZZ (JFS)', 'Search (goSAT)', 'Synergy']  # 标签序列参数
-    # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g']  # 颜色参数序列
-    #
-    # fig, ax = plt.subplots()
-    # f_line(ax, dataXBfs, dataYBfs, marker, label, color, cname)  # 调用函数
-    # # plt.show()
-    #
-    # plt.savefig("fig_branch_1/" + cname + "_bfs_covtrend_b.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    # # plt.savefig("figyx/" + cname + "_bfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    # plt.close()
-    #
-    # # plt.rc('font', family='Times New Roman')
-    #
-    # # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.', '.']
-    # # label = ['BVFP (z3)', 'BVFP (bitwuzla)', 'BVFP (mathsat5)', 'RSO (dreal)', 'RSO (cvc5)', 'ISC (z3)', 'FUZZ (jfs)',
-    # #          'Search (gosat)', 'Synergy', 'smt-jfs']  # 标签序列参数
-    # # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g', 'k']  # 颜色参数序列
-    #
-    # marker = ['.', 'x', '+', '.', 'x', '.', '.', '.', '.', '.']
-    # label = ['BVFP (Z3)', 'BVFP (Bitwuzla)', 'BVFP (MathSAT5)', 'RSO (dReal)', 'RSO (CVC5)', 'ISC (Z3)', 'FUZZ (JFS)', 'Search (goSAT)', 'Synergy']  # 标签序列参数
-    # color = ['b', 'b', 'b', 'y', 'y', 'r', 'c', 'm', 'g']  # 颜色参数序列
-    #
-    # fig, ax = plt.subplots()
-    # f_line(ax, dataXDfs, dataYDfs, marker, label, color, cname)  # 调用函数
-    # # plt.show()
-    # plt.savefig("fig_branch_1/" + cname + "_dfs_covtrend_b.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    # # plt.savefig("figyx/" + cname + "_dfs_covtrend.pdf", dpi=300, bbox_inches='tight', pad_inches=0.1)
-    # plt.close()

@@ -3,8 +3,6 @@ import csv
 
 def get_data(txt_file):
 
-    # txt_file = 'res_all_1.txt'
-
     dist_sum_lines = {'elementary_bfs': [0] * 9, 'elementary_dfs': [0] * 9, 'algorithm_bfs': [0] * 9,
                       'algorithm_dfs': [0] * 9, 'sf_bfs': [0] * 9, 'sf_dfs': [0] * 9}
 
@@ -24,14 +22,14 @@ def get_data(txt_file):
             locc = 0
             if len(strList)>2 and strList[2].strip() != "":
                 locc = int(strList[2].strip())
-            else:
-                print(line)
+            # else:
+            #     print(line)
 
             nobc = 0
             if len(strList)>3 and strList[3].strip() != "":
                 nobc = int(strList[3].strip())
-            else:
-                print(line)
+            # else:
+            #     print(line)
 
             key = className+'_'+searchType
             if solverType == "smt":
@@ -67,10 +65,12 @@ def get_data(txt_file):
 
 if __name__ == '__main__':
 
-    # txt_file = 'res_all_1.txt'
+    # txt_files = ['res_all_1.txt', 'res_all_2.txt', 'res_all_3.txt']
 
     txt_files = ['res_all_1.txt', 'res_all_2.txt', 'res_all_3.txt', 'res_all_4.txt', 'res_all_5.txt', 'res_all_6.txt',
-                 'res_all_7.txt', 'res_all_8.txt', 'res_all_9.txt', 'res_all_10.txt']
+             'res_all_7.txt', 'res_all_8.txt', 'res_all_9.txt', 'res_all_10.txt', 'res_all_11.txt', 'res_all_12.txt',
+             'res_all_13.txt', 'res_all_14.txt', 'res_all_15.txt', 'res_all_16.txt', 'res_all_17.txt', 'res_all_18.txt',
+             'res_all_19.txt', 'res_all_20.txt', 'res_all_21.txt']
 
     lines_lists = []
     branches_lists = []
@@ -101,7 +101,9 @@ if __name__ == '__main__':
     for i in range(len(mean_list_lines)):
         temp = []
         for j in range(len(mean_list_lines[i])):
-            element = str(mean_list_lines[i][j])+' ($\pm$'+str(std_list_lines[i][j])+')'
+            meanV = np.round(mean_list_lines[i][j], 2)
+            std_V = np.round(std_list_lines[i][j], 2)
+            element = str(meanV)+' ('+str(std_V)+')'
             temp.append(element)
         write_data_lines.append(temp)
 
@@ -109,7 +111,9 @@ if __name__ == '__main__':
     for i in range(len(mean_list_branches)):
         temp = []
         for j in range(len(mean_list_branches[i])):
-            element = str(mean_list_branches[i][j]) + ' ($\pm$' + str(std_list_branches[i][j]) + ')'
+            meanV = np.round(mean_list_branches[i][j], 2)
+            std_V = np.round(std_list_branches[i][j], 2)
+            element = str(meanV) + ' (' + str(std_V) + ')'
             temp.append(element)
         write_data_branches.append(temp)
 
