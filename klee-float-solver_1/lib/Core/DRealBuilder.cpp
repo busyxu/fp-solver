@@ -629,14 +629,14 @@ dreal::Formula DRealBuilder::constructFormular(ref<Expr> e) {
     FInvalidLogCheckExpr *FPcheck = cast<FInvalidLogCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->expr);
 //    dreal::Expression right = construct(FPcheck->right);
-    return left < 0;
+    return left <= 0;
   }
-//  case Expr::FInvalidPowCheck:{//need modify by yx
-//    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
-//    dreal::Expression left = construct(FPcheck->expr);
-////    dreal::Expression right = construct(FPcheck->right);
-//    return left == 0;
-//  }
+  case Expr::FInvalidPowCheck:{//need modify by yx
+    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
+    dreal::Expression left = construct(FPcheck->expr);
+//    dreal::Expression right = construct(FPcheck->right);
+    return left == 0;
+  }
   case Expr::FAddAccuracyCheck:{
     FAddAccuracyCheckExpr *FPcheck = cast<FAddAccuracyCheckExpr>(e);
     dreal::Expression left = construct(FPcheck->left);

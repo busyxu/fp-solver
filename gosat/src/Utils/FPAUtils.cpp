@@ -478,7 +478,7 @@ bool GMPEvaluateFInvalid(double op1, int type){
 
   if (type == 1 && op1 < 0)
     return true;
-  if (type == 2 && op1 < 0)
+  if (type == 2 && op1 <= 0)
     return true;
   if (type == 3 && op1 == 0)//base == 0
     return true;

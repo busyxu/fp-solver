@@ -1723,15 +1723,15 @@ namespace klee {
         if (e->getKind() == Expr::FInvalidLogCheck){
 //          ref<FOEqExpr> leftEq = FOEqExpr::create(leftExtAbs,DZeroExtExpr);
 //          ref<FOEqExpr> rightEq = FOEqExpr::create(rightExtAbs,DZeroExtExpr);
-          ref<Expr> limit = FOLtExpr::create(left,DZeroExpr);
+          ref<Expr> limit = FOLeExpr::create(left,DZeroExpr);
           return construct(limit,width_out);
         }
-//        if (e->getKind() == Expr::FInvalidPowCheck){
-////          ref<FOEqExpr> leftEq = FOEqExpr::create(leftExtAbs,DZeroExtExpr);
-////          ref<FOEqExpr> rightEq = FOEqExpr::create(rightExtAbs,DZeroExtExpr);
-//          ref<Expr> limit = FOEqExpr::create(left,DZeroExpr);
-//          return construct(limit,width_out);
-//        }
+        if (e->getKind() == Expr::FInvalidPowCheck){
+//          ref<FOEqExpr> leftEq = FOEqExpr::create(leftExtAbs,DZeroExtExpr);
+//          ref<FOEqExpr> rightEq = FOEqExpr::create(rightExtAbs,DZeroExtExpr);
+          ref<Expr> limit = FOEqExpr::create(left,DZeroExpr);
+          return construct(limit,width_out);
+        }
         else{
           assert(false && "unsupport fpcheck expr !");
         }

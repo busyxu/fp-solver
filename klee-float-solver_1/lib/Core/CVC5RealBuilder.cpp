@@ -680,14 +680,14 @@ Term CVC5RealBuilder::CVC5RealConstruct(ref<Expr> e){
     FInvalidLogCheckExpr *FPcheck = cast<FInvalidLogCheckExpr>(e);
     Term left = construct(FPcheck->expr);
     Term zeros = CVC5Realsolver.mkReal("0");
-    return CVC5Realsolver.mkTerm(LT, {left, zeros});
+    return CVC5Realsolver.mkTerm(LEQ, {left, zeros});
   }
-//  case Expr::FInvalidPowCheck:{//add by yx
-//    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
-//    Term left = construct(FPcheck->expr);
-//    Term zeros = CVC5Realsolver.mkReal("0");
-//    return CVC5Realsolver.mkTerm(EQUAL, {left, zeros});
-//  }
+  case Expr::FInvalidPowCheck:{//add by yx
+    FInvalidPowCheckExpr *FPcheck = cast<FInvalidPowCheckExpr>(e);
+    Term left = construct(FPcheck->expr);
+    Term zeros = CVC5Realsolver.mkReal("0");
+    return CVC5Realsolver.mkTerm(EQUAL, {left, zeros});
+  }
   case Expr::FAddAccuracyCheck:{//add by yx
     FAddAccuracyCheckExpr *FPcheck = cast<FAddAccuracyCheckExpr>(e);
     Term left = construct(FPcheck->left);
