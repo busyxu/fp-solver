@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2534818
+KLEE: KLEE: WATCHDOG: watching 7974
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawo&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawo&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,23 +10,33 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139908022285760, 94916928253184, 94916928312528, 42, 94916928195400, 94916929095600) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140159799867008, 94499794160992, 94499794244800, 42, 94499794103104, 94499795011120) at stream.c:46 1
 gsl: qmomof.c:42: ERROR: table length n must be positive integer
-KLEE: WARNING ONCE: calling external: fflush(139908022285984) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140159799867232) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000379e+04 ms
+>>>GoSat-gosat exec time: 4.424942e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: Large alloc: 13676149297177509888 bytes.  KLEE may run out of memory.
-tcmalloc: large alloc 13676149297177509888 bytes == (nil) @  0x7f3ee1792680 0x7f3ee17b3824 0x56537071a1f8 0x5653706ce4d6 0x56537071b7a5 0x56537071e8c4 0x5653706cb8ab 0x5653706d7f1d 0x565370738764 0x5653706f0cdb 0x5653706f1ec7 0x565370674663 0x7f3edfdba083 0x5653706b56de
-gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
-Default GSL error handler invoked.
+KLEE: ERROR: qmomof.c:232: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-gosat exec time: 3.009076e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000998e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000900e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000773e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.897781e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 5.851873e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.439662e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 301
+KLEE: done: total instructions = 5327
 KLEE: done: completed paths = 0
 KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 1
-Total exec time: 3.921582e+04 ms
+KLEE: done: generated tests = 2
+Total exec time: 1.357466e+05 ms

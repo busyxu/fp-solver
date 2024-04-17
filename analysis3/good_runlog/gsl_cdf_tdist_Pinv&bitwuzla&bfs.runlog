@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2675219
+KLEE: KLEE: WATCHDOG: watching 20868
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_tdist_Pinv&bitwuzla&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/cdf/cdf&gsl_cdf_tdist_Pinv&bitwuzla&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -13,287 +13,227 @@ KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Bitwuzla exec time: 4.485543e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已成功创建。
+>>>Bitwuzla exec time: 6.725831e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.427758e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 6.493981e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.947385e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.082838e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.709846e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:72: FloatPointCheck: Common Accuracy found !
+KLEE: WARNING ONCE: calling external: fprintf(140716711646848, 94409811520576, 94409812279816, 56, 94409811390872, 94409812518560) at stream.c:46 1
+gsl: beta.c:56: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140716711647072) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.717423e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.154339e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.537777e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.199540e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:74: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 3.479008e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_4.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.319812e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:74: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 5.428134e+02 ms
+gsl: gamma.c:1249: ERROR: x too large to extract fraction part
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_5.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 6.385915e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:74: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.811853e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.561162e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.633019e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:74: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 2.124419e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:74: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.607975e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.328228e+01 ms
+gsl: gamma.c:1249: ERROR: x too large to extract fraction part
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_6.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 7.254056e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.560582e+03 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_7.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 7.311073e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.116887e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.933190e+03 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_8.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.616240e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.234736e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.988982e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.177631e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.382155e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.518049e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.189604e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.541805e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.432364e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.642808e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.450783e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.456329e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.458541e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-KLEE: ERROR: gamma.c:712: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.444312e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.586224e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.224709e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.096220e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:63: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.209670e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 8.083379e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:63: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 4.007198e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.631675e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:63: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.835169e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.601668e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.142033e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.160373e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.698380e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.475019e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.092120e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.842929e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.010077e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.703119e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.156732e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.153200e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.742520e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.413939e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.936754e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.232384e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.356378e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.602913e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.989805e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 5.749551e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 3.784926e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: tdistinv.c:68: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.441780e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 5.412939e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_9.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.335871e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.752626e+04 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_10.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.696629e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.169612e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_11.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.765461e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_12.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.856980e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.343273e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_13.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.923704e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.319224e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_14.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 7.820019e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_15.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 7.940685e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_16.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.169809e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_17.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 7.277240e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_18.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.474966e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_19.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 9.038405e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_20.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.006813e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_21.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 9.515061e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_22.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.418257e+04 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_23.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.326611e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_24.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.910099e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_25.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.725843e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.214333e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.976590e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.996410e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.541722e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.228066e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 8.232662e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.768129e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_26.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.940403e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.201303e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.064404e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 7.677707e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.525146e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.389991e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.121535e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.006274e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.981571e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_27.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.275904e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.216321e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_28.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.308259e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.741478e+03 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_29.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.003894e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.344194e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_30.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.042228e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.603301e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_31.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.039780e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.519669e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_32.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.358945e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.538303e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_33.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.069077e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.507240e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_34.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.048619e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.635969e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_35.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.452988e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_36.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 9.189007e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_37.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 9.839976e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_38.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 9.829315e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_39.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.630685e+03 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_40.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.381319e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_41.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.024205e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_42.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.748691e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.482705e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_43.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.804747e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.523243e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_44.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.247611e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.513975e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_45.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.224207e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.840438e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.923200e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.644950e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.982834e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.108964e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.716653e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.791343e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.670714e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.514705e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_46.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.917553e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.511505e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_47.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.167017e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.748210e-01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_48.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.199590e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.840410e-01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_49.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.353280e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.200578e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.226434e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.301999e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.051370e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.416244e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.067320e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.710871e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.479361e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.828212e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.953577e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.617090e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.345018e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_50.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.216937e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.519720e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.748830e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.964160e-01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/FP_51.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_cdf_tdist_Pinv_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.191298e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 1446
+KLEE: done: total instructions = 2845
 KLEE: done: completed paths = 4
-KLEE: done: partially completed paths = 27
-KLEE: done: generated tests = 25
-Total exec time: 8.148195e+04 ms
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 5
+Total exec time: 4.450907e+04 ms

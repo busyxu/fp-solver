@@ -59,7 +59,7 @@ for test in testList:
     print(test)
 
 cnt = 0
-pool = multiprocessing.Pool(processes=30)
+pool = multiprocessing.Pool(processes=50)
 for i in range(len(testList[:-1])):
   if len(testList[i]) < 7:
     break

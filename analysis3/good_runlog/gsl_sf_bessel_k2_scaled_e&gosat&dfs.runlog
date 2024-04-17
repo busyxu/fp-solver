@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 668626
+KLEE: KLEE: WATCHDOG: watching 43989
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k2_scaled_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k2_scaled_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,21 +9,25 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(139946432665024, 94924271245248, 94924271336720, 124, 94924271208760, 94924271336704) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139661382420096, 94522547337248, 94522547461376, 124, 94522547308848, 94522547461360) at stream.c:46 1
 gsl: bessel_k.c:124: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(139946432665248) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139661382420320) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000403e+04 ms
+>>>GoSat-gosat exec time: 3.293013e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 2.059517e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: bessel_k.c:132: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.851029e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:127: ERROR: overflow
 Default GSL error handler invoked.
->>>GoSat-gosat exec time: 3.000439e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 150
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 1
-Total exec time: 7.068948e+04 ms
+KLEE: done: total instructions = 241
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 2
+Total exec time: 7.390317e+03 ms

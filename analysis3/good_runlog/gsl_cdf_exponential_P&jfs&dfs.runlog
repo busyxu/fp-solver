@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2704536
+KLEE: KLEE: WATCHDOG: watching 38903
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_exponential_P&jfs&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/cdf/cdf&gsl_cdf_exponential_P&jfs&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,44 +9,14 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>JFS exec time: 3.130116e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 6.022188e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.129861e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 6.095158e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.214561e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.267816e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.172850e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.142963e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.073430e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.015076e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 KLEE: WARNING ONCE: calling external: expm1((FDiv w64 (FSub w64 9223372036854775808
                      (ReadLSB w64 0 x))
            (ReadLSB w64 0 mu))) at exponential.c:40 18
+>>>JFS exec time: 4.835111e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 
 KLEE: done: total instructions = 44
 KLEE: done: completed paths = 2
-KLEE: done: partially completed paths = 6
-KLEE: done: generated tests = 8
-Total exec time: 7.576174e+04 ms
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 2
+Total exec time: 1.177445e+04 ms

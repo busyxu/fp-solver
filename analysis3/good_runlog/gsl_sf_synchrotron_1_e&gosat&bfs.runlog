@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2646728
+KLEE: KLEE: WATCHDOG: watching 9739
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_synchrotron_1_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_synchrotron_1_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,52 +9,26 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: ERROR: synchrotron.c:193: FloatPointCheck: FP Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000666e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000401e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.058515e+00 ms
+>>>GoSat-gosat exec time: 6.098001e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000595e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000460e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000454e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000471e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000664e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000575e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: synchrotron.c:194: FloatPointCheck: Common Accuracy found !
+KLEE: WARNING ONCE: calling external: fprintf(139741597824640, 94633700858016, 94633702228688, 187, 94633700829488, 94633702228672) at stream.c:46 1
+gsl: synchrotron.c:187: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139741597824864) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000685e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000655e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 8.130097e+00 ms
+>>>GoSat-gosat exec time: 5.007878e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 5.197431e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+gsl: synchrotron.c:223: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 5.743754e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 6.321476e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 a)) at synchrotron.c:218 39
 
-KLEE: done: total instructions = 43
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 3
-KLEE: done: generated tests = 2
-Total exec time: 3.160038e+05 ms
+KLEE: done: total instructions = 2863
+KLEE: done: completed paths = 3
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 4
+Total exec time: 1.111256e+04 ms

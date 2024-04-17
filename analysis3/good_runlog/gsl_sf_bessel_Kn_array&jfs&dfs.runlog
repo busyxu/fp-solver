@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3975021
+KLEE: KLEE: WATCHDOG: watching 42601
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_Kn_array&jfs&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_Kn_array&jfs&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,377 +9,230 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140055932577216, 94581011348320, 94581011438528, 171, 94581011310960, 94581011438512) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139724195604096, 93826998746048, 93826998877104, 171, 93826998724968, 93826998877088) at stream.c:46 1
 gsl: bessel_Kn.c:171: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140055932577440) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139724195604320) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.748433e+02 ms
+>>>JFS exec time: 4.103726e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 KLEE: ERROR: bessel_Kn.c:170: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.151898e+04 ms
+>>>JFS exec time: 3.146144e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.632744e+02 ms
+>>>JFS exec time: 5.250507e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.145273e+04 ms
+>>>JFS exec time: 3.148028e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.139950e+04 ms
+>>>JFS exec time: 3.145979e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 6.976939e+02 ms
+>>>JFS exec time: 4.961436e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:141: FloatPointCheck: Common Underflow found !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 c)) at bessel_K0.c:148 18
+>>>JFS exec time: 3.144557e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.148475e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.108783e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.146710e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146911e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.271299e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.363945e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: abs((ReadLSB w32 0 a)) at bessel_Kn.c:104 5
+gsl: bessel_Kn.c:54: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 3.147872e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.291197e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_Kn.c:207: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.347361e+02 ms
+tcmalloc: large alloc 1073750016 bytes == 0x55561e2ce000 @  0x7f1414f35887 0x5555b7d283a3 0x5555b7d61feb 0x7f1417f2a8da 0x7f1417f2b1fa 0x5555b8dcff2c 0x5555b8dce639 0x5555b8dcfe8a 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639
+tcmalloc: large alloc 2147491840 bytes == 0x55565e2d0000 @  0x7f1414f35887 0x5555b7d283a3 0x5555b7d61feb 0x7f1417f2a8da 0x7f1417f2b1fa 0x5555b8dcff2c 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639
+tcmalloc: large alloc 4294975488 bytes == 0x5556de2d2000 @  0x7f1414f35887 0x5555b7d283a3 0x5555b7d61feb 0x7f1417f2a8da 0x7f1417f2b1fa 0x5555b8dcff2c 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639
+tcmalloc: large alloc 8589942784 bytes == 0x5557dead4000 @  0x7f1414f35887 0x5555b7d283a3 0x5555b7d61feb 0x7f1417f2a8da 0x7f1417f2b1fa 0x5555b8dcff2c 0x5555b8dce639 0x5555b8dcfe8a 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639 0x5555b8dcfd6b 0x5555b8dce639
+tcmalloc: large alloc 6478897152 bytes == 0x5555e22c6000 @  0x7f1414f35887 0x5555b7d2a04c 0x5555b7d3318e 0x5555b7d26867 0x5555b7d3417f 0x5555b7d3f37d 0x5555b7d52d35 0x5555b7d9d956 0x5555b7d58738 0x5555b7d59259 0x5555b7cdf831 0x7f1412cefc87 0x5555b7d228ba
+>>>JFS exec time: 2.253009e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:141: FloatPointCheck: Common Accuracy found !
+gsl: bessel_Kn.c:208: ERROR: overflow
+Default GSL error handler invoked.
+>>>JFS exec time: 8.218270e+02 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.867680e+04 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.603836e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_Kn.c:223: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.578036e+02 ms
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.505541e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.490222e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.395906e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.446624e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.398669e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.443340e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.493723e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.472733e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.375483e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.498341e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.486769e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.382231e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.535609e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.507395e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.419346e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.371941e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.491323e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.127120e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.483323e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.440708e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.205718e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.487655e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 c)) at bessel_K0.c:157 18
->>>JFS exec time: 3.144301e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152395e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.146725e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.056605e+02 ms
+KLEE: WARNING ONCE: calling external: hypot(4607182418800017408, (FDiv w64 (ReadLSB w64 0 c)
+           4674736138332667904)) at bessel.c:398 10
+gsl: exp.c:110: ERROR: overflow
+Default GSL error handler invoked.
+>>>JFS exec time: 5.496959e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:159: FloatPointCheck: FDiv Accuracy found !
+gsl: exp.c:113: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 1.478299e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: exp.c:110: ERROR: overflow
+Default GSL error handler invoked.
+>>>JFS exec time: 1.487206e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.495691e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.487405e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.514404e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.484756e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.386092e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.284343e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.699475e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_Kn.c:193: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.139319e+04 ms
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.507272e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.849800e+02 ms
+>>>JFS exec time: 5.273713e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.139397e+04 ms
+>>>JFS exec time: 1.509136e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.503556e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.491773e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.505578e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.370433e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.148033e+04 ms
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.488514e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147028e+04 ms
+>>>JFS exec time: 1.379561e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.370493e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.385658e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.384386e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.395646e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.509708e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.339858e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.283084e+02 ms
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.487004e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.677954e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:150: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.148699e+04 ms
+gsl: exp.c:110: ERROR: overflow
+Default GSL error handler invoked.
+>>>JFS exec time: 1.476334e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.476869e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.999337e+02 ms
+>>>JFS exec time: 5.464331e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148935e+04 ms
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.486535e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.146429e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.900137e+02 ms
+>>>JFS exec time: 5.523056e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:150: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.046652e+02 ms
+>>>JFS exec time: 1.496201e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.371926e+03 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.332242e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 7.909529e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150648e+04 ms
+(warning Failed to load model from file due to size mismatch.expected:16 actual:0 bytes)>>>JFS exec time: 1.480129e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156626e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.925920e+02 ms
+>>>JFS exec time: 1.494306e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 1.487239e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.174977e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.095919e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 2.044994e+00 ms
+KLEE: WARNING: FUZZ: JFS solving UNSAT and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.389533e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:150: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.198206e+02 ms
+gsl: bessel_Kn.c:171: ERROR: domain error
+Default GSL error handler invoked.
+>>>JFS exec time: 5.374825e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150077e+04 ms
+(warning Failed to load model from file due to size mismatch.expected:8 actual:0 bytes)>>>JFS exec time: 1.489242e+03 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.136990e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.136101e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.141721e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149446e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.252503e+02 ms
+>>>JFS exec time: 5.118819e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ./cheb_eval.c:11: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.661402e+02 ms
+gsl: bessel_Kn.c:171: ERROR: domain error
+Default GSL error handler invoked.
+>>>JFS exec time: 5.478661e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.155317e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.137177e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.139423e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156473e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154832e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152372e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.161643e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.165960e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.134899e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.148652e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.135338e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147015e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.143712e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151371e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149448e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.164566e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.137102e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138750e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147863e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.137537e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.132457e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.144654e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149061e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.135990e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.144971e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.158874e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.157088e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153990e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: ./cheb_eval.c:18: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.153006e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.132140e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.731098e+02 ms
+gsl: bessel_Kn.c:171: ERROR: domain error
+Default GSL error handler invoked.
+>>>JFS exec time: 5.390151e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.478404e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.136669e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138809e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149695e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: ./cheb_eval.c:18: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.138283e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138314e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.373638e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.364328e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148468e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149098e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.146754e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.150817e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147426e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152646e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.145544e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151440e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.419647e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ./cheb_eval.c:19: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 7.070311e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150084e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.139906e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.175100e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ./cheb_eval.c:19: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.480104e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.145220e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138705e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.501864e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.639107e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148682e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.145794e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.411241e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ./cheb_eval.c:18: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.443335e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.155162e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.155649e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.013905e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.419178e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.141316e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.141273e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154628e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151070e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.140904e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.239502e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ./cheb_eval.c:19: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.772570e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.144895e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.148342e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.158459e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 9.089297e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148202e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.150838e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.678884e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 7.842935e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150503e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149785e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.969215e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 7.283381e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.145351e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.133132e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.643983e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 7.345413e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.145116e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.135483e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.798189e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 7.001806e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.151855e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.136556e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.353406e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ./cheb_eval.c:19: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.902068e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.146427e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.145304e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.445781e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.949937e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.146653e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138182e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.977798e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.143199e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.417815e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_K0.c:159: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.136897e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.142585e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.055145e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 9.179959e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148613e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149440e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153110e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.144594e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.145799e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147974e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147113e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.144291e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149898e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138734e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.136004e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.138770e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.133399e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154745e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.148606e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151153e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.148821e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: HaltTimer invoked
-KLEE: halting execution, dumping remaining states
+gsl: bessel_Kn.c:171: ERROR: domain error
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 2095
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 41
-KLEE: done: generated tests = 22
-Total exec time: 3.636135e+06 ms
-KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
-
-KLEE: ctrl-c detected, requesting interpreter to halt.
-KLEE: WARNING: KLEE: watchdog exiting (no child)
-
+KLEE: done: total instructions = 1467437
+KLEE: done: completed paths = 5
+KLEE: done: partially completed paths = 18
+KLEE: done: generated tests = 8
+Total exec time: 2.352594e+06 ms

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3411856
+KLEE: KLEE: WATCHDOG: watching 7031
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_plain_integrate&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_plain_integrate&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,64 +9,42 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94650942855840) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94841270426256) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140265969358272, 94650942782208, 94650942725136, 52, 94650942721192, 94650943586176) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139833463801472, 94841270311776, 94841270262792, 52, 94841270258848, 94841271140320) at stream.c:46 1
 gsl: plain.c:52: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(140265969358496) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139833463801696) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.048868e+01 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: plain.c:55: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 3.719000e-03 ms
->>>Synergy-dreal exec time: 8.102390e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.307105e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: plain.c:55: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 4.921000e-03 ms
->>>Synergy-dreal exec time: 5.052440e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.034508e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: plain.c:55: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 4.604000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 9.025512e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.126671e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: plain.c:52: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 5.101369e+02 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 4.140000e-03 ms
->>>Synergy-dreal exec time: 8.140830e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.527290e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 9.068000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.656000e-03 ms
->>>Synergy-dreal exec time: 1.839100e-02 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.374000e-03 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.676522e+02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: plain.c:52: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 7.481662e+02 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 3.703581e+02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: plain.c:58: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 1.397246e+02 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_monte_plain_integrate_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 2.161045e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: plain.c:58: ERROR: Range of integration is too large, please rescale
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 27104
+KLEE: done: total instructions = 27161
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 10
-KLEE: done: generated tests = 4
-Total exec time: 1.064566e+04 ms
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 1
+Total exec time: 8.487939e+03 ms

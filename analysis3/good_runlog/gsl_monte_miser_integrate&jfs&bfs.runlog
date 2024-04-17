@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2782275
+KLEE: KLEE: WATCHDOG: watching 48741
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_miser_integrate&jfs&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_miser_integrate&jfs&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,56 +9,34 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94626211953312) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94248501869200) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140536683361728, 94626211879648, 94626211822600, 86, 94626211818664, 94626212683424) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139995912259200, 94248501754688, 94248501705728, 86, 94248501701792, 94248502583040) at stream.c:46 1
 gsl: miser.c:86: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(140536683361952) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139995912259424) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.528666e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.844794e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: miser.c:89: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.346400e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: miser.c:89: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.790901e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: miser.c:89: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.737228e+02 ms
+>>>JFS exec time: 3.979413e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: miser.c:86: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>JFS exec time: 9.878041e+02 ms
+>>>JFS exec time: 9.080394e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: miser.c:92: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
->>>JFS exec time: 7.392045e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 7.167855e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.728668e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.130479e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.302044e+02 ms
+>>>JFS exec time: 4.932390e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: miser.c:86: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>JFS exec time: 1.269217e+03 ms
+>>>JFS exec time: 4.396922e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: miser.c:92: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 27417
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 11
-KLEE: done: generated tests = 4
-Total exec time: 1.658759e+04 ms
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 1
+Total exec time: 1.532774e+04 ms

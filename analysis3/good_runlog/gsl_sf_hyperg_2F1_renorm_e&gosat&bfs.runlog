@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1672948
+KLEE: KLEE: WATCHDOG: watching 32270
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_hyperg_2F1_renorm_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_hyperg_2F1_renorm_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,635 +9,208 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>GoSat-gosat exec time: 3.000530e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000357e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000360e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:828: FloatPointCheck: Common Accuracy found !
+KLEE: WARNING ONCE: calling external: fprintf(140052537419392, 94013827038304, 94013827017200, 1205, 94013827017104, 94013824188048) at stream.c:46 1
+gsl: gamma.c:1205: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140052537419616) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000348e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000456e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000375e+04 ms
+>>>GoSat-gosat exec time: 4.320353e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:829: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000548e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000356e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000359e+04 ms
+gsl: gamma.c:1205: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 4.570592e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:830: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000493e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000445e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000610e+04 ms
+gsl: gamma.c:1205: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 5.171118e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:1187: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.966017e+00 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 7.158993e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
->>>GoSat-gosat exec time: 3.000506e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000693e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000509e+04 ms
+KLEE: WARNING ONCE: calling external: sqrt(0) at hyperg_2F1.c:103 46
+>>>GoSat-gosat exec time: 7.169427e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:1193: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000340e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000552e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000548e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 4.542622e+00 ms
+>>>GoSat-gosat exec time: 7.757694e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000635e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000801e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 5.136645e+02 ms
+gsl: exp.c:257: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 8.156611e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 2.790287e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.775965e+01 ms
+>>>GoSat-gosat exec time: 4.551446e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000830e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000846e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 6.108643e+01 ms
+gsl: gamma.c:1205: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 5.217284e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.783733e+01 ms
+gsl: gamma.c:1249: ERROR: x too large to extract fraction part
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.116364e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000899e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000878e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 4.708069e+02 ms
+>>>GoSat-gosat exec time: 1.185699e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.648619e+01 ms
+>>>GoSat-gosat exec time: 8.028901e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001426e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000633e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 6.494243e+01 ms
+gsl: hyperg_2F1.c:773: ERROR: error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 8.385966e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.785529e+01 ms
+>>>GoSat-gosat exec time: 5.350090e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000892e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000605e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.372403e+02 ms
+>>>GoSat-gosat exec time: 1.781900e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.620320e+01 ms
+>>>GoSat-gosat exec time: 1.254794e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000617e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000862e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.907409e+01 ms
+>>>GoSat-gosat exec time: 8.045861e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.691458e+01 ms
+gsl: exp.c:257: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 8.580171e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000632e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000639e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.645408e+02 ms
+gsl: hyperg_2F1.c:773: ERROR: error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 6.993847e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.656466e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 7.564973e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000879e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000661e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.874194e+01 ms
+>>>GoSat-gosat exec time: 8.723451e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.692988e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000636e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000866e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.527988e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.894243e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000631e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000766e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 4.602356e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.411174e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000821e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000644e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.410398e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.572191e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
 >>>GoSat-gosat exec time: 3.000918e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000635e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.415674e+01 ms
+>>>GoSat-gosat exec time: 1.106804e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.657555e+01 ms
+>>>GoSat-gosat exec time: 1.549246e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000664e+04 ms
+>>>GoSat-gosat exec time: 3.001227e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001362e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.441412e+02 ms
+>>>GoSat-gosat exec time: 1.739656e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.651226e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.805047e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000645e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000873e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.510896e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.488354e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.867144e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.534311e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000982e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000780e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 9.415489e+01 ms
+gsl: gamma.c:1205: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 2.004410e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.791887e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 2.384712e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000926e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000881e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000654e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000919e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000650e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.141539e+02 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 2.134173e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.121967e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.907504e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000662e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000739e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.468466e+01 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 2.014538e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.878138e+01 ms
+gsl: gamma.c:1205: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 2.896892e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000662e+04 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.002245e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000813e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.850892e+01 ms
+>>>GoSat-gosat exec time: 2.575899e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:743: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.503332e+01 ms
+>>>GoSat-gosat exec time: 3.002457e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.002600e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.002672e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.002753e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 5.294170e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000613e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000730e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 8.042407e+01 ms
+gsl: exp.c:542: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.012306e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:746: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.699283e+01 ms
+gsl: hyperg_2F1.c:685: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.096805e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000606e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000876e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.042758e+03 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000595e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000697e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000938e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 4.841474e+01 ms
+gsl: hyperg_2F1.c:685: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 4.511315e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:746: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.986172e+01 ms
+>>>GoSat-gosat exec time: 3.368457e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000885e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001009e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000870e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000931e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000904e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.203959e+01 ms
+gsl: exp.c:542: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.521213e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:746: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.366432e+01 ms
+gsl: exp.c:542: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.695361e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001017e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000972e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.967945e+02 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.781271e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:748: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000905e+04 ms
+gsl: exp.c:254: ERROR: overflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.004171e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000824e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.832587e+01 ms
+>>>GoSat-gosat exec time: 5.207296e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000991e+04 ms
+gsl: exp.c:257: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.005227e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000699e+04 ms
+>>>GoSat-gosat exec time: 3.000750e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000704e+04 ms
+>>>GoSat-gosat exec time: 3.000793e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000701e+04 ms
+>>>GoSat-gosat exec time: 3.000795e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000659e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000602e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.385341e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000831e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000847e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 9.906954e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000622e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000726e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 8.593405e+01 ms
+>>>GoSat-gosat exec time: 1.656286e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:648: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.519928e+01 ms
+gsl: hyperg_2F1.c:685: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.059989e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000826e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000831e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 6.424222e+01 ms
+gsl: hyperg_2F1.c:685: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.133955e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:649: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.601592e+01 ms
+gsl: hyperg_2F1.c:685: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.001043e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001161e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001235e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001303e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001369e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.661348e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000589e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000629e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 8.513919e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:650: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.466917e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000840e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000636e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.006170e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:660: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 2.485865e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000499e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.003101e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.357466e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.838524e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000810e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001096e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.293452e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000797e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001261e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001268e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000797e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001538e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000760e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000807e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001205e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.745314e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:630: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000616e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000586e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000596e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.165530e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000806e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000769e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.086712e+03 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:630: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.124992e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000817e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001090e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000780e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001338e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001061e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 5.583023e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000786e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001118e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.170223e+03 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:630: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.913734e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000790e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000792e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 2.838097e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: hyperg_2F1.c:630: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.913869e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000773e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000868e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.303992e+03 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.001121e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000784e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
-KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
-
 KLEE: ctrl-c detected, requesting interpreter to halt.
->>>GoSat-gosat exec time: 3.000789e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: HaltTimer invoked
 KLEE: halting execution, dumping remaining states
 
-KLEE: done: total instructions = 418
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 41
-KLEE: done: generated tests = 41
-Total exec time: 3.658946e+06 ms
+KLEE: done: total instructions = 138680
+KLEE: done: completed paths = 15
+KLEE: done: partially completed paths = 660
+KLEE: done: generated tests = 20
+Total exec time: 2.764875e+06 ms

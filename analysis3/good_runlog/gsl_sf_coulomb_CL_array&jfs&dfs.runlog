@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1551154
+KLEE: KLEE: WATCHDOG: watching 19430
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_CL_array&jfs&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_CL_array&jfs&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,456 +9,425 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>JFS exec time: 8.364452e+02 ms
+KLEE: WARNING ONCE: calling external: sqrt(4607182418800017408) at coulomb.c:112 5
+>>>JFS exec time: 3.741176e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:51: FloatPointCheck: Common Overflow found !
+KLEE: WARNING ONCE: calling external: hypot((FAdd w64 (ReadLSB w64 0 a)
+           4607182418800017408), (ReadLSB w64 0 c)) at coulomb.c:134 21
+KLEE: ERROR: coulomb.c:134: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 7.337290e+02 ms
+>>>JFS exec time: 4.987465e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:51: FloatPointCheck: Common Underflow found !
+>>>JFS exec time: 5.051928e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140411172992640, 93978903821248, 93978903800272, 351, 93978903800168, 93978900987552) at stream.c:46 1
+gsl: exp.c:351: ERROR: overflow
+KLEE: WARNING ONCE: calling external: fflush(140411172992864) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 7.157896e+02 ms
+>>>JFS exec time: 4.971607e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:51: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.307275e+02 ms
+>>>JFS exec time: 5.203703e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.703834e+03 ms
+>>>JFS exec time: 8.524055e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:84: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.149957e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.181400e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:84: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.557054e+02 ms
+>>>JFS exec time: 4.008451e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 2.357380e+03 ms
+>>>JFS exec time: 4.006382e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:84: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.322720e+02 ms
+>>>JFS exec time: 3.405891e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:84: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.517625e+02 ms
+>>>JFS exec time: 5.110415e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:84: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.139132e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.139934e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.565007e+02 ms
+>>>JFS exec time: 5.017216e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.186849e+03 ms
+>>>JFS exec time: 3.594675e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:89: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.152401e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.249088e+02 ms
+>>>JFS exec time: 4.992470e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:89: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.900458e+02 ms
+>>>JFS exec time: 4.978784e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.841294e+04 ms
+>>>JFS exec time: 5.890374e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:85: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.153770e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.437697e+02 ms
+>>>JFS exec time: 5.059908e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:85: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.028182e+02 ms
+>>>JFS exec time: 5.098918e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150669e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151133e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.049959e+02 ms
+>>>JFS exec time: 5.465892e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:1118: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.148368e+02 ms
+>>>JFS exec time: 5.031165e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150027e+04 ms
+gsl: gamma.c:1180: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 3.145362e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.137997e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152885e+04 ms
+>>>JFS exec time: 3.151020e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.612685e+02 ms
+>>>JFS exec time: 5.809266e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:1129: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.177933e+02 ms
+>>>JFS exec time: 5.753252e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.154711e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.142679e+04 ms
+>>>JFS exec time: 7.524677e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.145932e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153670e+04 ms
+>>>JFS exec time: 3.149701e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156492e+04 ms
+>>>JFS exec time: 3.156479e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.160823e+04 ms
+>>>JFS exec time: 3.147169e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.328902e+02 ms
+>>>JFS exec time: 4.946623e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:906: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.185814e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.154428e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.141501e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.651402e+02 ms
+>>>JFS exec time: 5.739780e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:906: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.190648e+02 ms
+>>>JFS exec time: 9.125495e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150238e+04 ms
+>>>JFS exec time: 3.138951e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151462e+04 ms
+>>>JFS exec time: 3.148504e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.168722e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:906: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.412187e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.155727e+04 ms
+>>>JFS exec time: 3.149983e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.139285e+04 ms
+>>>JFS exec time: 3.148566e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.130245e+02 ms
+>>>JFS exec time: 7.965915e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:907: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.308402e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.147702e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.135925e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.291295e+02 ms
+>>>JFS exec time: 1.023779e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:907: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.695933e+02 ms
+>>>JFS exec time: 4.542125e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.151717e+04 ms
+>>>JFS exec time: 3.149306e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.148976e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152247e+04 ms
+>>>JFS exec time: 3.149477e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152349e+04 ms
+>>>JFS exec time: 3.148576e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151119e+04 ms
+>>>JFS exec time: 3.148558e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153095e+04 ms
+>>>JFS exec time: 3.148730e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154443e+04 ms
+>>>JFS exec time: 3.151120e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.161745e+04 ms
+>>>JFS exec time: 3.148229e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.178574e+04 ms
+>>>JFS exec time: 3.136917e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.029981e+03 ms
+>>>JFS exec time: 2.640077e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:908: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.151214e+04 ms
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 3.147797e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152694e+04 ms
+>>>JFS exec time: 3.454837e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 3.148708e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.027879e+02 ms
+>>>JFS exec time: 2.751765e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148617e+04 ms
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 3.145872e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.144334e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.158985e+04 ms
+>>>JFS exec time: 3.144080e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.100374e+02 ms
+>>>JFS exec time: 5.059297e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:914: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.229277e+02 ms
+>>>JFS exec time: 5.488221e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.149815e+04 ms
+>>>JFS exec time: 1.140931e+04 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.146951e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.157033e+04 ms
+>>>JFS exec time: 3.147094e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.108479e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:914: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 7.598725e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.148270e+04 ms
+>>>JFS exec time: 3.145436e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.155632e+04 ms
+>>>JFS exec time: 3.146407e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.153535e+02 ms
+>>>JFS exec time: 5.164286e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:914: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 7.530854e+02 ms
+>>>JFS exec time: 4.239953e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.138590e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.145250e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.874605e+02 ms
+>>>JFS exec time: 2.317500e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:914: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.055393e+03 ms
+>>>JFS exec time: 3.146788e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.419941e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.146456e+04 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 3.145434e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146744e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151978e+04 ms
+>>>JFS exec time: 3.147030e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.269687e+02 ms
+>>>JFS exec time: 1.474171e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:915: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.120216e+02 ms
+>>>JFS exec time: 9.463240e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:915: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.151625e+04 ms
+>>>JFS exec time: 7.104027e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.147557e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151569e+04 ms
+>>>JFS exec time: 3.137924e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.768923e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.103255e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.153735e+04 ms
+>>>JFS exec time: 3.147801e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151510e+04 ms
+>>>JFS exec time: 3.145763e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.941947e+03 ms
+>>>JFS exec time: 5.426300e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:915: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.205226e+03 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 1.009392e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:915: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.150763e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.155919e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.092260e+03 ms
+>>>JFS exec time: 6.139732e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.447821e+03 ms
+>>>JFS exec time: 2.131612e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.164541e+04 ms
+>>>JFS exec time: 3.146381e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.146106e+04 ms
+>>>JFS exec time: 3.147248e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156597e+04 ms
+>>>JFS exec time: 3.133250e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: gamma.c:915: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.150345e+04 ms
+>>>JFS exec time: 3.145920e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.173623e+04 ms
+>>>JFS exec time: 3.145717e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.209993e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 2.781276e+04 ms
+>>>JFS exec time: 3.145959e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.304697e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150854e+04 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 3.148331e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.136536e+04 ms
+>>>JFS exec time: 3.132848e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149353e+04 ms
+>>>JFS exec time: 3.145455e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: gamma.c:915: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.163974e+04 ms
+>>>JFS exec time: 3.146521e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.144371e+04 ms
+>>>JFS exec time: 3.144575e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 2.432162e+04 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.149450e+04 ms
+>>>JFS exec time: 3.146331e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.565058e+02 ms
+>>>JFS exec time: 7.216202e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.152651e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.165706e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.776842e+02 ms
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 5.429275e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:709: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.127583e+02 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 1.168065e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.151494e+04 ms
+>>>JFS exec time: 6.195487e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.147197e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.147427e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152937e+04 ms
+>>>JFS exec time: 3.148356e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.629995e+02 ms
+>>>JFS exec time: 3.146810e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146023e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 6.209075e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.076110e+03 ms
+>>>JFS exec time: 1.110041e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.150940e+04 ms
+>>>JFS exec time: 1.103328e+04 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.146816e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156807e+04 ms
+>>>JFS exec time: 3.147746e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.143386e+04 ms
+>>>JFS exec time: 3.144754e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151301e+04 ms
+>>>JFS exec time: 3.143950e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153974e+04 ms
+>>>JFS exec time: 3.147134e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.631313e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:1149: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.141408e+04 ms
+>>>JFS exec time: 3.146322e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.844601e+02 ms
+>>>JFS exec time: 1.373463e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.142982e+04 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 3.147454e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146442e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151149e+04 ms
+>>>JFS exec time: 3.137575e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151950e+04 ms
+>>>JFS exec time: 3.144842e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151904e+04 ms
+>>>JFS exec time: 3.145585e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.150998e+04 ms
+>>>JFS exec time: 3.146566e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156174e+04 ms
+>>>JFS exec time: 5.976733e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 5.906240e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 6.301697e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 5.286207e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 2.190955e+04 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.143614e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153830e+04 ms
+>>>JFS exec time: 3.146405e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153253e+04 ms
+>>>JFS exec time: 3.146580e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.686238e+02 ms
+>>>JFS exec time: 3.145753e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.362200e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 9.693913e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:712: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.147745e+04 ms
+>>>JFS exec time: 7.345750e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.147875e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154861e+04 ms
+>>>JFS exec time: 3.147885e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154712e+04 ms
+>>>JFS exec time: 3.147147e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 9.550235e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:712: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.157632e+04 ms
+>>>JFS exec time: 3.148021e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.144229e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.154818e+04 ms
+>>>JFS exec time: 3.145928e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.930246e+02 ms
+>>>JFS exec time: 2.422662e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.159690e+04 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+>>>JFS exec time: 3.146662e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151958e+04 ms
+>>>JFS exec time: 3.147503e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.039121e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.156652e+04 ms
+>>>JFS exec time: 3.146999e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.151427e+04 ms
+>>>JFS exec time: 3.147269e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 8.534208e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.005183e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.153367e+04 ms
+>>>JFS exec time: 3.147122e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.144524e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153614e+04 ms
+>>>JFS exec time: 6.225640e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+>>>JFS exec time: 3.144588e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.084995e+03 ms
+>>>JFS exec time: 5.227047e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 5.315284e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.288202e+03 ms
+>>>JFS exec time: 1.259996e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.154067e+04 ms
+>>>JFS exec time: 3.137909e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153066e+04 ms
+>>>JFS exec time: 3.145818e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.453352e+03 ms
+>>>JFS exec time: 3.147468e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146816e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.586403e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 5.536249e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 2.712644e+04 ms
+>>>JFS exec time: 6.323632e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.152139e+04 ms
+>>>JFS exec time: 3.149493e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.156285e+04 ms
+>>>JFS exec time: 3.146102e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147870e+04 ms
+>>>JFS exec time: 3.148362e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: gamma.c:742: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.152802e+04 ms
+>>>JFS exec time: 3.147654e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.141848e+04 ms
+>>>JFS exec time: 3.147088e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 2.795703e+04 ms
+>>>JFS exec time: 1.469424e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.151956e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.288310e+03 ms
+>>>JFS exec time: 7.319708e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 1.565950e+04 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.151562e+04 ms
+>>>JFS exec time: 3.147433e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.150219e+04 ms
+>>>JFS exec time: 3.147219e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.149573e+04 ms
+>>>JFS exec time: 3.144906e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152183e+04 ms
+>>>JFS exec time: 3.147212e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 6.167545e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 7.622549e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.915007e+03 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 3.147452e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.147270e+04 ms
+>>>JFS exec time: 3.147937e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.152901e+04 ms
+>>>JFS exec time: 3.148517e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.153917e+04 ms
+>>>JFS exec time: 3.137000e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.135624e+04 ms
+>>>JFS exec time: 3.144435e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.369960e+03 ms
+>>>JFS exec time: 8.450794e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:933: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.252386e+03 ms
+>>>JFS exec time: 6.651966e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.146684e+04 ms
+>>>JFS exec time: 3.149254e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.142801e+04 ms
+>>>JFS exec time: 3.147664e+04 ms
 KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.223580e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: gamma.c:933: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
-KLEE: HaltTimer invoked
-KLEE: halting execution, dumping remaining states
+>>>JFS exec time: 3.145185e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.148779e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.144783e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
 KLEE: ctrl-c detected, requesting interpreter to halt.
+>>>JFS exec time: 3.146076e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+KLEE: halting execution, dumping remaining states
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
 
-KLEE: done: total instructions = 402
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 55
-KLEE: done: generated tests = 46
-Total exec time: 3.639454e+06 ms
+sh: 1: gdb: not found
+
+KLEE: done: total instructions = 88261
+KLEE: done: completed paths = 42
+KLEE: done: partially completed paths = 48
+KLEE: done: generated tests = 17
+Total exec time: 3.674104e+06 ms

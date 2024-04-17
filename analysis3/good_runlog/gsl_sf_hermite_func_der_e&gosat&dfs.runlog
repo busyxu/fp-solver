@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 607137
+KLEE: KLEE: WATCHDOG: watching 45461
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_hermite_func_der_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_hermite_func_der_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,52 +10,34 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: calling external: sqrt(4610661241675116395) at hermite.c:372 27
->>>GoSat-Z3 exec time: 1.821190e+01 ms
->>>GoSat-Z3 exec time: 1.845779e+01 ms
->>>GoSat-Z3 exec time: 2.204137e+01 ms
->>>GoSat-Z3 exec time: 2.326556e+01 ms
->>>GoSat-Z3 exec time: 2.200157e+01 ms
->>>GoSat-Z3 exec time: 2.315668e+01 ms
->>>GoSat-Z3 exec time: 1.715182e+01 ms
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000627e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 9.159161e+00 ms
+>>>GoSat-Z3 exec time: 1.603597e+01 ms
+>>>GoSat-gosat exec time: 3.493893e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 1.371950e+01 ms
 KLEE: WARNING: GOSAT: Z3 evaluate SUCCESS !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000589e+04 ms
+>>>GoSat-gosat exec time: 5.741241e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 6.064327e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000498e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000403e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000409e+04 ms
+>>>GoSat-gosat exec time: 5.205160e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000470e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000363e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.331303e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(139911186097792, 94681245612800, 94681246982432, 1183, 94681245583728, 94681246982416) at stream.c:46 1
+gsl: hermite.c:1183: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139911186098016) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-gosat exec time: 3.628249e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: hermite.c:1183: ERROR: domain error
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 149
-KLEE: done: completed paths = 2
-KLEE: done: partially completed paths = 0
-KLEE: done: generated tests = 2
-Total exec time: 1.931224e+05 ms
+KLEE: done: total instructions = 308
+KLEE: done: completed paths = 3
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 4
+Total exec time: 4.202054e+04 ms

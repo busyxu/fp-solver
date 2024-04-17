@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3416025
+KLEE: KLEE: WATCHDOG: watching 18898
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qagi&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qagi&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,26 +10,46 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139966592636352, 94444388181472, 94444388112680, 240, 94444388108960, 94444388660224) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139982681458304, 94247720166976, 94247720098080, 240, 94247720094360, 94247720661760) at stream.c:46 1
 gsl: qags.c:240: ERROR: tolerance cannot be achieved with given epsabs and epsrel
-KLEE: WARNING ONCE: calling external: fflush(139966592636576) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139982681458528) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000447e+04 ms
+>>>GoSat-gosat exec time: 4.089323e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
 gsl: qags.c:232: ERROR: iteration limit exceeds available workspace
 Default GSL error handler invoked.
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000615e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000386e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.735334e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt(4607182418800017408) at [no debug info]
+>>>GoSat-gosat exec time: 7.660251e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.000582e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000614e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000727e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000698e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000748e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000667e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000738e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000808e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000863e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000849e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000906e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 481
-KLEE: done: completed paths = 0
+KLEE: done: total instructions = 16706
+KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 1
-Total exec time: 9.894488e+04 ms
+KLEE: done: generated tests = 3
+Total exec time: 3.412027e+05 ms

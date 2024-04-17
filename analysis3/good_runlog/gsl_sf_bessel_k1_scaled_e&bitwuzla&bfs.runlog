@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3396254
+KLEE: KLEE: WATCHDOG: watching 52086
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k1_scaled_e&bitwuzla&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k1_scaled_e&bitwuzla&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -13,99 +13,31 @@ KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(139829030319552, 94051831851552, 94051832866352, 105, 94051831730568, 94051832866336) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139996862260864, 94088192756352, 94088193754656, 105, 94088192627072, 94088193754640) at stream.c:46 1
 gsl: bessel_k.c:105: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(139829030319776) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139996862261088) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.011254e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_bessel_k1_scaled_e_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_bessel_k1_scaled_e_bfs/' 已成功创建。
+>>>Bitwuzla exec time: 6.809340e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.425139e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.469522e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.826063e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 4.522893e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.088648e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.423987e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 5.993530e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.195721e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.196920e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.431632e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.000495e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.757435e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.198879e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.725761e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.696154e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.553737e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.509998e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.016533e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 9.009649e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.278671e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 2.359032e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 4.884492e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.603398e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.661996e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:112: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.237604e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:112: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 4.538408e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.958029e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_bessel_k1_scaled_e_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_bessel_k1_scaled_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 7.606801e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:108: ERROR: overflow
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 3.763509e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_bessel_k1_scaled_e_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_bessel_k1_scaled_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.819099e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:113: ERROR: underflow
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 237
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 14
-KLEE: done: generated tests = 13
-Total exec time: 5.073613e+04 ms
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 2
+Total exec time: 1.963053e+04 ms

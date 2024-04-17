@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3871522
+KLEE: KLEE: WATCHDOG: watching 29638
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_sqrt_real&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_complex_sqrt_real&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,32 +10,13 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 x)) at math.c:319 7
->>>Synergy-Z3 exec time: 8.753489e+00 ms
->>>Synergy-dreal exec time: 1.769770e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 7.365538e+00 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_complex_sqrt_real_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_complex_sqrt_real_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.545913e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.776000e-03 ms
->>>Synergy-dreal exec time: 3.732830e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.061000e-03 ms
->>>Synergy-dreal exec time: 1.065030e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 5.933956e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: math.c:323: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 4.532000e-03 ms
->>>Synergy-dreal exec time: 1.279100e-02 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.289000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 3.647000e-03 ms
->>>Synergy-dreal exec time: 1.477880e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
 
 KLEE: done: total instructions = 570
 KLEE: done: completed paths = 2
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 3
-Total exec time: 8.788449e+03 ms
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 2
+Total exec time: 1.168175e+04 ms

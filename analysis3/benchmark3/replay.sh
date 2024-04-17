@@ -1,9 +1,9 @@
 # Basic tools path
-LIBM_PATH="/home/aaa/klee-uclibc/lib/libm.a"
+LIBM_PATH="/home/aaa/fp-solver/klee-uclibc/lib/libm.a"
 #KLEE_PATH="/home/aaa/klee-2.3"
-GSL_PATH="/home/aaa/gsl"
-GSL_RUNTIME_PATH="/home/aaa/gsl_runtime_lib"
-KLEE_PATH="/home/aaa/klee-float-solver"
+GSL_PATH="/home/aaa/fp-solver/gsl"
+GSL_RUNTIME_PATH="/home/aaa/fp-solver/gsl_runtime_lib"
+KLEE_PATH="/home/aaa/fp-solver/klee-float-solver"
 
 ## KLEE : Sometimes must be defined by user ####
 KLEE_EXE_PATH=${KLEE_PATH}"/build/bin/klee"
@@ -69,12 +69,12 @@ touch ${result_file} ${cover_trend_file}
 export LD_LIBRARY_PATH=${GSL_CBLAS_PATH}:${GSL_LIBS_PATH}:${GSL_RUNTIME_PATH}
 
 # get all dictionary
-all_dicts=($(ls -d */))
+#all_dicts=($(ls -d */))
 
 # or we can manual define which dictionary to work:
 #all_dicts=("blas")
 #all_dicts=("cdf")
-#all_dicts=("compAndopt")
+all_dicts=("compAndopt")
 #all_dicts=("complex")
 #all_dicts=("diffAndInteg")
 #all_dicts=("elementary")
@@ -167,7 +167,7 @@ do
     if [ -f ${driver_name} ]; then
       echo "execution driver_name is exit"
     else
-      /home/aaa/llvm-6/install/bin/clang -fprofile-arcs -ftest-coverage \
+      /home/aaa/fp-solver/llvm-6/install/bin/clang -fprofile-arcs -ftest-coverage \
           -I${KLEE_HEADFILE_PATH}  -I${GSL_HEADFILE_PATH} \
           -L${GSL_RUNTIME_PATH}     -lgcov_preload \
           -L${GSL_CBLAS_PATH}       -lgslcblas \
@@ -227,11 +227,11 @@ do
         ;;
       gsl_fit_*)
         gcov_file=${gcov_file_fit}
-        rm -f ${GSL_FIT_PATH}/*.gcda ${GSL_FIT_PATH}/*.gcov
+       # rm -f ${GSL_FIT_PATH}/*.gcda ${GSL_FIT_PATH}/*.gcov
         ;;
       gsl_min_*)
         gcov_file=${gcov_file_min}
-        rm -f ${GSL_MIN_pATH}/*.gcda ${GSL_MIN_pATH}/*.gcov
+       # rm -f ${GSL_MIN_pATH}/*.gcda ${GSL_MIN_pATH}/*.gcov
         ;;
       gsl_integration_*)
         gcov_file=${gcov_file_integration}
@@ -346,7 +346,7 @@ do
 #      touch ${tempout}
        touch temp.out
 #      echo "=================>3 point:"${gcov_file_path}
-      gcov_res=`/home/aaa/llvm-6/install/bin/llvm-cov gcov ${gcov_file_path}`
+      gcov_res=`/home/aaa/fp-solver/llvm-6/install/bin/llvm-cov gcov ${gcov_file_path}`
 #      obj_gcov=${rdict%/}"_"${python_res}".gcov"
 #      cp ${gcov_res_path} ${obj_gcov}
 #      if [ $? -eq 0 ]; then
@@ -376,7 +376,7 @@ do
 #    touch ${tempout}
     touch temp.out
     # creating .gcov
-    gcov_res=`/home/aaa/llvm-6/install/bin/llvm-cov gcov ${gcov_file_path}`
+    gcov_res=`/home/aaa/fp-solver/llvm-6/install/bin/llvm-cov gcov ${gcov_file_path}`
 
     echo "======= "${gcov_res} > temp.out
 

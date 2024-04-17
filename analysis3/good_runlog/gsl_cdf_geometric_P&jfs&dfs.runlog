@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 439154
+KLEE: KLEE: WATCHDOG: watching 9191
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_geometric_P&jfs&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/cdf/cdf&gsl_cdf_geometric_P&jfs&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,40 +9,14 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>JFS exec time: 3.132103e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.129782e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.129852e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.178881e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.170657e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.013572e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.084907e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exponential.c:40: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.062980e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 KLEE: WARNING ONCE: calling external: expm1((FDiv w64 (FSub w64 9223372036854775808
                      (SIToFP w64 (ReadLSB w32 0 x)))
            (ReadLSB w64 0 mu))) at exponential.c:40 18
->>>JFS exec time: 5.999015e+02 ms
+>>>JFS exec time: 4.981078e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 
 KLEE: done: total instructions = 45
 KLEE: done: completed paths = 2
-KLEE: done: partially completed paths = 5
-KLEE: done: generated tests = 7
-Total exec time: 1.064497e+05 ms
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 2
+Total exec time: 1.047677e+04 ms

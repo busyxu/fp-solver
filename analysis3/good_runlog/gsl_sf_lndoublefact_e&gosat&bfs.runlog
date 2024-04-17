@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3165363
+KLEE: KLEE: WATCHDOG: watching 4457
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_lndoublefact_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_lndoublefact_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,19 +10,23 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: flushing 7152 bytes on read, may be slow and/or crash: MO11564[7152] allocated at global:doub_fact_table
->>>GoSat-Z3 exec time: 3.009622e+03 ms
->>>GoSat-gosat exec time: 8.118000e-03 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 1.142500e+04 ms
->>>GoSat-Z3 exec time: 1.365274e+04 ms
->>>GoSat-gosat exec time: 9.990000e-04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 3.026257e+04 ms
->>>GoSat-gosat exec time: 4.622740e+00 ms
+>>>GoSat-gosat exec time: 5.493707e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 1.356572e+01 ms
+>>>GoSat-gosat exec time: 4.027802e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 1.281883e+01 ms
+>>>GoSat-gosat exec time: 3.000521e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 7.894000e-03 ms
+>>>GoSat-gosat exec time: 3.000661e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 7.250000e-03 ms
+>>>GoSat-gosat exec time: 3.000721e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 44
-KLEE: done: completed paths = 1
+KLEE: done: total instructions = 342
+KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 0
-KLEE: done: generated tests = 1
-Total exec time: 6.857755e+04 ms
+KLEE: done: generated tests = 2
+Total exec time: 1.008743e+05 ms

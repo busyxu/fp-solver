@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3932152
+KLEE: KLEE: WATCHDOG: watching 51161
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_K0_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_K0_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,225 +9,52 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140155229423040, 94409740572736, 94409740663648, 173, 94409740536120, 94409740663632) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140585845077632, 94010674739360, 94010674862928, 173, 94010674710832, 94010674862912) at stream.c:46 1
 gsl: bessel_K0.c:173: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140155229423264) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140585845077856) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000359e+04 ms
+>>>GoSat-gosat exec time: 4.819699e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
->>>GoSat-gosat exec time: 3.000432e+04 ms
+>>>GoSat-gosat exec time: 5.100579e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 a)) at bessel_K0.c:157 18
+gsl: exp.c:257: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.000588e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000430e+04 ms
+>>>GoSat-gosat exec time: 3.000619e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000547e+04 ms
+>>>GoSat-gosat exec time: 6.143738e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.000915e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000400e+04 ms
+>>>GoSat-gosat exec time: 3.001008e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000583e+04 ms
+>>>GoSat-gosat exec time: 1.335409e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001229e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000574e+04 ms
+>>>GoSat-gosat exec time: 1.895742e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001101e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.766321e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000421e+04 ms
+>>>GoSat-gosat exec time: 3.001189e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000440e+04 ms
+>>>GoSat-gosat exec time: 3.001271e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 1.156280e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000597e+04 ms
+>>>GoSat-gosat exec time: 3.001440e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000459e+04 ms
+>>>GoSat-gosat exec time: 3.001563e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000440e+04 ms
+>>>GoSat-gosat exec time: 3.000859e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000435e+04 ms
+>>>GoSat-gosat exec time: 3.000924e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000608e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 6.594622e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000447e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000462e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000598e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000634e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000453e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 8.508537e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000450e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000652e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000644e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000665e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000608e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 6.810110e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000476e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000492e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000664e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000504e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000490e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 6.136840e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000666e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000683e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000662e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000489e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000459e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 8.443273e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000477e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000635e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000456e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000476e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000643e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 6.070500e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000601e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000564e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000907e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000584e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000623e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000422e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000428e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000429e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000425e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000408e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000443e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 9.320103e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000590e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000570e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000418e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000606e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000441e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 6.208234e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000434e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000489e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000591e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000462e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000881e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 9.113902e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000687e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000567e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000439e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000630e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000459e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 5.951428e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000439e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000470e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000475e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000465e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000498e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 1.252886e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000627e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000461e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000649e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000620e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000463e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 9.826074e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000676e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000656e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000661e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000661e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000485e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000480e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000646e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000647e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000668e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: bessel_K0.c:178: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000562e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000564e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000554e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000508e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 8.843615e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 417
-KLEE: done: completed paths = 0
+KLEE: done: total instructions = 2828
+KLEE: done: completed paths = 4
 KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 2
-Total exec time: 2.693457e+06 ms
+KLEE: done: generated tests = 5
+Total exec time: 3.750570e+05 ms

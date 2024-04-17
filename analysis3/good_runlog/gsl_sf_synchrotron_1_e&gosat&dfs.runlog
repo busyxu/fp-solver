@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2650626
+KLEE: KLEE: WATCHDOG: watching 9785
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_synchrotron_1_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_synchrotron_1_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,35 +9,26 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: ERROR: synchrotron.c:193: FloatPointCheck: FP Invalid found !
-KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 6.301553e+00 ms
+>>>GoSat-gosat exec time: 6.374012e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: synchrotron.c:194: FloatPointCheck: Common Accuracy found !
+KLEE: WARNING ONCE: calling external: fprintf(140045204436608, 94801287887008, 94801289257680, 223, 94801287858480, 94801289257696) at stream.c:46 1
+gsl: synchrotron.c:223: ERROR: underflow
+KLEE: WARNING ONCE: calling external: fflush(140045204436832) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000462e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000454e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000620e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.049717e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000541e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000345e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.645163e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 a)) at synchrotron.c:218 39
+>>>GoSat-gosat exec time: 6.327092e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 4.809661e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: synchrotron.c:187: ERROR: domain error
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 40
-KLEE: done: completed paths = 0
+KLEE: done: total instructions = 2863
+KLEE: done: completed paths = 3
 KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 2
-Total exec time: 1.607674e+05 ms
+KLEE: done: generated tests = 4
+Total exec time: 1.135674e+04 ms

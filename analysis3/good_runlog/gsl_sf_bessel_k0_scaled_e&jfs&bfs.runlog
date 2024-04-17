@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1981530
+KLEE: KLEE: WATCHDOG: watching 52919
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k0_scaled_e&jfs&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k0_scaled_e&jfs&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,63 +9,21 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(139675934791104, 94710847862720, 94710847954192, 89, 94710847826232, 94710847954176) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140458095380096, 94094669027360, 94094669151488, 89, 94094668998960, 94094669151472) at stream.c:46 1
 gsl: bessel_k.c:89: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(139675934791328) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140458095380320) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.776034e+02 ms
+>>>JFS exec time: 5.080908e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 1.128297e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.177865e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.043353e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.866391e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.246577e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.583887e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 7.625730e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:92: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 3.146991e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.420872e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.139373e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 7.159051e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:93: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 9.889814e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:93: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.978957e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 9.997109e+02 ms
+>>>JFS exec time: 5.466576e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:94: ERROR: underflow
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 166
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 10
-KLEE: done: generated tests = 10
-Total exec time: 8.645373e+04 ms
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 1.191152e+04 ms

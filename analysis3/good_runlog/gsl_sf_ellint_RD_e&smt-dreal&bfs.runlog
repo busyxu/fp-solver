@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1838739
+KLEE: KLEE: WATCHDOG: watching 11761
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RD_e&smt-dreal&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RD_e&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -11,13 +11,74 @@ KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: ERROR: ellint.c:119: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 9.441514e+00 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.045542e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: ellint.c:120: FloatPointCheck: FDiv Accuracy found !
+KLEE: WARNING ONCE: calling external: fprintf(140097202816640, 94458869497056, 94458870857728, 125, 94458869475728, 94458869637104) at stream.c:46 1
+gsl: ellint.c:125: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140097202816864) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.487723e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:125: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.125505e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:125: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 3.942397e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:125: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_4.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 4.391714e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:175: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_5.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.397578e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:125: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_6.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.581716e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:175: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_7.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 4.525164e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: ellint.c:175: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/FP_8.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_ellint_RD_e_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 4.808137e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 a)) at ellint.c:149 14
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
-KLEE: done: total instructions = 94
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+sh: 1: gdb: not found
+
+KLEE: done: total instructions = 42007
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 2
-Total exec time: 7.301888e+03 ms
+KLEE: done: partially completed paths = 18
+KLEE: done: generated tests = 4
+Total exec time: 3.677877e+06 ms

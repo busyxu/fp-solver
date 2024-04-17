@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3989936
+KLEE: KLEE: WATCHDOG: watching 13979
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_K1_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_K1_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,21 +9,58 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140092574107072, 94269293688896, 94269293779840, 179, 94269293652280, 94269293779824) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140144654829184, 94903543019680, 94903543143280, 179, 94903542991152, 94903543143264) at stream.c:46 1
 gsl: bessel_K1.c:179: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140092574107296) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140144654829408) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000502e+04 ms
+>>>GoSat-gosat exec time: 4.393769e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 4.779035e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
 gsl: bessel_K1.c:182: ERROR: overflow
 Default GSL error handler invoked.
->>>GoSat-gosat exec time: 3.000524e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 5.555393e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 a)) at bessel_K1.c:163 18
+gsl: exp.c:257: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.000612e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000654e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000683e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.686450e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.000982e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001083e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.456989e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001570e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.230848e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001173e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001262e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001331e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001520e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001683e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001293e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001416e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 157
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 1
-Total exec time: 7.386980e+04 ms
+KLEE: done: total instructions = 3010
+KLEE: done: completed paths = 4
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 5
+Total exec time: 4.061130e+05 ms

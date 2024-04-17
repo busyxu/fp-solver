@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2428155
+KLEE: KLEE: WATCHDOG: watching 956
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_pareto_P&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/cdf/cdf&gsl_cdf_pareto_P&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,68 +9,13 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: ERROR: pareto.c:36: FloatPointCheck: FDiv Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.099021e+01 ms
->>>Synergy-dreal exec time: 7.062510e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 5.966572e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: pareto.c:36: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 3.843000e-03 ms
->>>Synergy-dreal exec time: 4.283250e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 5.991265e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: pareto.c:36: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 4.115000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: pareto.c:36: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.417000e-03 ms
->>>Synergy-dreal exec time: 1.917170e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 5.994300e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: pareto.c:36: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.968400e-02 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.119900e-02 ms
->>>Synergy-dreal exec time: 1.926880e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 6.006916e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: pareto.c:36: FloatPointCheck: FPow Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.705800e-02 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.120100e-02 ms
->>>Synergy-dreal exec time: 7.767600e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 1.130277e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 2.954600e-02 ms
->>>Synergy-dreal exec time: 9.372340e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 1.130018e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 2.885400e-02 ms
->>>Synergy-dreal exec time: 1.550900e-02 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 5.924408e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: pareto.c:36: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 3.304000e-02 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.079692e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_cdf_pareto_P_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_cdf_pareto_P_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.877156e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 
 KLEE: done: total instructions = 50
 KLEE: done: completed paths = 2
-KLEE: done: partially completed paths = 7
-KLEE: done: generated tests = 9
-Total exec time: 3.338117e+04 ms
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 2
+Total exec time: 1.175040e+04 ms

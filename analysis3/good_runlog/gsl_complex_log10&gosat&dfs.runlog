@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 4019231
+KLEE: KLEE: WATCHDOG: watching 18503
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_log10&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_complex_log10&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,55 +9,22 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: ERROR: math.c:105: FloatPointCheck: FDiv Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000568e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000410e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000386e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000379e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 1.008518e+01 ms
->>>GoSat-gosat exec time: 3.291912e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
->>>GoSat-Z3 exec time: 3.335000e-03 ms
->>>GoSat-gosat exec time: 3.635645e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 3.311000e-03 ms
->>>GoSat-gosat exec time: 3.000375e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 5.922000e-03 ms
->>>GoSat-gosat exec time: 3.000389e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 7.997000e-03 ms
->>>GoSat-gosat exec time: 3.000385e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 KLEE: WARNING ONCE: calling external: log1p((FMul w64 N0:(FDiv w64 (FAbs w64 (ReadLSB w64 0 y))
                         (FAbs w64 (ReadLSB w64 0 x)))
            N0)) at math.c:115 26
-KLEE: ERROR: math.c:115: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-Z3 exec time: 3.931000e-03 ms
->>>GoSat-gosat exec time: 3.000406e+04 ms
+>>>GoSat-gosat exec time: 3.000768e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 6.779000e-03 ms
->>>GoSat-gosat exec time: 3.000406e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 9.140000e-03 ms
->>>GoSat-gosat exec time: 3.000405e+04 ms
+>>>GoSat-gosat exec time: 6.618017e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
->>>GoSat-Z3 exec time: 5.374000e-03 ms
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000389e+04 ms
+>>>GoSat-gosat exec time: 6.122192e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 6.892507e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.000720e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000347e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 379
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 3
-KLEE: done: generated tests = 2
-Total exec time: 3.704480e+05 ms
+KLEE: done: total instructions = 2857
+KLEE: done: completed paths = 4
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 3
+Total exec time: 7.460453e+04 ms

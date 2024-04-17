@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3702284
+KLEE: KLEE: WATCHDOG: watching 28537
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&jfs&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&jfs&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,33 +9,21 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>JFS exec time: 3.137663e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 1.563770e+04 ms
+>>>JFS exec time: 5.010635e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:117: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 1.819553e+04 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:117: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.651700e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.892725e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140236359165376, 94238999763008, 94238999726496, 110, 94238999726392, 94238996913824) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139901255075456, 94487128357024, 94487128328600, 110, 94487128328496, 94487125515920) at stream.c:46 1
 gsl: exp.c:110: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(140236359165600) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139901255075680) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.968810e+02 ms
+>>>JFS exec time: 5.155708e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: exp.c:113: ERROR: underflow
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 169
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 4
-KLEE: done: generated tests = 4
-Total exec time: 7.740844e+04 ms
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 1.260791e+04 ms

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1504664
+KLEE: KLEE: WATCHDOG: watching 22084
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_doublefact_e&jfs&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_doublefact_e&jfs&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,25 +10,19 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: flushing 7152 bytes on read, may be slow and/or crash: MO11564[7152] allocated at global:doub_fact_table
->>>JFS exec time: 6.939677e+02 ms
+>>>JFS exec time: 5.057909e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(139629263394240, 94052450334784, 94052450298264, 1509, 94052450298168, 94052447485696) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139926853363328, 94464491444384, 94464491415952, 1509, 94464491415856, 94464488603376) at stream.c:46 1
 gsl: gamma.c:1509: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(139629263394464) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139926853363552) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 8.056511e+02 ms
+>>>JFS exec time: 4.898191e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 3.375232e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.375086e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>JFS exec time: 3.417801e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
 
 KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 1.153956e+05 ms
+Total exec time: 1.019886e+04 ms

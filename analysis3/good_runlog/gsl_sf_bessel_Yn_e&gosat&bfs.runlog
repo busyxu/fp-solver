@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1057115
+KLEE: KLEE: WATCHDOG: watching 8187
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_Yn_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_Yn_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,28 +9,42 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140674537551296, 94471740471712, 94471740562448, 80, 94471740434776, 94471740562432) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140034949215872, 94527944006144, 94527944129536, 80, 94527943977296, 94527944129520) at stream.c:46 1
 gsl: bessel_Y0.c:80: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140674537551520) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140034949216096) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000542e+04 ms
+>>>GoSat-gosat exec time: 4.045388e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000532e+04 ms
+>>>GoSat-gosat exec time: 4.384160e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000435e+04 ms
+>>>GoSat-gosat exec time: 5.985939e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: bessel_Y0.c:110: ERROR: underflow
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 1.349232e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 6.758754e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((ReadLSB w64 0 b)) at bessel_Y0.c:102 18
+>>>GoSat-gosat exec time: 7.393178e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 1.267594e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001297e+04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001334e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000803e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001272e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.364746e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
 
-KLEE: done: total instructions = 142
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 1
-Total exec time: 1.002023e+05 ms
+KLEE: done: total instructions = 4978
+KLEE: done: completed paths = 5
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 5
+Total exec time: 1.332655e+05 ms

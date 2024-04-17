@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3709883
+KLEE: KLEE: WATCHDOG: watching 7806
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_e&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,36 +9,25 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Synergy-Z3 exec time: 1.578844e+01 ms
->>>Synergy-dreal exec time: 7.433680e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 5.901000e-03 ms
->>>Synergy-dreal exec time: 2.000720e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:117: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 2.725000e-03 ms
->>>Synergy-dreal exec time: 2.374990e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.145469e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.209005e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_exp_e_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_exp_e_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.608031e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140280842933696, 93903222249536, 93903222213024, 113, 93903222212920, 93903219400368) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140709490828928, 93937696610464, 93937696582040, 113, 93937696581936, 93937693769376) at stream.c:46 1
 gsl: exp.c:113: ERROR: underflow
-KLEE: WARNING ONCE: calling external: fflush(140280842933920) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140709490829152) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.030089e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_exp_e_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_exp_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.574017e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: exp.c:110: ERROR: overflow
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 3.893000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 
 KLEE: done: total instructions = 169
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 3
-KLEE: done: generated tests = 3
-Total exec time: 2.408538e+04 ms
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 2
+Total exec time: 1.192316e+04 ms

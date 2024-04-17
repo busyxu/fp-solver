@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2558325
+KLEE: KLEE: WATCHDOG: watching 52404
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_wave_sphF_array&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_wave_sphF_array&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,49 +9,33 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.880309e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000635e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 7.074305e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 KLEE: WARNING ONCE: calling external: sqrt(4607182418800017408) at coulomb.c:1393 7
->>>GoSat-gosat exec time: 3.000513e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000583e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000419e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 4.354943e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.692978e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.896331e+01 ms
+>>>GoSat-gosat exec time: 3.717059e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140113843062208, 94837668314240, 94837668413232, 1399, 94837668284824, 94837668413264) at stream.c:46 1
-gsl: coulomb.c:1399: ERROR: underflow
-KLEE: WARNING ONCE: calling external: fflush(140113843062432) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fprintf(140679783286400, 93953633500384, 93953633640224, 1385, 93953633479056, 93953633640208) at stream.c:46 1
+gsl: coulomb.c:1385: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140679783286624) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.211017e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 1.712295e+02 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.776315e+01 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.928059e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:1385: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 4.155296e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
-KLEE: done: total instructions = 174
+KLEE: ctrl-c detected, requesting interpreter to halt.
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via gdb
+
+sh: 1: gdb: not found
+tcmalloc: large alloc 1452982272 bytes == 0x5574dda76000 @  0x7ff2926a22a4 0x7ff290e8510f 0x7ff2917e4723 0x7ff2917a4773 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f 0x7ff2917ad922 0x7ff2917ae11f
+
+KLEE: done: total instructions = 33756
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 2
-Total exec time: 1.361312e+05 ms
+KLEE: done: partially completed paths = 8
+KLEE: done: generated tests = 6
+Total exec time: 3.694791e+06 ms

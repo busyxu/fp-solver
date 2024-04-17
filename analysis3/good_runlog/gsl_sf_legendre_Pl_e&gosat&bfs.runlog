@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2418865
+KLEE: KLEE: WATCHDOG: watching 35040
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_legendre_Pl_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_legendre_Pl_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,23 +9,23 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000604e+04 ms
+>>>GoSat-gosat exec time: 5.736373e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(139767101695616, 94596728453632, 94596729823776, 108, 94596728424784, 94596729823760) at stream.c:46 1
+gsl: legendre_poly.c:108: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139767101695840) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-gosat exec time: 4.674777e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000381e+04 ms
+>>>GoSat-gosat exec time: 5.235491e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000405e+04 ms
+>>>GoSat-gosat exec time: 5.666006e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000572e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 65
+KLEE: done: total instructions = 129
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 0
-KLEE: done: generated tests = 1
-Total exec time: 1.307025e+05 ms
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 2
+Total exec time: 1.119605e+04 ms

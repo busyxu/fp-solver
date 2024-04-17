@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3160213
+KLEE: KLEE: WATCHDOG: watching 48271
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_vegas_integrate&jfs&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_vegas_integrate&jfs&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,56 +9,34 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94059787475616) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94657579121296) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139665811600832, 94059787401792, 94059787344896, 128, 94059787340944, 94059788222176) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139935376909952, 94657579006624, 94657578957816, 128, 94657578953864, 94657579843392) at stream.c:46 1
 gsl: vegas.c:128: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(139665811601056) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139935376910176) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.534573e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 8.936204e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: vegas.c:131: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.560040e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: vegas.c:131: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.640227e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: vegas.c:131: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.420161e+02 ms
+>>>JFS exec time: 4.900898e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: vegas.c:128: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>JFS exec time: 6.133125e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.599349e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.527659e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.797876e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 7.113985e+02 ms
+>>>JFS exec time: 4.881944e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: vegas.c:128: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>JFS exec time: 1.256434e+03 ms
+>>>JFS exec time: 4.411540e+03 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: vegas.c:134: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
->>>JFS exec time: 9.406973e+02 ms
+>>>JFS exec time: 9.819220e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: vegas.c:134: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 27293
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 11
-KLEE: done: generated tests = 4
-Total exec time: 1.647844e+04 ms
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 1
+Total exec time: 1.694449e+04 ms

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 4161586
+KLEE: KLEE: WATCHDOG: watching 19625
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_wave_FG_array&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_coulomb_wave_FG_array&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,136 +9,637 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: ERROR: coulomb.c:1266: FloatPointCheck: FDiv Divide-By-Zero found !
+KLEE: WARNING ONCE: calling external: fprintf(139798424118912, 94265199353152, 94265199492896, 927, 94265199331736, 94265199492880) at stream.c:46 1
+gsl: coulomb.c:927: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139798424119136) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 7.880440e-01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.022076e+03 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.945406e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 8.362878e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.499302e+02 ms
+>>>Synergy-dreal exec time: 1.077546e+00 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_4.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 8.907000e-03 ms
+>>>Synergy-dreal exec time: 5.780330e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.146346e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_5.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.961000e-03 ms
+>>>Synergy-dreal exec time: 5.220840e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_6.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.670000e-03 ms
+>>>Synergy-dreal exec time: 3.823110e-01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1266: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 1.541470e-01 ms
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_7.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.097800e-02 ms
+>>>Synergy-dreal exec time: 2.561509e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.044738e+02 ms
+>>>Fuzz with seed exec time: 4.738847e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1266: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 1.738980e-01 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_8.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.082400e-02 ms
+>>>Synergy-dreal exec time: 4.557085e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.920279e+02 ms
+>>>Fuzz with seed exec time: 6.358672e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1266: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.335815e+01 ms
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_9.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.398000e-02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 3.888000e-03 ms
->>>Synergy-dreal exec time: 6.161580e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 7.934409e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1267: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 6.202000e-03 ms
->>>Synergy-dreal exec time: 6.440780e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.334143e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1267: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 7.373000e-03 ms
->>>Synergy-dreal exec time: 2.685500e-02 ms
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_10.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.299100e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_11.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.384200e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_12.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.137000e-02 ms
+>>>Synergy-dreal exec time: 1.715069e+01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.894000e-03 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_13.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.000000e-02 ms
+>>>Synergy-dreal exec time: 3.656719e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149139e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_14.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.137000e-02 ms
+>>>Synergy-dreal exec time: 2.741346e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 6.625414e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_15.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.024700e-02 ms
+>>>Synergy-dreal exec time: 4.670108e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 7.237446e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_16.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.300300e-02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.598000e-03 ms
->>>Synergy-dreal exec time: 3.188770e-01 ms
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_17.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.739400e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_18.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.231300e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_19.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.108300e-02 ms
+>>>Synergy-dreal exec time: 1.877596e+01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.451000e-03 ms
->>>Synergy-dreal exec time: 2.131390e-01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_20.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.413000e-03 ms
+>>>Synergy-dreal exec time: 3.681779e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.973259e+02 ms
+>>>Fuzz with seed exec time: 1.150683e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_21.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.109700e-02 ms
+>>>Synergy-dreal exec time: 2.374795e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.147696e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_22.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.084600e-02 ms
+>>>Synergy-dreal exec time: 2.517377e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 5.505011e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:901: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 8.595000e-03 ms
->>>Synergy-dreal exec time: 2.826100e-02 ms
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_23.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.163200e-02 ms
+>>>Synergy-dreal exec time: 2.795434e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.298749e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_24.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.358800e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_25.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.551700e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_26.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.309800e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_27.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.001400e-02 ms
+>>>Synergy-dreal exec time: 1.838213e+01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.395000e-03 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_28.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.805000e-03 ms
+>>>Synergy-dreal exec time: 5.031742e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149744e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_29.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.068800e-02 ms
+>>>Synergy-dreal exec time: 4.388473e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.148423e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_30.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.239400e-02 ms
+>>>Synergy-dreal exec time: 3.169140e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.306109e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_31.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.267600e-02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 3.110400e-02 ms
->>>Synergy-dreal exec time: 7.434880e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.529832e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:930: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 3.448400e-02 ms
->>>Synergy-dreal exec time: 3.735870e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.796161e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:930: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 5.131600e-02 ms
->>>Synergy-dreal exec time: 1.007883e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:930: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 8.911846e+02 ms
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_32.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.712800e-02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 5.887000e-03 ms
->>>Synergy-dreal exec time: 7.742770e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 7.714278e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1048: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 9.117000e-03 ms
->>>Synergy-dreal exec time: 5.084320e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.971583e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1048: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.026400e-02 ms
->>>Synergy-dreal exec time: 9.362890e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.188214e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1048: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 7.741000e-03 ms
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_33.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.212100e-02 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.139000e-03 ms
->>>Synergy-dreal exec time: 6.130040e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.973187e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1122: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 9.639000e-03 ms
->>>Synergy-dreal exec time: 7.168450e-01 ms
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_34.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.001100e-02 ms
+>>>Synergy-dreal exec time: 2.030057e+01 ms
 KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 7.158000e-03 ms
->>>Synergy-dreal exec time: 9.840730e-01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_35.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.098000e-02 ms
+>>>Synergy-dreal exec time: 4.834168e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.597905e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:1122: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.262800e-02 ms
->>>Synergy-dreal exec time: 5.756670e-01 ms
+>>>Fuzz with seed exec time: 1.149956e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_36.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.094000e-02 ms
+>>>Synergy-dreal exec time: 4.337445e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.787313e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:824: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 8.308000e-03 ms
->>>Synergy-dreal exec time: 1.008570e+00 ms
+>>>Fuzz with seed exec time: 1.150258e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_37.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.150900e-02 ms
+>>>Synergy-dreal exec time: 2.639357e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.786396e+02 ms
+>>>Fuzz with seed exec time: 1.151105e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_38.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.020800e-02 ms
+>>>Synergy-dreal exec time: 1.923131e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 5.697428e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: coulomb.c:824: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 8.888000e-03 ms
+gsl: trig.c:552: ERROR: error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_39.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.006000e-02 ms
+>>>Synergy-dreal exec time: 2.319447e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 6.763663e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_40.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.328000e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_41.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.340300e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_42.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.316600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_43.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.061500e-02 ms
+>>>Synergy-dreal exec time: 1.871086e+01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_44.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.112700e-02 ms
+>>>Synergy-dreal exec time: 4.281697e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 7.339690e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_45.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.035500e-02 ms
+>>>Synergy-dreal exec time: 3.177282e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.150299e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_46.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.128300e-02 ms
+>>>Synergy-dreal exec time: 2.419119e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.150183e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_47.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.609000e-03 ms
+>>>Synergy-dreal exec time: 2.606011e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 7.462001e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_48.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.085800e-02 ms
+>>>Synergy-dreal exec time: 4.346975e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.152126e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_49.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.126300e-02 ms
+>>>Synergy-dreal exec time: 3.413434e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.151165e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_50.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.023600e-02 ms
+>>>Synergy-dreal exec time: 5.555985e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.146755e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_51.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.070500e-02 ms
+>>>Synergy-dreal exec time: 3.265623e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.075748e+03 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_52.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 8.754100e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_53.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.407500e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_54.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.291600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_55.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.784000e-03 ms
+>>>Synergy-dreal exec time: 1.892510e+01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_56.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.091200e-02 ms
+>>>Synergy-dreal exec time: 4.125698e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.150784e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_57.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.348800e-02 ms
+>>>Synergy-dreal exec time: 3.564766e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.151557e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_58.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.152900e-02 ms
+>>>Synergy-dreal exec time: 2.255780e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.139850e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_59.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.244500e-02 ms
+>>>Synergy-dreal exec time: 2.478502e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.142930e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_60.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.026800e-02 ms
+>>>Synergy-dreal exec time: 1.336542e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.146976e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_61.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.071900e-02 ms
+>>>Synergy-dreal exec time: 1.935646e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 9.404064e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_62.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.991500e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_63.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.276100e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_64.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.316600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_65.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.133500e-02 ms
+>>>Synergy-dreal exec time: 2.669237e+01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_66.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.005500e-02 ms
+>>>Synergy-dreal exec time: 4.495331e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.152311e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_67.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.112000e-02 ms
+>>>Synergy-dreal exec time: 3.581994e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149290e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_68.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.160300e-02 ms
+>>>Synergy-dreal exec time: 2.594356e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.154580e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_69.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.145800e-02 ms
+>>>Synergy-dreal exec time: 2.807650e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.152459e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_70.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.110600e-02 ms
+>>>Synergy-dreal exec time: 2.653576e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149444e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_71.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.130800e-02 ms
+>>>Synergy-dreal exec time: 2.403903e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 9.732271e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_72.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.842200e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_73.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.863200e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_74.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.457300e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_75.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.040600e-02 ms
+>>>Synergy-dreal exec time: 2.554121e+01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_76.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.144900e-02 ms
+>>>Synergy-dreal exec time: 5.506499e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.134862e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_77.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.110700e-02 ms
+>>>Synergy-dreal exec time: 4.215130e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.150696e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_78.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.112900e-02 ms
+>>>Synergy-dreal exec time: 2.949224e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149842e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_79.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.132300e-02 ms
+>>>Synergy-dreal exec time: 2.912012e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.148298e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_80.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.076800e-02 ms
+>>>Synergy-dreal exec time: 2.719249e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.148671e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_81.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.190000e-02 ms
+>>>Synergy-dreal exec time: 5.136353e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.149943e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_82.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.318000e-02 ms
+>>>Synergy-dreal exec time: 1.000878e+00 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_83.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.232000e-02 ms
+>>>Synergy-dreal exec time: 5.675470e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_84.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.088200e-02 ms
+>>>Synergy-dreal exec time: 5.498680e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 5.274657e+02 ms
+KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_85.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.500600e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_86.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.344200e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_87.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.442400e-02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
+gsl: coulomb.c:927: ERROR: domain error
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_88.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.121900e-02 ms
+>>>Synergy-dreal exec time: 1.802463e+01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_89.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.264700e-02 ms
+>>>Synergy-dreal exec time: 3.900302e+05 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_90.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.168500e-02 ms
+>>>Synergy-dreal exec time: 3.641761e+05 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_91.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.499000e-03 ms
+>>>Synergy-dreal exec time: 7.318346e+02 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_92.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 8.532000e-03 ms
+>>>Synergy-dreal exec time: 2.831813e+05 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_93.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.018900e-02 ms
+>>>Synergy-dreal exec time: 2.177839e+05 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/FP_94.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_coulomb_wave_FG_array_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.092600e-02 ms
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
 KLEE: ctrl-c detected, requesting interpreter to halt.

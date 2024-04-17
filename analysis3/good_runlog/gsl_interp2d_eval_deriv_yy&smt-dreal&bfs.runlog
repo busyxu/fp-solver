@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 588668
+KLEE: KLEE: WATCHDOG: watching 2780
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp2d_eval_deriv_yy&smt-dreal&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp2d_eval_deriv_yy&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -11,31 +11,43 @@ KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140485493794240, 94077178730048, 94077178803712, 101, 94077178670120, 94077179673200) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140364683388544, 94032101693088, 94032101799408, 101, 94032101633056, 94032102635712) at stream.c:46 1
 gsl: interp2d.c:101: ERROR: x values must be strictly increasing
-KLEE: WARNING ONCE: calling external: fflush(140485493794464) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140364683388768) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 9.998109e+00 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.174965e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 9.008429e+00 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.085749e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:109: ERROR: y values must be strictly increasing
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 1.009540e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.252490e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:143: ERROR: interpolation x value out of range
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 1.165228e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.434669e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:143: ERROR: interpolation x value out of range
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 1.317040e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/FP_4.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.611655e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:147: ERROR: interpolation y value out of range
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 1.254369e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/FP_5.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_interp2d_eval_deriv_yy_bfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.525021e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:147: ERROR: interpolation y value out of range
 Default GSL error handler invoked.
@@ -44,4 +56,4 @@ KLEE: done: total instructions = 1135
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 6
 KLEE: done: generated tests = 2
-Total exec time: 7.161312e+03 ms
+Total exec time: 9.733804e+03 ms

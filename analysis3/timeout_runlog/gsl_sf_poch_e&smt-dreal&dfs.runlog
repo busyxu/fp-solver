@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2427630
+KLEE: KLEE: WATCHDOG: watching 29401
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_poch_e&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_poch_e&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,129 +9,127 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Synergy-Z3 exec time: 1.655620e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.576166e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.655900e-02 ms
->>>Synergy-dreal exec time: 1.935357e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.241115e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:316: FloatPointCheck: Common Overflow found !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 4.112079e+02 ms
+>>>Synergy-dreal exec time: 1.582396e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fmod((FSub w64 9223372036854775808
+           (ReadLSB w64 0 a)), 4611686018427387904) at poch.c:332 31
+KLEE: WARNING ONCE: calling external: fprintf(140000959637120, 94611069385216, 94611069356472, 542, 94611069356368, 94611066543776) at stream.c:46 1
+gsl: exp.c:542: ERROR: overflow
+KLEE: WARNING ONCE: calling external: fflush(140000959637344) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 3.363700e-02 ms
->>>Synergy-dreal exec time: 1.264174e+00 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.245700e-02 ms
+>>>Synergy-dreal exec time: 2.872875e+00 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.778184e+02 ms
+>>>Fuzz with seed exec time: 1.103666e+04 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:316: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 2.549000e-02 ms
->>>Synergy-dreal exec time: 2.196500e-02 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.570600e-02 ms
->>>Synergy-dreal exec time: 5.335180e-01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.947500e-02 ms
+>>>Synergy-dreal exec time: 5.969569e+00 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.243707e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.687203e+01 ms
->>>Synergy-dreal exec time: 1.395002e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.199269e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:342: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.064600e-02 ms
->>>Synergy-dreal exec time: 1.301546e+01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.987285e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:342: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.023900e-02 ms
->>>Synergy-dreal exec time: 3.419900e-02 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.883200e-02 ms
->>>Synergy-dreal exec time: 3.809620e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.155380e+04 ms
+>>>Fuzz with seed exec time: 1.149000e+04 ms
 KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.446700e-02 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_4.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.211700e-02 ms
+>>>Synergy-dreal exec time: 2.416549e+00 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_5.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 5.784500e-02 ms
+>>>Synergy-dreal exec time: 8.722520e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_6.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 3.167725e+02 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_7.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.363200e-02 ms
+>>>Synergy-dreal exec time: 7.178530e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.144972e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_8.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.441200e-02 ms
+>>>Synergy-dreal exec time: 6.187050e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.148883e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_9.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.219224e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 7.018000e-02 ms
->>>Synergy-dreal exec time: 5.638370e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 5.594100e-02 ms
->>>Synergy-dreal exec time: 1.730828e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_10.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.066651e+01 ms
+KLEE: WARNING: SMT-DREAL: Z3 solving UNSAT and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_11.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.329700e-02 ms
+>>>Synergy-dreal exec time: 2.338272e+00 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_12.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.558300e-02 ms
+>>>Synergy-dreal exec time: 6.789561e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.586927e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:369: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 6.419400e-02 ms
->>>Synergy-dreal exec time: 2.468400e-02 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 9.905351e+01 ms
->>>Synergy-dreal exec time: 8.990460e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.807676e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:345: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 9.622000e-03 ms
->>>Synergy-dreal exec time: 4.989080e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.153811e+04 ms
+>>>Fuzz with seed exec time: 1.146454e+04 ms
 KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.731700e-02 ms
->>>Synergy-dreal exec time: 7.500650e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.391400e-02 ms
->>>Synergy-dreal exec time: 2.338600e-02 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.250350e+02 ms
->>>Synergy-dreal exec time: 9.636200e-01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_13.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 8.202300e-02 ms
+>>>Synergy-dreal exec time: 4.597168e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.552799e+02 ms
+>>>Fuzz with seed exec time: 5.357425e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.364600e-02 ms
->>>Synergy-dreal exec time: 1.156596e+00 ms
+gsl: exp.c:545: ERROR: underflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_14.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.947500e-02 ms
+>>>Synergy-dreal exec time: 2.623823e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.152804e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.505500e-02 ms
->>>Synergy-dreal exec time: 6.659000e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.435100e-02 ms
->>>Synergy-dreal exec time: 8.454740e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.488424e+02 ms
+>>>Fuzz with seed exec time: 6.195652e+02 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: poch.c:345: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.495400e-02 ms
->>>Synergy-dreal exec time: 7.058610e-01 ms
+gsl: exp.c:542: ERROR: overflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_15.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.897000e-02 ms
+>>>Synergy-dreal exec time: 1.684764e+00 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_16.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 6.644506e+02 ms
+>>>Synergy-dreal exec time: 3.968077e+01 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 7.798615e+02 ms
+>>>Fuzz with seed exec time: 1.145417e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_17.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.305800e-02 ms
+>>>Synergy-dreal exec time: 3.167054e+01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 5.340844e+03 ms
 KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.188900e-02 ms
->>>Synergy-dreal exec time: 5.335690e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.155876e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.755100e-02 ms
->>>Synergy-dreal exec time: 5.638780e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 1.119800e-02 ms
->>>Synergy-dreal exec time: 6.792000e-03 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
-KLEE: ERROR: poch.c:346: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.328700e-02 ms
->>>Synergy-dreal exec time: 2.132917e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.153578e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.593200e-02 ms
+gsl: exp.c:542: ERROR: overflow
+Default GSL error handler invoked.
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/FP_18.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_poch_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 7.447700e-02 ms
 KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
 KLEE: ctrl-c detected, requesting interpreter to halt.

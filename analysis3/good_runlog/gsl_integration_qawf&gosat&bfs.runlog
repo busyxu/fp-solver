@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3282789
+KLEE: KLEE: WATCHDOG: watching 7773
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawf&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_integration_qawf&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,23 +10,17 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140516751238592, 93878202551392, 93878202610880, 42, 93878202493760, 93878203393632) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140294185989760, 94168337452224, 94168337536176, 42, 94168337394488, 94168338302176) at stream.c:46 1
 gsl: qmomof.c:42: ERROR: table length n must be positive integer
-KLEE: WARNING ONCE: calling external: fflush(140516751238816) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140294185989984) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000386e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: Large alloc: 4149467033411835904 bytes.  KLEE may run out of memory.
-tcmalloc: large alloc 4149467033411837952 bytes == (nil) @  0x7fcc9c8bd680 0x7fcc9c8de824 0x5561a41751f8 0x5561a41294d6 0x5561a41767a5 0x5561a41798c4 0x5561a41268ab 0x5561a4132f1d 0x5561a4193764 0x5561a414bcdb 0x5561a414cec7 0x5561a40cf663 0x7fcc9aee5083 0x5561a41106de
-gsl: qmomof.c:60: ERROR: failed to allocate space for chebmo block
-Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 5.151158e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 402
+KLEE: done: total instructions = 327
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 2
+KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 1
-Total exec time: 3.851971e+04 ms
+Total exec time: 1.314707e+04 ms

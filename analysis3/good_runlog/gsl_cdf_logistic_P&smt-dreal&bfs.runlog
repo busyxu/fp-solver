@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 478214
+KLEE: KLEE: WATCHDOG: watching 48912
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/cdf/cdf&gsl_cdf_logistic_P&smt-dreal&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/cdf/cdf&gsl_cdf_logistic_P&smt-dreal&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,155 +9,13 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: ERROR: logistic.c:29: FloatPointCheck: FDiv Invalid found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 6.539330e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.373131e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:29: FloatPointCheck: FDiv Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 3.804960e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.824197e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:29: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 5.978040e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.178107e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:29: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-dreal exec time: 1.193320e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 6.641849e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:29: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.001365e+01 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.947000e-03 ms
->>>Synergy-dreal exec time: 2.785490e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.134314e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 5.623000e-03 ms
->>>Synergy-dreal exec time: 2.576780e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.136056e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 6.763000e-03 ms
->>>Synergy-dreal exec time: 1.720400e-02 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 7.188233e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:37: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 6.573000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.172000e-03 ms
->>>Synergy-dreal exec time: 3.013600e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.132774e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 8.173000e-03 ms
->>>Synergy-dreal exec time: 3.725630e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 4.426065e+03 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:37: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 5.443000e-03 ms
->>>Synergy-dreal exec time: 2.230785e+01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 7.308190e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:37: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 5.976000e-03 ms
->>>Synergy-dreal exec time: 2.713620e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.133084e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 9.540000e-03 ms
->>>Synergy-dreal exec time: 3.437190e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.132841e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 4.728100e-02 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.080000e-03 ms
->>>Synergy-dreal exec time: 4.102790e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.400000e-03 ms
->>>Synergy-dreal exec time: 6.037240e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 1.131641e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 7.065000e-03 ms
->>>Synergy-dreal exec time: 3.118230e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 6.106192e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:33: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 4.957000e-03 ms
->>>Synergy-dreal exec time: 1.968200e-02 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.130923e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 7.134000e-03 ms
->>>Synergy-dreal exec time: 2.253650e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.146000e-03 ms
->>>Synergy-dreal exec time: 2.442640e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.131566e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 7.103000e-03 ms
->>>Synergy-dreal exec time: 3.419830e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.130082e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 8.325000e-03 ms
->>>Synergy-dreal exec time: 2.028000e-02 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 6.124199e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:33: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 7.591000e-03 ms
->>>Synergy-dreal exec time: 2.117380e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.009000e-03 ms
->>>Synergy-dreal exec time: 1.878010e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.129819e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 8.031000e-03 ms
->>>Synergy-dreal exec time: 3.171530e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.130618e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 9.226000e-03 ms
->>>Synergy-dreal exec time: 2.458950e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 6.077116e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-KLEE: ERROR: logistic.c:33: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 5.818000e-03 ms
->>>Synergy-dreal exec time: 2.495670e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving UNKNOWN with unsupport and Using JFS to solve !
->>>JFS exec time: 3.130408e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 7.270000e-03 ms
->>>Synergy-dreal exec time: 2.204780e-01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_cdf_logistic_P_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_cdf_logistic_P_bfs/' 已成功创建。
+>>>Synergy-dreal exec time: 3.695932e+00 ms
 KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
 
 KLEE: done: total instructions = 52
 KLEE: done: completed paths = 2
-KLEE: done: partially completed paths = 11
-KLEE: done: generated tests = 13
-Total exec time: 3.791591e+05 ms
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 2
+Total exec time: 1.165839e+04 ms

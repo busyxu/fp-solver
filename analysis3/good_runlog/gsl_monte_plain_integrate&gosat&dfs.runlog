@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3410621
+KLEE: KLEE: WATCHDOG: watching 4923
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_plain_integrate&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_plain_integrate&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,20 +9,34 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94422199638688) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94702909495952) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139931353535936, 94422199565056, 94422199507984, 52, 94422199504040, 94422200369024) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140515318482560, 94702909381472, 94702909332488, 52, 94702909328544, 94702910210016) at stream.c:46 1
 gsl: plain.c:52: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(139931353536160) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140515318482784) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000435e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.760936e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: plain.c:52: ERROR: xu must be greater than xl
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 6.218297e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: plain.c:52: ERROR: xu must be greater than xl
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 8.037817e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: plain.c:58: ERROR: Range of integration is too large, please rescale
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 7.608603e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: plain.c:58: ERROR: Range of integration is too large, please rescale
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 26873
+KLEE: done: total instructions = 27161
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 1
+KLEE: done: partially completed paths = 5
 KLEE: done: generated tests = 1
-Total exec time: 3.783797e+04 ms
+Total exec time: 1.110126e+04 ms

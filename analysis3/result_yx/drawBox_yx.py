@@ -162,7 +162,7 @@ input_data()
 #     write_date(elementary_dfs_dict, stype+"_dfs_dict_output.csv")
 
 write_date(elementary_bfs_dict, "elementary_bfs_dict_output.csv")
-write_date(complex_bfs_dict, "complex_bfs_dict_output.csv")
+# write_date(complex_bfs_dict, "complex_bfs_dict_output.csv")
 write_date(diffAndInteg_bfs_dict, "diffAndInteg_bfs_dict_output.csv")
 # # write_date(blas_bfs_dict, "blas_bfs_dict_output.csv")
 write_date(cdf_bfs_dict, "cdf_bfs_dict_output.csv")
@@ -171,7 +171,7 @@ write_date(compAndopt_bfs_dict, "compAndopt_bfs_dict_output.csv")
 write_date(sf_bfs_dict, "sf_bfs_dict_output.csv")
 
 write_date(elementary_dfs_dict, "elementary_dfs_dict_output.csv")
-write_date(complex_dfs_dict, "complex_dfs_dict_output.csv")
+# write_date(complex_dfs_dict, "complex_dfs_dict_output.csv")
 write_date(diffAndInteg_dfs_dict, "diffAndInteg_dfs_dict_output.csv")
 # # write_date(blas_dfs_dict, "blas_dfs_dict_output.csv")
 write_date(cdf_dfs_dict, "cdf_dfs_dict_output.csv")
@@ -299,8 +299,8 @@ def drawfigure(incsvfile, outfilename):
 drawfigure("elementary_bfs_dict_output.csv", "elementary_bfs_box.pdf")
 drawfigure("elementary_dfs_dict_output.csv", "elementary_dfs_box.pdf")
 
-drawfigure("complex_bfs_dict_output.csv", "complex_bfs_box.pdf")
-drawfigure("complex_dfs_dict_output.csv", "complex_dfs_box.pdf")
+# drawfigure("complex_bfs_dict_output.csv", "complex_bfs_box.pdf")
+# drawfigure("complex_dfs_dict_output.csv", "complex_dfs_box.pdf")
 
 drawfigure("diffAndInteg_bfs_dict_output.csv", "diffAndInteg_bfs_box.pdf")
 drawfigure("diffAndInteg_dfs_dict_output.csv", "diffAndInteg_dfs_box.pdf")

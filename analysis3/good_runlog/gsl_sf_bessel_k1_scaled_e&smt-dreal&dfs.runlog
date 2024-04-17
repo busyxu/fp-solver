@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3416699
+KLEE: KLEE: WATCHDOG: watching 52724
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k1_scaled_e&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_k1_scaled_e&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,135 +9,32 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140079741158848, 94008101214144, 94008101305616, 105, 94008101177656, 94008101305600) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139789530576512, 94506301896736, 94506302020864, 105, 94506301868336, 94506302020848) at stream.c:46 1
 gsl: bessel_k.c:105: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140079741159072) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139789530576736) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.619604e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_bessel_k1_scaled_e_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_bessel_k1_scaled_e_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.511724e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
 gsl: bessel_k.c:108: ERROR: overflow
 Default GSL error handler invoked.
->>>Synergy-Z3 exec time: 1.528979e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_bessel_k1_scaled_e_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_bessel_k1_scaled_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.542700e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 4.441000e-03 ms
->>>Synergy-dreal exec time: 9.888110e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.279719e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 6.237000e-03 ms
->>>Synergy-dreal exec time: 3.729680e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 3.318000e-03 ms
->>>Synergy-dreal exec time: 3.053680e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.231209e+03 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 5.284000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.240000e-03 ms
->>>Synergy-dreal exec time: 2.335380e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.779000e-03 ms
->>>Synergy-dreal exec time: 1.082570e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.071300e+03 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 8.876000e-03 ms
->>>Synergy-dreal exec time: 7.141280e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.961893e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 7.474000e-03 ms
->>>Synergy-dreal exec time: 3.128050e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 4.502000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.672000e-03 ms
->>>Synergy-dreal exec time: 2.027160e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.960000e-03 ms
->>>Synergy-dreal exec time: 1.491190e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 9.229183e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 8.277000e-03 ms
->>>Synergy-dreal exec time: 2.062110e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 8.817345e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: FDiv Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 1.513304e+01 ms
->>>Synergy-Z3 exec time: 5.297000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 3.689000e-03 ms
->>>Synergy-dreal exec time: 3.226590e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 4.355000e-03 ms
->>>Synergy-dreal exec time: 1.828200e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 3.280000e-03 ms
-KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.645000e-03 ms
->>>Synergy-dreal exec time: 1.813980e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 7.837685e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 5.888000e-03 ms
->>>Synergy-dreal exec time: 4.091040e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.804000e-03 ms
->>>Synergy-dreal exec time: 2.841450e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.149788e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 9.616000e-03 ms
->>>Synergy-dreal exec time: 6.765530e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 7.700481e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
-KLEE: ERROR: bessel_k.c:111: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 6.559000e-03 ms
->>>Synergy-dreal exec time: 2.414870e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 7.971133e+02 ms
-KLEE: WARNING: FUZZ with seed: solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 5.859000e-03 ms
->>>Synergy-dreal exec time: 4.133030e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 4.579000e-03 ms
->>>Synergy-dreal exec time: 2.956710e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.146452e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 6.994000e-03 ms
->>>Synergy-dreal exec time: 5.465480e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.144261e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 4.677000e-03 ms
->>>Synergy-dreal exec time: 2.800500e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.133128e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_bessel_k1_scaled_e_dfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_bessel_k1_scaled_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 9.157000e-03 ms
+>>>Synergy-dreal exec time: 6.450380e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate SUCCESS !
+gsl: bessel_k.c:113: ERROR: underflow
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 180
+KLEE: done: total instructions = 237
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 11
-KLEE: done: generated tests = 10
-Total exec time: 6.774754e+04 ms
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 2
+Total exec time: 1.101677e+04 ms

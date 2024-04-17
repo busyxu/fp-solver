@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 4036156
+KLEE: KLEE: WATCHDOG: watching 16533
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_arccsch&jfs&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_complex_arccsch&jfs&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,11 +10,31 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: calling external: hypot((ReadLSB w64 0 x), (ReadLSB w64 0 y)) at math.c:83 3
-KLEE: ERROR: math.c:259: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
+KLEE: WARNING ONCE: calling external: sqrt((FMul w64 4602678819172646912
+           (FAdd w64 (FDiv w64 N0:(FAdd w64 9218868437227405313
+                                            N1:(FAbs w64 (FMul w64 13830554455654793216
+                                                                   (FMul w64 (FSub w64 9223372036854775808
+                                                                                       (FMul w64 (ReadLSB w64 0 y)
+                                                                                                 9218868437227405312))
+                                                                             9218868437227405312))))
+                               (FAdd w64 (FAdd w64 9221120237041090561 N1) 4607182418800017408))
+                     (FDiv w64 N0
+                               (FAdd w64 9221120237041090561 (FSub w64 N1 4607182418800017408)))))) at math.c:564 35
+>>>JFS exec time: 3.145032e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.145753e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146867e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 5.170765e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 4.881538e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+>>>JFS exec time: 5.243361e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 
-KLEE: done: total instructions = 351
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 1
-Total exec time: 7.824617e+03 ms
+KLEE: done: total instructions = 6544
+KLEE: done: completed paths = 4
+KLEE: done: partially completed paths = 0
+KLEE: done: generated tests = 3
+Total exec time: 1.088037e+05 ms

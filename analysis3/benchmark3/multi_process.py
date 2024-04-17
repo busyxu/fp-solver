@@ -59,7 +59,7 @@ for test in testList:
     print(test)
 
 cnt = 0
-pool = multiprocessing.Pool(processes=30)
+pool = multiprocessing.Pool(processes=10)
 for i in range(len(testList[:-1])):
   if len(testList[i]) < 7:
     break
@@ -74,7 +74,8 @@ for i in range(len(testList[:-1])):
   #   continue
 
   # solver_type = ["smt", "bitwuzla", "mathsat5", "cvc5-real", "dreal-is", "fp2int", "jfs", "gosat", "smt-dreal", "smt-jfs"]
-  solver_type = ["smt", "bitwuzla", "mathsat5", "cvc5-real", "dreal-is", "fp2int", "jfs", "gosat", "smt-dreal"]
+  # solver_type = ["smt", "bitwuzla", "mathsat5", "cvc5-real", "dreal-is", "fp2int", "jfs", "gosat", "smt-dreal"]
+  solver_type = ["bitwuzla", "jfs", "gosat", "smt-dreal"]
   # solver_type = ["fp2int"]
   # print(workDic, testName)
   for solver in solver_type:

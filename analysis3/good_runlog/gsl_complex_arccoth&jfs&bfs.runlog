@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 241465
+KLEE: KLEE: WATCHDOG: watching 37795
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_arccoth&jfs&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_complex_arccoth&jfs&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,11 +10,17 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: calling external: hypot((ReadLSB w64 0 x), (ReadLSB w64 0 y)) at math.c:83 3
-KLEE: ERROR: math.c:259: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
+>>>JFS exec time: 3.142712e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.135724e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.146168e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>JFS exec time: 3.145389e+04 ms
+KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 351
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 1
+KLEE: done: total instructions = 2410
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 0
 KLEE: done: generated tests = 1
-Total exec time: 7.886746e+03 ms
+Total exec time: 1.348373e+05 ms

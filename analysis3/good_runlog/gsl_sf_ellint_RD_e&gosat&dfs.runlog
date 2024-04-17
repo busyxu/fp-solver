@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1838690
+KLEE: KLEE: WATCHDOG: watching 6808
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RD_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_sf_ellint_RD_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -11,13 +11,321 @@ KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: ERROR: ellint.c:119: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-Z3 exec time: 9.049135e+00 ms
+>>>GoSat-Z3 exec time: 1.518245e+01 ms
 KLEE: WARNING: GOSAT: Z3 evaluate SUCCESS !
-KLEE: ERROR: ellint.c:120: FloatPointCheck: FDiv Accuracy found !
+KLEE: WARNING ONCE: calling external: fprintf(139644390340224, 93990994648288, 93990996008960, 125, 93990994626960, 93990994788336) at stream.c:46 1
+gsl: ellint.c:125: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(139644390340448) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-Z3 exec time: 3.663000e-03 ms
+>>>GoSat-gosat exec time: 6.576404e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((FMul w64 (FAdd w64 (FAdd w64 (ReadLSB w64 0 a)
+                               (ReadLSB w64 0 b))
+                     (FMul w64 4613937818241073152
+                               (ReadLSB w64 0 c)))
+           4596373779694328218)) at ellint.c:170 64
+>>>GoSat-Z3 exec time: 6.180800e-02 ms
+>>>GoSat-gosat exec time: 9.645236e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 2.495400e-02 ms
+>>>GoSat-gosat exec time: 3.000956e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 4.541400e-02 ms
+>>>GoSat-gosat exec time: 3.000955e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.622582e+03 ms
+KLEE: WARNING: GOSAT: Z3 evaluate SUCCESS !
+gsl: ellint.c:175: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-Z3 exec time: 4.792000e-03 ms
+>>>GoSat-gosat exec time: 3.000827e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.735000e-03 ms
+>>>GoSat-gosat exec time: 7.696567e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.593509e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.480990e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.569075e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.680471e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.547803e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.557598e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.594655e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.428811e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.362981e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.368557e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.354961e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.352852e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.318112e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.323323e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.292808e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.299844e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.249029e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.259399e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.215892e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.220527e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.179894e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.177756e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.138577e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.133829e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.090817e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.093414e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 8.201900e-02 ms
+>>>GoSat-gosat exec time: 9.991904e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 3.702200e-02 ms
+>>>GoSat-gosat exec time: 3.000905e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.455400e-02 ms
+>>>GoSat-gosat exec time: 8.606912e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.092489e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 5.621100e-02 ms
+>>>GoSat-gosat exec time: 3.026076e+03 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.297350e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.297066e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.259885e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.276959e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.217158e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.222409e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.185203e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.186167e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.133916e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.136665e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.093979e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.093394e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 7.810100e-02 ms
+>>>GoSat-gosat exec time: 7.467837e+02 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 3.054390e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 4.148500e-02 ms
+>>>GoSat-gosat exec time: 3.000797e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.352500e-02 ms
+>>>GoSat-gosat exec time: 7.144071e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.272553e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.271127e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.225420e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.227498e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.184900e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.193669e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.138011e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.138435e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.095050e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.098904e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 7.310700e-02 ms
+>>>GoSat-gosat exec time: 9.605381e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.044500e-02 ms
+>>>GoSat-gosat exec time: 9.626828e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.099214e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 6.406300e-02 ms
+>>>GoSat-gosat exec time: 3.000913e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 3.049474e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 4.537000e-02 ms
+>>>GoSat-gosat exec time: 3.000805e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 8.579999e+03 ms
+>>>GoSat-gosat exec time: 6.467640e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.336000e-03 ms
+>>>GoSat-gosat exec time: 6.241785e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.513500e-02 ms
+>>>GoSat-gosat exec time: 7.933404e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 2.044400e-02 ms
+>>>GoSat-gosat exec time: 3.000794e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 3.956200e-02 ms
+>>>GoSat-gosat exec time: 3.000717e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 1.071500e-02 ms
+KLEE: WARNING: GOSAT: Z3 evaluate SUCCESS !
+gsl: ellint.c:175: ERROR: domain error
+Default GSL error handler invoked.
+>>>GoSat-Z3 exec time: 4.625000e-03 ms
+>>>GoSat-gosat exec time: 4.975277e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.554022e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.563038e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.541423e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.535217e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.498428e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.517539e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.463984e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.456614e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.418529e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.419392e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.367304e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.359509e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.318089e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.314480e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.274616e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.268723e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.223255e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.230695e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.271574e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.264380e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.201977e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.201343e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.134409e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.141338e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 1.072270e-01 ms
+>>>GoSat-gosat exec time: 1.585544e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.731900e-02 ms
+>>>GoSat-gosat exec time: 1.661670e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.136087e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 7.161800e-02 ms
+>>>GoSat-gosat exec time: 3.001251e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 3.082085e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 4.951800e-02 ms
+>>>GoSat-gosat exec time: 3.001138e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 4.631500e-02 ms
+>>>GoSat-gosat exec time: 3.001014e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 1.326900e-02 ms
+>>>GoSat-gosat exec time: 8.874797e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.725000e-03 ms
+>>>GoSat-gosat exec time: 3.000871e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 8.153000e-03 ms
+>>>GoSat-gosat exec time: 8.102902e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.771217e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.803348e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.791207e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.730826e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.689703e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.651194e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.615031e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.633388e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.563498e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.508947e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.438779e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.416262e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.376228e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.371469e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.336576e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.353412e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.395818e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.294326e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+KLEE: WARNING: KLEE: WATCHDOG: time expired, attempting halt via INT
 
-KLEE: done: total instructions = 94
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 2
-Total exec time: 7.061019e+03 ms
+KLEE: ctrl-c detected, requesting interpreter to halt.
+>>>GoSat-Z3 exec time: 3.238970e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+KLEE: halting execution, dumping remaining states
+
+KLEE: done: total instructions = 8407
+KLEE: done: completed paths = 10
+KLEE: done: partially completed paths = 22
+KLEE: done: generated tests = 7
+Total exec time: 3.663302e+06 ms

@@ -1,8 +1,8 @@
 # Basic tools path
-LIBM_PATH="/home/aaa/klee-uclibc/lib/libm.a"
-GSL_PATH="/home/aaa/gsl"
-GSL_RUNTIME_PATH="/home/aaa/gsl_runtime_lib"
-KLEE_PATH="/home/aaa/klee-float-solver"
+LIBM_PATH="/home/aaa/fp-solver/klee-uclibc/lib/libm.a"
+GSL_PATH="/home/aaa/fp-solver/gsl"
+GSL_RUNTIME_PATH="/home/aaa/fp-solver/gsl_runtime_lib"
+KLEE_PATH="/home/aaa/fp-solver/klee-float-solver"
 
 ## KLEE : Sometimes must be defined by user ####
 KLEE_EXE_PATH=${KLEE_PATH}"/build/bin/klee"
@@ -62,20 +62,20 @@ TIME_LOG_TXT=${KLEE_OUT_DIR}/"execute_time.txt"
 rm -rf ${KLEE_OUT_DIR} 
 
 # get driver.bccd
-#/home/aaa/llvm-6/install/bin/clang -emit-llvm -I/home/aaa/gsl -I/home/aaa/klee-float-solver/include -c gsl_sf_clausen_e.c
+#/home/aaa/fp-solver/llvm-6/install/bin/clang -emit-llvm -I/home/aaa/fp-solver/gsl -I/home/aaa/fp-solver/klee-float-solver/include -c gsl_sf_clausen_e.c
 #clang -emit-llvm -I${GSL_HEADFILE_PATH} -I${KLEE_HEADFILE_PATH} -c ${driver_name}.c
-/home/aaa/llvm-6/install/bin/clang -emit-llvm -I${GSL_HEADFILE_PATH} -I${KLEE_HEADFILE_PATH} -c ${driver_name}.c
+/home/aaa/fp-solver/llvm-6/install/bin/clang -emit-llvm -I${GSL_HEADFILE_PATH} -I${KLEE_HEADFILE_PATH} -c ${driver_name}.c
 
 # link with libgsl.bc, to generate driver_gsl.bc
-#/home/aaa/llvm-6/install/bin/llvm-link ${driver_name}.bc ${GSL_LIB_BC_PATH} -o ${driver_name}"_gsl.bc"
+#/home/aaa/fp-solver/llvm-6/install/bin/llvm-link ${driver_name}.bc ${GSL_LIB_BC_PATH} -o ${driver_name}"_gsl.bc"
 gslbc=${driver_name}"_gsl.bc"
 if [ -e "$gslbc" ]; then
     echo "$gslbc exist."
 else
     #echo "文件 $filename 不存在."
-#    /home/aaa/llvm-6/install/bin/llvm-link "gsl_sf_clausen_e.bc" "/home/aaa/gsl_runtime_lib/libgsl-cblas.so.bc" -o "gsl_sf_clausen_e_gsl.bc"
+#    /home/aaa/fp-solver/llvm-6/install/bin/llvm-link "gsl_sf_clausen_e.bc" "/home/aaa/fp-solver/gsl_runtime_lib/libgsl-cblas.so.bc" -o "gsl_sf_clausen_e_gsl.bc"
 #    llvm-link ${driver_name}.bc ${GSL_LIB_BC_PATH} -o ${driver_name}"_gsl.bc"
-    /home/aaa/llvm-6/install/bin/llvm-link ${driver_name}.bc ${GSL_LIB_BC_PATH} -o ${driver_name}"_gsl.bc"
+    /home/aaa/fp-solver/llvm-6/install/bin/llvm-link ${driver_name}.bc ${GSL_LIB_BC_PATH} -o ${driver_name}"_gsl.bc"
 fi
 # run klee to get Ktest inputs
 start_second=$(date +%s)

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3149859
+KLEE: KLEE: WATCHDOG: watching 42429
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_vegas_integrate&bitwuzla&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_vegas_integrate&bitwuzla&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -13,56 +13,42 @@ KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94508180349888) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94636090221488) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140355316434368, 94508179393696, 94508179932240, 128, 94508179240160, 94508180320576) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140014672111232, 94636089257216, 94636089795656, 128, 94636089103576, 94636090184096) at stream.c:46 1
 gsl: vegas.c:128: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(140355316434592) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140014672111456) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 9.074248e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.479730e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: vegas.c:131: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 2.337412e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: vegas.c:131: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.507702e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: vegas.c:131: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.523531e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/' 已成功创建。
+>>>Bitwuzla exec time: 7.444237e+00 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: vegas.c:128: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 1.651457e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.756336e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: vegas.c:134: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 2.328672e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.052823e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 5.253532e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 4.068986e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.363100e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.553101e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: vegas.c:128: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 3.728522e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_vegas_integrate_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.220475e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: vegas.c:134: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 27293
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 11
-KLEE: done: generated tests = 4
-Total exec time: 1.230676e+04 ms
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 1
+Total exec time: 1.796160e+04 ms

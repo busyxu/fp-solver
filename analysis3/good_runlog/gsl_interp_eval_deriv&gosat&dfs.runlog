@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1027050
+KLEE: KLEE: WATCHDOG: watching 3071
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp_eval_deriv&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp_eval_deriv&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,17 +10,43 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(140213136864704, 94527972797056, 94527972851936, 83, 94527972739824, 94527972878688) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140500460512896, 94690535983840, 94690536063184, 83, 94690535926504, 94690536081376) at stream.c:46 1
 gsl: interp.c:83: ERROR: x values must be strictly increasing
-KLEE: WARNING ONCE: calling external: fflush(140213136864928) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140500460513120) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000303e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.519993e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: interp.c:83: ERROR: x values must be strictly increasing
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 5.142452e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001389e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 8.628129e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001007e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001147e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000870e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 7.883288e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: interp.c:186: ERROR: interpolation error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 7.291275e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: interp.c:186: ERROR: interpolation error
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 3.000639e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000613e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 304
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 1
-Total exec time: 3.692748e+04 ms
+KLEE: done: total instructions = 1383
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 4
+KLEE: done: generated tests = 3
+Total exec time: 1.931672e+05 ms

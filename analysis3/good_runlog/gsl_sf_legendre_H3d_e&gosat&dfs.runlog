@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1846110
+KLEE: KLEE: WATCHDOG: watching 38700
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_legendre_H3d_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_legendre_H3d_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,42 +9,116 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>GoSat-gosat exec time: 3.000468e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000356e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000359e+04 ms
+>>>GoSat-gosat exec time: 1.199386e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: legendre_H3d.c:368: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>GoSat-gosat exec time: 3.000366e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000361e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000369e+04 ms
+>>>GoSat-gosat exec time: 6.453401e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: ERROR: legendre_H3d.c:369: FloatPointCheck: Common Accuracy found !
+>>>GoSat-gosat exec time: 1.760534e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 9.996865e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: ldexp((FLOOR w64 (FDiv w64 (FAbs w64 (FMul w64 (ReadLSB w64 0 b)
+                                          (ReadLSB w64 0 c)))
+                      4605249457297304856)), 4294967293) at trig.c:184 30
+>>>GoSat-Z3 exec time: 3.042526e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.044160e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 2.175275e+04 ms
+>>>GoSat-gosat exec time: 1.961159e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.962000e-03 ms
+>>>GoSat-gosat exec time: 2.175688e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.966000e-03 ms
+>>>GoSat-gosat exec time: 2.781491e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.102000e-03 ms
+>>>GoSat-gosat exec time: 2.630092e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.859000e-03 ms
+>>>GoSat-gosat exec time: 1.668020e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.172000e-03 ms
+>>>GoSat-gosat exec time: 4.283491e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.012000e-03 ms
+>>>GoSat-gosat exec time: 1.515950e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.203000e-03 ms
+>>>GoSat-gosat exec time: 2.740530e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.988000e-03 ms
+>>>GoSat-gosat exec time: 2.550784e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 3.048722e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-gosat exec time: 3.000688e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.049447e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 7.163271e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.177315e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 8.980447e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((FAdd w64 (FMul w64 N0:(ReadLSB w64 0 b)
+                     N0)
+           4607182418800017408)) at legendre_H3d.c:306 27
+>>>GoSat-gosat exec time: 1.582858e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.001007e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001032e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.430112e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 3.046677e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.046377e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.046138e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.045972e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.048108e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 1.352997e+01 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.047730e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.048483e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.050431e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.048171e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-Z3 exec time: 3.050721e+04 ms
+KLEE: WARNING: GOSAT: Z3 solving UNSAT and remove the state !
+>>>GoSat-gosat exec time: 3.000978e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000697e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.879459e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.000542e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 5.384974e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140411818268288, 94887297784704, 94887299162528, 379, 94887297763696, 94887299162544) at stream.c:46 1
+gsl: legendre_H3d.c:379: ERROR: overflow
+KLEE: WARNING ONCE: calling external: fflush(140411818268512) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000409e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000418e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000409e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000363e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000334e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.138929e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: legendre_H3d.c:375: ERROR: domain error
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 133
-KLEE: done: completed paths = 1
+KLEE: done: total instructions = 4494
+KLEE: done: completed paths = 19
 KLEE: done: partially completed paths = 2
-KLEE: done: generated tests = 3
-Total exec time: 3.415061e+05 ms
+KLEE: done: generated tests = 16
+Total exec time: 6.145309e+05 ms

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2048063
+KLEE: KLEE: WATCHDOG: watching 15299
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_zero_Jnu_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_zero_Jnu_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,26 +9,161 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140008860431808, 94283698461088, 94283698548432, 1106, 94283698424152, 94283698837984) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140612566169216, 94095120521728, 94095120641728, 1106, 94095120492880, 94095120915008) at stream.c:46 1
 gsl: bessel_zero.c:1106: ERROR: no zero-th root for nu = 0.0
-KLEE: WARNING ONCE: calling external: fflush(140008860432032) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140612566169440) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 4.230264e+00 ms
+>>>GoSat-gosat exec time: 6.423449e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000357e+04 ms
+>>>GoSat-gosat exec time: 5.244827e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 9.260098e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 3.000331e+04 ms
+>>>GoSat-gosat exec time: 8.902086e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 2.762815e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: ERROR: bessel_zero.c:933: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-Z3 exec time: 5.085712e+02 ms
+>>>GoSat-gosat exec time: 1.177000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 7.188405e+01 ms
+>>>GoSat-gosat exec time: 1.234000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.995267e+01 ms
+>>>GoSat-gosat exec time: 1.408000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 9.258877e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((FDiv w64 (FMul w64 4616189618054758400
+                     N0:(FMul w64 (FSub w64 9223372036854775808
+                                            (POW w64 (ReadLSB w64 0 a)
+                                                     13827552055903212885))
+                                  (FSub w64 9223372036854775808
+                                            (FMul w64 (POW w64 N1:(FMul w64 4607984497486668242
+                                                                            (FSub w64 (FMul w64 4616189618054758400
+                                                                                                (UIToFP w64 (ReadLSB w32 0 b)))
+                                                                                      4607182418800017408))
+                                                               4604180019048437077)
+                                                      (FAdd w64 (FAdd w64 (FAdd w64 (FAdd w64 4607182418800017408
+                                                                                              (FMul w64 4592170420042115755
+                                                                                                        N2:(FDiv w64 4607182418800017408 (FMul w64 N1 N1))))
+                                                                                    (FMul w64 13817544056731278450 N3:(FMul w64 N2 N2)))
+                                                                          (FMul w64 (FMul w64 4606550511821051626 N3) N2))
+                                                                (FMul w64 (FMul w64 13848292533107920287 N3) N3))))))
+           (FSub w64 (FMul w64 N4:(FAdd w64 (FSub w64 (FMul w64 N5:(FDiv w64 (FSub w64 (FSub w64 (FMul w64 4611686018427387904
+                                                                                                           (FSub w64 (FMul w64 4611686018427387904 N0) 4607182418800017408))
+                                                                                                 13830554455654793216)
+                                                                                       4607182418800017408)
+                                                                             4611686018427387904)
+                                                                (FAdd w64 (FSub w64 (FMul w64 N6:(FMul w64 4611686018427387904 N5)
+                                                                                              N7:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                               N8:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                N9:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                 N10:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                   N11:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                     N12:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                       N13:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                         N14:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                           N15:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                             N16:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                               N17:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 N18:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   N19:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     N20:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       N21:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         N22:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           N23:(FAdd w64 (FSub w64 (FMul w64 N6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             N24:(FAdd w64 (FSub w64 (FMul w64 N6 0) 0)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           4393525652257626924))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   0)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         13621132293282404798))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 N24)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       4400271679754210812))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               N23)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     13624730853763742350))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             N22)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   4402123812354939272))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           N21)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 13625922413636691880))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         N20)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               4402690293716916262))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       N19)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             13627048023987164536))
+                                                                                                                                                                                                                                                                                                                                                                                                                                     N18)
+                                                                                                                                                                                                                                                                                                                                                                                                                           4407321213001447181))
+                                                                                                                                                                                                                                                                                                                                                                                                   N17)
+                                                                                                                                                                                                                                                                                                                                                                                         4422159091528488848))
+                                                                                                                                                                                                                                                                                                                                                                 N16)
+                                                                                                                                                                                                                                                                                                                                                       13668394879211681417))
+                                                                                                                                                                                                                                                                                                                               N15)
+                                                                                                                                                                                                                                                                                                                     4460893992726990046))
+                                                                                                                                                                                                                                                                                             N14)
+                                                                                                                                                                                                                                                                                   4438760464177521195))
+                                                                                                                                                                                                                                                           N13)
+                                                                                                                                                                                                                                                 13720533323954202130))
+                                                                                                                                                                                                                         N12)
+                                                                                                                                                                                                               4517610458450782941))
+                                                                                                                                                                                       N11)
+                                                                                                                                                                             13755742520559206256))
+                                                                                                                                                      N10)
+                                                                                                                                            13773833992394807059))
+                                                                                                                     N9)
+                                                                                                           4582247252053701192))
+                                                                                    N8)
+                                                                          4602492402979039503))
+                                                      N7)
+                                            4609283925327046131)
+                               N4)
+                     4607182418800017408))) at bessel_zero.c:1017 16
+>>>GoSat-gosat exec time: 1.325000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.816000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.829000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.001026e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000908e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.928734e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.345620e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 4.846447e+02 ms
+>>>GoSat-gosat exec time: 1.406000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 7.099154e+01 ms
+>>>GoSat-gosat exec time: 9.530000e-04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 7.368215e+01 ms
+>>>GoSat-gosat exec time: 1.232000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 1.104090e+01 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-Z3 exec time: 2.346071e+02 ms
+>>>GoSat-gosat exec time: 1.205000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 6.033957e+01 ms
+>>>GoSat-gosat exec time: 1.181000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-Z3 exec time: 5.700021e+01 ms
+>>>GoSat-gosat exec time: 1.175000e-03 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.332938e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: bessel_zero.c:1114: ERROR: unimplemented
+Default GSL error handler invoked.
+>>>GoSat-gosat exec time: 4.708697e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: bessel_zero.c:1100: ERROR: domain error
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 129
-KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 2
-Total exec time: 6.986826e+04 ms
+KLEE: done: total instructions = 3700
+KLEE: done: completed paths = 3
+KLEE: done: partially completed paths = 6
+KLEE: done: generated tests = 5
+Total exec time: 7.485016e+04 ms

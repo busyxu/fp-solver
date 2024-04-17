@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2767266
+KLEE: KLEE: WATCHDOG: watching 42747
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_miser_integrate&bitwuzla&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/diffAndInteg/diffAndInteg&gsl_monte_miser_integrate&bitwuzla&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -13,56 +13,42 @@ KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: getenv(94527919350720) at default.c:34 15
+KLEE: WARNING ONCE: calling external: getenv(94030314562480) at default.c:34 15
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139702612702656, 94527918394688, 94527918924888, 86, 94527918241016, 94527919321344) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139708575819392, 94030313598368, 94030314128464, 86, 94030313444592, 94030314525024) at stream.c:46 1
 gsl: miser.c:86: ERROR: xu must be greater than xl
-KLEE: WARNING ONCE: calling external: fflush(139702612702880) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139708575819616) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.963890e+00 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.424012e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: miser.c:89: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 2.291599e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: miser.c:89: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.463660e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: miser.c:89: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 6.375710e+00 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/' 已成功创建。
+>>>Bitwuzla exec time: 1.249426e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: miser.c:86: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 1.669876e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.050155e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: miser.c:92: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 2.288652e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 5.900296e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 5.414296e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 4.058083e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 2.392446e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.362116e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: miser.c:86: ERROR: xu must be greater than xl
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 3.756810e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_monte_miser_integrate_bfs/' 已经存在。
+>>>Bitwuzla exec time: 6.980134e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: miser.c:92: ERROR: Range of integration is too large, please rescale
 Default GSL error handler invoked.
 
 KLEE: done: total instructions = 27417
 KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 11
-KLEE: done: generated tests = 4
-Total exec time: 1.179387e+04 ms
+KLEE: done: partially completed paths = 5
+KLEE: done: generated tests = 1
+Total exec time: 1.386965e+04 ms

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 580062
+KLEE: KLEE: WATCHDOG: watching 40583
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp2d_eval_deriv_xx&jfs&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/compAndopt/compAndopt&gsl_interp2d_eval_deriv_xx&jfs&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -11,31 +11,31 @@ KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: Alignment of memory from call "malloc" is not modelled. Using alignment of 8.
 KLEE: WARNING ONCE: Alignment of memory from call "calloc" is not modelled. Using alignment of 8.
-KLEE: WARNING ONCE: calling external: fprintf(139816998098368, 94724145370688, 94724145444352, 101, 94724145310760, 94724146313840) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140403305711232, 93982756640416, 93982756746736, 101, 93982756580384, 93982757582992) at stream.c:46 1
 gsl: interp2d.c:101: ERROR: x values must be strictly increasing
-KLEE: WARNING ONCE: calling external: fflush(139816998098592) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140403305711456) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>JFS exec time: 6.261848e+02 ms
+>>>JFS exec time: 4.910273e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
->>>JFS exec time: 6.252568e+02 ms
-KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
-gsl: interp2d.c:147: ERROR: interpolation y value out of range
-Default GSL error handler invoked.
->>>JFS exec time: 6.345173e+02 ms
+>>>JFS exec time: 4.888630e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:147: ERROR: interpolation y value out of range
 Default GSL error handler invoked.
->>>JFS exec time: 7.174272e+02 ms
+>>>JFS exec time: 4.087953e+02 ms
+KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
+gsl: interp2d.c:147: ERROR: interpolation y value out of range
+Default GSL error handler invoked.
+>>>JFS exec time: 4.570269e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:143: ERROR: interpolation x value out of range
 Default GSL error handler invoked.
->>>JFS exec time: 6.305094e+02 ms
+>>>JFS exec time: 4.284170e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:143: ERROR: interpolation x value out of range
 Default GSL error handler invoked.
->>>JFS exec time: 6.515433e+02 ms
+>>>JFS exec time: 4.807435e+02 ms
 KLEE: WARNING: FUZZ: JFS solving SAT and evaluate SUCCESS !
 gsl: interp2d.c:109: ERROR: y values must be strictly increasing
 Default GSL error handler invoked.
@@ -44,4 +44,4 @@ KLEE: done: total instructions = 1135
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 6
 KLEE: done: generated tests = 2
-Total exec time: 1.203738e+04 ms
+Total exec time: 1.295265e+04 ms

@@ -224,10 +224,10 @@ double fp64_overflow_dis(double op1, double op2, int opcode, int type)
     dis = DBL_MAX;
   }
 
-    long int_value1 = 0x7fefffffffffffff;
-    long int_value2 = 0x0000000000000001;
-    double *dmax = (double *)&int_value1;
-    double *dmin = (double *)&int_value2;
+//    long int_value1 = 0x7fefffffffffffff;
+//    long int_value2 = 0x0000000000000001;
+//    double *dmax = (double *)&int_value1;
+//    double *dmin = (double *)&int_value2;
 
   mpq_t hVal1, hVal2, hRes, FMax, FMin, FZero, hResMax, hResMin;
   mpq_init(hVal1);mpq_init(hVal2);mpq_init(hRes);

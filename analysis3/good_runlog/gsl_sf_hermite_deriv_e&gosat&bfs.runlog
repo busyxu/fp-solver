@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2337242
+KLEE: KLEE: WATCHDOG: watching 28350
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_hermite_deriv_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_hermite_deriv_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,77 +10,41 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7961[4104] allocated at global:fact_table
->>>GoSat-Z3 exec time: 1.043984e+04 ms
->>>GoSat-Z3 exec time: 1.383803e+04 ms
->>>GoSat-gosat exec time: 2.578900e-02 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 3.038104e+04 ms
->>>GoSat-Z3 exec time: 2.057162e+04 ms
->>>GoSat-Z3 exec time: 4.607750e+03 ms
->>>GoSat-Z3 exec time: 1.815686e+04 ms
->>>GoSat-Z3 exec time: 8.187955e+03 ms
->>>GoSat-Z3 exec time: 1.128073e+04 ms
->>>GoSat-Z3 exec time: 3.050748e+04 ms
->>>GoSat-Z3 exec time: 6.373898e+02 ms
->>>GoSat-Z3 exec time: 6.188114e+02 ms
->>>GoSat-Z3 exec time: 5.743030e+03 ms
->>>GoSat-Z3 exec time: 2.237957e+04 ms
->>>GoSat-Z3 exec time: 1.815058e+04 ms
->>>GoSat-Z3 exec time: 1.332397e+04 ms
->>>GoSat-Z3 exec time: 1.592634e+04 ms
->>>GoSat-Z3 exec time: 3.445821e+03 ms
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000543e+04 ms
+>>>GoSat-gosat exec time: 5.685940e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: fprintf(140597308741248, 94031485090688, 94031486468384, 312, 94031485069680, 94031486468368) at stream.c:46 1
+gsl: hermite.c:312: ERROR: domain error
+KLEE: WARNING ONCE: calling external: fflush(140597308741472) at error.c:44 12
+Default GSL error handler invoked.
+KLEE: ERROR: error.c:47: abort failure
+KLEE: NOTE: now ignoring this error at this location
+>>>GoSat-gosat exec time: 4.677438e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000407e+04 ms
+>>>GoSat-gosat exec time: 5.036973e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000582e+04 ms
+>>>GoSat-gosat exec time: 3.000536e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 5.851936e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.000483e+04 ms
+>>>GoSat-gosat exec time: 1.011937e+01 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000473e+04 ms
+>>>GoSat-gosat exec time: 8.510000e-04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_LT]
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.002272e+04 ms
+>>>GoSat-Z3 exec time: 1.312389e+01 ms
+>>>GoSat-gosat exec time: 9.230000e-04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-gosat exec time: 2.155000e-03 ms
+>>>GoSat-Z3 exec time: 1.364724e+01 ms
+>>>GoSat-gosat exec time: 8.860000e-04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 1.734237e+01 ms
->>>GoSat-gosat exec time: 1.971000e-03 ms
+>>>GoSat-Z3 exec time: 1.318165e+01 ms
+>>>GoSat-gosat exec time: 1.054000e-03 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 2.339765e+01 ms
->>>GoSat-gosat exec time: 1.653000e-03 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 2.325699e+01 ms
->>>GoSat-gosat exec time: 1.814000e-03 ms
-KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
->>>GoSat-Z3 exec time: 1.036300e-02 ms
->>>GoSat-gosat exec time: 1.569000e-03 ms
+>>>GoSat-Z3 exec time: 5.440000e-03 ms
+>>>GoSat-gosat exec time: 7.880000e-04 ms
 KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 318
+KLEE: done: total instructions = 382
 KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 0
-KLEE: done: generated tests = 1
-Total exec time: 4.268697e+05 ms
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 2
+Total exec time: 4.103264e+04 ms

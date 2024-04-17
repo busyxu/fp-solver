@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 242421
+KLEE: KLEE: WATCHDOG: watching 41921
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/complex/complex&gsl_complex_arccoth&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_complex_arccoth&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,11 +10,31 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: calling external: hypot((ReadLSB w64 0 x), (ReadLSB w64 0 y)) at math.c:83 3
-KLEE: ERROR: math.c:259: FloatPointCheck: FDiv Divide-By-Zero found !
-KLEE: NOTE: now ignoring this error at this location
+/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/' 已成功创建。
+>>>Synergy-dreal exec time: 5.328000e-01 ms
+KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/' 已经存在。
+>>>Synergy-dreal exec time: 2.082810e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.145818e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/' 已经存在。
+>>>Synergy-dreal exec time: 1.910150e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.134514e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_complex_arccoth_dfs/' 已经存在。
+>>>Synergy-dreal exec time: 2.021440e-01 ms
+KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
+>>>Fuzz with seed exec time: 1.136186e+04 ms
+KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
 
-KLEE: done: total instructions = 351
-KLEE: done: completed paths = 0
-KLEE: done: partially completed paths = 1
+KLEE: done: total instructions = 2410
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 0
 KLEE: done: generated tests = 1
-Total exec time: 7.643254e+03 ms
+Total exec time: 4.416423e+04 ms

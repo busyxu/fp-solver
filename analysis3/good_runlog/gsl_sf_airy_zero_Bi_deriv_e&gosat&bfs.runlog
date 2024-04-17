@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 1399508
+KLEE: KLEE: WATCHDOG: watching 35868
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_airy_zero_Bi_deriv_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_airy_zero_Bi_deriv_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,18 +9,19 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140186540934592, 94916761343936, 94916761431776, 508, 94916761307448, 94916761737248) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140339289634432, 94352942127136, 94352942247632, 508, 94352942098736, 94352942553216) at stream.c:46 1
 gsl: airy_zero.c:508: ERROR: s is less than 1
-KLEE: WARNING ONCE: calling external: fflush(140186540934816) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140339289634656) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 4.465463e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.215068e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 7.690000e-04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 85
-KLEE: done: completed paths = 0
+KLEE: done: total instructions = 175
+KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 1
-Total exec time: 1.023333e+04 ms
+KLEE: done: generated tests = 2
+Total exec time: 1.114412e+04 ms

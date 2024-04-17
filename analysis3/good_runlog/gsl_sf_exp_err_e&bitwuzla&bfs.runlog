@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 4139612
+KLEE: KLEE: WATCHDOG: watching 36778
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_err_e&bitwuzla&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_sf_exp_err_e&bitwuzla&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -13,658 +13,343 @@ KLEE: Replacing function "__fpclassify" with "klee_internal_fpclassify"
 KLEE: Replacing function "__finitef" with "klee_internal_finitef"
 KLEE: Replacing function "__finite" with "klee_internal_finite"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
->>>Bitwuzla exec time: 4.258973e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已成功创建。
+>>>Bitwuzla exec time: 1.825450e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:541: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 2.615383e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:541: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 2.268342e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:541: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 4.359057e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:544: FloatPointCheck: Common Overflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 4.091334e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:544: FloatPointCheck: Common Underflow found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.500210e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: ERROR: exp.c:544: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 1.635464e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.005498e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.151329e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.545923e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.106685e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.241417e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.097731e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.516436e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.777113e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.349472e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.212177e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.049533e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.099687e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.644647e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.573249e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.527452e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.673036e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.760979e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(139694311028160, 94214724783104, 94214724661776, 542, 94214724661672, 94214533851088) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(139996397315712, 93862656281696, 93862656152072, 542, 93862656151968, 93862653929408) at stream.c:46 1
 gsl: exp.c:542: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(139694311028384) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(139996397315936) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 3.514617e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.860066e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 gsl: exp.c:545: ERROR: underflow
 Default GSL error handler invoked.
->>>Bitwuzla exec time: 2.775475e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_2.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.245648e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.020032e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.861015e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.367807e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.123613e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.586927e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.581280e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.035071e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.568713e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.026002e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.402057e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.016176e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.013877e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.030938e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.493056e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.020338e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.099941e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.186851e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_3.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.670908e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.827393e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.084032e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.974781e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.009022e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.221315e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.306339e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.959347e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.324116e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.298772e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.602447e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.128362e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.217224e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.204899e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_4.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.734190e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 5.894339e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_5.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.725669e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.495579e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.508611e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.839757e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.116775e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.157361e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.218232e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.076165e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.143837e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.127766e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.146487e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.220760e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.788271e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.196003e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.028231e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.909019e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.515076e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_6.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 5.113127e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 7.085819e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.364429e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.407126e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.464951e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.369537e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.262841e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.682899e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.204441e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.356361e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.131656e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.880548e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.204697e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.024724e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.099722e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.693020e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.402207e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.992503e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_7.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 5.416254e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_8.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 5.487777e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_9.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 6.816083e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_10.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.603223e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.505520e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.682439e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.374205e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.016569e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.205757e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.177524e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.565565e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.183395e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.266616e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.306216e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.805945e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.053665e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.024099e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.156239e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.180930e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.406142e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.175943e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.748401e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_11.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.420509e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.284191e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.303022e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.106600e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.036647e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.107955e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.997464e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.665960e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.248128e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.098141e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.046028e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.071327e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.039901e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.088396e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-KLEE: ERROR: exp.c:552: FloatPointCheck: Common Accuracy found !
-KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 7.812161e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.084217e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.062826e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.829256e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.942628e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.460384e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.412864e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.082226e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_12.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.518616e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 6.343386e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_13.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.885122e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_14.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.884971e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_15.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.973940e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_16.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.853707e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.742056e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_17.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.417788e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_18.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.068319e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.151839e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_19.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.001843e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_20.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.000672e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_21.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.000613e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_22.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 9.949622e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_23.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.316644e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.979268e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_24.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.709689e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_25.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.753580e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_26.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.863013e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_27.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.833648e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.459962e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_28.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 5.122247e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_29.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 5.218919e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_30.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.942043e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.506741e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.647657e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.017530e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.243860e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.026170e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.274970e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.190880e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.088340e-01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.396780e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_31.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.604045e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_32.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.598796e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
 KLEE: ERROR: libm/e_exp.c:144: memory error: out of bound pointer
 KLEE: NOTE: now ignoring this error at this location
->>>Bitwuzla exec time: 3.846492e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_33.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.873589e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.487090e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_34.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.935666e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.581798e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_35.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.967588e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.105414e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_36.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.152738e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.392741e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_37.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.504290e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 8.588617e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.930466e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.861374e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.686308e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.106763e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.144905e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.203442e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.507749e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.739993e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.609175e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.799241e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.815315e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.061088e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.383251e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.539630e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.059694e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.440875e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_38.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.779079e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.718892e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_39.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.917103e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.712698e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_40.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.946997e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.324837e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_41.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.288803e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.332844e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_42.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.030729e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_43.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.167795e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_44.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.876804e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_45.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.958941e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_46.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.930180e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_47.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.836552e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_48.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.180869e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 9.611633e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.968861e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.459801e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 5.678855e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.362837e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.386527e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.097959e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.073842e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.433665e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.514150e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.328551e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.333344e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.439109e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.100416e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.952502e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.044034e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.231424e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_49.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.420487e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.285968e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_50.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.610150e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.299325e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_51.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.403828e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.572931e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_52.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.571853e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_53.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.414277e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_54.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.640682e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_55.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.694165e+01 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_56.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.947801e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.746768e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_57.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.414234e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.681691e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_58.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.357526e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.310621e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.353134e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.295093e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.580467e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.879896e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_59.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.724256e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.132085e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.072414e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.418262e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.158767e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.775119e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.649582e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.113190e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.720273e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.087327e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.324486e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.263273e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.020227e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.033110e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.005923e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.156391e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.061648e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.192654e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_60.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 3.990208e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.382110e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_61.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.563277e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.204015e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_62.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.277383e+01 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.907841e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.766368e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.924201e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.064607e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.119626e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.671525e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_63.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.319393e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.963948e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_64.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.676121e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_65.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.335304e+03 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_66.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.392750e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.906453e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_67.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.690615e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.282902e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_68.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.289037e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.295592e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.222151e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.014480e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.742850e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.878391e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.832802e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.003208e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.302682e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.100979e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.016816e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.544700e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.011093e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.105085e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.578111e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.019021e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.782271e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_69.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.341509e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 3.383694e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_70.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.921005e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.463614e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_71.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.912328e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 3.404607e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_72.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.952260e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.148817e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.215951e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.764436e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_73.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 4.784456e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.685337e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_74.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.056049e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.734907e+01 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_75.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 1.328142e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.796683e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.599819e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_76.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.014722e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.279610e+03 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_77.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.369578e+02 ms
+KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_78.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.017595e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.205680e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.336253e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.136033e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.214013e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.113113e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.233163e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.648826e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.692106e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.822344e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.387179e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.549816e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.776078e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.150638e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.366529e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.078637e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.061596e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 7.822142e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.598400e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.048271e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.306340e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate SUCCESS !
->>>Bitwuzla exec time: 1.491570e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.050851e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 9.962136e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 8.610728e+01 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.659542e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.923952e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.214631e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.669932e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.719356e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.379909e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 6.402121e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.058437e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.023236e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.037937e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.976840e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.073527e+03 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.635934e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_79.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.782141e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.673382e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.496075e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 4.469980e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
-Bitwuzla Timeout !
->>>Bitwuzla exec time: 3.055798e+04 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.817862e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.125915e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.760018e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.172917e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 1.819084e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.633650e+02 ms
-KLEE: WARNING: Bitwuzla: Bitwuzla solving SAT and evaluate FAILURE and remove the state !
->>>Bitwuzla exec time: 2.008928e+02 ms
+/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/FP_80.smt2
+目录 '/home/aaa/fp-solver/smtlib2_NoCF/gsl_sf_exp_err_e_bfs/' 已经存在。
+>>>Bitwuzla exec time: 2.387579e+02 ms
 KLEE: WARNING: Bitwuzla: Bitwuzla solving UNSAT and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 2444
-KLEE: done: completed paths = 12
-KLEE: done: partially completed paths = 12
-KLEE: done: generated tests = 18
-Total exec time: 9.709245e+05 ms
+KLEE: done: total instructions = 2544
+KLEE: done: completed paths = 16
+KLEE: done: partially completed paths = 3
+KLEE: done: generated tests = 13
+Total exec time: 2.467628e+04 ms

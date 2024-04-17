@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 3616430
+KLEE: KLEE: WATCHDOG: watching 29287
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/elementary/elementary&gsl_sf_log_abs_e&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/elementary/elementary&gsl_sf_log_abs_e&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,35 +9,19 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140392516044224, 94027480815680, 94027480782520, 132, 94027480779064, 94027480903184) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140622265558656, 94508059760800, 94508059735728, 132, 94508059732272, 94508059880960) at stream.c:46 1
 gsl: log.c:132: ERROR: domain error
-KLEE: WARNING ONCE: calling external: fflush(140392516044448) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140622265558880) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
->>>Synergy-Z3 exec time: 9.730214e+00 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_log_abs_e_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_log_abs_e_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.659188e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 2.154000e-03 ms
->>>Synergy-dreal exec time: 4.838330e-01 ms
-KLEE: WARNING: SMT-DREAL: DReal solving UNKNOWN with all support and remove this state !
->>>Synergy-Z3 exec time: 2.144000e-03 ms
->>>Synergy-dreal exec time: 3.232910e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.146139e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 6.717000e-03 ms
->>>Synergy-dreal exec time: 3.017150e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.149385e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.429700e-02 ms
->>>Synergy-dreal exec time: 4.738510e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and using JFS with seeds to solve !
->>>Fuzz with seed exec time: 1.137045e+04 ms
-KLEE: WARNING: FUZZ with seed: solving UNKNOWN evalute FAILURE and remove the state !
 
 KLEE: done: total instructions = 103
 KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 2
-Total exec time: 4.510381e+04 ms
+Total exec time: 1.178669e+04 ms

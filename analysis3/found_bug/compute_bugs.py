@@ -70,28 +70,19 @@ def get_bug(stype):
   return data
 
 databfs = get_bug("bfs")
-mergeData = {}
-mergeData["elementary"] = np.array(databfs["elementary"]) + np.array(databfs["complex"])
-mergeData["algorithm"] = np.array(databfs["cdf"]) + np.array(databfs["compAndopt"]) + np.array(databfs["diffAndInteg"]) + np.array(databfs["solveEqu"])
-mergeData["sf"] = np.array(databfs["sf"])
-
 bug_file = "uniq_bug_result_bfs1.csv"
 with open(bug_file, 'w', newline='') as file:
   writer = csv.writer(file)
-  for key in mergeData.keys():
-    for datav in mergeData[key]:
+  for key in databfs.keys():
+    for datav in databfs[key]:
       writer.writerows([datav])
 print(f'数据已写入CSV文件: {bug_file}')
 
 datadfs = get_bug("dfs")
-mergeData = {}
-mergeData["elementary"] = np.array(datadfs["elementary"]) + np.array(datadfs["complex"])
-mergeData["algorithm"] = np.array(datadfs["cdf"]) + np.array(datadfs["compAndopt"]) + np.array(datadfs["diffAndInteg"]) + np.array(datadfs["solveEqu"])
-mergeData["sf"] = np.array(datadfs["sf"])
 bug_file = "uniq_bug_result_dfs1.csv"
 with open(bug_file, 'w', newline='') as file:
   writer = csv.writer(file)
-  for key in mergeData.keys():
-    for datav in mergeData[key]:
+  for key in datadfs.keys():
+    for datav in datadfs[key]:
       writer.writerows([datav])
 print(f'数据已写入CSV文件: {bug_file}')

@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 4134964
+KLEE: KLEE: WATCHDOG: watching 10113
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_zero_J0_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_zero_J0_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,19 +9,17 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140062745015744, 94923107088448, 94923107176128, 1030, 94923107051832, 94923107056024) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140045138495104, 94648938666144, 94648938786480, 1030, 94648938637616, 94648938641808) at stream.c:46 1
 gsl: bessel_zero.c:1030: ERROR: error
-KLEE: WARNING ONCE: calling external: fflush(140062745015968) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140045138495328) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_EQ]
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000331e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 5.298117e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
 
-KLEE: done: total instructions = 87
-KLEE: done: completed paths = 0
+KLEE: done: total instructions = 156
+KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 1
-Total exec time: 3.957285e+04 ms
+KLEE: done: generated tests = 2
+Total exec time: 1.363038e+04 ms

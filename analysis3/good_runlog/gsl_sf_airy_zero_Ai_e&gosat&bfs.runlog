@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2755068
+KLEE: KLEE: WATCHDOG: watching 40817
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_airy_zero_Ai_e&gosat&bfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_airy_zero_Ai_e&gosat&bfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,18 +9,19 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-KLEE: WARNING ONCE: calling external: fprintf(140630242534848, 94860539983936, 94860540071648, 439, 94860539947320, 94860540369056) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140488571643520, 94617119684768, 94617119805136, 439, 94617119656240, 94617120102656) at stream.c:46 1
 gsl: airy_zero.c:439: ERROR: s is less than 1
-KLEE: WARNING ONCE: calling external: fflush(140630242535072) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140488571643744) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_LT]
->>>GoSat-gosat exec time: 3.819287e+00 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 4.276845e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 8.500000e-04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
 
-KLEE: done: total instructions = 85
-KLEE: done: completed paths = 0
+KLEE: done: total instructions = 175
+KLEE: done: completed paths = 1
 KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 1
-Total exec time: 9.059725e+03 ms
+KLEE: done: generated tests = 2
+Total exec time: 1.067206e+04 ms

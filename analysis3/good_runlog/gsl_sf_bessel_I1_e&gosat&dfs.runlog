@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 4076670
+KLEE: KLEE: WATCHDOG: watching 24358
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_bessel_I1_e&gosat&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_bessel_I1_e&gosat&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -9,21 +9,38 @@ KLEE: Replacing function "__isinff" with "klee_internal_isinff"
 KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000452e+04 ms
+>>>GoSat-gosat exec time: 5.820124e+00 ms
 KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140278691374528, 94581403793472, 94581403884176, 217, 94581403756856, 94581403884160) at stream.c:46 1
-gsl: bessel_I1.c:217: ERROR: underflow
-KLEE: WARNING ONCE: calling external: fflush(140278691374752) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fprintf(140426567190144, 94115645905056, 94115646028416, 242, 94115645876528, 94115646028432) at stream.c:46 1
+gsl: bessel_I1.c:242: ERROR: overflow
+KLEE: WARNING ONCE: calling external: fflush(140426567190368) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
-[into case Z3_OP_FPA_EQ]
->>>GoSat-gosat exec time: 3.000377e+04 ms
-KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 7.227614e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+KLEE: WARNING ONCE: calling external: sqrt((FAbs w64 (ReadLSB w64 0 a))) at bessel_I1.c:175 18
+>>>GoSat-gosat exec time: 7.873966e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 3.000777e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000827e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000812e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 3.000803e+04 ms
+KLEE: WARNING: GOSAT: GOSAT solving UNKNOWN and evaluate FAILURE and remove the state !
+>>>GoSat-gosat exec time: 6.809532e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 6.178435e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+>>>GoSat-gosat exec time: 5.068263e+00 ms
+KLEE: WARNING: GOSAT: GOSAT solving SAT and evaluate SUCCESS !
+gsl: bessel_I1.c:217: ERROR: underflow
+Default GSL error handler invoked.
 
-KLEE: done: total instructions = 112
-KLEE: done: completed paths = 1
-KLEE: done: partially completed paths = 1
-KLEE: done: generated tests = 2
-Total exec time: 7.088475e+04 ms
+KLEE: done: total instructions = 3141
+KLEE: done: completed paths = 5
+KLEE: done: partially completed paths = 2
+KLEE: done: generated tests = 6
+Total exec time: 1.321615e+05 ms

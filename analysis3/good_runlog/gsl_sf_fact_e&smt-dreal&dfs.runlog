@@ -1,6 +1,6 @@
-KLEE: KLEE: WATCHDOG: watching 2307795
+KLEE: KLEE: WATCHDOG: watching 10689
 
-KLEE: output directory is "/home/aaa/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&smt-dreal&dfs_output"
+KLEE: output directory is "/home/aaa/fp-solver/analysis3/benchmark3/sf/sf&gsl_sf_fact_e&smt-dreal&dfs_output"
 KLEE: Using Z3 solver backend
 KLEE: Replacing function "__isnanf" with "klee_internal_isnanf"
 KLEE: Replacing function "__isnan" with "klee_internal_isnan"
@@ -10,28 +10,17 @@ KLEE: Replacing function "__isinf" with "klee_internal_isinf"
 KLEE: Replacing function "__isinfl" with "klee_internal_isinfl"
 KLEE: WARNING ONCE: function "gsl_ieee_set_mode" has inline asm
 KLEE: WARNING ONCE: flushing 4104 bytes on read, may be slow and/or crash: MO7959[4104] allocated at global:fact_table
->>>Synergy-Z3 exec time: 1.602912e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_fact_e_dfs/FP_0.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_fact_e_dfs/' 已成功创建。
+>>>Synergy-Z3 exec time: 1.428019e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
->>>Synergy-Z3 exec time: 1.486000e-02 ms
->>>Synergy-dreal exec time: 1.169016e+00 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 1.276275e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 3.459500e-02 ms
->>>Synergy-dreal exec time: 5.434690e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 1.251849e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 2.380700e-02 ms
->>>Synergy-dreal exec time: 5.300520e-01 ms
-KLEE: WARNING: SMT-DReal: DReal solving SAT and evaluate FAILURE and (UnAssigned variable exists or no dreal support constraints) and Using JFS to solve !
->>>JFS exec time: 1.235806e+04 ms
-KLEE: WARNING: FUZZ: JFS solving UNKNOWN and evaluate FAILURE and remove the state !
->>>Synergy-Z3 exec time: 1.727052e+01 ms
+/home/aaa/fp-solver/smtlib2_CF/gsl_sf_fact_e_dfs/FP_1.smt2
+目录 '/home/aaa/fp-solver/smtlib2_CF/gsl_sf_fact_e_dfs/' 已经存在。
+>>>Synergy-Z3 exec time: 1.483444e+01 ms
 KLEE: WARNING: SMT-DREAL: Z3 solving SAT and evaluate SUCCESS !
-KLEE: WARNING ONCE: calling external: fprintf(140548399162816, 93990678796352, 93990678759832, 1489, 93990678759736, 93990675947264) at stream.c:46 1
+KLEE: WARNING ONCE: calling external: fprintf(140519859463808, 93983051929760, 93983051901328, 1489, 93983051901232, 93983049088752) at stream.c:46 1
 gsl: gamma.c:1489: ERROR: overflow
-KLEE: WARNING ONCE: calling external: fflush(140548399163040) at error.c:44 12
+KLEE: WARNING ONCE: calling external: fflush(140519859464032) at error.c:44 12
 Default GSL error handler invoked.
 KLEE: ERROR: error.c:47: abort failure
 KLEE: NOTE: now ignoring this error at this location
@@ -40,4 +29,4 @@ KLEE: done: total instructions = 125
 KLEE: done: completed paths = 2
 KLEE: done: partially completed paths = 1
 KLEE: done: generated tests = 3
-Total exec time: 5.055429e+04 ms
+Total exec time: 1.130783e+04 ms
