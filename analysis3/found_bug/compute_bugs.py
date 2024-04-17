@@ -3,7 +3,8 @@ import os
 import csv
 import numpy as np
 
-group = ["elementary", "complex", "diffAndInteg", "cdf", "solveEqu", "compAndopt", "sf"]
+# group = ["elementary", "complex", "diffAndInteg", "cdf", "solveEqu", "compAndopt", "sf"]
+group = ["elementary", "algorithm", "sf"]
 solver_type = ["smt", "bitwuzla", "mathsat5", "dreal-is", "cvc5-real", "fp2int", "jfs", "gosat", "smt-dreal"]
 
 # group = ["elementary", "complex", "diffAndInteg", "cdf", "solveEqu", "sf"]
