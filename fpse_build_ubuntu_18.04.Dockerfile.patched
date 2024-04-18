@@ -1,0 +1,100 @@
+FROM fpse_build_base:ubuntu1804
+
+RUN sudo apt-get update
+RUN sudo apt-get -y --no-install-recommends install  \
+    build-essential  \
+    cmake  \
+    curl  \
+    file  \
+    g++-multilib  \
+    gcc-multilib  \
+    git  \
+    libcap-dev  \
+    libgoogle-perftools-dev  \
+    libncurses5-dev  \
+    libsqlite3-dev  \
+    libtcmalloc-minimal4  \
+    python3-pip  \
+    unzip  \
+    graphviz  \
+    doxygen  \
+    pkg-config \
+    m4
+
+RUN pip3 install lit tabulate wllvm -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# pull fp-solver
+RUN git clone https://github.com/busyxu/fp-solver.git
+RUN cd /home/aaa/fp-solver && git checkout docker_fpse
+
+# Install LLVM-6
+COPY build_llvm-6.sh /home/aaa/fp-solver
+RUN cd /home/aaa/fp-solver && ./build_llvm-6.sh
+
+# Build Z3 4.6.2
+COPY /build_z3-4.6.2.sh /home/aaa/fp-solver
+RUN cd /home/aaa/fp-solver && ./build_z3-4.6.2.sh
+
+ENV PATH="$PATH:/home/aaa/fp-solver/llvm-6/build:/home/aaa/fp-solver/llvm-6/install/bin:/home/aaa/fp-solver/z3-4.6.2/build:/home/aaa/fp-solver/z3-4.6.2/install/bin"
+
+# Install klee-uclibc
+RUN cd /home/aaa/fp-solver/klee-uclibc && \
+    ./configure --make-llvm-lib && \
+    make -j4
+
+# Install zlib
+RUN cd /home/aaa/fp-solver/zlib-1.2.11 && \
+    ./configure && \
+    make && \
+    sudo make install
+
+# Install gmp-6.2.0x
+RUN rm -rf /home/aaa/fp-solver/gmp-6.2.0x
+ADD gmp-6.2.0x.tar.xz /home/aaa/fp-solver
+RUN cd /home/aaa/fp-solver/gmp-6.2.0x && \
+    ./configure --enable-cxx && \
+    make && \
+    sudo make install
+
+# install json-c
+
+
+# install gsl
+
+
+# install gsl_runtime_lib
+
+
+# install bitwuzla
+
+
+# install mathsat5
+
+
+# install cvc5
+
+
+# install dreal
+RUN cd /home/aaa/fp-solver/dreal_install && \
+    sudo ./install_dreal.sh
+
+# install nlopt
+
+
+# install gosat
+
+
+# install klee-float-solver include jfs
+
+
+# install analysis
+
+
+COPY fpse_build.sh /home/aaa
+
+RUN cd /home/aaa && ./fpse_build.sh
+
+
+
+
+
