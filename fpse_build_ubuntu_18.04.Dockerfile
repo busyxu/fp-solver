@@ -56,7 +56,6 @@ RUN /home/aaa/fp-solver/build_json-c.sh
 
 # link gsl_runtime_lib
 
-
 # install bitwuzla
 RUN /home/aaa/fp-solver/build_bitwuzla.sh
 
