@@ -5,8 +5,8 @@ set -o pipefail
 
 
 #sudo apt-get install libssl-dev python3-pip
-/usr/bin/python3 -m pip install tomli
-/usr/bin/python3 -m pip install pyparsing
+#/usr/bin/python3 -m pip install tomli
+#/usr/bin/python3 -m pip install pyparsing
 
 cd /usr/share/cmake-3.22.1
 sudo chmod 777 ./configure

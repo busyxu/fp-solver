@@ -22,18 +22,16 @@ RUN sudo apt-get -y --no-install-recommends install  \
     pkg-config \
     m4
 
-RUN pip3 install lit tabulate wllvm -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install lit tabulate wllvm tomli pyparsing -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # pull fp-solver
 RUN git clone https://github.com/busyxu/fp-solver.git
 RUN cd /home/aaa/fp-solver && git checkout docker_fpse
 
 # Install LLVM-6
-COPY build_llvm-6.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_llvm-6.sh
 
 # Build Z3 4.6.2
-COPY /build_z3-4.6.2.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_z3-4.6.2.sh
 
 # setting env

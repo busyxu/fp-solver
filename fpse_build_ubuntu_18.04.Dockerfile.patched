@@ -28,71 +28,56 @@ RUN git clone https://github.com/busyxu/fp-solver.git
 RUN cd /home/aaa/fp-solver && git checkout docker_fpse
 
 # Install LLVM-6
-COPY build_llvm-6.sh /home/aaa/fp-solver
-RUN cd /home/aaa/fp-solver && ./build_llvm-6.sh
+RUN /home/aaa/fp-solver/build_llvm-6.sh
 
 # Build Z3 4.6.2
-COPY /build_z3-4.6.2.sh /home/aaa/fp-solver
-RUN cd /home/aaa/fp-solver && ./build_z3-4.6.2.sh
+RUN /home/aaa/fp-solver/build_z3-4.6.2.sh
 
+# setting env
 ENV PATH="$PATH:/home/aaa/fp-solver/llvm-6/build:/home/aaa/fp-solver/llvm-6/install/bin:/home/aaa/fp-solver/z3-4.6.2/build:/home/aaa/fp-solver/z3-4.6.2/install/bin"
 
 # Install klee-uclibc
-RUN cd /home/aaa/fp-solver/klee-uclibc && \
-    ./configure --make-llvm-lib && \
-    make -j4
+RUN /home/aaa/fp-solver/build_klee-uclibc.sh
 
 # Install zlib
-RUN cd /home/aaa/fp-solver/zlib-1.2.11 && \
-    ./configure && \
-    make && \
-    sudo make install
+RUN /home/aaa/fp-solver/build_zlib-1.2.11.sh
 
 # Install gmp-6.2.0x
 RUN rm -rf /home/aaa/fp-solver/gmp-6.2.0x
 ADD gmp-6.2.0x.tar.xz /home/aaa/fp-solver
-RUN cd /home/aaa/fp-solver/gmp-6.2.0x && \
-    ./configure --enable-cxx && \
-    make && \
-    sudo make install
+RUN /home/aaa/fp-solver/build_gmp-6.2.0x.sh
 
 # install json-c
+RUN /home/aaa/fp-solver/build_json-c.sh
+
+# remake gsl
 
 
-# install gsl
-
-
-# install gsl_runtime_lib
+# link gsl_runtime_lib
 
 
 # install bitwuzla
+RUN /home/aaa/fp-solver/bitwuzla.sh
 
-
-# install mathsat5
+# install mathsat5 'tar'
 
 
 # install cvc5
-
+RUN /home/aaa/fp-solver/bitwuzla.sh
 
 # install dreal
-RUN cd /home/aaa/fp-solver/dreal_install && \
-    sudo ./install_dreal.sh
+RUN /home/aaa/fp-solver/build_dreal.sh
 
 # install nlopt
-
+RUN /home/aaa/fp-solver/build_nlopt.sh
 
 # install gosat
-
+RUN /home/aaa/fp-solver/build_gosat.sh
 
 # install klee-float-solver include jfs
+RUN /home/aaa/fp-solver/build_fpse.sh
 
-
-# install analysis
-
-
-COPY fpse_build.sh /home/aaa
-
-RUN cd /home/aaa && ./fpse_build.sh
+# copy analysis
 
 
 
