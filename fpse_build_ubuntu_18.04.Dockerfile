@@ -58,13 +58,13 @@ RUN /home/aaa/fp-solver/build_json-c.sh
 
 
 # install bitwuzla
-RUN /home/aaa/fp-solver/bitwuzla.sh
+RUN /home/aaa/fp-solver/build_bitwuzla.sh
 
 # install mathsat5 'tar'
 
 
 # install cvc5
-RUN /home/aaa/fp-solver/bitwuzla.sh
+RUN /home/aaa/fp-solver/build_cvc5.sh
 
 # install dreal
 RUN /home/aaa/fp-solver/build_dreal.sh

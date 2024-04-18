@@ -5,6 +5,7 @@ set -x
 set -e
 
 cd /home/aaa/fp-solver/bitwuzla
+rm -rf build
 ./configure.sh --shared --prefix /home/aaa/fp-solver/bitwuzla/install
 cd build
 make -j$(nproc)
