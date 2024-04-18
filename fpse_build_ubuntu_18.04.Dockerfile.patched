@@ -56,7 +56,10 @@ RUN /home/aaa/fp-solver/build_json-c.sh
 # link gsl_runtime_lib
 
 # install bitwuzla
-RUN /home/aaa/fp-solver/build_bitwuzla1.sh
+RUN rm -rf /home/aaa/fp-solver/bitwuzla
+COPY bitwuzla /home/aaa/fp-solver/bitwuzla
+COPY build_bitwuzla.sh /home/aaa/fp-solver
+RUN /home/aaa/fp-solver/build_bitwuzla.sh
 
 # install mathsat5 'tar'
 

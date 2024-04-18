@@ -20,7 +20,8 @@ RUN sudo apt-get -y --no-install-recommends install  \
     graphviz  \
     doxygen  \
     pkg-config \
-    m4
+    m4 \
+    ibssl-dev
 
 RUN pip3 install lit tabulate wllvm tomli pyparsing -i https://pypi.tuna.tsinghua.edu.cn/simple
 
@@ -57,6 +58,9 @@ RUN /home/aaa/fp-solver/build_json-c.sh
 # link gsl_runtime_lib
 
 # install bitwuzla
+#RUN rm -rf /home/aaa/fp-solver/bitwuzla
+#COPY bitwuzla /home/aaa/fp-solver/bitwuzla
+#COPY build_bitwuzla.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_bitwuzla.sh
 
 # install mathsat5 'tar'

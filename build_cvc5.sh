@@ -8,6 +8,11 @@ set -o pipefail
 #/usr/bin/python3 -m pip install tomli
 #/usr/bin/python3 -m pip install pyparsing
 
+#sudo apt-get install libssl-dev
+
+cd /home/aaa/fp-solcer
+sudo tar -xvzf cmake-3.22.1.tar.gz -C /usr/share
+
 cd /usr/share/cmake-3.22.1
 sudo chmod 777 ./configure
 sudo ./configure
