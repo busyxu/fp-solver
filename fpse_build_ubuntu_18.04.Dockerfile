@@ -21,11 +21,16 @@ RUN sudo apt-get -y --no-install-recommends install  \
     doxygen  \
     pkg-config \
     m4 \
-    ibssl-dev
+    libssl-dev \
+    default-jre \
+    default-jdk \
+    flex bison
 
-RUN pip3 install lit tabulate wllvm tomli pyparsing -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install lit tabulate wllvm toml pyparsing -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # pull fp-solver
+RUN git config --global http.proxy socks5://192.168.35.180:10808
+RUN git config --global https.proxy socks5://192.168.35.180:10808
 RUN git clone https://github.com/busyxu/fp-solver.git
 RUN cd /home/aaa/fp-solver && git checkout docker_fpse
 
@@ -58,15 +63,16 @@ RUN /home/aaa/fp-solver/build_json-c.sh
 # link gsl_runtime_lib
 
 # install bitwuzla
-#RUN rm -rf /home/aaa/fp-solver/bitwuzla
-#COPY bitwuzla /home/aaa/fp-solver/bitwuzla
-#COPY build_bitwuzla.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_bitwuzla.sh
 
 # install mathsat5 'tar'
 
 
 # install cvc5
+RUN rm -rf /home/aaa/fp-solver/cvc5
+RUN mkdir -p /home/aaa/fp-solver/cvc5
+COPY cvc5 /home/aaa/fp-solver/cvc5
+COPY build_cvc5.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_cvc5.sh
 
 # install dreal
