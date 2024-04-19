@@ -1,0 +1,16 @@
+from setuptools import setup, Extension, find_packages
+
+polypy = Extension('polypy',
+                    sources = ['${polypy_SOURCES_STR}'],
+                    include_dirs = ['../include'],
+                    libraries = ['poly'],
+                    library_dirs = ['${CMAKE_INSTALL_PREFIX}/lib']
+)
+
+setup (name = 'polypy',
+       version = '${LIBPOLY_VERSION}',
+       description = 'A library for symbolic computation with polynomials',
+       author = 'Dejan Jovanovic',
+       author_email = 'dejan@csl.sri.com',
+       url = 'https://github.com/SRI-CSL/libpoly',
+       ext_modules = [polypy])
