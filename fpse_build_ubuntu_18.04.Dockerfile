@@ -24,72 +24,98 @@ RUN sudo apt-get -y --no-install-recommends install  \
     libssl-dev \
     default-jre \
     default-jdk \
-    flex bison
+    flex \
+    bison \
+    vim
 
-RUN pip3 install lit tabulate wllvm toml pyparsing -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install lit tabulate wllvm toml pyparsing numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # pull fp-solver
-RUN git config --global http.proxy socks5://192.168.35.180:10808
-RUN git config --global https.proxy socks5://192.168.35.180:10808
-RUN git clone https://github.com/busyxu/fp-solver.git
-RUN cd /home/aaa/fp-solver && git checkout docker_fpse
+#RUN git config --global http.proxy socks5://192.168.137.180:10808
+#RUN git config --global https.proxy socks5://192.168.137.180:10808
+#RUN git clone https://github.com/busyxu/fp-solver.git
+#RUN cd /home/aaa/fp-solver && git checkout docker_fpse
 
 # Install LLVM-6
+COPY --chown=aaa:aaa llvm-6 /home/aaa/fp-solver/llvm-6
+COPY --chown=aaa:aaa build_llvm-6.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_llvm-6.sh
 
 # Build Z3 4.6.2
+COPY --chown=aaa:aaa z3-4.6.2 /home/aaa/fp-solver/z3-4.6.2
+COPY --chown=aaa:aaa build_z3-4.6.2.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_z3-4.6.2.sh
 
 # setting env
 ENV PATH="$PATH:/home/aaa/fp-solver/llvm-6/build:/home/aaa/fp-solver/llvm-6/install/bin:/home/aaa/fp-solver/z3-4.6.2/build:/home/aaa/fp-solver/z3-4.6.2/install/bin"
 
 # Install klee-uclibc
+COPY --chown=aaa:aaa klee-uclibc /home/aaa/fp-solver/klee-uclibc
+COPY --chown=aaa:aaa build_klee-uclibc.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_klee-uclibc.sh
 
 # Install zlib
+COPY --chown=aaa:aaa zlib-1.2.11 /home/aaa/fp-solver/zlib-1.2.11
+COPY --chown=aaa:aaa build_zlib-1.2.11.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_zlib-1.2.11.sh
 
 # Install gmp-6.2.0x
-RUN rm -rf /home/aaa/fp-solver/gmp-6.2.0x
-ADD gmp-6.2.0x.tar.xz /home/aaa/fp-solver
+ADD --chown=aaa:aaa gmp-6.2.0x.tar.xz /home/aaa/fp-solver
+COPY --chown=aaa:aaa build_gmp-6.2.0x.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_gmp-6.2.0x.sh
 
 # install json-c
+COPY --chown=aaa:aaa json-c /home/aaa/fp-solver/json-c
+COPY --chown=aaa:aaa build_json-c.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_json-c.sh
 
-# remake gsl
-
+# copy gsl
+COPY --chown=aaa:aaa gsl /home/aaa/fp-solver/gsl
 
 # link gsl_runtime_lib
+COPY --chown=aaa:aaa gsl_runtime_lib /home/aaa/fp-solver/gsl_runtime_lib
+COPY --chown=aaa:aaa build_gsl_runtime_lib.sh /home/aaa/fp-solver
+RUN /home/aaa/fp-solver/build_gsl_runtime_lib.sh
 
 # install bitwuzla
-RUN /home/aaa/fp-solver/build_bitwuzla.sh
+COPY --chown=aaa:aaa bitwuzla /home/aaa/fp-solver/bitwuzla
+COPY --chown=aaa:aaa build_bitwuzla.sh /home/aaa/fp-solver
+#RUN /home/aaa/fp-solver/build_bitwuzla.sh
 
-# install mathsat5 'tar'
+# copy mathsat5
+COPY --chown=aaa:aaa mathsat-5.6.11 /home/aaa/fp-solver/mathsat-5.6.11
 
+# install cmake-3.22.1
+COPY --chown=aaa:aaa cmake-3.22.1.tar.gz /home/aaa/fp-solver
+COPY --chown=aaa:aaa build_cmake.sh /home/aaa/fp-solver
+RUN /home/aaa/fp-solver/build_cmake.sh
 
 # install cvc5
-RUN rm -rf /home/aaa/fp-solver/cvc5
-RUN mkdir -p /home/aaa/fp-solver/cvc5
-COPY cvc5 /home/aaa/fp-solver/cvc5
-COPY build_cvc5.sh /home/aaa/fp-solver
-RUN /home/aaa/fp-solver/build_cvc5.sh
+COPY --chown=aaa:aaa cvc5 /home/aaa/fp-solver/cvc5
+COPY --chown=aaa:aaa build_cvc5.sh /home/aaa/fp-solver
+#RUN /home/aaa/fp-solver/build_cvc5.sh
 
 # install dreal
+COPY --chown=aaa:aaa dreal_install /home/aaa/fp-solver/dreal_install
+COPY --chown=aaa:aaa build_dreal.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_dreal.sh
 
 # install nlopt
-RUN /home/aaa/fp-solver/build_nlopt.sh
+COPY --chown=aaa:aaa nlopt /home/aaa/fp-solver/nlopt
+COPY --chown=aaa:aaa build_nlopt.sh /home/aaa/fp-solver
+#RUN /home/aaa/fp-solver/build_nlopt.sh
 
 # install gosat
-RUN /home/aaa/fp-solver/build_gosat.sh
+COPY --chown=aaa:aaa gosat /home/aaa/fp-solver/gosat
+COPY --chown=aaa:aaa build_gosat.sh /home/aaa/fp-solver
+#RUN /home/aaa/fp-solver/build_gosat.sh
 
 # install klee-float-solver include jfs
+COPY --chown=aaa:aaa klee-float-solver_1 /home/aaa/fp-solver/klee-float-solver_1
+COPY --chown=aaa:aaa build_fpse.sh /home/aaa/fp-solver
 RUN /home/aaa/fp-solver/build_fpse.sh
 
 # copy analysis
-
-
-
+COPY --chown=aaa:aaa analysis /home/aaa/fp-solver/analysis
 
 

@@ -6,7 +6,7 @@ set -e
 
 cd /home/aaa/fp-solver/llvm-6
 
-#sudo rm -rf build
+sudo rm -rf build
 mkdir -p build
 cd build
 

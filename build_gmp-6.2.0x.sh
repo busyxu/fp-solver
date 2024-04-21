@@ -10,7 +10,7 @@ set -e
 #cd gmp-6.2.0x 
 #./configure --enable-cxx
 
-cd /home/aaa/fp-solver
+cd /home/aaa/fp-solver/gmp-6.2.0x
 ./configure --enable-cxx
 
 make -j$(nproc)

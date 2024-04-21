@@ -6,7 +6,7 @@ set -e
 
 cd /home/aaa/fp-solver/z3-4.6.2
 
-#sudo rm -rf build
+sudo rm -rf build
 mkdir -p build
 cd build
 
