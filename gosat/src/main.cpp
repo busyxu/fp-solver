@@ -214,7 +214,7 @@ int main(int argc, const char** argv)
                 getPointerToFunction(ll_func_ptr));
 
         // Now working with optimization backend
-        goSATAlgorithm current_alg = (opt_go_algorithm == kUndefinedAlg) ? kESCH : opt_go_algorithm;
+        goSATAlgorithm current_alg = (opt_go_algorithm == kUndefinedAlg) ? kCRS2 : opt_go_algorithm;
 //        goSATAlgorithm current_alg = kESCH; kCRS2;kBYTEEA
 
         gosat::NLoptOptimizer nl_opt(static_cast<nlopt_algorithm>(current_alg));

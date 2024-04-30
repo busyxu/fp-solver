@@ -571,9 +571,9 @@ llvm::Value* FPIRGenerator::genExprIR
             else
                 return m_const_one;
         case Z3_OP_EQ:
-          llvm::errs()<<"[into case Z3_OP_EQ]\n";
+//          llvm::errs()<<"[into case Z3_OP_EQ]\n";
         case Z3_OP_FPA_EQ:
-          llvm::errs()<<"[into case Z3_OP_FPA_EQ]\n";
+//          llvm::errs()<<"[into case Z3_OP_FPA_EQ]\n";
             return genEqualityIR(builder, expr_sym, arg_syms);
         case Z3_OP_NOT:
             // Do nothing, negation is handled with de-morgans
@@ -614,9 +614,9 @@ llvm::Value* FPIRGenerator::genExprIR
                                       arg_syms[2]->getValue());
 
         case Z3_OP_BNEG:
-          llvm::errs()<<"[into case Z3_OP_BNEG]\n";
+//          llvm::errs()<<"[into case Z3_OP_BNEG]\n";
         case Z3_OP_FPA_NEG:
-          llvm::errs()<<"[into case Z3_OP_FPA_NEG]\n";
+//          llvm::errs()<<"[into case Z3_OP_FPA_NEG]\n";
             return builder.CreateFSub(
                     ConstantFP::get(builder.getDoubleTy(), -0.0),
                     arg_syms[0]->getValue());
@@ -654,7 +654,7 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_SLT:
         case Z3_OP_ULT:
         case Z3_OP_LT:
-          llvm::errs()<<"[into case Z3_OP_LT]\n";
+//          llvm::errs()<<"[into case Z3_OP_LT]\n";
         case Z3_OP_FPA_LT:
 //          llvm::outs()<<*expr_sym->getValue()<<"\n";
 //          expr_sym->getValue()->print(llvm::outs());
@@ -678,7 +678,7 @@ llvm::Value* FPIRGenerator::genExprIR
         case Z3_OP_SGT:
         case Z3_OP_UGT:
         case Z3_OP_GT:
-          llvm::errs()<<"[into case Z3_OP_GT]\n";
+//          llvm::errs()<<"[into case Z3_OP_GT]\n";
         case Z3_OP_FPA_GT:
             if (expr_sym->isNegated()) {//是否是一个非的表达式
                 auto comp_res = builder.CreateFCmpOLE(arg_syms[0]->getValue(),
