@@ -76,127 +76,127 @@ CMakeFiles/gosat.dir/src/main.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/main.cpp.o: /home/aaa/fp-solver/gosat/src/main.cpp
 CMakeFiles/gosat.dir/src/main.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gosat.dir/src/main.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/main.cpp.o -MF CMakeFiles/gosat.dir/src/main.cpp.o.d -o CMakeFiles/gosat.dir/src/main.cpp.o -c /home/aaa/fp-solver/gosat/src/main.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/main.cpp.o -MF CMakeFiles/gosat.dir/src/main.cpp.o.d -o CMakeFiles/gosat.dir/src/main.cpp.o -c /home/aaa/fp-solver/gosat/src/main.cpp
 
 CMakeFiles/gosat.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/main.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/main.cpp > CMakeFiles/gosat.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/main.cpp > CMakeFiles/gosat.dir/src/main.cpp.i
 
 CMakeFiles/gosat.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/main.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/main.cpp -o CMakeFiles/gosat.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/main.cpp -o CMakeFiles/gosat.dir/src/main.cpp.s
 
 CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o: /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp
 CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o -MF CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o.d -o CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o -c /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o -MF CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o.d -o CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.o -c /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp
 
 CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp > CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp > CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.i
 
 CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp -o CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/Utils/FPAUtils.cpp -o CMakeFiles/gosat.dir/src/Utils/FPAUtils.cpp.s
 
 CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o: /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp
 CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o -MF CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o.d -o CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o -c /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o -MF CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o.d -o CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.o -c /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp
 
 CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp > CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp > CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.i
 
 CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp -o CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/ExprAnalyzer/FPExprAnalyzer.cpp -o CMakeFiles/gosat.dir/src/ExprAnalyzer/FPExprAnalyzer.cpp.s
 
 CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o: /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp
 CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o -MF CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o.d -o CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o -c /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o -MF CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o.d -o CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.o -c /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp
 
 CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp > CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp > CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.i
 
 CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp -o CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/IRGen/FPIRGenerator.cpp -o CMakeFiles/gosat.dir/src/IRGen/FPIRGenerator.cpp.s
 
 CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o: /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp
 CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o -MF CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o.d -o CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o -c /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o -MF CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o.d -o CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.o -c /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp
 
 CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp > CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp > CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.i
 
 CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp -o CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/CodeGen/FPExprCodeGenerator.cpp -o CMakeFiles/gosat.dir/src/CodeGen/FPExprCodeGenerator.cpp.s
 
 CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o: /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp
 CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o -MF CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o.d -o CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o -c /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o -MF CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o.d -o CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.o -c /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp
 
 CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp > CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp > CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.i
 
 CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp -o CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/CodeGen/FPExprLibGenerator.cpp -o CMakeFiles/gosat.dir/src/CodeGen/FPExprLibGenerator.cpp.s
 
 CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o: /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp
 CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o -MF CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o.d -o CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o -c /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o -MF CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o.d -o CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.o -c /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp
 
 CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp > CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp > CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.i
 
 CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp -o CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/Optimizer/NLoptOptimizer.cpp -o CMakeFiles/gosat.dir/src/Optimizer/NLoptOptimizer.cpp.s
 
 CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o: /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp
 CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o -MF CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o.d -o CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o -c /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o -MF CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o.d -o CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.o -c /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp
 
 CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp > CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp > CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.i
 
 CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp -o CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/CodeGen/CodeGen.cpp -o CMakeFiles/gosat.dir/src/CodeGen/CodeGen.cpp.s
 
 CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o: CMakeFiles/gosat.dir/flags.make
 CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o: /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp
 CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o: CMakeFiles/gosat.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaa/fp-solver/gosat/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o -MF CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o.d -o CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o -c /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o -MF CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o.d -o CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.o -c /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp
 
 CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.i"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp > CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp > CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.i
 
 CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.s"
-	/home/aaa/jfs/cmake-build-debug/runtime/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp -o CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/fp-solver/gosat/src/Optimizer/ModelValidator.cpp -o CMakeFiles/gosat.dir/src/Optimizer/ModelValidator.cpp.s
 
 # Object files for target gosat
 gosat_OBJECTS = \
